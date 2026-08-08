@@ -1,0 +1,97 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Segoe UI", -apple-system, "Helvetica Neue", sans-serif;
+$body-bg: #ffffff;
+$body-color: #26222e;
+$link-color: #240085;
+$presentation-heading-color: #240085;
+$presentation-heading-font-weight: 650;
+$presentation-h2-font-size: 1.15em;
+$code-color: #240085;
+
+/*-- scss:rules --*/
+.reveal h1 {
+  color: #240085;
+}
+.reveal h2 {
+  border-bottom: 3px solid #ddd6f5;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+// Migrated beamer frames are dense: keep lists and equations compact so a frame that
+// filled a 4:3 beamer slide still fits one reveal slide.
+.reveal .slides section > ul,
+.reveal .slides section > ol {
+  margin-bottom: 0.4em;
+}
+.reveal li {
+  margin-bottom: 0.25em;
+}
+.reveal mjx-container[display="true"] {
+  margin: 0.5em 0;
+}
+.reveal .smaller mjx-container {
+  font-size: 0.85em !important;
+}
+.reveal .slides img {
+  max-height: 420px;
+  object-fit: contain;
+}
+.reveal .columns img {
+  max-height: 300px;
+}
+.reveal .slide-number {
+  color: #240085;
+}
+.reveal .footer {
+  color: #7f7a99;
+}
+.result {
+  background: #efecfa;
+  border-left: 6px solid #240085;
+  border-radius: 6px;
+  padding: 0.1em 0.8em;
+  margin: 0.6em 0;
+}
+.box {
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  margin: 0.6em 0;
+}
+.box-a {
+  background: #e7e2f8;
+  border-left: 6px solid #240085;
+}
+.box-b {
+  background: #fdf3e7;
+  border-left: 6px solid #c87a1e;
+}
+.tagline {
+  text-align: center;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #240085;
+}
+.center {
+  text-align: center;
+}
+.reveal .columns {
+  align-items: center;
+}
+.reveal .columns .column {
+  text-align: center;
+}
+.reveal table {
+  font-size: 0.85em;
+}
+.reveal table th {
+  background: #240085;
+  color: #ffffff;
+  border: none;
+}
+.reveal table td {
+  border-color: #ddd6f5;
+}
+.reveal table tr:nth-child(even) td {
+  background: #f5f3fc;
+}

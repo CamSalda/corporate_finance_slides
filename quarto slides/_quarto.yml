@@ -1,0 +1,19 @@
+project:
+  title: "Corporate Finance"
+
+author: "Camilo Saldarriaga"
+institute: "Finance Department, ESCP Business School, 2025/2026"
+
+format:
+  revealjs:
+    theme: [default, ../escp.scss]
+    logo: escplogo.png
+    slide-number: c/t
+    transition: fade
+    menu: false
+    embed-resources: true
+    html-math-method: mathjax
+  beamer:
+    aspectratio: 43
+    include-in-header: ../_beamer-preamble.tex
+    theme: default

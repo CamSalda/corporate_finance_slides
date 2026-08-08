@@ -1,0 +1,24 @@
+# pixi
+.pixi/
+
+# quarto build artifacts
+.quarto/
+_site/
+*_files/
+
+# python
+__pycache__/
+*.py[cod]
+
+# latex build artifacts
+*.aux
+*.log
+*.nav
+*.snm
+*.toc
+*.out
+*.synctex.gz
+
+# OS junk
+Thumbs.db
+.DS_Store

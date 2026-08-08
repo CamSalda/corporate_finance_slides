@@ -1,0 +1,17 @@
+[workspace]
+name = "corporate_finance_slides"
+description = "Quarto slide decks for the Corporate Finance course at ESCP Business School"
+channels = ["conda-forge"]
+platforms = ["win-64", "osx-arm64", "linux-64"]
+version = "0.1.0"
+
+[tasks]
+render = "quarto render 'quarto slides'"
+preview = "quarto preview 'quarto slides'"
+clean = "python -c \"import shutil,pathlib; [shutil.rmtree(p, ignore_errors=True) for p in pathlib.Path('quarto slides').rglob('*_files')]; shutil.rmtree('quarto slides/.quarto', ignore_errors=True)\""
+
+[dependencies]
+python = "3.12.*"
+quarto = "*"
+pre-commit = "*"
+ruff = "*"
