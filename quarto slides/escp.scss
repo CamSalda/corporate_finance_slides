@@ -33,6 +33,24 @@ $code-color: #240085;
 .reveal .smaller mjx-container {
   font-size: 0.85em !important;
 }
+// Second shrink step for the frames that were already crowded in beamer. This replaces
+// Quarto's .smaller (0.6em) rather than compounding with it, so the value is absolute.
+// !important because Quarto injects its own rule after the theme.
+.reveal .slide.dense {
+  font-size: 0.55em !important;
+}
+.reveal .slide.dense h2 {
+  font-size: 0.95em;
+}
+.reveal .slide.dense li {
+  margin-bottom: 0.1em;
+}
+// Font sizes carried over from the beamer sources, mostly source credits under figures.
+.reveal .tiny { font-size: 0.45em; }
+.reveal .scriptsize { font-size: 0.55em; }
+.reveal .footnotesize { font-size: 0.65em; }
+.reveal .small { font-size: 0.8em; }
+.reveal .large { font-size: 1.15em; }
 .reveal .slides img {
   max-height: 420px;
   object-fit: contain;

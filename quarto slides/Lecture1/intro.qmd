@@ -1,0 +1,135 @@
+---
+title: "Corporate Finance"
+subtitle: "Lecture 1: Introduction"
+footer: "Lecture 1: Introduction"
+---
+
+##
+
+::: {.center}
+Presentation
+:::
+
+## Course outline {.smaller}
+
+1.  Chapter 10: Capital Markets and the Pricing of Risk
+
+2.  Chapter 11: Optimal Portfolio Choice
+
+3.  Chapter 11: Capital Asset Pricing Model
+
+4.  Chapter 13: Investor Behavior and Capital Market Efficiency
+
+5.  Chapter 12: Estimating the Cost of Capital
+
+6.  Chapter 14: Capital Structure in a Perfect Market
+
+7.  Chapter 15: Debt and Taxes
+
+8.  Chapter 17: Payout Policy
+
+9.  Chapters 23-24: Introduction to Long-term Financing
+
+10. Chapters 20 & 30: Options and Risk Management
+
+## Assessment methods {.smaller}
+
+- Overall grade:
+
+  - Continuous assessment
+
+    - Excel group assignment (20%)
+
+    - Pearson Mylab weekly homework (10%)
+
+  - Final exam (70%)\
+
+    - Closed-book, paper-based, on-campus exam.
+
+    - Duration of two hours.
+
+    - Mix of multiple choice questions, calculation questions including
+      possibly questions to draw figures with short answers interpreting
+      the results, and few short open-answer questions.
+
+    - Formula sheet will be provided and students need to bring a
+      calculator.
+
+    - Last year's exam will be provided in November.
+
+- Students need a minimum grade of 8 in the final exam and a minimum
+  overall grade of 10 to pass the course.
+
+## Bibliography
+
+- The reference book is Berk, Jonathan and Peter DeMarzo, "Corporate
+  Finance," Pearson Education.
+
+- The course will cover the Parts IV, V and VII ... ...but in less
+  detail than the book.
+
+- An electronic version of the textbook is available on MyFinanceLab.
+
+## Documents and learning resources {.smaller}
+
+- Printed course materials: slides & exercises.
+
+- Blackboard: <https://escp.blackboard.com/> $\Rightarrow$ Additional
+  materials and Q&A forum
+
+- Pearson Mylab: MyFinanceLab (access via blackboard)
+
+  - Students are required to complete weekly assignments in
+    MyFinanceLab.
+
+  - These homeworks are made available after each lecture block and are
+    due before the start of the next lecture block. Late submission will
+    not be accepted.
+
+  - Each homework contains five questions that cover a two-hour lecture.
+    For four-hour lectures, two such homeworks will be made available
+    (covering a total of ten questions).
+
+  - There will be twelve homeworks in total.
+
+  - It is recommended to study the additional exercises for each chapter
+    available in the multimedia library.
+
+##
+
+::: {.center}
+![](eggsbasket.jpg){fig-align="center"}
+
+::: {.large}
+
+Do not put all the eggs in the same basket
+
+:::
+:::
+
+## Homework grade {.smaller}
+
+- There are twelve homeworks, one for each two-hour lecture block.
+
+- Homeworks are made available after each lecture and they are due one
+  week later (before the next lecture starts).
+
+- Each homework is automatically graded on a scale from 0 to 100%. A
+  missing homework will receive a grade of zero.
+
+- The homework grade is the average grade in the first eleven homeworks
+  multiplied by 20 (to obtain a grade in the 0-20 range).
+
+- The homework grade is worth 10% of the overall grade.
+
+## Contact
+
+- Camilo Saldarriaga
+
+- Mail: juan_camilo.saldarriaga@edu.escp.eu
+
+##
+
+::: {.center}
+No digital devices rule
+:::

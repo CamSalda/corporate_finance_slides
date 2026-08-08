@@ -17,10 +17,18 @@ from pathlib import Path
 SOURCE_ROOT = Path(__file__).parent.parent / "slides"
 TARGET_ROOT = Path(__file__).parent / "quarto slides"
 
-# A slide whose markdown exceeds this many characters gets Quarto's {.smaller} class.
+# Beamer frames hold more than a reveal slide comfortably fits, so long slides are shrunk in
+# two steps: Quarto's own {.smaller}, then the theme's stronger {.dense} on top of it.
 SMALLER_THRESHOLD = 400
+DENSE_THRESHOLD = 800
 
 STRIP_COMMANDS = ["vspace", "hspace", "vskip", "medskip", "smallskip", "bigskip", "bigstrut"]
+
+# Pandoc discards LaTeX font sizing, which would blow up footnote-sized source credits into
+# body text. Sentinel paragraphs survive the round trip and become styled divs afterwards.
+FONT_SIZES = ["tiny", "scriptsize", "footnotesize", "small", "large", "Large"]
+SIZE_OPEN = "QZSIZE{}QZ"
+SIZE_CLOSE = "QZENDSIZEQZ"
 
 
 def read_source(tex_path: Path) -> str:
@@ -40,14 +48,19 @@ def strip_comments(text: str) -> str:
 
 
 def extract_frames(body: str) -> list[tuple[str, str]]:
-    """Return (title, body) for every frame, skipping the plain title page."""
+    """Return (title, body) for every frame that belongs in the slides.
+
+    A frame may carry an overlay specification before its options. `<beamer:0>` marks a frame
+    the original deck shows only in the handout, so it is dropped; `<handout:0>` marks the
+    reverse and is kept. The title page is dropped too, Quarto builds its own from the YAML.
+    """
     pattern = re.compile(
-        r"\\begin\{frame\}(\[[^\]]*\])?(?:\{(.*?)\})?\s*(.*?)\\end\{frame\}",
+        r"\\begin\{frame\}(<[^>]*>)?(\[[^\]]*\])?(?:\{(.*?)\})?\s*(.*?)\\end\{frame\}",
         re.DOTALL,
     )
     frames = []
-    for options, title, content in pattern.findall(body):
-        if "\\titlepage" in content:
+    for overlay, options, title, content in pattern.findall(body):
+        if "beamer:0" in overlay or "\\titlepage" in content:
             continue
         frames.append((title.strip(), content.strip()))
     return frames
@@ -88,14 +101,82 @@ def expand_column_commands(fragment: str) -> str:
     return re.sub(r"\\begin\{columns\}(.*?)\\end\{columns\}", rewrite, fragment, flags=re.DOTALL)
 
 
+def closing_brace(text: str, start: int) -> int | None:
+    """Index of the brace closing the group that opens at `start`."""
+    depth = 0
+    for index in range(start, len(text)):
+        if text[index] == "{":
+            depth += 1
+        elif text[index] == "}":
+            depth -= 1
+            if depth == 0:
+                return index
+    return None
+
+
+def mark_font_sizes(fragment: str) -> str:
+    """Replace LaTeX font sizing with sentinels pandoc carries through as paragraphs.
+
+    The `{\\small ...}` switch form has to be brace-matched rather than regex-matched: a lazy
+    match would stop at the first closing brace, which is usually inside the maths it wraps.
+    """
+    def wrap(size: str, inner: str) -> str:
+        return f"\n\n{SIZE_OPEN.format(size)}\n\n{inner}\n\n{SIZE_CLOSE}\n\n"
+
+    for size in FONT_SIZES:
+        fragment = re.sub(
+            rf"\\begin\{{{size}\}}(.*?)\\end\{{{size}\}}",
+            lambda m, s=size: wrap(s, m.group(1)),
+            fragment,
+            flags=re.DOTALL,
+        )
+
+    switch = re.compile(r"\{\\(" + "|".join(sorted(FONT_SIZES, key=len, reverse=True)) + r")(?![a-zA-Z])")
+    for match in reversed(list(switch.finditer(fragment))):
+        end = closing_brace(fragment, match.start())
+        if end is None:
+            continue
+        inner = fragment[match.end() : end]
+        fragment = fragment[: match.start()] + wrap(match.group(1), inner) + fragment[end + 1 :]
+    return fragment
+
+
+def apply_font_sizes(markdown: str) -> str:
+    """Turn the surviving sentinels into divs the theme styles."""
+    for size in FONT_SIZES:
+        markdown = markdown.replace(SIZE_OPEN.format(size), f"::: {{.{size.lower()}}}")
+    return markdown.replace(SIZE_CLOSE, ":::")
+
+
+def strip_resizebox(fragment: str) -> str:
+    """Unwrap \\resizebox{w}{h}{$...$}, keeping only the maths it scales.
+
+    Dropping just the two size arguments would leave the content group's braces and inline
+    `$` behind, which breaks the display environment the box usually sits in.
+    """
+    while (start := fragment.find("\\resizebox")) != -1:
+        cursor = start + len("\\resizebox")
+        groups = []
+        for _ in range(3):
+            cursor = fragment.find("{", cursor)
+            end = closing_brace(fragment, cursor) if cursor != -1 else None
+            if end is None:
+                return fragment
+            groups.append(fragment[cursor + 1 : end])
+            cursor = end + 1
+        content = groups[2].strip().strip("$")
+        fragment = fragment[:start] + content + fragment[cursor:]
+    return fragment
+
+
 def clean_fragment(fragment: str) -> str:
     """Remove spacing commands and beamer-only markup pandoc cannot map."""
     for command in STRIP_COMMANDS:
         fragment = re.sub(rf"\\{command}\*?(\{{[^}}]*\}})?", "", fragment)
-    fragment = re.sub(r"\\resizebox\{[^}]*\}\{[^}]*\}", "", fragment)
+    fragment = strip_resizebox(fragment)
     fragment = fragment.replace("\\par", "")
     fragment = fragment.replace("\\pause", "\n\n. . .\n\n")
-    return expand_column_commands(fragment)
+    return mark_font_sizes(expand_column_commands(fragment))
 
 
 def convert_divs(markdown: str) -> str:
@@ -126,6 +207,8 @@ def fix_math(markdown: str) -> str:
     markdown = markdown.replace("\\end{align*}", "\\end{aligned}")
     markdown = markdown.replace("\\begin{align}", "\\begin{aligned}")
     markdown = markdown.replace("\\end{align}", "\\end{aligned}")
+    # Pandoc wraps raw equation environments in $$, which nests two display modes.
+    markdown = re.sub(r"\\(begin|end)\{equation\*?\}", "", markdown)
     return markdown.replace("BrickRed", "firebrick")
 
 
@@ -167,10 +250,13 @@ def convert(lecture: str, stem: str, output_name: str) -> None:
 
     slides = []
     for title, content in extract_frames(body):
-        markdown = fix_images(fix_math(convert_divs(latex_to_markdown(clean_fragment(content)))))
+        markdown = latex_to_markdown(clean_fragment(content))
+        markdown = fix_images(fix_math(convert_divs(apply_font_sizes(markdown))))
         markdown = markdown.strip()
         heading = f"## {title}" if title else "##"
-        if len(markdown) > SMALLER_THRESHOLD:
+        if len(markdown) > DENSE_THRESHOLD:
+            heading += " {.smaller .dense}"
+        elif len(markdown) > SMALLER_THRESHOLD:
             heading += " {.smaller}"
         slides.append(f"{heading}\n\n{markdown}\n")
 

@@ -72,7 +72,7 @@ Example of the set of possible portfolios of P and the security A
 
 Purchase of A is financed by borrowing at the risk-free rate.
 
-## Improving the Sharpe ratio of a portfolio: example (con't) {.smaller}
+## Improving the Sharpe ratio of a portfolio: example (con't) {.smaller .dense}
 
 - Investors who hold the portfolio P borrow a "small" quantity $\delta$
   at the risk-free rate and invest this amount in A. The return of their
@@ -82,6 +82,8 @@ Purchase of A is financed by borrowing at the risk-free rate.
 - The risk of their portfolio changes by (using a first-order Taylor
   expansion, see appendix):
 
+::: {.small}
+
 $$\begin{aligned}
 \Delta \sigma & = \sqrt{\sigma^{2}_{P}+\delta^{2}\sigma^{2}_{A}+2\delta \sigma_{P}\sigma_{A}\rho_{A,P}}-\sigma_{P} && \text{new volatility $-$ old volatility} \\
 & \approx \sqrt{\sigma^{2}_{P}+2\delta \sigma_{P}\sigma_{A}\rho_{A,P}}-\sigma_{P} && \text{$\delta^{2}$ is negligible for a small $\delta$} \\
@@ -89,6 +91,8 @@ $$\begin{aligned}
 & \approx \sigma_{P}\left(1+\delta \frac{\sigma_{A}\rho_{A,P}}{\sigma_{P}}\right)-\sigma_{P} && \text{$\sqrt{1+x} \approx 1+x/2$} \\
 & = \textcolor{firebrick}{\boldsymbol{\delta \sigma_{A} \rho_{A,P}}} && \text{the two $\sigma_{P}$ cancel}
 \end{aligned}$$
+
+:::
 
 ## Improving the Sharpe ratio of a portfolio: intuition
 
@@ -136,10 +140,6 @@ $$\Delta \sigma = \textcolor{firebrick}{\boldsymbol{\delta \sigma_{A} \rho_{A,P}
 
 - Should we invest in the REIT if we already hold Omega?
 
-##
-
-\<beamer:0\>\[noframenumbering\]
-
 ## B. Capital Asset Pricing Model
 
 - Reminder: Markowitz (1952) + Tobin (1958) $\rightarrow$ any investor
@@ -154,11 +154,13 @@ $$\Delta \sigma = \textcolor{firebrick}{\boldsymbol{\delta \sigma_{A} \rho_{A,P}
 
 - Starting point: Markowitz (1952) / Tobin (1958).
 
-  :::: {.center}
-  ::: large
+  ::: {.center}
+  ::: {.large}
+
   **+**
+
   :::
-  ::::
+  :::
 
 - Investors hold homogeneous beliefs about expected returns,
   volatilities, and correlations of all financial assets.
@@ -279,10 +281,6 @@ $\Rightarrow$ The super-efficient portfolio is unique.
 
 2.  What is the portfolio on the CML which has the same risk as Stock A
     and what is its expected return?
-
-##
-
-\<beamer:0\>\[noframenumbering\]
 
 ## Example 2:  expected return with negative beta
 
