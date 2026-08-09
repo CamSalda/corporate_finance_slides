@@ -95,18 +95,6 @@ Presentation
   - It is recommended to study the additional exercises for each chapter
     available in the multimedia library.
 
-##
-
-::: {.center}
-![](eggsbasket.jpg){fig-align="center"}
-
-::: {.large}
-
-Do not put all the eggs in the same basket
-
-:::
-:::
-
 ## Homework grade {.smaller}
 
 - There are twelve homeworks, one for each two-hour lecture block.
@@ -128,8 +116,27 @@ Do not put all the eggs in the same basket
 
 - Mail: juan_camilo.saldarriaga@edu.escp.eu
 
+## {.center}
+
+::: {.center .huge}
+Some class rules
+:::
+
 ##
 
 ::: {.center}
-No digital devices rule
+**1. No digital devices rule**
+
+![](noDigitalDevices.png){height="420"}
+:::
+
+##
+
+::: {.center}
+**2. Do not have parallel conversations while the professor talks**
+
+[*If you would rather talk through the whole class, it is better not to come
+at all, and to accept the consequences*]{.small}
+
+![](parallelConversations.jpg){height="330"}
 :::
