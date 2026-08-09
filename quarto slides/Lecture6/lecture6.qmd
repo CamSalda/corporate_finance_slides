@@ -27,6 +27,54 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
 -   You are the manager of a big company, and you want to execute a big
     investment project, how can you get the money?
 
+## Example 1
+
+::: {.center}
+![](newsPark1.png){height="70"}
+:::
+
+::: {.center}
+![](newsDragonBall.jpg){height="250"}
+:::
+
+:::: {.columns}
+::: {.column width="55%"}
+![](newsPark2.png){height="55"}
+:::
+
+::: {.column width="45%"}
+![](newsPark3.png){height="105"}
+:::
+::::
+
+## Example 2
+
+:::: {.columns}
+::: {.column width="50%"}
+![](tourMontparnasse1.png){height="290"}
+:::
+
+::: {.column width="50%"}
+![](tourMontparnasse2.jpg){height="235"}
+:::
+::::
+
+## What this lecture is about
+
+- There are two ways to raise that money, and today we study how to measure
+  the cost of each one:
+
+  - **Equity**: sell a share of the company to investors.
+
+  - **Debt**: borrow the money and pay it back with interest.
+
+- Why measure it at all? Because the money is not free. Whoever provides it
+  expects a return, and that expected return is your cost of capital.
+
+- You then compare the cost of capital with the return your project is
+  expected to earn: if the project earns less than the money costs, it is not
+  worth doing.
+
 ## A. The equity cost of capital
 
 - Cost of capital of any investment opportunity = expected return of
@@ -90,6 +138,19 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
     investment analysis it is more common to use the short-term interest
     rate.)
 
+## Two ways to estimate the premium {.smaller}
+
+- The premium cannot be observed directly, so it has to be estimated:
+
+1.  **The historical approach**: what the market actually paid over the
+    risk-free rate in the past.
+
+2.  **The fundamental approach**: the return that justifies today's index
+    level, given what firms are expected to pay out.
+
+- Same number seen from two ends: past realised returns, or expected future
+  cash flows.
+
 ## Determining the market risk premium: historical approach
 
 ![](table12p1ang.png){fig-align="center"}
@@ -114,30 +175,22 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
 - Remark: this method assumes that the future expected dividends grow at
   a constant rate---a reasonable hypothesis for the overall market.
 
-## The constant expected growth model {.smaller}
+## The constant expected growth model {.smaller .dense}
 
 - The price of an asset is the present value of the dividends it pays:
   $$P_{0} = \frac{\text{Div}_{1}}{1+r} + \frac{\text{Div}_{2}}{(1+r)^{2}} + \frac{\text{Div}_{3}}{(1+r)^{3}} + \dots$$
 
-- Assume the dividends grow at a constant rate $g$, so that
-  $\text{Div}_{t+1} = \text{Div}_{t}(1+g)$. The sum is then a geometric
-  series, and for $r > g$ it collapses to $$P_{0} = \frac{\text{Div}_{1}}{r-g}.$$
+- Assume the dividends grow at a constant rate $g$, so that each dividend is
+  $(1+g)$ times the one before. As long as growth is below the discount rate,
+  the whole sum collapses to $$P_{0} = \frac{\text{Div}_{1}}{r-g}.$$
 
-## The geometric series step {.smaller}
+- Read the other way round, the expected return is the dividend yield
+  ($\text{Div}_{1}/P_{0}$, next year's dividend as a share of today's price)
+  plus the growth rate:
 
-- Substituting $\text{Div}_{t} = \text{Div}_{1}(1+g)^{t-1}$ into the sum, and
-  writing $x = \frac{1+g}{1+r}$:
-  $$P_{0} = \sum_{t=1}^{\infty} \frac{\text{Div}_{1}(1+g)^{t-1}}{(1+r)^{t}} = \frac{\text{Div}_{1}}{1+r} \sum_{k=0}^{\infty} x^{k}$$
-
-- A geometric series converges only when $|x| < 1$, which here means
-  $r > g$. In that case
-  $$\sum_{k=0}^{\infty} x^{k} = \frac{1}{1-x}.$$
-
-- Substituting back, the $(1+r)$ cancels and the constant-growth formula
-  falls out:
-  $$\begin{aligned}
-  P_{0} &= \frac{\text{Div}_{1}}{1+r} \cdot \frac{1}{1-\frac{1+g}{1+r}} = \frac{\text{Div}_{1}}{1+r} \cdot \frac{1+r}{(1+r)-(1+g)} = \frac{\text{Div}_{1}}{r-g}
-  \end{aligned}$$
+::: {.box .box-a}
+$$r = \frac{\text{Div}_{1}}{P_{0}} + g$$
+:::
 
 ## The constant expected growth model (con't) {.smaller}
 
@@ -148,7 +201,13 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
 - Intuition: investors earn what the asset pays out today, plus the rate at
   which that payout grows.
 
+- Where does $P_{0} = \text{Div}_{1}/(r-g)$ itself come from? The step-by-step
+  derivation is in the Appendix at the end of this deck.
+
 ## C. Beta estimation {.smaller}
+
+- Once you have the historical market returns and the historical returns of
+  your stock, you can compute the beta.
 
 - Other key parameter to implement the CAPM: beta
 
@@ -208,14 +267,20 @@ security $i$'s excess returns versus the market excess returns.
 ## Debt yields {.smaller}
 
 - The yield to maturity of a bond (YTM) = IRR an investor will earn from
-  holding the bond to maturity (denoted by $y$)
+  holding the bond to maturity.
 
 - If there is no default risk: YTM = expected return for investors.
 
-- Otherwise: $$\begin{aligned}
-  r_{D} & = \left(1-p\right) y + p \left( y - L\right), \\
-  & = y - p L, \\
-  & = \text{YTM} - \text{Prob}\left(\operatorname{default}\right) \times \operatorname{Expected} \ \operatorname{Loss \ Rate}.
+- Otherwise two more things matter:
+
+  - $p$ = the probability that the borrower defaults.
+
+  - $L$ = the expected loss rate, the share of the promised return lost when
+    it does default.
+
+- The expected return on the debt is then $$\begin{aligned}
+  r_{D} & = \left(1-p\right)\text{YTM} + p \left( \text{YTM} - L\right), \\
+  & = \text{YTM} - p L.
   \end{aligned}$$
 
 ## Annual default rates by debt rating
@@ -258,7 +323,7 @@ security $i$'s excess returns versus the market excess returns.
 
 ## A simple example: estimating the beta of a project from a single-product firm
 
-- You wish to launch a data marketing firm using the principle of
+- You wish to launch a data marketing firm using as reference the company
   1000mercis.com (ALMIL).
 
 - ALMIL has no debt and its beta is 0.59.
@@ -290,6 +355,26 @@ r_{U} = \frac{E}{E+D} r_{E} + \frac{D}{E+D} r_{D}.
 $$ Asset or unlevered beta $$
 \beta_{U} = \frac{E}{E+D} \beta_{E} + \frac{D}{E+D} \beta_{D}.
 $$
+
+## The unlevered cost of capital: intuition {.smaller}
+
+- The firm's assets are owned by two groups: the shareholders, who hold $E$ of
+  firm value, and the lenders, who hold $D$. Between them they own the whole
+  business.
+
+- Whatever the assets earn is shared out between those two groups. So the
+  return on the assets is simply the average of what each group gets, weighted
+  by the share of the firm each one holds.
+
+- The same is true of risk, which is why the betas combine in exactly the same
+  way.
+
+- Borrowing does not make the business itself any riskier: it only decides who
+  carries that risk. Lenders take the safer part (low $\beta_{D}$), so the
+  shareholders are left holding the riskier part (high $\beta_{E}$).
+
+- To find the risk of the underlying business, we therefore have to put the two
+  pieces back together, i.e. **unlever** the comparable firm.
 
 ## Unlevering the cost of capital: example {.smaller}
 
@@ -425,7 +510,7 @@ $$
 
 - What is its WACC?
 
-## F. Conclusion about the use of the CAPM
+## F. Conclusion about the use of the CAPM {.smaller}
 
 - Limitations
 
@@ -443,3 +528,30 @@ $$
   - Practical and straightforward to implement.
 
   - Discipline and rigor.
+
+## Appendix: why the constant growth formula works {.smaller}
+
+- Write the dividends out, each one $(1+g)$ times the one before:
+  $$P_{0} = \frac{\text{Div}_{1}}{1+r} + \frac{\text{Div}_{1}(1+g)}{(1+r)^{2}} + \frac{\text{Div}_{1}(1+g)^{2}}{(1+r)^{3}} + \dots$$
+
+- Every term is the previous one multiplied by the same fraction. Give that
+  fraction a name, $x = \frac{1+g}{1+r}$, and take the first term out:
+  $$P_{0} = \frac{\text{Div}_{1}}{1+r} \times \left(1 + x + x^{2} + x^{3} + \dots\right)$$
+
+- So the whole question is: what does $1 + x + x^{2} + x^{3} + \dots$ add up to?
+
+## Appendix: why the constant growth formula works (con't) {.smaller}
+
+- Call that sum $S = 1 + x + x^{2} + x^{3} + \dots$ Multiplying it by $x$ just
+  shifts it along by one term:
+  $$x \, S = x + x^{2} + x^{3} + x^{4} + \dots$$
+
+- Subtracting the second line from the first, everything cancels except the
+  leading 1, so $S - x\,S = 1$ and
+  $$S = \frac{1}{1-x}.$$
+
+- This only works if the terms keep shrinking, i.e. as long as growth is below
+  the discount rate.
+
+- Putting $x = \frac{1+g}{1+r}$ back and simplifying gives the formula:
+  $$P_{0} = \frac{\text{Div}_{1}}{1+r} \times \frac{1}{1-\frac{1+g}{1+r}} = \frac{\text{Div}_{1}}{r-g}$$
