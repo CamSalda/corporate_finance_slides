@@ -18,6 +18,15 @@ E.  A project's cost of capital (Chap. 12.5 and 12.6)
 
 F.  Conclusion about the use of the CAPM (Chap. 12.7)
 
+## Some questions to start
+
+-   What is an investment project?
+
+-   What makes it different from ordinary spending?
+
+-   You are the manager of a big company, and you want to execute a big
+    investment project, how can you get the money?
+
 ## A. The equity cost of capital
 
 - Cost of capital of any investment opportunity = expected return of
@@ -104,6 +113,40 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
 
 - Remark: this method assumes that the future expected dividends grow at
   a constant rate---a reasonable hypothesis for the overall market.
+
+## The constant expected growth model {.smaller}
+
+- The price of an asset is the present value of the dividends it pays:
+  $$P_{0} = \frac{\text{Div}_{1}}{1+r} + \frac{\text{Div}_{2}}{(1+r)^{2}} + \frac{\text{Div}_{3}}{(1+r)^{3}} + \dots$$
+
+- Assume the dividends grow at a constant rate $g$, so that
+  $\text{Div}_{t+1} = \text{Div}_{t}(1+g)$. The sum is then a geometric
+  series, and for $r > g$ it collapses to $$P_{0} = \frac{\text{Div}_{1}}{r-g}.$$
+
+## The geometric series step {.smaller}
+
+- Substituting $\text{Div}_{t} = \text{Div}_{1}(1+g)^{t-1}$ into the sum, and
+  writing $x = \frac{1+g}{1+r}$:
+  $$P_{0} = \sum_{t=1}^{\infty} \frac{\text{Div}_{1}(1+g)^{t-1}}{(1+r)^{t}} = \frac{\text{Div}_{1}}{1+r} \sum_{k=0}^{\infty} x^{k}$$
+
+- A geometric series converges only when $|x| < 1$, which here means
+  $r > g$. In that case
+  $$\sum_{k=0}^{\infty} x^{k} = \frac{1}{1-x}.$$
+
+- Substituting back, the $(1+r)$ cancels and the constant-growth formula
+  falls out:
+  $$\begin{aligned}
+  P_{0} &= \frac{\text{Div}_{1}}{1+r} \cdot \frac{1}{1-\frac{1+g}{1+r}} = \frac{\text{Div}_{1}}{1+r} \cdot \frac{1+r}{(1+r)-(1+g)} = \frac{\text{Div}_{1}}{r-g}
+  \end{aligned}$$
+
+## The constant expected growth model (con't) {.smaller}
+
+- Starting from $$P_{0} = \frac{\text{Div}_{1}}{r-g},$$ solving for the
+  expected return gives
+  $$r = \underbrace{\frac{\text{Div}_{1}}{P_{0}}}_{\text{Dividend yield}} + \underbrace{g}_{\text{Growth}}$$
+
+- Intuition: investors earn what the asset pays out today, plus the rate at
+  which that payout grows.
 
 ## C. Beta estimation {.smaller}
 
