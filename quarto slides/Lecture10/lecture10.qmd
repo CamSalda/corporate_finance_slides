@@ -87,13 +87,13 @@ pp. 174-191, 2016.
 
 ![](figure17p3.png){fig-align="center"}
 
-## Price reaction when a stock goes ex-dividend
+## Price reaction when a stock goes ex-dividend {.smaller}
 
 - In a perfect market, the price should fall exactly by the amount of
   dividend paid
 
   ::: {.center}
-  ![](SequencePrice.png){fig-align="center"}
+  ![](SequencePrice.png){fig-align="center" height="330"}
   :::
 
 - With taxes on dividends, it becomes a bit more complicated.
@@ -211,6 +211,23 @@ pp. 174-191, 2016.
 
   Number of stocks: 90,000. Stock price: \$ 900,000 / 90,000 = \$ 10.
 
+## Dividends or repurchases: same firm value {.smaller}
+
+- The total value of the firm is the same whether the cash is used for
+  repurchases or paid out as dividends: equity is \$900,000 either way.
+
+- The difference is only in where the change shows up:
+
+  - **Repurchase**: the individual stock price stays the same (\$10), but
+    there are fewer stocks (90,000 instead of 100,000).
+
+  - **Dividend**: the number of stocks stays the same (100,000), but the
+    individual stock price drops (from \$10 to \$9).
+
+::: {.result}
+**Same total value, split differently between price and quantity.**
+:::
+
 ## Exercise: share repurchase and DCF evaluation {.smaller}
 
 - Firm X has 100 000 stocks and a constant cash flow of \$10 per stock.
@@ -288,7 +305,7 @@ pp. 174-191, 2016.
 
   - Asymmetric information: dividends can be used to signal performance.
 
-  - Clientele effects: some investors pay less dividends on dividends.
+  - Clientele effects: some investors pay less taxes on dividends.
 
     - In the US: 1. Stocks in retirement accounts 2. Pension Funds 3.
       Companies (70% deductible)

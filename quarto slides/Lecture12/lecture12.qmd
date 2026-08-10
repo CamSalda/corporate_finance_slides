@@ -235,22 +235,103 @@ at maturity:
 - Seller (**short position**) of a **put** expects an increase in the
   price of the underlying.
 
-## C. Option payoffs at expiration
+##
+
+::: {.center}
+**But first, let's fight a monster**
+
+![](maxMonsterScary.jpg){height="400"}
+:::
+
+## The monster is called max {.smaller}
+
+- In the next slides you will meet formulas like
+  $\max\left(S_{T} - K; \ 0\right)$. That $\max$ is the whole monster.
+
+- $\max$ of two numbers means: **look at both and keep the bigger one**.
+  Nothing else.
+
+  - $\max(3;\ 7) = 7$ and $\max(7;\ 3) = 7$: the order does not matter.
+
+  - $\max(-5;\ 0) = 0$: when one of the two is zero, a negative number
+    never wins.
+
+- So $\max(\text{something};\ 0)$ is just a way of saying **"never let this go
+  below zero"**.
+
+## Why an option needs it {.smaller}
+
+- At expiration, the holder of the option **chooses** whether to use it.
+  Nobody chooses to lose money, so the option is used only when it pays.
+
+- Take a call with a strike price of $K = 20$, that is the right to buy the
+  share for 20:
+
+  - If the share is worth 25, you buy at 20 something worth 25: you gain 5.
+
+  - If the share is worth 15, buying at 20 would be a bad deal, so you walk
+    away and get 0.
+
+- "Take the better of the two" is exactly what $\max$ writes down:
+  $$C_{T} = \max\left(S_{T} - K; \ 0\right)$$
+
+## The same thing in numbers {.smaller}
+
+- Strike price $K = 20$. The share price at expiration is $S_{T}$:
+
+  | Share price $S_{T}$ | 10 | 15 | 20 | 25 | 30 |
+  |:--------------------|---:|---:|---:|---:|---:|
+  | $S_{T} - K$         | −10 | −5 | 0 | 5 | 10 |
+  | **Call payoff** $\max(S_{T}-K;\ 0)$ | 0 | 0 | 0 | 5 | 10 |
+  | **Put payoff** $\max(K-S_{T};\ 0)$ | 10 | 5 | 0 | 0 | 0 |
+
+- The middle row can be negative, the payoff rows never are. The zero in the
+  $\max$ does that work.
+
+## That is why the graph has an elbow {.smaller}
+
+- The payoff diagrams you will see are just a picture of this choice:
+
+  - On the flat part, $\max$ is picking the zero: the option is not worth
+    using.
+
+  - On the sloped part, $\max$ is picking $S_{T} - K$: the option is worth
+    using, and every extra euro on the share is an extra euro of payoff.
+
+- The two parts meet exactly at the strike price. That is the kink.
+
+##
+
+::: {.center}
+**The max monster was kind of friendly after all**
+
+![](maxMonsterFriendly.png){height="380"}
+:::
+
+## C. Option payoffs at expiration {.smaller}
 
 - The value of a call at expiration is $$\begin{equation*}
   C_{T} = \max \left(S_{T} - K; \ 0 \right),
   \end{equation*}$$ where $S_{T}$ is the price of the underlying at
   expiration and $K$ is the strike price of the option.
 
-- Example for $K = 20$: ![](figure20p2.png){fig-align="center"}
+- Example for $K = 20$:
 
-## Option payoffs at expiration: put
+::: {.center}
+![](figure20p2.png){height="290"}
+:::
+
+## Option payoffs at expiration: put {.smaller}
 
 - The value of a put at expiration is $$\begin{equation*}
   P_{T} = \max \left(K - S_{T}; \ 0 \right).
   \end{equation*}$$
 
-- Example for $K = 20$: ![](figure20p2Put.png){fig-align="center"}
+- Example for $K = 20$:
+
+::: {.center}
+![](figure20p2Put.png){height="320"}
+:::
 
 ## Option pricing model: call {.smaller .dense}
 
@@ -293,10 +374,14 @@ at maturity:
 - A large number of options are not traded on exchanges but rather in
   over the counter markets.
 
-## Option quotes: example of CBOE
+## Option quotes: example of CBOE {.smaller}
 
-![](table20p1.png){fig-align="center"} Suppose that you have decided to buy a call with
-a strike of 30 and expiration in January.
+::: {.center}
+![](table20p1.png){height="270"}
+:::
+
+Suppose that you have decided to buy a call with a strike of 30 and
+expiration in January.
 
 - Is this option "in-the-money" or "out-of-the-money"?
 

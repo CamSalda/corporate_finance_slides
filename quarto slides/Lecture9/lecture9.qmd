@@ -28,11 +28,11 @@ E.  Optimal capital structure with taxes (Chap. 15.5; elements of Chap.
 
 - Example:
 
-  - France in 2023: marginal corporate tax rate = 25% $\Rightarrow$
+  - France in 2026: marginal corporate tax rate = 25% $\Rightarrow$
     interest expenses are deductible up to the higher of EUR 3 million
-    and 30% of EBITDA.
+    or 30% of EBITDA.
 
-  - US in 2023: marginal corporate tax rate (federal rate) = 21%
+  - US in 2026: marginal corporate tax rate (federal rate) = 21%
     $\Rightarrow$ interest expenses are deductible up to 30% of EBIT.
 
   $\Rightarrow$ We will assume for simplicity that interest expenses are
@@ -98,9 +98,6 @@ With leverage:
 
 ![](CashFlowsUnleveredLeveredFirm.png){fig-align="center"}
 
-- "You must pay taxes. But there is no law that says you gotta leave a
-  tip." (Morgan Stanley)
-
 ## B. MM2: debt, tax, and firm value
 
 - Reminder: MM1 framework $\Rightarrow$ Perfect capital markets + no
@@ -121,7 +118,11 @@ $$V^{L} = V^{U} + PV(\operatorname{Interest \ Tax \ Shield}).$$
   $$\operatorname{Annual \ tax \ shield} = \tau_{C} r D.$$
 
 - Present value of the tax shield is:
-  $$PV\left(\operatorname{Tax \ shield}\right) = \sum_{i = 1}^{\infty} \frac{\tau_{C}r D}{\left(1+r\right)^{i}} =  \frac{\tau_{C}r D}{r} = \tau_{C} D.$$
+  $$PV\left(\operatorname{Tax \ shield}\right) = \sum_{i = 1}^{\infty} \frac{\tau_{C}r D}{\left(1+r\right)^{i}} = \frac{\tau_{C}r D}{1+r} + \frac{\tau_{C}r D}{\left(1+r\right)^{2}} + \frac{\tau_{C}r D}{\left(1+r\right)^{3}} + \dots$$
+
+  - The same saving $\tau_{C} r D$ every year, discounted one year further
+    each time. Summing this perpetuity gives
+    $$PV\left(\operatorname{Tax \ shield}\right) = \frac{\tau_{C}r D}{r} = \tau_{C} D.$$
 
   - Remark: valid as long as the perpetuity has the same risk as the
     debt.
@@ -280,13 +281,13 @@ r^{L}_{E} & = \frac{r^{U}_{E} \left(\left(E^{L} + D \right) - \tau_{C} D\right) 
 
 - Thus, the leverage which minimizes the WACC also maximizes firm value.
 
-## Do firms prefer debt?
+## Do firms prefer debt? {.smaller}
 
 Net External Financing and Capital Expenditures by U.S. Corporations,
 1980-2021
 
 ::: {.center}
-![](NetExternalFinancingUSCorporations.png){fig-align="center"}
+![](NetExternalFinancingUSCorporations.png){fig-align="center" height="330"}
 :::
 
 ::: {.small}

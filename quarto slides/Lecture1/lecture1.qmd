@@ -24,6 +24,105 @@ E.  The historical risk-return trade-off (Chap. 10.4)
 
 F.  Risk and returns of individual stocks (Chap. 10.4)
 
+## {.center}
+
+::: {.center}
+**But first, let's battle a monster.**
+
+::: {.huge}
+$\sum$
+:::
+
+*This is a monster you will find along the course several times*
+:::
+
+##
+
+::: {.center}
+**Initially it may look scary...**
+
+![](monsterScary.jpg){height="420"}
+:::
+
+##
+
+::: {.center}
+**So hopefully, you will see that the monster is not that scary**
+
+![](monsterFriendly.jpg){height="420"}
+:::
+
+## The monster only means "add these up" {.smaller}
+
+- The symbol $\sum$ is the Greek letter S, and S stands for **sum**. It is a
+  shortcut for writing a long addition.
+
+- Instead of writing the addition in full, we can write it with the symbol:
+  $$1 + 2 + 3 + 4 + 5 \qquad \text{is written} \qquad \sum_{i=1}^{5} i$$
+
+- Both mean exactly the same thing: **15**. The symbol saves ink, nothing more.
+
+## How to read the monster {.smaller}
+
+- Three things are attached to it:
+
+  - Below: where to **start** counting, here $i=1$.
+
+  - Above: where to **stop**, here $5$.
+
+  - To the right: **what to add**, here just $i$ itself.
+
+- So you take the recipe on the right, put in $i=1$, then $i=2$, and so on
+  until you reach the number on top, and add up everything you wrote:
+  $$\sum_{i=1}^{5} i = \underbrace{1}_{i=1} + \underbrace{2}_{i=2} + \underbrace{3}_{i=3} + \underbrace{4}_{i=4} + \underbrace{5}_{i=5} = 15$$
+
+## The recipe can be anything {.smaller}
+
+- The letter $i$ is just a counter. Whatever sits to the right of the symbol is
+  the recipe, and the counter is replaced by 1, then 2, then 3...
+
+- Adding the squares of the first four numbers:
+  $$\sum_{i=1}^{4} i^{2} = 1^{2} + 2^{2} + 3^{2} + 4^{2} = 1 + 4 + 9 + 16 = 30$$
+
+- In finance the recipe is usually a cash flow to be discounted:
+  $$\sum_{i=1}^{3} \frac{C_{i}}{(1+r)^{i}} = \frac{C_{1}}{1+r} + \frac{C_{2}}{(1+r)^{2}} + \frac{C_{3}}{(1+r)^{3}}$$
+
+## Summing up to $n$ {.smaller}
+
+- Often we do not know how many terms there are, so we call that number $n$:
+  $$\sum_{i=1}^{n} \frac{C_{i}}{(1+r)^{i}} = \frac{C_{1}}{1+r} + \frac{C_{2}}{(1+r)^{2}} + \dots + \frac{C_{n}}{(1+r)^{n}}$$
+
+- It says: start at the first year, stop at year $n$, and add up every
+  discounted cash flow in between.
+
+- A project paying for 5 years has $n=5$; one paying for 30 years has $n=30$.
+  The formula does not change, only where we stop.
+
+## Summing up to infinity {.smaller}
+
+- Sometimes the payments never stop, for instance a company that is expected
+  to pay a dividend every year forever. Then we write $\infty$ on top:
+  $$\sum_{i=1}^{\infty} \frac{C}{(1+r)^{i}} = \frac{C}{1+r} + \frac{C}{(1+r)^{2}} + \frac{C}{(1+r)^{3}} + \dots$$
+
+- Adding infinitely many numbers does not have to give an infinite total. Each
+  term here is smaller than the one before, because we divide by $(1+r)$ once
+  more every year.
+
+- The terms shrink fast enough that the total settles on a finite number. This
+  is the perpetuity, and it is why a share paying dividends forever still has
+  a finite price.
+
+## Why the total can be finite {.smaller}
+
+- A simpler example of the same idea: keep adding halves of what is left:
+  $$\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \dots$$
+
+- After two terms you are at $0.75$, after three at $0.875$, after four at
+  $0.9375$. The total never passes $1$, it just gets closer and closer.
+
+- The monster is tamed: an endless sum of shrinking terms adds up to a number
+  you can actually put in a valuation.
+
 ## A. Risk and return: a first glimpse {.smaller}
 
 - Standard & Poor's 500: 90 U.S. stocks up to 1957 and 500 after that.
