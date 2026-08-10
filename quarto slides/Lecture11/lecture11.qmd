@@ -4,7 +4,7 @@ subtitle: "Lecture 11: Long-Term Financing"
 footer: "Lecture 11: Long-Term Financing"
 ---
 
-## Plan
+## Plan {.smaller}
 
 **First Part: Raising Equity Capital**
 
@@ -75,6 +75,12 @@ D.  Repayment Provisions (Chap. 24.4)
   corporate investors might invest for strategic corporate objectives,
   in addition to the financial returns.
 
+## Example
+
+::: {.center}
+![](lecunAMI1.png){height="420"} ![](lecunAMI2.png){height="420"}
+:::
+
 ## B. The Initial Public Offering (IPO) {.smaller}
 
 - The process of selling stock to the public for the first time.
@@ -120,6 +126,12 @@ D.  Repayment Provisions (Chap. 24.4)
   - Auction IPO: Investors place bids and the IPO price is the highest
     price such that the number of bids at or above that price equal the
     number of offered shares.
+
+## Example
+
+::: {.center}
+![](anthropicIPO.png){height="420"} ![](alphabetSEO.png){height="265"}
+:::
 
 ## Largest U.S. IPOs
 
@@ -335,6 +347,22 @@ D.  Repayment Provisions (Chap. 24.4)
   details of the offering, and includes an indenture (formal debt
   agreement between issuer and bondholder).
 
+## Example {.smaller}
+
+:::: {.columns}
+::: {.column width="45%"}
+**Private debt example:**
+
+![](mistralPrivateDebt.png){height="300"}
+:::
+
+::: {.column width="55%"}
+**Public debt example:**
+
+![](oraclePublicDebt.png){height="205"}
+:::
+::::
+
 ## Seniority
 
 - Most types of corporate bonds---notes (maturity less than 10 years)
@@ -354,8 +382,11 @@ D.  Repayment Provisions (Chap. 24.4)
 
 - An expanding market, thanks to the increase in public deficits
 
-  - In France, the public debt in 2024 amounted to 112% of the GDP, or
-    3,228 billion EUR.
+  - In France, the public debt at the end of 2025 amounted to 115.6% of
+    the GDP, or 3,460.5 billion EUR.
+
+  - Up from 112% of GDP and 3,228 billion EUR a year earlier: an increase
+    of 232.5 billion EUR in a single year.
 
 ## Existing U.S. Treasury Securities
 
