@@ -4,11 +4,17 @@ subtitle: "Lecture 1: Introduction"
 footer: "Lecture 1: Introduction"
 ---
 
-##
+## Objectives
 
-::: {.center}
-Presentation
-:::
+## Presentation
+
+1.  Name
+
+2.  Where are you from?
+
+3.  Academic background?
+
+4.  Fun fact or thing you like?
 
 ## Course outline {.smaller}
 
@@ -32,7 +38,7 @@ Presentation
 
 10. Chapters 20 & 30: Options and Risk Management
 
-## Assessment methods {.smaller}
+## Assessment methods {.smaller .dense}
 
 - Overall grade:
 
@@ -72,7 +78,7 @@ Presentation
 
 ## Documents and learning resources {.smaller}
 
-- Printed course materials: slides & exercises.
+- I will update the slides weekly.
 
 - Blackboard: <https://escp.blackboard.com/> $\Rightarrow$ Additional
   materials and Q&A forum
@@ -118,9 +124,19 @@ Presentation
 
 ## {.center}
 
+::: {.content-visible when-format="revealjs"}
 ::: {.center .huge}
 Some class rules
 :::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Some class rules}
+\end{center}
+\vfill
+```
 
 ##
 
@@ -140,3 +156,25 @@ at all, and to accept the consequences*]{.small}
 
 ![](parallelConversations.jpg){height="330"}
 :::
+
+## {.center}
+
+::: {.center}
+**3. Attendance will be taken at the beginning of every class**
+:::
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+The final assignment
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries The final assignment}
+\end{center}
+\vfill
+```
