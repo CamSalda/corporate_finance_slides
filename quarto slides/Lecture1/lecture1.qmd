@@ -4,6 +4,16 @@ subtitle: "Lecture 1: Capital Markets and the Pricing of Risk"
 footer: "Lecture 1: Capital Markets and the Pricing of Risk"
 ---
 
+## Plan
+
+- Learn some general concepts
+
+- Learn how to compute returns
+
+- Understand how we measure risk
+
+- Understand what is an index
+
 ## Key concepts
 
 - Compute/estimate returns and risk
@@ -26,6 +36,7 @@ F.  Risk and returns of individual stocks (Chap. 10.4)
 
 ## {.center}
 
+::: {.content-visible when-format="revealjs"}
 ::: {.center}
 **But first, let's battle a monster.**
 
@@ -35,6 +46,17 @@ $\sum$
 
 *This is a monster you will find along the course several times*
 :::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\Large\bfseries But first, let's battle a monster.}\\[1.5em]
+{\color{escpblue}\Huge$\displaystyle\sum$}\\[1.5em]
+\textit{This is a monster you will find along the course several times}
+\end{center}
+\vfill
+```
 
 ##
 
@@ -47,7 +69,7 @@ $\sum$
 ##
 
 ::: {.center}
-**So hopefully, you will see that the monster is not that scary**
+**But hopefully, you will see that the monster is not that scary**
 
 ![](monsterFriendly.jpg){height="420"}
 :::
@@ -152,8 +174,7 @@ dividends are reinvested.
 
 ::: {.tiny}
 
-Source: Chicago Center for Research in Security Prices, Standard and
-Poor's, MSCI, and Global Financial Data.
+Source: CRSP, Standard and Poor's, MSCI, Global Financial Data.
 
 :::
 
@@ -165,8 +186,7 @@ Poor's, MSCI, and Global Financial Data.
 
 ::: {.tiny}
 
-Source: Chicago Center for Research in Security Prices, Standard and
-Poor's, MSCI, and Global Financial Data.
+Source: CRSP, Standard and Poor's, MSCI, Global Financial Data.
 
 :::
 
@@ -217,27 +237,25 @@ Source: Yahoo Finance
 - What is the better investment (Investment at the end of year N until
   year N+2)?
 
-  +:-------+:----:+:----:+:-----:+--------:+
-  | Investment 1                           |
-  +--------+------+------+-------+---------+
-  | Value  | 100  | 50   | 100   | Average |
-  +--------+------+------+-------+---------+
-  | Return |      | -50% | +100% | +25 %   |
-  +--------+------+------+-------+---------+
-  |        |      |      |       |         |
-  +--------+------+------+-------+---------+
-  | Investment 2                           |
-  +--------+------+------+-------+---------+
-  | Value  | 100  | 110  | 121   |         |
-  +--------+------+------+-------+---------+
-  | Return |      | +10% | +10%  | +10%    |
-  +--------+------+------+-------+---------+
+  +:-------------+:---------:+:---------:+:---------:+:-----------:+
+  | Investment 1                                                   |
+  +--------------+-----------+-----------+-----------+-------------+
+  | Value        | 100       | 50        | 100       | Average     |
+  +--------------+-----------+-----------+-----------+-------------+
+  | Return       |           | -50%      | +100%     | +25 %       |
+  +--------------+-----------+-----------+-----------+-------------+
+  | Investment 2                                                   |
+  +--------------+-----------+-----------+-----------+-------------+
+  | Value        | 100       | 110       | 121       |             |
+  +--------------+-----------+-----------+-----------+-------------+
+  | Return       |           | +10%      | +10%      | +10%        |
+  +--------------+-----------+-----------+-----------+-------------+
 
   . . .
 
 - The arithmetic average is misleading ...
 
-## Geometric mean (annualized) or ``compound annual growth rate'' (CAGR)
+## Geometric mean (annualized), or CAGR
 
 - The geometric mean is calculated as
   $\operatorname{Geometric \ mean} = \left(\frac{\operatorname{Wealth \ at \ the \ end \ of \ n \ years}}{\operatorname{Initial \ investment}}\right)^{\frac{1}{n}} - 1$
@@ -299,7 +317,7 @@ decimal points)?
 | 31/12/2016 |    48.72 |          |  2.35% |
 :::
 
-## Returns and ``stock splits'' {.smaller}
+## Returns and "stock splits" {.smaller}
 
 - Companies sometimes decide to do "stock splits", or "reverse stock
   splits", which need to be taken into account when returns are
@@ -387,19 +405,17 @@ $$\overline{R}  = \frac{1}{T} \sum^{T}_{t=1} R_{t} = \frac{1}{T}\left(R_{1} + \d
 
 - Volatility = standard deviation of the returns
 
-  After the calculation of the variance $$\begin{aligned}
-  Var\left[ R \right] = \frac{1}{T-1} \sum^{T}_{t=1} \left(R_{t} - \overline{R}\right)^{2},
-  \end{aligned}$$ we get the volatility $$\begin{equation*}
-  \sigma_{R} = \sqrt{Var\left[ R \right]}.
-  \end{equation*}$$
+  First calculate the variance, then take its square root to get the volatility:
+
+  $$\text{Var}\left[ R \right] = \frac{1}{T-1} \sum^{T}_{t=1} \left(R_{t} - \overline{R}\right)^{2} \qquad\qquad \sigma_{R} = \sqrt{\text{Var}\left[ R \right]}$$
 
 - Attention:
 
   - The volatility is a symmetric risk measure. It takes into account
     the risk to win as well as the risk to lose!
 
-  - Other risk measures exist to quantify the risk of losses (downside
-    risk) $\Rightarrow$ Example: VaR ("value at risk")
+  - Other measures capture only the risk of losses (downside risk),
+    e.g. VaR ("value at risk").
 
 ## E. The historical risk and return trade-off
 
@@ -438,25 +454,25 @@ Source: CRSP, Morgan Stanley Capital International
 
 :::
 
-## What's ``new''?  The low-risk anomaly
+## What's "new"? The low-risk anomaly
 
-All stocks: ![](bakerWurglerlowvol.png){fig-align="center"}
+All stocks:
+
+![](bakerWurglerlowvol.png){fig-align="center" width="78%"}
 
 ::: {.tiny}
 
-Wurgler, Jeffrey, Brendan Bradley, and Malcolm Baker. "Benchmarks as
-limits to arbitrage: Understanding the low volatility anomaly.\" (2011).
+Baker, Bradley and Wurgler (2011).
 
 :::
 
-## What's ``new''?  The low-risk anomaly (con't)
+## What's "new"? The low-risk anomaly (con't)
 
 Top 1000 stocks by MktCap ![](bakerWurglerlowvol2.png){fig-align="center"}
 
 ::: {.tiny}
 
-Wurgler, Jeffrey, Brendan Bradley, and Malcolm Baker. "Benchmarks as
-limits to arbitrage: Understanding the low volatility anomaly.\" (2011).
+Baker, Bradley and Wurgler (2011).
 
 :::
 
