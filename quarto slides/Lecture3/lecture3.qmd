@@ -1,204 +1,61 @@
 ---
 title: "Corporate Finance"
-subtitle: "Lecture 2 & 3: Optimal Portfolio Choice"
-footer: "Lecture 2 & 3: Optimal Portfolio Choice"
+subtitle: "Lecture 3: The Efficient Frontier and the Best Portfolio"
+footer: "Lecture 3: The Efficient Frontier and the Best Portfolio"
 ---
 
-## Introduction
+## Plan
 
-- Optimal portfolio choice:
+- Find the efficient portfolios built from two stocks
 
-  - How can we optimise risk and return by combining multiple assets?
+- See what short sales add to the picture
 
-  - Pioneered by Markowitz in his article "Portfolio Selection"
-    published in the "Journal of Finance" in 1952.
+- Move from two stocks to many: the efficient frontier
 
-::: {.center}
-![](Markowitz.png){fig-align="center"} Harry Markowitz Nobel Memorial Prize 1990
-:::
+- Add a risk-free asset and identify the single best risky portfolio
+
+- Separate the risk that diversification removes from the risk that stays
 
 ## Outline
 
-A.  Risk and return of a two-stock portfolio: the effect of
-    diversification
+A.  Efficient portfolios with two stocks
 
-B.  Efficient portfolios with two stocks
+B.  $N$ risky stocks: the efficient frontier
 
-C.  $N$ risky stocks: the efficient frontier
-
-D.  The "super-efficient" portfolio
+C.  The "super-efficient" portfolio
 
 - The content of this lecture mostly draws on the BDM textbook Chap.
-  10.5-6 and 11.1-5.
+  11.2-5.
 
-##
+## Recap: a portfolio is a set of weights {.smaller}
 
-:::: {.center}
-::: Huge
-BEFORE WE START
-:::
-::::
+- A portfolio is described by how your money is split between the stocks. Those
+  fractions are the **weights**, and they add up to 1.
 
-## Which framework for choice under risk? {.smaller}
+- With EUR 30 of every EUR 100 in stock 1 and EUR 70 in stock 2, the weights are
+  $x_{1} = 0.30$ and $x_{2} = 0.70$, and the portfolio return is
 
-- Let's play a game
+  $$R_{p} = x_{1}R_{1} + x_{2}R_{2}$$
 
-- Do you prefer:
+- The return of the portfolio is simply each stock's return counted in proportion
+  to the money behind it.
 
-  A.  Win EUR 100 000 for sure.
+## Recap: portfolio risk depends on comovement {.smaller}
 
-  B.  Participate in a lottery which yields EUR 0 with probability 0.5,
-      and EUR 200 000 with probability 0.5?
+- Risk does not add up the same way. The variance of a two-stock portfolio is
 
-  . . .
+  $$\text{Var}\left(R_{p}\right) = \underbrace{x_{1}^{2}\text{Var}\left(R_{1}\right) + x_{2}^{2}\text{Var}\left(R_{2}\right)}_{\text{individual risks}} + \underbrace{2x_{1}x_{2}\text{Cov}\left(R_{1},R_{2}\right)}_{\text{comovement}}$$
 
-- Distribution of expected gains:
+- The last term is what makes a portfolio different from the sum of its parts. It
+  is positive when the two stocks tend to move together and negative when they
+  move in opposite directions.
 
-  - $E\left(W_{A}\right) = 100 000$
+- The volatility of the portfolio is $\sigma_{R_{p}} = \sqrt{\text{Var}\left(R_{p}\right)}$.
 
-  - $E\left(W_{B}\right) = 0.5 \times 0 + 0.5 \times 200 000 = 100 000$
+## Recap: correlation drives diversification {.smaller}
 
-    . . .
-
-- According to the expected value criterion: indifference.
-
-- And still: (in general) preference for the sure outcome! (i.e.
-  aversion to risk)
-
-## The mean-variance framework
-
-::: {.center}
-![](MVchoice.png){fig-align="center"}
-:::
-
-## Mean-variance utility {.smaller}
-
-- Mean-variance analysis can be motivated with utility derived from the
-  first two moments of wealth: $U(E(W),\text{Var}(W)),$ where $U$ is
-  increasing in the expected wealth, $E(W)$, and decreasing in the
-  variance of wealth, $\text{Var}(W).$
-
-- A common specification is $$
-  U(E(W),\text{Var}(W)) = E(W)-\frac{\gamma}{2} \text{Var}(W),
-  $$ where $\gamma>0$ measures the aversion to variance
-  relative to the preference for the mean. $\gamma$ is related to the
-  coefficient of absolute risk aversion discussed in the previous
-  lecture.
-
-- In our simplified framework more risk aversion or lower risk tolerance
-  refer to higher values of $\gamma.$
-
-## A. Risk and return of a two-stock portfolio: the effect of diversification
-
-- You can invest in two stocks:
-
-  ::: {.center}
-  :::
-
-- EUR 50 invested in Umbrella Inc and EUR 50 in Sun Umbrella Inc:
-
-  ::: {.center}
-  :::
-
-- The appropriate combination of stocks can produce an investment with
-  lower risk.
-
-## Two risky stocks: a more realistic example of diversification (with fictitious stocks)
-
-::: {.center}
-![](table11p1.png){fig-align="center"}
-:::
-
-## Probability reminder {.smaller .dense}
-
-- Computation of the covariance and correlation: Consider the random
-  variables $X$, $Y$ with payments $x_i$, $y_i$, $i=1,\dots,N$:
-
-$$\begin{aligned}
-\operatorname{Covariance}\left(X,Y\right) & = \sigma_{X,Y} = E\left[\left(X-E\left(X\right)\right)\left(Y-E\left(Y\right)\right)\right], \\
-& = \sum_{i} p_{i} \left(x_{i} - E\left( X \right)\right) \left(y_{i} - E\left( Y \right)\right).
-\end{aligned}$$ $$\begin{aligned}
-\operatorname{Correlation}\left(X,Y\right) = \rho_{X,Y} = \frac{\operatorname{Covariance}\left(X,Y\right)}{\sqrt{\operatorname{Variance}\left(X\right)\operatorname{Variance}\left(Y\right)}} = \frac{\sigma_{X,Y}}{\sigma_{X}\sigma_{Y}}.
-\end{aligned}$$ $$\begin{aligned}
-\operatorname{Beta}_{X}^{Y} = \beta_{X,Y} = \frac{\operatorname{Covariance}\left(X,Y\right)}{\operatorname{Variance}\left(Y\right)} = \frac{\sigma_{X,Y}}{\sigma_{Y}^{2}}.
-\end{aligned}$$
-
-## Interpretation of the correlation
-
-![](figure11p1ang.png){fig-align="center"}
-
-The correlation measures how returns move in relation to each other.
-
-## Computing the covariance and correlation {.smaller}
-
-- Computation of the covariance with historical returns
-  $$
-  \text{Cov}\left(R_{i},R_{j}\right) = \frac{1}{T-1} \sum^{T}_{t=1}\left(R_{it} - \overline{R}_{i}\right)\left(R_{jt} - \overline{R}_{j}\right).
-  $$
-
-- The correlation is $$
-  \text{Corr}\left(R_{i},R_{j}\right) = \frac{\text{Cov}\left(R_{i},R_{j}\right) }{\sigma_{R_{i}} \sigma_{R_{j}}}.
-  $$
-
-- **Reminder**: computation of expected returns and variance from
-  historical data $$\begin{aligned}
-  \overline{R}  & = \frac{1}{T} \sum^{T}_{t=1} R_{t} = \frac{1}{T}\left(R_{1} + \dots + R_{T} \right), \\
-  \text{Var}\left[ R \right] & = \frac{1}{T-1} \sum^{T}_{t=1} \left(R_{t} - \overline{R}\right)^{2}.
-  \end{aligned}$$
-
-## Computing the covariance and correlation between two stocks
-
-::: {.center}
-![](table11p2.png){fig-align="center"}
-:::
-
-## Historical annual volatilities and correlations for selected stocks
-
-::: {.center}
-![](table11p3.png){fig-align="center"}
-:::
-
-## Properties of the covariance and variance (reminder) {.smaller}
-
-- The covariance is bilinear: $$\begin{aligned}
-  \text{Cov}\left[R_{1}+R_{2},R_{3}\right] & = \text{Cov} \left[R_{1},R_{3}\right] +\text{Cov} \left[R_{2},R_{3}\right]  \\
-  \text{Cov}\left[m R_{2},R_{3}\right] & = m \text{Cov} \left[R_{2},R_{3}\right]
-  \end{aligned}$$
-
-- The variance is a special case of the covariance $$\begin{aligned}
-  \text{Var}\left[R_{1}\right] & = \text{Cov} \left[R_{1},R_{1}\right] \\
-  \text{Var}\left[m R_{1}\right] & = m \text{Cov} \left[R_{1},mR_{1}\right]  = m^2 \text{Cov} \left[R_{1},R_{1}\right]= m^2 \text{Var}\left[R_{1}\right]
-  \end{aligned}$$
-
-## Computing the variance and standard deviation of a portfolio: the case with two stocks {.smaller}
-
-- The return of the portfolio is $R_{p} = x_{1}R_{1}+x_{2}R_{2}$.
-
-- We get $$\begin{aligned}
-  \text{Var}\left(R_{p}\right) & = \text{Cov}\left(R_{p}, R_{p} \right) = \text{Cov}\left(x_{1}R_{1}+x_{2}R_{2}, x_{1}R_{1}+x_{2}R_{2} \right) \\
-  & = x_{1}^{2} \text{Var}\left(R_{1}\right) + x_{2}^{2} \text{Var}\left(R_{2}\right) + 2 x_{1} x_{2} \text{Cov}\left( R_{1},R_{2}\right) \\
-  & = x_{1}^{2} \text{Var}\left(R_{1}\right) + x_{2}^{2} \text{Var}\left(R_{2}\right) + 2 x_{1} x_{2} \sigma_{R_{1}}\sigma_{R_{2}}\text{Corr}\left( R_{1},R_{2}\right).
-  \end{aligned}$$
-
-- The volatility of the portfolio is
-  $$\sigma_{R_{p}} = \sqrt{\text{Var}\left(R_{p}\right)}.$$
-
-## The risk of a portfolio with two stocks {.smaller}
-
-- The risk of a portfolio with two stocks is **not** the sum of the
-  individual stock risks.
-
-- It is the sum of the individual stock risks, plus the comovement of
-  the stocks: $$
-  \text{Var}\left(R_{p}\right) = \underbrace{x_{1}^{2} \text{Var}\left(R_{1}\right) + x_{2}^{2} \text{Var}\left(R_{2}\right)}_{\text{individual risks}} + \underbrace{2 x_{1} x_{2} \text{Cov}\left( R_{1},R_{2}\right)}_{\text{comovement}}
-  $$
-
-- If they co-move in different directions, the aggregated risk is
-  smaller.
-
-- If they co-move in the same direction, the aggregated risk is greater.
-
-## Diversification and correlation {.smaller}
+$\sigma_{p}$ is the volatility of the portfolio, and $\rho_{12}$ the correlation
+between the two stocks.
 
 ::: {.box .box-a}
 $\rho_{12} = 1$ $\Rightarrow$
@@ -214,26 +71,11 @@ is smaller than the average risk due to the effect of diversification.
 
 ::: {.box .box-a}
 $\rho_{12} = -1$ $\Rightarrow$
-$\sigma_{p} = \left|x_{1}\sigma_{1}-x_{2}\sigma_{2}\right|$ Portfolio
-weights $x_1$ and $x_2$ exist which eliminate the risk.
+$\sigma_{p} = \left|x_{1}\sigma_{1}-x_{2}\sigma_{2}\right|$ The negative
+comovement of the assets reduces the risk of the portfolio.
 :::
 
-## The volatility of a portfolio of $N$ stocks {.smaller}
-
-- The portfolio return is $$
-  R_{p} = x_{1} R_{1}+ \cdots + x_{N}R_{N} = \sum^{N}_{i=1} x_{i}R_{i}.
-  $$
-
-- The variance is $$\begin{aligned}
-  \text{Var}\left[R_{p}\right] & = \text{Cov}\left[R_{p}, R_{p} \right] = \sum^{N}_{i=1} x_{i} \text{Cov}\left[R_{i}, R_{p} \right], \\
-  & = \sum^{N}_{i=1} x_{i} \text{Cov}\left[R_{i},\sum^{N}_{j=1} x_{j}R_{j} \right]  = \sum^{N}_{i=1} x_{i} \sum^{N}_{j=1} x_{j}\text{Cov}\left[R_{i},R_{j} \right],  \\
-  & = \sum^{N}_{i=1} \sum^{N}_{j=1} x_{i}  x_{j}\text{Cov}\left[R_{i},R_{j} \right].
-  \end{aligned}$$
-
-- **Don't panic**: We will not use this formula for more than two
-  stocks.
-
-## B. Efficient portfolios with two stocks
+## A. Efficient portfolios with two stocks
 
 ::: {.center}
 |   Stock   | Expected return | Volatility |
@@ -269,7 +111,7 @@ E\left[R_{40-60}\right]& = x_{I} E\left[R_{I}\right] + x_{C} E\left[R_{C}\right]
 ![](table11p4.png){fig-align="center"} Expected returns and volatility for different
 portfolios of two stocks.
 
-## But wait\dots ``an efficient portfolio''? {.smaller}
+## But wait... "an efficient portfolio"? {.smaller}
 
 - We define as efficient, all portfolios with:
 
@@ -365,7 +207,7 @@ portfolios of two stocks.
 ![](figure11p5ang.png){fig-align="center"}
 :::
 
-## C. $N$ risky stocks: the efficient frontier {.smaller}
+## B. $N$ risky stocks: the efficient frontier {.smaller}
 
 - What is the effect of adding a third stock to a portfolio of Coca-Cola
   and Intel?
@@ -410,7 +252,7 @@ portfolios of two stocks.
 
 - Remark: an efficient portfolio may contain some short positions.
 
-## D. The ``super-efficient'' portfolio
+## C. The "super-efficient" portfolio
 
 - Up to now, the efficient portfolio only contained risky securities.
 

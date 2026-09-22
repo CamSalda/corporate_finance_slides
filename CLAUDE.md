@@ -26,7 +26,8 @@ quarto slides/
   Lecture1/ … Lecture12/ one folder per lecture: .qmd + only the images it uses
 ```
 
-Decks: L1 pricing of risk (+ `intro.qmd`, the course-admin deck), L2-3 portfolio choice, L4 CAPM,
+Decks: L1 pricing of risk (+ `intro.qmd`, the course-admin deck), L2 portfolio choice and
+diversification (+ `lecture2-extras.qmd`), L3 efficient frontier, L4 CAPM,
 L5 market efficiency, L6 cost of capital, L7-8 capital structure (perfect market), L9 debt and
 taxes, L10 payout policy, L11 long-term financing, L12 options and risk management (+
 `final-exam.qmd`). Rendered `.html` and `.pdf` are committed next to their source.
