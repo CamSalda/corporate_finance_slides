@@ -574,3 +574,165 @@ portfolio is the absolute value of the difference between the weighted risks.
 
 - **Don't panic**: We will not use this formula for more than two
   stocks.
+
+## Can a weight be negative? {.smaller}
+
+- So far every weight was between 0 and 1: you put part of your money in each
+  stock.
+
+- A weight can also be **negative**. It means you have sold a stock you do not
+  own. This is a **short sale**, or "shorting" the stock.
+
+- How is that possible? You borrow the share from someone (in practice your
+  broker), sell it today, and buy it back later to give it back. You hold the
+  cash now and owe one share later.
+
+- You gain if the price falls: sell at 100, buy back at 60, return the share, and
+  keep 40. You lose if the price rises: buying back at 150 costs you 50.
+
+## Shorting: an everyday picture {.smaller}
+
+- A friend lends you a soccer match ticket and says "give it back next month".
+
+- You think tickets will be cheaper next month, so you sell it today for EUR 100.
+
+- Next month tickets cost EUR 60. You buy one, hand it back to your friend, and
+  keep the EUR 40 difference. You made money on a ticket you never owned.
+
+- If tickets had risen to EUR 150 instead, you would still have to buy one to
+  return it, and lose EUR 50.
+
+- Two lessons: a short position **wins when the price goes down and loses when it
+  goes up**, and there is no ceiling on the loss, because a price can keep rising.
+
+## Negative weights in the portfolio formula {.smaller}
+
+- You have EUR 100. You short EUR 50 of stock 1 and put all the cash you now hold,
+  your EUR 100 plus the EUR 50 raised, into stock 2.
+
+- The weights are $x_{1} = -50/100 = -0.5$ and $x_{2} = 150/100 = 1.5$. They still
+  add up to 1, since the money always comes from somewhere.
+
+- The formulas do not change:
+
+  $$R_{p} = x_{1}R_{1} + x_{2}R_{2} = -0.5 \, R_{1} + 1.5 \, R_{2}$$
+
+- If stock 1 falls, the negative weight turns that fall into a gain for the
+  portfolio. Lecture 3 uses negative weights to widen the set of portfolios we
+  can build.
+
+## Worked example: two stocks, four years {.smaller}
+
+We observe the yearly returns of two stocks over four years:
+
+| Year | Stock A | Stock B |
+|:----:|:-------:|:-------:|
+| 1    | 12%     | 1%      |
+| 2    | -4%     | 9%      |
+| 3    | 10%     | -3%     |
+| 4    | 2%      | 5%      |
+
+- Notice that they tend to move in opposite directions: A's best years are B's
+  worst.
+
+- We compute, step by step: the mean returns, the variances and volatilities,
+  the covariance, the correlation, the beta, and then the return and risk of a
+  portfolio that puts half of the money in each stock.
+
+- To keep the arithmetic simple, we work in percentage points throughout.
+
+## Step 1: mean returns {.smaller}
+
+- Add the four returns and divide by four:
+
+  $$\overline{R}_{A} = \frac{12 - 4 + 10 + 2}{4} = \frac{20}{4} = 5\%$$
+
+  $$\overline{R}_{B} = \frac{1 + 9 - 3 + 5}{4} = \frac{12}{4} = 3\%$$
+
+- These are our estimates of the expected return of each stock: on a typical
+  year, A earns 5% and B earns 3%.
+
+## Step 2: variances and volatilities {.smaller}
+
+- For each year, take the distance to the mean, square it, then add up:
+
+| Year | $R_{A} - 5$ | squared | $R_{B} - 3$ | squared |
+|:----:|:-----------:|:-------:|:-----------:|:-------:|
+| 1    | 7           | 49      | -2          | 4       |
+| 2    | -9          | 81      | 6           | 36      |
+| 3    | 5           | 25      | -6          | 36      |
+| 4    | -3          | 9       | 2           | 4       |
+| Sum  |             | **164** |             | **80**  |
+
+- Divide by $T - 1 = 3$ and take the square root:
+
+  $$\begin{aligned}
+  \text{Var}(R_{A}) &= \frac{164}{3} = 54.7 \qquad & \sigma_{A} &= \sqrt{54.7} = 7.4\% \\
+  \text{Var}(R_{B}) &= \frac{80}{3} = 26.7 \qquad & \sigma_{B} &= \sqrt{26.7} = 5.2\%
+  \end{aligned}$$
+
+## Step 3: covariance {.smaller}
+
+- Same distances as before, but now multiply A's distance by B's, year by year:
+
+| Year | $R_{A} - 5$ | $R_{B} - 3$ | product   |
+|:----:|:-----------:|:-----------:|:---------:|
+| 1    | 7           | -2          | -14       |
+| 2    | -9          | 6           | -54       |
+| 3    | 5           | -6          | -30       |
+| 4    | -3          | 2           | -6        |
+| Sum  |             |             | **-104**  |
+
+  $$\text{Cov}(R_{A}, R_{B}) = \frac{-104}{3} = -34.7$$
+
+- Every product is negative: in each year, when one stock is above its average
+  the other is below. The two stocks move in opposite directions.
+
+## Step 4: correlation and beta {.smaller}
+
+- Correlation: divide the covariance by the two volatilities.
+
+  $$\rho_{A,B} = \frac{-34.7}{7.4 \times 5.2} = \frac{-34.7}{38.2} = -0.91$$
+
+  Close to $-1$: the two stocks move almost perfectly against each other.
+
+- Beta of B with respect to A: divide the covariance by the variance of A, the
+  stock that does the moving.
+
+  $$\beta_{B,A} = \frac{-34.7}{54.7} = -0.63$$
+
+  When A goes up by 1%, B goes down by about 0.63% on average.
+
+## Step 5: return of the 50/50 portfolio {.smaller}
+
+- Put half of the money in each stock: $x_{A} = x_{B} = 0.5$.
+
+- Year by year, the portfolio earns the average of the two returns:
+
+| Year | Stock A | Stock B | Portfolio |
+|:----:|:-------:|:-------:|:---------:|
+| 1    | 12%     | 1%      | 6.5%      |
+| 2    | -4%     | 9%      | 2.5%      |
+| 3    | 10%     | -3%     | 3.5%      |
+| 4    | 2%      | 5%      | 3.5%      |
+
+- Its mean return is $(6.5 + 2.5 + 3.5 + 3.5)/4 = 4\%$, exactly what the formula
+  gives:
+
+  $$\overline{R}_{p} = x_{A}\overline{R}_{A} + x_{B}\overline{R}_{B} = 0.5 \times 5 + 0.5 \times 3 = 4\%$$
+
+## Step 6: risk of the 50/50 portfolio {.smaller}
+
+- With the formula from this lecture:
+
+  $$\text{Var}(R_{p}) = 0.5^{2} \times 54.7 + 0.5^{2} \times 26.7 + 2 \times 0.5 \times 0.5 \times (-34.7)$$
+
+  $$= 13.7 + 6.7 - 17.3 = 3.0 \qquad\qquad \sigma_{p} = \sqrt{3.0} = 1.7\%$$
+
+- Check directly on the portfolio returns: the distances to the 4% mean are
+  $2.5$, $-1.5$, $-0.5$, $-0.5$; their squares add up to $9$, and $9/3 = 3.0$.
+  Same answer.
+
+- **Takeaway**: alone, the stocks have volatilities of 7.4% and 5.2%. Together,
+  1.7%. The negative covariance term removed most of the risk while the return
+  stayed a plain average of the two. That is diversification at work.
