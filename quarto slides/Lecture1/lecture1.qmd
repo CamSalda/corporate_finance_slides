@@ -255,13 +255,18 @@ Source: Yahoo Finance
 
 - The arithmetic average is misleading ...
 
-## Geometric mean (annualized), or CAGR
+## Geometric mean (annualized), or CAGR {.smaller}
+
+- CAGR stands for **Compound Annual Growth Rate**: the constant yearly return
+  that turns the initial investment into the final wealth.
 
 - The geometric mean is calculated as
-  $\operatorname{Geometric \ mean} = \left(\frac{\operatorname{Wealth \ at \ the \ end \ of \ n \ years}}{\operatorname{Initial \ investment}}\right)^{\frac{1}{n}} - 1$
+
+  $$\text{Geometric mean} = \left(\frac{\text{Wealth at the end of n years}}{\text{Initial investment}}\right)^{\frac{1}{n}} - 1$$
 
 - or
-  $\operatorname{Geometric \ mean } = \left(\left(1+R_{1}\right) \left(1+R_{2}\right)\dots \left(1+R_{n}\right)\right)^{\frac{1}{n}} - 1$
+
+  $$\text{Geometric mean} = \left(\left(1+R_{1}\right) \left(1+R_{2}\right)\dots \left(1+R_{n}\right)\right)^{\frac{1}{n}} - 1$$
 
 ## To sum up: calculation of returns {.smaller}
 
@@ -379,6 +384,25 @@ decimal points)?
 - **Attention**: These indices can be calculated as "total return index"
   including dividends or "price index" without dividends! Some indices
   exist in different versions.
+
+## Which indices include dividends? {.smaller}
+
+| Total return: dividends reinvested | Price only: dividends ignored        |
+|:-----------------------------------|:-------------------------------------|
+| DAX 40 (Germany)                   | S&P 500, Dow Jones, Nasdaq (US)      |
+| Ibovespa (Brazil)                  | FTSE 100 (UK)                        |
+|                                    | Nikkei 225 (Japan)                   |
+|                                    | CAC 40 (France)                      |
+|                                    | Hang Seng (Hong Kong)                |
+
+- **Price index**: when a company pays a dividend, its share price drops, and
+  the index does not add that cash back. It only measures price changes.
+
+- **Total return index**: assumes every dividend is reinvested in the index,
+  so it grows faster over time.
+
+- Most price indices also have an official total return version, e.g. the
+  S&P 500 TR or the CAC 40 GR (next slide).
 
 ## CAC40 and CAC40 GR (gross return)
 
