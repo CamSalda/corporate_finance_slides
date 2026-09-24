@@ -387,7 +387,7 @@ decimal points)?
 
 ## Which indices include dividends? {.smaller}
 
-| Total return: dividends reinvested | Price only                           |
+| Gross total return: dividends reinvested | Price only                     |
 |:-----------------------------------|:-------------------------------------|
 | DAX 40 (Germany)                   | S&P 500, Dow Jones, Nasdaq (US)      |
 | Ibovespa (Brazil)                  | FTSE 100 (UK)                        |
@@ -399,10 +399,28 @@ decimal points)?
   the index does not add that cash back. It only measures price changes.
 
 - **Total return index**: assumes every dividend is reinvested in the index,
-  so it grows faster over time.
+  before tax, so it grows faster over time.
 
 - Most price indices also have an official total return version, e.g. the
-  S&P 500 TR or the CAC 40 GR (next slide).
+  S&P 500 TR or the CAC 40 GR.
+
+## The same index comes in three versions {.smaller}
+
+- **Price index** (price-only or capital index): follows share prices only.
+  When a company pays a dividend its price drops and the index drops with it;
+  the cash is never added back. The headline S&P 500, Dow Jones, FTSE 100,
+  CAC 40 and Nikkei 225 are all price indices.
+
+- **Gross total return index** (gross return or performance index): every
+  dividend is reinvested in the index on the day it is paid, before any tax.
+  Examples: the DAX 40 as quoted in the news, the S&P 500 TR, the CAC 40 GR.
+
+- **Net total return index** (net return index): dividends are reinvested after
+  the withholding tax a foreign investor would pay. The usual benchmark for
+  international funds and ETFs. Examples: MSCI World Net, S&P 500 Net.
+
+- Same companies, same prices in all three. The only difference is what happens
+  to the dividends, and over the long run that difference is large.
 
 ## CAC40 and CAC40 GR (gross return)
 
