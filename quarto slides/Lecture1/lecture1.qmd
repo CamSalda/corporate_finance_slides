@@ -387,7 +387,7 @@ decimal points)?
 
 ## Which indices include dividends? {.smaller}
 
-| Total return: dividends reinvested | Price only: dividends ignored        |
+| Total return: dividends reinvested | Price only                           |
 |:-----------------------------------|:-------------------------------------|
 | DAX 40 (Germany)                   | S&P 500, Dow Jones, Nasdaq (US)      |
 | Ibovespa (Brazil)                  | FTSE 100 (UK)                        |
