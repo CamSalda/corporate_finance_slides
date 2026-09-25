@@ -1,0 +1,360 @@
+---
+title: "Corporate Finance"
+subtitle: "Lecture 3 extras: Read the news, and look around you"
+footer: "Lecture 3 extras"
+---
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center}
+[Extra 1]{.large}
+
+::: {.huge}
+Read the news: Eni
+:::
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\Large Extra 1}\\[0.8em]
+{\color{escpblue}\Huge\bfseries Read the news: Eni}
+\end{center}
+\vfill
+```
+
+## Eni: a big dividend payer in Milan {.smaller}
+
+:::: {.columns}
+::: {.column width="46%"}
+![](palazzoEni.jpg){width="100%"}
+
+[Palazzo Eni, Rome]{.small}
+:::
+
+::: {.column width="54%"}
+- Italian oil and gas group, listed in Milan (FTSE MIB) and New York. The
+  state holds about 30%.
+
+- Share price about **EUR 24**, market cap about **EUR 60 billion**.
+
+- 2025: adjusted net profit **EUR 5.0 billion**, operating cash flow
+  **EUR 12.5 billion**.
+
+- Returned **EUR 5.0 billion** to shareholders in 2025: EUR 3.1 billion of
+  dividends, EUR 1.9 billion of buybacks.
+
+- Dividend of **EUR 1.05 per share**: a **yield of about 4.5%**.
+:::
+::::
+
+::: {.tiny}
+Sources: [Eni 2025 results](https://www.eni.com/en-IT/media/press-release/2026/02/2025-fourth-quarter-results.html), [dividend policy](https://www.eni.com/en-IT/investors/remuneration-policy/dividend.html); market data Sept. 2026.
+:::
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center}
+[Extra 2]{.large}
+
+::: {.huge}
+Indices and dividends
+:::
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\Large Extra 2}\\[0.8em]
+{\color{escpblue}\Huge\bfseries Indices and dividends}
+\end{center}
+\vfill
+```
+
+## Which indices include dividends? {.smaller}
+
+| Gross total return: dividends reinvested | Price only                     |
+|:-----------------------------------|:-------------------------------------|
+| DAX 40 (Germany)                   | S&P 500, Dow Jones, Nasdaq (US)      |
+| Ibovespa (Brazil)                  | FTSE 100 (UK)                        |
+|                                    | Nikkei 225 (Japan)                   |
+|                                    | CAC 40 (France)                      |
+|                                    | Hang Seng (Hong Kong)                |
+
+- **Price index**: when a company pays a dividend, its share price drops, and
+  the index does not add that cash back. It only measures price changes.
+
+- **Total return index**: assumes every dividend is reinvested in the index,
+  before tax, so it grows faster over time.
+
+- Most price indices also have an official total return version, e.g. the
+  S&P 500 TR or the CAC 40 GR.
+
+## The same index comes in three versions {.smaller}
+
+- **Price index** (price-only or capital index): follows share prices only.
+  When a company pays a dividend its price drops and the index drops with it;
+  the cash is never added back. The headline S&P 500, Dow Jones, FTSE 100,
+  CAC 40 and Nikkei 225 are all price indices.
+
+- **Gross total return index** (gross return or performance index): every
+  dividend is reinvested in the index on the day it is paid, before any tax.
+  Examples: the DAX 40 as quoted in the news, the S&P 500 TR, the CAC 40 GR.
+
+- **Net total return index** (net return index): dividends are reinvested after
+  the withholding tax a foreign investor would pay. The usual benchmark for
+  international funds and ETFs. Examples: MSCI World Net, S&P 500 Net.
+
+- Same companies, same prices in all three. The only difference is what happens
+  to the dividends, and over the long run that difference is large.
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center}
+[Extra 3]{.large}
+
+::: {.huge}
+Variance and covariance, other ways
+:::
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\Large Extra 3}\\[0.8em]
+{\color{escpblue}\Huge\bfseries Variance and covariance, other ways}
+\end{center}
+\vfill
+```
+
+## Alternative expressions of the variance {.smaller}
+
+- The variance is the average squared distance to the mean. For $N$ observations
+  $x_{1}, \dots, x_{N}$ with mean $\bar{x}$:
+
+  $$\sigma^{2} = \frac{1}{N} \sum_{i=1}^{N} \left(x_{i} - \bar{x}\right)^{2}$$
+
+- The same number can be written without any distances, as the **mean of the
+  squares minus the square of the mean**:
+
+  $$\sigma^{2} = \frac{1}{N} \sum_{i=1}^{N} x_{i}^{2} - \bar{x}^{2}
+  \qquad\qquad
+  \text{Var}(X) = \mathbb{E}\left[X^{2}\right] - \left(\mathbb{E}[X]\right)^{2}$$
+
+- This is the **König-Huygens formula**. It is handy with a calculator: you add
+  the values, add their squares, and never compute a single distance.
+
+## König-Huygens step by step {.smaller}
+
+- Start from the definition and expand the square inside the sum:
+
+  $$\sigma^{2} = \frac{1}{N}\sum_{i=1}^{N} \left(x_{i} - \bar{x}\right)^{2}
+  = \frac{1}{N}\sum_{i=1}^{N} \left(x_{i}^{2} - 2\,x_{i}\,\bar{x} + \bar{x}^{2}\right)$$
+
+- Average each of the three pieces separately:
+
+  $$\sigma^{2} = \underbrace{\frac{1}{N}\sum_{i=1}^{N} x_{i}^{2}}_{\text{mean of the squares}}
+  \;-\; \underbrace{\frac{1}{N}\sum_{i=1}^{N} 2\,x_{i}\,\bar{x}}_{\text{middle term}}
+  \;+\; \underbrace{\frac{1}{N}\sum_{i=1}^{N} \bar{x}^{2}}_{\text{last term}}$$
+
+## König-Huygens step by step (con't) {.smaller}
+
+- Develop the middle and last terms:
+
+  $$\begin{aligned}
+  \frac{1}{N}\sum_{i=1}^{N} 2\,x_{i}\,\bar{x} &= 2\bar{x} \cdot \frac{1}{N}\sum_{i=1}^{N} x_{i} = 2\bar{x} \cdot \bar{x} = 2\bar{x}^{2} \\
+  \frac{1}{N}\sum_{i=1}^{N} \bar{x}^{2} &= \frac{1}{N} \cdot N\bar{x}^{2} = \bar{x}^{2}
+  \end{aligned}$$
+
+- Add them up:
+
+  $$\begin{aligned}
+  \sigma^{2} &= \frac{1}{N}\sum_{i=1}^{N} x_{i}^{2} - 2\bar{x}^{2} + \bar{x}^{2}
+  = \frac{1}{N}\sum_{i=1}^{N} x_{i}^{2} - \bar{x}^{2} \\
+  \text{Var}(X) &= \mathbb{E}\left[X^{2}\right] - \left(\mathbb{E}[X]\right)^{2}
+  \end{aligned}$$
+
+## From data to expectations {.smaller}
+
+- For data, "average" means $\frac{1}{N}\sum$: every observation counts $1/N$.
+  For a random variable, "average" means the expectation $\mathbb{E}[\,\cdot\,]$,
+  where every outcome counts with its probability. Same idea, different weights.
+
+- Replace each $\frac{1}{N}\sum$ by $\mathbb{E}$ and $\bar{x}$ by $\mathbb{E}[X]$:
+
+  $$\frac{1}{N}\sum_{i=1}^{N} x_{i}^{2} - \bar{x}^{2}
+  \quad\longrightarrow\quad
+  \mathbb{E}\left[X^{2}\right] - \left(\mathbb{E}[X]\right)^{2} = \text{Var}(X)$$
+
+- **Check with numbers.** Stock A from Lecture 2 had returns 12, -4, 10, 2, with
+  mean 5. Mean of the squares: $(144 + 16 + 100 + 4)/4 = 66$. Then
+  $66 - 5^{2} = 41$. The direct route gave $(49 + 81 + 25 + 9)/4 = 41$. Same
+  number.
+
+- In the lecture we divide by $T-1$ instead of $N$ for historical returns. The
+  identity still works; only the constant in front changes.
+
+## Alternative expressions of the covariance {.smaller}
+
+- **The shortcut formula.** The same trick as König-Huygens works for the
+  covariance: the **mean of the products minus the product of the means**, in
+  expectation and for $N$ observations $(x_{i}, y_{i})$ with means $\bar{x}$, $\bar{y}$:
+
+  $$\begin{aligned}
+  \text{Cov}(X, Y) &= \mathbb{E}[XY] - \mathbb{E}[X]\,\mathbb{E}[Y] \\
+  \text{Cov}(X, Y) &= \frac{1}{N} \sum_{i=1}^{N} x_{i}\,y_{i} - \bar{x}\,\bar{y}
+  \end{aligned}$$
+
+- **Covariance from variances.** Take the variance of $X + Y$, remove the two
+  individual variances, and halve what is left:
+
+  $$\text{Cov}(X, Y) = \tfrac{1}{2}\left[\text{Var}(X + Y) - \text{Var}(X) - \text{Var}(Y)\right]$$
+
+  This is the two-stock portfolio variance formula with weights of 1, read
+  backwards.
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center}
+[Extra 4]{.large}
+
+::: {.huge}
+The Markowitz problem
+:::
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\Large Extra 4}\\[0.8em]
+{\color{escpblue}\Huge\bfseries The Markowitz problem}
+\end{center}
+\vfill
+```
+
+## Markowitz: the optimization problem {.smaller}
+
+- We have $N$ stocks and must choose the weights $x_{1}, \dots, x_{N}$. Write
+  $\sigma_{ij} = \text{Cov}(R_{i}, R_{j})$ for the covariance between stocks $i$
+  and $j$.
+
+- **Target**: the smallest possible portfolio variance.
+
+  $$\min_{x_{1}, \dots, x_{N}} \; \text{Var}(R_{p}) = \sum_{i=1}^{N} \sum_{j=1}^{N} x_{i}\, x_{j}\, \sigma_{ij}$$
+
+- **Constraints**: reach a chosen expected return $\mu$, and invest all the
+  money.
+
+  $$\sum_{i=1}^{N} x_{i}\, E[R_{i}] = \mu \qquad\qquad \sum_{i=1}^{N} x_{i} = 1$$
+
+- Adding $x_{i} \geq 0$ forbids short sales. Solving once for each $\mu$
+  traces out the efficient frontier.
+
+## Markowitz: first-order conditions {.smaller}
+
+- Attach a multiplier to each constraint, $\lambda$ for the return and $\gamma$
+  for the budget, and write the Lagrangian (the $\tfrac{1}{2}$ only cleans up
+  the derivative):
+
+  $$\mathcal{L} = \tfrac{1}{2} \sum_{i=1}^{N} \sum_{j=1}^{N} x_{i}\, x_{j}\, \sigma_{ij}
+  - \lambda \Big( \sum_{i=1}^{N} x_{i}\, E[R_{i}] - \mu \Big)
+  - \gamma \Big( \sum_{i=1}^{N} x_{i} - 1 \Big)$$
+
+- Partial derivative with respect to each weight $x_{k}$, set to zero: one
+  equation per stock.
+
+  $$\begin{aligned}
+  \frac{\partial \mathcal{L}}{\partial x_{k}} &= \sum_{j=1}^{N} \sigma_{kj}\, x_{j} - \lambda\, E[R_{k}] - \gamma = 0 \\
+  \text{that is} \qquad \text{Cov}(R_{k}, R_{p}) &= \lambda\, E[R_{k}] + \gamma
+  \end{aligned}$$
+
+- The derivatives with respect to $\lambda$ and $\gamma$ give back the two
+  constraints: $N + 2$ linear equations for $N + 2$ unknowns.
+
+## Markowitz: the solution {.smaller}
+
+- Stack the weights in a column $\mathbf{x}$, the expected returns in a column
+  $\boldsymbol{\mu}$, a column of ones $\mathbf{1}$, and the covariances in the
+  matrix $\boldsymbol{\Sigma}$. The $N$ first-order conditions become one line:
+
+  $$\boldsymbol{\Sigma}\, \mathbf{x} = \lambda\, \boldsymbol{\mu} + \gamma\, \mathbf{1}
+  \qquad \Longrightarrow \qquad
+  \mathbf{x}^{*} = \boldsymbol{\Sigma}^{-1} \left( \lambda\, \boldsymbol{\mu} + \gamma\, \mathbf{1} \right)$$
+
+- $\lambda$ and $\gamma$ are fixed by the two constraints. With the shorthand
+  $A = \mathbf{1}'\boldsymbol{\Sigma}^{-1}\mathbf{1}$,
+  $B = \mathbf{1}'\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}$,
+  $C = \boldsymbol{\mu}'\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}$,
+  $D = AC - B^{2}$:
+
+  $$\lambda = \frac{A\mu - B}{D} \qquad\qquad \gamma = \frac{C - B\mu}{D}$$
+
+- In practice: one matrix inverse (`MINVERSE` in Excel) and every optimal
+  portfolio follows.
+
+## Markowitz: the frontier {.smaller}
+
+- Plug the solution back into the variance. The smallest variance reachable for
+  a target return $\mu$ is
+
+  $$\sigma_{p}^{2}(\mu) = \frac{A\mu^{2} - 2B\mu + C}{D}$$
+
+- A parabola in $\mu$: that is the minimum-variance frontier, and its upper
+  half is the efficient frontier. Its lowest point, the global minimum-variance
+  portfolio, has weights $\mathbf{x} = \boldsymbol{\Sigma}^{-1}\mathbf{1} / A$.
+
+- **Reading the first-order condition**: in an optimal portfolio, each stock's
+  contribution to risk, its covariance with the portfolio, is a straight-line
+  function of its expected return. Lecture 4 builds the CAPM on exactly this
+  idea.
+
+## Markowitz in real life: no closed form {.smaller}
+
+- Asset managers solve the same kind of problem every day, but with extra
+  constraints that a real mandate imposes:
+
+  - **Caps on the weights**: no more than, say, 5% in any single stock, or 25%
+    in any sector.
+
+  - **No short sales**, or a limit on the total short position.
+
+  - **Factor neutrality**: the portfolio's exposure to a risk factor (the
+    market, oil, interest rates) must be zero or within a band.
+
+  - **Turnover and cost limits**: do not trade more than a given fraction of
+    the portfolio.
+
+- With inequality constraints like these there is no formula to plug into.
+  Instead an **optimizer** searches for the weights numerically, and the result
+  is an approximation, accurate to as many decimals as we ask for.
+
+## Markowitz in real life: an optimizer {.smaller}
+
+- An open-source example in Python: [**CVXPY**](https://www.cvxpy.org). The
+  problem is written almost as it appears on the previous slides: the target
+  to minimise, then the list of constraints, then `solve()`.
+
+- Here with a return target, full investment, no short sales, and a 5% cap on
+  every weight:
+
+```python
+import cvxpy as cp
+x = cp.Variable(N)
+constraints = [mu @ x >= target,   # return target
+               cp.sum(x) == 1,     # fully invested
+               x >= 0,             # no short sales
+               x <= 0.05]          # 5% cap per stock
+objective = cp.Minimize(cp.quad_form(x, Sigma))
+cp.Problem(objective, constraints).solve()
+```
+
+- The optimizer returns the weights in `x.value`. Change a constraint, run it
+  again: that is how a real portfolio is rebalanced.
