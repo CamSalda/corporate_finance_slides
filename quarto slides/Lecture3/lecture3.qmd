@@ -673,85 +673,124 @@ Next year is either sunny or rainy, each with probability one half.
   line** from the deposit through Umbrella: lending puts you between the two,
   borrowing ($x > 1$) beyond Umbrella.
 
-## Leverage effect: general formula for the expected portfolio return and risk {.smaller .dense}
+## The slope of the line is the Sharpe ratio {.smaller}
 
-- Expected return: weighted average (by the fraction invested) of each
-  constituent's return:
-  $E\left(R_{p}\right) = \sum^{N}_{i=1} x_{i} \times E\left(R_{i}\right)+x_{f} r_{f},$
-  where assets $i = 1, \dots, N$ are risky and
-  $x_{f}+\sum^{N}_{i=1} x_{i}=1$.
+- On the previous slide, $E[R_{p}] = r_{f} + x\,(E[R_{U}] - r_{f})$ and
+  $\sigma_{p} = x\,\sigma_{U}$. Replace $x$ by $\sigma_{p} / \sigma_{U}$:
 
-- Risk:\
-  If $N=1$, then $\sigma_{p} = x \sigma$, where $x$ is the fraction
-  invested in the risky asset and $\sigma$ is its volatility.\
-  If $N>1$, then it suffices to calculate portfolio variance using only
-  the risky assets with
+  $$E[R_{p}] = r_{f} + \underbrace{\frac{E[R_{U}] - r_{f}}{\sigma_{U}}}_{\text{slope}} \times \sigma_{p}$$
 
-  $$\sigma^{2}_{p} = \sum^{N}_{i=1} x^{2}_{i} \sigma^{2}_{i} + \sum^{N}_{i=1} \sum^{N}_{\overset{j=1}{j \ne i}} x_{i} x_{j} \text{Cov}\left(R_{i}, R_{j}\right),$$
+- The slope is the **extra return you earn for each unit of risk you take**.
+  It has a name: the **Sharpe ratio** of the risky investment.
 
-  and take $\sigma_{p} = \sqrt{\sigma^{2}_{p}}$.
+  $$\text{Sharpe ratio} = \frac{\text{Excess return}}{\text{Volatility}} = \frac{E[R] - r_{f}}{\sigma}$$
 
-- Borrowing thereby corresponds to a negative portfolio weight in the
-  risk-free asset, $x_{f}<0$.
+- Umbrella: $(10\% - 3\%) / 20\% = 0.35$. Every 1% of volatility buys 0.35%
+  of return above the risk-free rate.
 
-## Leverage effect: consequences {.smaller}
+## Comparing risky investments: compare the lines {.smaller}
 
-The possibility to change the risk and return of a portfolio with a
-risk-free security has two fundamental consequences.
-
-1.  It is easy to generate high returns ...if a high level of risk is
-    taken. $\Rightarrow$ Never analyse a return without also analysing
-    its risk.
-
-2.  It is now possible to select objectively between two risky
-    investments: $\Rightarrow$ The portfolio which generates the highest
-    slope in the ($E(R)$, $\sigma$) plane is preferred, **regardless of
-    the risk aversion**.
-
-## Sharpe ratio: identification of the best investment
-
-- Sharpe ratio:
-  $$\frac{\operatorname{Excess \ return \ of \ the \ portfolio}}{\operatorname{Portfolio \ volatility}} = \frac{E\left[R_{p}\right]-r_{f}}{\sigma_{p}}.$$
-
-- **Remark:** Here, the best investment does not depend on the aversion
-  to risk. $\Rightarrow$ Regardless of the risk aversion, all investors
-  should hold the portfolio of risky assets
-
-## What is the link between leverage, diversification, and efficient portfolios? {.smaller}
-
-- If investors can invest and borrow at the risk-free rate, only one
-  risky portfolio is efficient: the "tangency portfolio" or
-  "super-efficient portfolio."
-
-- Conclusion:
-
-  - From a given set of risky securities, investors should construct the
-    same portfolio.
-
-  - They will then adjust for their risk-aversion by investing/borrowing
-    at the risk-free rate. $\Rightarrow$ Two fund separation theorem
-    (James Tobin)
-
-- It can then be shown that the efficient frontier is a half straight
-  line, tangent to the Markowitz's hyperbola. The tangency point is the
-  ...tangency portfolio.
-
-## The efficient frontier with a risk-free asset
+- Once a risk-free asset exists, we can combine **any** portfolio on the
+  efficient frontier with it. Each gives a straight line from the risk-free
+  point: many lines to choose from (risk-free rate 3%):
 
 ::: {.center}
-![](TangencyPFang.png){fig-align="center"}
+| Portfolio        | Expected return | Volatility | Sharpe ratio |
+|:-----------------|:---------------:|:----------:|:------------:|
+| Coca-Cola (0, 1) | 6%              | 25%        | 0.12         |
+| (0.2, 0.8)       | 10%             | 22.4%      | 0.31         |
+| (0.5, 0.5)       | 16%             | 28%        | 0.46         |
+| Intel (1, 0)     | 26%             | 50%        | 0.46         |
 :::
 
-## Summary on efficient frontier with a risk-free asset {.smaller}
+- The Sharpe ratio is the extra return **per unit of risk**: 0.46% per 1% of
+  risk for Intel, only 0.12% for Coca-Cola.
 
-- It can be shown that the equation of the efficient frontier WITH
-  risk-free asset (e.g., with borrowing/leverage) is given by:
-  $$E\left(R_{p}\right)=r_{f}+\underbrace{\frac{E\left(R_{T}\right)-r_{f}}{\sigma_{T}}\sigma_{p}}_{Risk \ premium},$$
-  where the subscript $p$ corresponds to the efficient portfolio and the
-  subscript T to the tangency (or "super-efficient") portfolio
+- Take the **highest Sharpe ratio** and mix it with the risk-free asset: at any
+  risk, it pays more than any other mix, whoever you are.
 
-  - **Reminder**: all efficient portfolios contain the tangency
-    portfolio and the risk-free asset (long or short)
+- Leverage makes any return possible, so **compare Sharpe ratios, not returns**.
+
+## Two lines on the Intel-Coca-Cola curve {.smaller}
+
+::: {.center}
+![](frontierSharpeLines.png){width="70%"}
+:::
+
+The line through Intel (slope 0.46) is above the line through (0.2, 0.8)
+(slope 0.31) everywhere. Mixing Intel with the risk-free asset beats mixing
+(0.2, 0.8) with it, at every level of risk.
+
+## The best line: tangent to the frontier {.smaller}
+
+::: {.center}
+![](frontierTangency.png){width="70%"}
+:::
+
+Rotate the line upward until it just touches the curve. The touching point is
+the **tangency portfolio**: (0.66, 0.34), return 19.1%, volatility 34%, Sharpe
+ratio 0.475, the highest available. Every other line lies below it.
+
+## Everyone holds the same risky portfolio {.smaller}
+
+- The tangency line beats every other line, so **no investor wants a different
+  risky portfolio**. The tangency portfolio is the one efficient portfolio of
+  risky assets.
+
+- Risk aversion decides only **where on the line** you sit:
+
+  - cautious investors put part of their money in the tangency portfolio and
+    lend the rest at $r_{f}$: between the risk-free point and $T$;
+
+  - bold investors borrow at $r_{f}$ and put more than their own money in $T$:
+    beyond $T$ on the line.
+
+- This is the **two-fund separation** theorem (James Tobin, 1958): every
+  investor holds the same two funds, the tangency portfolio and the risk-free
+  asset, in different proportions. The choice of the risky portfolio is
+  objective; only the mix is personal.
+
+## The general picture {.smaller}
+
+::: {.center}
+![](TangencyPFang.png){width="58%"}
+:::
+
+With many securities the story is the same: the Markowitz curve, the risk-free
+point, and one tangency portfolio (also called "super-efficient"). Every other
+portfolio on the curve stops being efficient once the risk-free asset exists.
+
+## The efficient frontier is now a straight line {.smaller}
+
+- Every efficient portfolio is a mix of the risk-free asset and the tangency
+  portfolio $T$, so it sits on the tangent line. Its equation:
+
+  $$E\left(R_{p}\right) = r_{f} + \underbrace{\frac{E\left(R_{T}\right) - r_{f}}{\sigma_{T}}}_{\text{Sharpe ratio of } T} \times \sigma_{p}$$
+
+- Read it as: **risk-free rate, plus a risk premium proportional to the risk you
+  take**. The proportion is the Sharpe ratio of the tangency portfolio, the
+  same for everyone.
+
+- With Intel and Coca-Cola: $E(R_{p}) = 3\% + 0.475 \times \sigma_{p}$. The
+  old curve is dominated everywhere except at $T$.
+
+## Example: moving to the tangent line {.smaller}
+
+- An investor holds (0.2, 0.8): return 10%, volatility 22.4%. Two ways to do
+  better using the tangency portfolio $T$ (19.1%, 34%) and the risk-free asset:
+
+- **Same risk, more return.** Put a fraction $x$ in $T$ with
+  $x \times 34\% = 22.4\%$, so $x = 0.66$, the rest at $r_{f}$:
+
+  $$E[R_{p}] = 3\% + 0.66 \times (19.1\% - 3\%) = 13.6\% \qquad \text{instead of } 10\%$$
+
+- **Same return, less risk.** Choose $x$ so that
+  $3\% + x \times 16.1\% = 10\%$, so $x = 0.43$:
+
+  $$\sigma_{p} = 0.43 \times 34\% = 14.7\% \qquad \text{instead of } 22.4\%$$
+
+- Either way the investor ends up on the tangent line, holding only $T$ and the
+  risk-free asset.
 
 ## Two types of risk
 

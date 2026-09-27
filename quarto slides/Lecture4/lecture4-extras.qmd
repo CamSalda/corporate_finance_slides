@@ -1,0 +1,5 @@
+---
+title: "Corporate Finance"
+subtitle: "Lecture 4 extras: Read the news, and look around you"
+footer: "Lecture 4 extras"
+---
