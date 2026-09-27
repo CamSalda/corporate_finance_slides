@@ -4,25 +4,287 @@ subtitle: "Lecture 4: CAPM"
 footer: "Lecture 4: CAPM"
 ---
 
+## Plan
+
+- Recap from lecture 3
+
+- Ask what return a stock must offer to be worth adding to a portfolio: the
+  required return and the beta
+
+- Meet the CAPM: when every investor holds the tangency portfolio, that
+  portfolio is the market itself
+
+- Use the CAPM to determine the risk premium of any stock
+
+Mostly based on the BDM textbook Chap. 11.6-8.
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Recap lecture 3
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Recap lecture 3}
+\end{center}
+\vfill
+```
+
+## Recap of Lecture 3 {.smaller}
+
+Let's do a recap:
+
+- Combining two stocks: many portfolios, many risk-return pairs
+
+- Efficient portfolios and the efficient frontier
+
+- The shape of the frontier depends on the correlation
+
+- The minimum-variance portfolio
+
+- Short sales extend the frontier
+
+- From two stocks to N: the frontier moves left
+
+- Adding the risk-free asset
+
+- Borrowing and leverage
+
+- The Sharpe ratio, and how it picks the efficient frontier
+
+- The super-efficient (tangency) portfolio
+
+- Two types of risk
+
+## Recap: combining two stocks {.smaller}
+
+- Given two stocks, we choose the **weights** $x_{1}$ and $x_{2}$, with
+  $x_{1} + x_{2} = 1$. Each choice is one portfolio, with its own expected
+  return and its own risk.
+
+- Plotted as points, risk across and return up, all the mixes of the two stocks
+  trace a **curve** (Intel and Coca-Cola, zero correlation):
+
+::: {.center}
+![](frontierEfficientOnly.png){width="52%"}
+:::
+
+## Recap: efficient portfolios and the frontier {.smaller}
+
+::: {.box .box-a}
+A portfolio is **efficient** when, for its level of risk, no other portfolio
+gives a higher return; equivalently, for its level of return, no other portfolio
+has a lower risk.
+:::
+
+::: {.box .box-a}
+The **efficient frontier** is the set of all efficient portfolios: the upper part
+of the curve.
+:::
+
+- Example: (0, 1) and (0.4, 0.6) both have 25% volatility, but the second returns
+  14% against 6%. Holding only Coca-Cola is dominated; the lower part of the curve
+  is inefficient.
+
+## Recap: the shape depends on correlation {.smaller}
+
+:::: {.columns}
+::: {.column width="42%"}
+::: {style="text-align: left"}
+- **Correlation +1**: no diversification. The curve is a straight line between
+  the two stocks.
+
+- **Lower correlation**: the curve bends to the left, the same returns at lower
+  risk.
+
+- **Correlation −1**: the risks can cancel completely; with the right weights the
+  portfolio has zero risk.
+:::
+:::
+
+::: {.column width="58%"}
+![](figure11p4ang.png){fig-align="center" width="100%" style="max-height: 470px"}
+:::
+::::
+
+## Recap: the minimum-variance portfolio {.smaller}
+
+::: {.center}
+![](frontierMVP.png){width="48%"}
+:::
+
+- The mix with the **lowest risk** of all: the "nose" of the curve, where the
+  efficient set begins. Here (0.2, 0.8), with 22.4% volatility, below either
+  stock alone.
+
+- Its weights depend only on the volatilities and the correlation, **not on the
+  expected returns**.
+
+## Recap: short sales extend the frontier {.smaller}
+
+- A **short sale** is a negative weight: sell a stock you borrowed, and invest
+  more than your own money in the other one.
+
+- Shorting assets allows to extend the efficient frontier further.
+
+::: {.center}
+![](figure11p5ang.png){width="40%"}
+:::
+
+## Recap: from two stocks to N {.smaller}
+
+- A third stock turns the curve into a **region** of possible portfolios. The
+  efficient frontier is its **upper-left edge**.
+
+- Every stock we add, even a poor one on its own, moves the frontier further
+  left: more diversification. The best frontier uses all available investments.
+
+::: {.center}
+![](figure11p8ang.png){width="46%"}
+:::
+
+## Recap: adding the risk-free asset {.smaller}
+
+- The risk-free rate $r_{f}$ is known in advance: zero volatility, zero
+  correlation with every stock.
+
+- A fraction $x$ in a risky portfolio and $1 - x$ at $r_{f}$ gives
+  $E[R_{p}] = r_{f} + x\,(E[R_{U}] - r_{f})$ and $\sigma_{p} = x\,\sigma_{U}$:
+  both grow with $x$, so every mix is on a **straight line** from the risk-free
+  point. Umbrella (10%, 20%) and a 3% deposit, half and half: 6.5% and 10%.
+
+::: {.center}
+![](figureBanUmb.png){width="54%"}
+:::
+
+## Recap: borrowing and leverage {.smaller}
+
+- **Leverage** is investing with borrowed money. In the formulas it is a
+  **negative weight on the risk-free asset**, $x_{f} < 0$, with more than 100% in
+  the risky one.
+
+- Borrow 50 at 3% and put 150 in Umbrella: $x_{U} = 1.5$, $x_{f} = -0.5$. Return
+  13.5% instead of 10%, volatility 30% instead of 20%: leverage scales the risk
+  premium and the risk by the **same factor**.
+
+- It takes you beyond the risky portfolio on the same straight line. Gains and
+  losses are both magnified, so **never judge a return without its risk**.
+
+## Recap: the Sharpe ratio {.smaller}
+
+- The slope of the line from the risk-free point is the **Sharpe ratio**: the
+  extra return you get per unit of risk.
+
+  $$\text{Sharpe ratio} = \frac{E[R] - r_{f}}{\sigma}$$
+
+::: {.center}
+| Portfolio        | Expected return | Volatility | Sharpe ratio |
+|:-----------------|:---------------:|:----------:|:------------:|
+| Coca-Cola (0, 1) | 6%              | 25%        | 0.12         |
+| (0.2, 0.8)       | 10%             | 22.4%      | 0.31         |
+| (0.5, 0.5)       | 16%             | 28%        | 0.46         |
+| Intel (1, 0)     | 26%             | 50%        | 0.46         |
+:::
+
+- A steeper line pays more at every level of risk, whoever you are. With
+  leverage any return is possible, so **compare Sharpe ratios, not returns**.
+
+## Recap: the Sharpe ratio and the efficient frontier {.smaller}
+
+::: {.center}
+![](frontierTangency.png){width="48%"}
+:::
+
+- The steepest line from the risk-free point is the one **tangent** to the curve.
+  Once a risk-free asset exists, the efficient frontier **is that straight line**:
+
+  $$E(R_{p}) = r_{f} + \underbrace{\frac{E(R_{T}) - r_{f}}{\sigma_{T}}}_{\text{Sharpe ratio of } T} \times \sigma_{p}
+  \qquad \text{here } 3\% + 0.475 \times \sigma_{p}$$
+
+## Recap: the super-efficient portfolio {.smaller}
+
+::: {.center}
+![](TangencyPFang.png){width="38%"}
+:::
+
+- The tangency point $T$ is the risky portfolio with the **highest Sharpe
+  ratio**: the tangency, or **super-efficient**, portfolio.
+
+- **Everyone holds it.** Risk aversion only sets where you sit on the line:
+  cautious investors lend part of their money at $r_{f}$, bold ones borrow and
+  put more than their own money in $T$ (two-fund separation).
+
+## Recap: two types of risk {.smaller}
+
+::: {.box .box-a}
+**Systematic risk**: market-wide (economy, interest rates, inflation). It hits
+every stock at once, so diversification **cannot** remove it.
+:::
+
+::: {.box .box-a}
+**Idiosyncratic risk**: specific to one firm (its products, its management). It
+averages out across many stocks, so diversification **does** remove it.
+:::
+
+::: {.center}
+![](figure11p2ang.png){width="36%"}
+:::
+
+Volatility falls as stocks are added and flattens at the systematic level.
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Beginning of lecture 4 content
+:::
+
+::: {.center .small}
+Lecture 3 found the best portfolio of risky assets. Today we ask what that implies
+for the return each stock has to offer: the CAPM.
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Beginning of lecture 4 content}
+
+\vspace{1.5em}
+\begin{minipage}{0.8\textwidth}
+\small\centering
+Lecture 3 found the best portfolio of risky assets. Today we ask what that implies
+for the return each stock has to offer: the CAPM.
+\end{minipage}
+\end{center}
+\vfill
+```
+
 ## Introduction {.smaller}
 
-- Determine the appropriate risk premium (Capital Asset Pricing Model /
-  CAPM)
+- Today: how to determine the risk premium a stock must offer, with the
+  **Capital Asset Pricing Model (CAPM)**: Tobin (1958), Treynor (1962), Sharpe
+  (1964), Lintner (1965), Mossin (1966).
 
-  - Tobin (1958), Jack Treynor (1962), William Sharpe (1964), John
-    Lintner (1965), Jan Mossin (1966).
+- **Why it matters.** The CAPM is the most widely used model linking risk and
+  return. About three firms in four use it to estimate their **cost of
+  capital**: the discount rate for projects, valuations and regulated prices.
 
 :::::: {.columns}
 ::: {.column width="25%"}
-![](Tobin.png){fig-align="center"}
+![](Tobin.png){fig-align="center" width="55%" style="max-height: 170px"}
 :::
 
 ::: {.column width="25%"}
-![](Sharpe.png){fig-align="center"}
+![](Sharpe.png){fig-align="center" width="55%" style="max-height: 170px"}
 :::
 
 ::: {.column width="25%"}
-![](Markowitz.png){fig-align="center"}
+![](Markowitz.png){fig-align="center" width="55%" style="max-height: 170px"}
 :::
 ::::::
 
@@ -48,97 +310,127 @@ Harry Markowitz
 
 3.  Determining the risk premium (according to the CAPM) (Chap. 11.8)
 
-## A. Efficient portfolio and required returns
+## A. Required returns: the answer first {.smaller}
 
-- To start, we ask a basic question:
+- Last class we met the **Sharpe ratio**: the extra return we get for every
+  unit of risk we take. Today we use it to decide whether an asset is **worth
+  adding to a portfolio**.
 
-  ::: {.center}
-  **How can we improve the Sharpe ratio of our portfolio?**
-  :::
+- You hold a portfolio $P$. Someone offers you a stock $A$. **Should you buy
+  some?**
 
-- Example: investors wish to add the security A to their portfolio P
-  (any portfolio).
+::: {.box .box-a}
+**The answer, in one sentence.** A stock is worth adding only if its expected
+return pays for the risk it adds to *your* portfolio. And the risk it adds
+depends on how it **moves with what you already hold**, not on how risky it is
+on its own.
+:::
 
-  - Can we determine whether this security improves the Sharpe ratio of
-    their portfolio? If yes, how?
+- The rest of this section unpacks that sentence in three steps:
 
-## Improving the Sharpe ratio of a portfolio: example
+  1. measure the risk $A$ adds to $P$;
 
-Example of the set of possible portfolios of P and the security A
+  2. measure what that extra risk is worth;
+
+  3. compare with what $A$ actually pays.
+
+## Step 1: the risk a stock adds {.smaller}
+
+- Add a small amount $\delta$ of $A$ to $P$, financed by borrowing at $r_{f}$.
+  The extra return is easy: $\delta\,(E(R_{A}) - r_{f})$.
+
+- The extra risk is not $\delta\,\sigma_{A}$. For a small $\delta$ the
+  volatility of the portfolio rises by about
+
+  $$\Delta\sigma \approx \delta \times \sigma_{A} \times \rho_{A,P}$$
+
+  $\delta$: the fraction of the portfolio put into $A$; $\sigma_{A}$: the
+  volatility of $A$ on its own; $\rho_{A,P}$: the correlation between $A$ and
+  the portfolio $P$.
+
+- The **correlation** is in the formula: a stock that moves with your portfolio
+  adds its full risk, an uncorrelated one almost none, a negatively correlated
+  one **reduces** risk. The same diversification story as Bore Industries.
+
+- Where the formula comes from: the appendix at the end of the deck.
+
+## Step 2: what is that extra risk worth? {.smaller}
+
+- You could take the same extra risk another way: **leverage**, borrowing to
+  buy more of $P$.
+
+- Leverage on $P$ pays the Sharpe ratio of $P$ for each unit of risk (Lecture
+  3). So extra risk $\Delta\sigma$ taken through $P$ would earn
+
+  $$\Delta\sigma \times \frac{E(R_{P}) - r_{f}}{\sigma_{P}}$$
+
+  $\Delta\sigma$: the extra risk from step 1; $E(R_{P}) - r_{f}$: the risk
+  premium of $P$; $\sigma_{P}$: its volatility. The fraction is $P$'s Sharpe ratio.
+
+- That is the **benchmark**. $A$ is worth adding when its extra return (step 1,
+  left) is at least what the same risk earns through $P$ (right):
+
+  $$\delta\,(E(R_{A}) - r_{f}) \;\geq\; \Delta\sigma \times \left(E(R_{P}) - r_{f}\right) / \sigma_{P}$$
+
+## In a picture: Omega and the REIT {.smaller}
 
 ::: {.center}
-![](hyperbola.png){fig-align="center"}
+![](omegaReit.png){width="66%"}
 :::
 
-Purchase of A is financed by borrowing at the risk-free rate.
+Zoom around Omega (15%, 20%). The green line is leverage on Omega. Adding a
+little REIT (9%, 35%, correlation 0.10) financed by borrowing traces the blue
+curve, which leaves Omega **above the line**: a small addition raises the Sharpe
+ratio. Add too much and the curve drops below it again.
 
-## Improving the Sharpe ratio of a portfolio: example (con't) {.smaller .dense}
+## Step 3: the rule, and the beta {.smaller}
 
-- Investors who hold the portfolio P borrow a "small" quantity $\delta$
-  at the risk-free rate and invest this amount in A. The return of their
-  portfolio changes by:
-  $\Delta R = \delta\left(E\left(R_{A}\right) - r_{f}\right).$
+- Buy $A$ if its extra return beats the benchmark:
 
-- The risk of their portfolio changes by (using a first-order Taylor
-  expansion, see appendix):
+  $$\delta\,(E(R_{A}) - r_{f}) \;\geq\; \delta\,\sigma_{A}\,\rho_{A,P} \times \frac{E(R_{P}) - r_{f}}{\sigma_{P}}$$
 
-::: {.small}
+- Cancel $\delta$ and group the risk terms into one number:
 
-$$\begin{aligned}
-\Delta \sigma & = \sqrt{\sigma^{2}_{P}+\delta^{2}\sigma^{2}_{A}+2\delta \sigma_{P}\sigma_{A}\rho_{A,P}}-\sigma_{P} && \text{new volatility $-$ old volatility} \\
-& \approx \sqrt{\sigma^{2}_{P}+2\delta \sigma_{P}\sigma_{A}\rho_{A,P}}-\sigma_{P} && \text{$\delta^{2}$ is negligible for a small $\delta$} \\
-& = \sigma_{P}\sqrt{1+2\delta \frac{\sigma_{A}\rho_{A,P}}{\sigma_{P}}}-\sigma_{P} && \text{factor out $\sigma_{P}$} \\
-& \approx \sigma_{P}\left(1+\delta \frac{\sigma_{A}\rho_{A,P}}{\sigma_{P}}\right)-\sigma_{P} && \text{$\sqrt{1+x} \approx 1+x/2$} \\
-& = \textcolor{firebrick}{\boldsymbol{\delta \sigma_{A} \rho_{A,P}}} && \text{the two $\sigma_{P}$ cancel}
-\end{aligned}$$
+  $$\beta_{A,P} = \rho_{A,P}\,\frac{\sigma_{A}}{\sigma_{P}} = \frac{\text{Cov}(R_{A},R_{P})}{\text{Var}(R_{P})}$$
 
-:::
+  The **beta** from Lecture 2, with $P$ as the thing that moves: when $P$ moves
+  by 1%, $A$ moves by $\beta_{A,P}$% on average.
 
-## Improving the Sharpe ratio of a portfolio: intuition
+- The rule becomes a **required return** $r_{A}$: buy $A$ if it pays at least
+  $r_{A}$, short it if it pays less.
 
-$$\Delta \sigma = \textcolor{firebrick}{\boldsymbol{\delta \sigma_{A} \rho_{A,P}}}$$
+  $$E(R_{A}) \;\geq\; r_{A} = r_{f} + \beta_{A,P}\,\big(E(R_{P}) - r_{f}\big)$$
 
-- This result is intuitive: the contribution to the risk of their
-  portfolio depends not only of the risk of the new security A but also
-  on the correlation with their existing portfolio!
+## Example: should we add the REIT to Omega? {.smaller}
 
-  - Not convinced? Start with the general expression of the variance of
-    a portfolio (Eq. 11.13 in the textbook).
+- Omega: expected return 15%, volatility 20%. Treasury bills: 3%. REIT: expected
+  return 9%, volatility 35%, correlation with Omega 0.10.
 
-## Improving the Sharpe ratio of a portfolio: example (con't 2) {.smaller}
+- Beta of the REIT with respect to Omega:
+  $\beta = 0.10 \times 35\% / 20\% = 0.175$.
 
-- A similar increase of the risk of the existing portfolio
-  ($\Delta \sigma$) via leverage would increase the return by:
-  $$\Delta \sigma \frac{E\left(R_{p}\right)-r_{f}}{\sigma_{P}}.$$
+- Required return:
+  $r_{\text{REIT}} = 3\% + 0.175 \times (15\% - 3\%) = 5.1\%$.
 
-- Hence, it is optimal to add security A if and only if:
-  $$\delta \left[E\left(R_{A}\right)-r_{f}\right]\geq \delta \sigma_A \rho_{A,P} \frac{E\left(R_{p}\right)-r_{f}}{\sigma_{P}}.$$
+- The REIT pays 9%, above 5.1%: **yes, buy some.** It looks poor on its own (less
+  return than Omega for more risk), but its low correlation means it adds very
+  little risk.
 
-- Or: $$\begin{aligned}
-  E\left(R_{A}\right) \geq r_{f} + \rho_{A,P} \frac{\sigma_{A}}{\sigma_{P}}\left[E\left(R_{p}\right)-r_{f}\right] = r_{f}+\beta_{A,P}\left[E\left(R_{p}\right)-r_{f}\right].
-  \end{aligned}$$
+- **The twist.** With a correlation of 0.50 instead of 0.10: $\beta = 0.875$,
+  required return $3\% + 0.875 \times 12\% = 13.5\%$, above the 9% it pays: **no.**
+  Same stock, same return, same risk; the correlation alone flips the decision.
 
-## To sum up
+## From the required return to the CAPM {.smaller}
 
-- Investors should add security A to their existing portfolio P only if
-  $$E\left(R_{A}\right) \geq r_{f}+\beta_{A,P}\left[E\left(R_{p}\right)-r_{f}\right].$$
+- The rule holds for **any** portfolio $P$: the required return of a stock is
+  the risk-free rate plus its beta with respect to $P$ times $P$'s risk premium.
 
-  - Remark: If the return is lower, the best strategy is to short the
-    security.
+- Lecture 3 showed that every investor holds the same risky portfolio, the
+  tangency portfolio. Section B asks what that portfolio must be when everyone
+  holds it, and finds the answer: **the market**.
 
-- Hence, we define the required return of an asset as:
-  $$r_{i} = r_{f}+\beta_{i,P}\left[E\left(R_{p}\right)-r_{f}\right].$$
-
-## Example: required return of a new investment
-
-- Omega: expected return of 15% and volatility of 20%.
-
-- Treasury bills (risk-free) pay 3%.
-
-- REIT (real estate investment trust): expected return of 9% and
-  volatility of 35%. Correlation with Omega is 10%.
-
-- Should we invest in the REIT if we already hold Omega?
+- Replace $P$ by the market portfolio and the required return becomes the
+  **CAPM**.
 
 ## B. Capital Asset Pricing Model
 
