@@ -6,26 +6,33 @@ footer: "Lecture 3: The Efficient Frontier and the Best Portfolio"
 
 ## Plan
 
-- Find the efficient portfolios built from two stocks
+- Recap from lecture 2
 
-- See what short sales add to the picture
+- Find the efficient portfolios built from two stocks
 
 - Move from two stocks to many: the efficient frontier
 
-- Add a risk-free asset and identify the single best risky portfolio
+- Add a risk-free asset and identify the single best risky portfolio: The “super-efficient” portfolio
 
 - Separate the risk that diversification removes from the risk that stays
 
-## Outline
+Mostly based on the BDM textbook Chap. 11.2-5.
 
-A.  Efficient portfolios with two stocks
+## {.center}
 
-B.  $N$ risky stocks: the efficient frontier
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Recap lecture 2
+:::
+:::
 
-C.  The "super-efficient" portfolio
-
-- The content of this lecture mostly draws on the BDM textbook Chap.
-  11.2-5.
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Recap lecture 2}
+\end{center}
+\vfill
+```
 
 ## Recap of Lecture 2 {.smaller}
 
@@ -48,41 +55,49 @@ Let's do a recap:
 - You have money to invest and many assets to choose from. A **portfolio** is
   the answer to one question: how much of the money goes into each asset?
 
+- We start the analysis with only 2 assets, but we will extend it.
+
+- Formally, we answer this question by choosing the weights $x_{1}$ and $x_{2}$:
+  the percentage of the portfolio we invest in each asset, with $x_{1} + x_{2} = 1$.
+
 - Two assets held together are not the same thing as each asset on its own:
   the portfolio's risk depends on how the assets move relative to each other.
 
 - Lecture 2 built the tools to describe any portfolio by its expected return
-  and its risk. Today we use them to find the **best** portfolios.
+  and its risk.
 
 ## Recap: the mean-variance framework {.smaller}
 
 - Investors care about two things: **expected return** (more is better) and
-  **risk**, measured by the variance or its square root, the volatility (less
+  **risk**, measured by the variance or its square root, the standard deviation (less
   is better).
 
 - Every asset is a point on a chart with risk on the horizontal axis and
-  expected return on the vertical axis. Up and to the left is better.
+  expected return on the vertical axis.
 
 ::: {.center}
 ![](MVchoice.png){fig-align="center" width="40%"}
 :::
 
-- Two equivalent rules: for a given return, minimise risk; for a given risk,
+- The mean variance framework is defined by two equivalent rules: for a given return, minimise risk; for a given risk,
   maximise return.
 
 ## Recap: the utility function {.smaller}
 
 - The trade-off between return and risk is written as a **utility function**: a
-  score of how satisfied an investor is with a risky investment. The investor
-  picks the highest score.
+  score of how satisfied an investor is with a risky investment. We model investors behavior
+  as if they act to maximize this function.
 
   $$U = E(W) - \frac{\gamma}{2}\,\text{Var}(W)$$
 
 - $E(W)$ is the expected final wealth and $\text{Var}(W)$ its variance. The
   score rises with the mean and falls with the variance.
 
-- $\gamma > 0$ is the **risk aversion**: how much variance the investor is
-  willing to give up return to avoid. A higher $\gamma$ means a more cautious
+- Remember that wealth $W$ is a **random variable**: it is uncertain, we do not
+  know the result of the investment before we invest. We can only characterize
+  its past behaviour with the mean and the variance.
+
+- $\gamma > 0$ is the **risk aversion**: A higher $\gamma$ means a more cautious
   investor.
 
 ## Recap: the three monsters {.smaller}
@@ -100,35 +115,40 @@ Let's do a recap:
 
 - Positive: they tend to move together. Negative: in opposite directions.
 
-## Recap: correlation drives diversification {.smaller}
+## Recap: correlation and beta {.smaller}
 
-$\sigma_{p}$ is the volatility of the portfolio, and $\rho_{12}$ the correlation
-between the two stocks.
+- **Correlation**: the covariance divided by the two volatilities. The units
+  cancel, so the result always lies between $-1$ and $+1$.
 
-::: {.box .box-a}
-$\rho_{12} = 1$ $\Rightarrow$
-$\sigma_{p} = x_{1}\sigma_{1}+x_{2}\sigma_{2}$ The risk of the portfolio
-is the average risk.
-:::
+  $$\rho_{X,Y} = \text{Corr}\left(R_{i},R_{j}\right) = \frac{\text{Cov}\left(R_{i},R_{j}\right)}{\sigma_{R_{i}}\,\sigma_{R_{j}}}$$
 
-::: {.box .box-a}
-$\rho_{12} < 1$ $\Rightarrow$
-$\sigma_{p} < x_{1}\sigma_{1}+x_{2}\sigma_{2}$ The risk of the portfolio
-is smaller than the average risk due to the effect of diversification.
-:::
+  $+1$: always move together. $0$: no systematic link. $-1$: always in
+  opposite directions.
 
-::: {.box .box-a}
-$\rho_{12} = -1$ $\Rightarrow$
-$\sigma_{p} = \left|x_{1}\sigma_{1}-x_{2}\sigma_{2}\right|$ The negative
-comovement of the assets reduces the risk of the portfolio.
-:::
+- **Beta**: the covariance divided by the variance of $X$, the one that does the
+  moving. It answers: when $X$ moves by 1%, by how much does $Y$ move on average?
 
-## Recap: portfolio return, variance and volatility {.smaller}
+  $$\beta_{Y,X} = \frac{\text{Cov}\left(X,Y\right)}{\text{Var}\left(X\right)} = \frac{\sigma_{X,Y}}{\sigma_{X}^{2}}$$
+
+  A beta of 1.5 with respect to the market: a market rise of 1% comes with a
+  rise of about 1.5% for the stock.
+
+## Recap: portfolio return {.smaller}
+
+**The portfolio return**
 
 - The **weights** $x_{1}, x_{2}$ are the fractions of the money in each stock;
-  they add up to 1. The portfolio return counts each stock in proportion:
+  they add up to 1.
+
+- The portfolio return is the **weighted average of the individual returns**:
+  each stock's return counts in proportion to the money invested in it.
 
   $$R_{p} = x_{1}R_{1} + x_{2}R_{2}$$
+
+- Example: 30% in stock 1 and 70% in stock 2, with returns of 10% and 4%, gives
+  $R_{p} = 0.3 \times 10\% + 0.7 \times 4\% = 5.8\%$.
+
+## Recap: portfolio variance and volatility {.smaller}
 
 - Risk does not add up the same way. The variance of the portfolio is
 
@@ -136,6 +156,67 @@ comovement of the assets reduces the risk of the portfolio.
 
 - The comovement term is what makes a portfolio different from the sum of its
   parts. The volatility is $\sigma_{R_{p}} = \sqrt{\text{Var}\left(R_{p}\right)}$.
+
+- Since the covariance is the correlation times the two volatilities,
+  $\text{Cov}\left(R_{1},R_{2}\right) = \rho_{12}\,\sigma_{1}\,\sigma_{2}$, the same
+  variance can be written with the correlation:
+
+  $$\text{Var}\left(R_{p}\right) = x_{1}^{2}\sigma_{1}^{2} + x_{2}^{2}\sigma_{2}^{2} + 2x_{1}x_{2}\,\rho_{12}\,\sigma_{1}\,\sigma_{2}$$
+
+  This is the form that shows how the correlation drives the risk of the
+  portfolio (next slide).
+
+## Recap: correlation drives diversification {.smaller}
+
+The correlation term defines how strong the diversification effect will be.
+
+::: {.box .box-a}
+**Correlation = 1**. There is no diversification: the portfolio's risk is just
+the weighted average of the two risks.
+:::
+
+::: {.box .box-a}
+**Correlation below 1 (including zero)**. The portfolio's risk is **smaller than
+the average risk** of the individual assets. There is diversification.
+:::
+
+::: {.box .box-a}
+**The stocks tend to move in opposite directions** (negative correlation). A
+move in one is usually offset by a move in the other, so diversification is
+strongest here. In the extreme case of a correlation of −1 the risks subtract
+exactly, and with the right weights the portfolio's risk can be brought down to
+zero.
+:::
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Beginning of lecture 3 content
+:::
+
+::: {.center .small}
+Lecture 2 gave us the tools to measure the return and the risk of any portfolio.
+Today we use them to answer the real question: among all the portfolios we could
+build, which ones are worth holding?
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Beginning of lecture 3 content}
+
+\vspace{1.5em}
+\begin{minipage}{0.8\textwidth}
+\small\centering
+Lecture 2 gave us the tools to measure the return and the risk of any portfolio.
+Today we use them to answer the real question: among all the portfolios we could
+build, which ones are worth holding?
+\end{minipage}
+\end{center}
+\vfill
+```
 
 ## A. Efficient portfolios with two stocks
 
@@ -173,7 +254,20 @@ E\left[R_{40-60}\right]& = x_{I} E\left[R_{I}\right] + x_{C} E\left[R_{C}\right]
 ![](table11p4.png){fig-align="center"} Expected returns and volatility for different
 portfolios of two stocks.
 
-## But wait... "an efficient portfolio"? {.smaller}
+## From the table to the frontier {.smaller}
+
+::: {.center}
+![](table11p4.png){width="52%"}
+:::
+
+Each row is one portfolio; plotted as points they trace the curve of all
+two-stock portfolios, whose upper part is the **efficient** set.
+
+::: {.center}
+![](frontierEfficientOnly.png){width="52%"}
+:::
+
+## Efficient portfolios {.smaller}
 
 - We define as efficient, all portfolios with:
 
@@ -181,75 +275,159 @@ portfolios of two stocks.
 
   - Maximum expected return for a given variance.
 
-- A portfolio is inefficient when it is possible to find another
+- A portfolio is **INefficient** when it is possible to find another
   portfolio which has a larger expected return and a lower or equal
   volatility.
+
+- To know if a portfolio is efficient we ask **two** questions: is there a portfolio witht
+the same return but lower risk? is there one with the same risk but higher return?
 
 - Hence: investors who simultaneously maximise the expected return on
   their portfolio and minimise risk, will choose an efficient portfolio.
 
-## Back to our example
+
+## Same risk, more return? {.smaller}
+
+**If I hold the portfolio (0, 1), all in Coca-Cola, is there a portfolio with
+the same volatility but a higher return?**
+
+::: {.center}
+![](frontierSameVol.png){width="66%"}
+:::
+
+Follow the dotted line up from 25% volatility: it meets the curve twice.
+
+## The efficient frontier for two stocks
 
 ::: {.center}
 ![](figure11p3ang.png){fig-align="center"}
 :::
 
-## Improving returns with an efficient portfolio: the effect of correlation
+## The effect of correlation {.smaller}
 
-- Consider a portfolio which consists to 100% of Coca-Cola stocks
+:::: {.columns}
+::: {.column width="42%"}
+::: {style="text-align: left"}
+- How much risk you remove by combining two assets depends on their
+  correlation, and that is what shapes the frontier.
 
-- How can you maximize the expected return of this portfolio without
-  increasing its volatility?
+- **Correlation +1**: risk is a weighted average of the two volatilities. The
+  frontier is a straight line: no diversification.
 
-## Improving returns with an efficient portfolio: the effect of correlation (con't)
+- **Lower correlation**: the curve bends to the left, the same returns at lower
+  risk. The gain is largest for negative correlation, and maximal at $-1$.
+:::
+:::
 
-![](figure11p4ang.png){fig-align="center"}
+::: {.column width="58%"}
+![](figure11p4ang.png){fig-align="center" width="100%" style="max-height: 470px"}
+:::
+::::
+
+## The effect of correlation (con't)
+
+- So, a good way to reduce the risk of portfolio, or to increase the level of return we can get
+for every level of risk is to add assets with a negative correlation.
+
+## The minimum-variance portfolio: what it is {.smaller}
+
+::: {.center}
+![](frontierMVP.png){width="48%"}
+:::
+
+- The combination of the two stocks with the **lowest risk**: the leftmost
+  point, the "nose" where the curve turns back. Here (0.2, 0.8), with 22.4%
+  volatility, below either stock alone (25% and 50%).
+
+- The **efficient set begins here**: above it the curve is efficient, below it
+  every portfolio is dominated.
+
+- It **ignores expected returns**: its weights depend only on volatilities and
+  correlation. The most cautious investor picks it without looking at returns.
 
 ## The minimum variance portfolio {.smaller}
 
-- It is easy to find the minimum variance portfolio in the case of two
-  stocks: $$\begin{aligned}
-  \min_{x} \ \sigma^{2}_{p} = x^{2} \sigma^{2}_{1} + \left(1-x\right)^{2} \sigma^{2}_{2} + 2(1-x)x\sigma_{1}\sigma_{2} \rho_{1,2}
-  \end{aligned}$$ The first-order condition is $$\begin{aligned}
-  2 x \sigma^{2}_{1} - 2 (1-x) \sigma^{2}_{2} + 2 \sigma_{1}\sigma_{2}\rho_{1,2} - 4 x \sigma_{1} \sigma_{2} \rho_{1,2} = 0
-  \end{aligned}$$
-  $$\Leftrightarrow \ \ \ x = \frac{\sigma^{2}_{2}-\sigma_{1}\sigma_{2}\rho_{1,2}}{\sigma^{2}_{1}+\sigma^{2}_{2}-2\sigma_{1}\sigma_{2}\rho_{1,2}}.$$
+- We have the formula for the portfolio variance:
 
-## Short sales
+  $$\sigma^{2}_{p} = x_{1}^{2}\sigma^{2}_{1} + x_{2}^{2}\sigma^{2}_{2} + 2x_{1}x_{2}\,\sigma_{1}\sigma_{2}\rho_{1,2}$$
 
-- Short sales make it possible to benefit from falling stock prices.
-  $\rightarrow$ Strategy:
+- By definition the two weights add up to one, $x_{1} + x_{2} = 1$, so
+  $x_{2} = 1 - x_{1}$. Replacing $x_{2}$ in the formula leaves a single
+  unknown, $x_{1}$:
 
-  - Take a short position: borrow and sell a stock.
+  $$\sigma^{2}_{p} = x_{1}^{2}\sigma^{2}_{1} + \left(1-x_{1}\right)^{2}\sigma^{2}_{2} + 2x_{1}\left(1-x_{1}\right)\sigma_{1}\sigma_{2}\rho_{1,2}$$
 
-  - Close a short position: buy the stock back and return it.
+- The minimum variance portfolio is the value of $x_{1}$ that makes this
+  expression as small as possible:
 
-- Usually done when you expect the price to go down.
+  $$\min_{x_{1}} \ \sigma^{2}_{p}$$
 
-## Short sales
+## The minimum variance portfolio (con't) {.smaller}
+
+- Take the derivative with respect to $x_{1}$ and set it to zero (the
+  first-order condition):
+
+  $$2x_{1}\sigma^{2}_{1} - 2\left(1-x_{1}\right)\sigma^{2}_{2} + 2\sigma_{1}\sigma_{2}\rho_{1,2} - 4x_{1}\sigma_{1}\sigma_{2}\rho_{1,2} = 0$$
+
+- Solve for $x_{1}$:
+
+  $$x_{1} = \frac{\sigma^{2}_{2}-\sigma_{1}\sigma_{2}\rho_{1,2}}{\sigma^{2}_{1}+\sigma^{2}_{2}-2\sigma_{1}\sigma_{2}\rho_{1,2}}
+  \qquad\qquad x_{2} = 1 - x_{1}$$
+
+- Only volatilities and the correlation appear: the expected returns play no
+  role. Check with Intel and Coca-Cola ($\rho_{1,2} = 0$):
+  $x_{1} = 0.25^{2} / (0.5^{2} + 0.25^{2}) = 0.2$, the portfolio (0.2, 0.8).
+
+## Short sales: a reminder from Lecture 2 {.smaller}
+
+- A **short sale** is selling a stock you do not own. You borrow the share (in
+  practice from your broker), sell it today, and buy it back later to return it.
+  You hold the cash now and owe one share later.
+
+- You **gain if the price falls**: sell at 100, buy back at 60, return the share,
+  keep 40. You **lose if it rises**: buying back at 150 costs you 50. And there
+  is no ceiling on the loss, because a price can keep rising.
+
+- In the portfolio formula a short sale is a **negative weight**. Short EUR 50 of
+  stock 1 and put EUR 150 into stock 2: $x_{1} = -0.5$, $x_{2} = 1.5$, still adding
+  up to 1. The return and variance formulas do not change.
+
+- Why it matters here: negative weights **widen the set of portfolios** we can
+  build.
+
+## Short sales: an example, step by step {.smaller}
+
+- **Today.** You borrow one share of Stock A, worth 100, and sell it. You now
+  hold 100 in cash and owe one share. You put the 100 in the risk-free asset at
+  5% for one year.
+
+- **In one year.** Two things happen at once:
+
+  - Your risk-free investment has grown to $100 \times 1.05 = 105$.
+
+  - You must buy one share of A to return it. Its price is $100 \times (1 +$
+    return of A$)$: if A rose 10%, buying it back costs 110; if it fell 20%,
+    only 80.
+
+- **Your gain or loss** is what you have (105) minus what you must pay to buy the
+  share back.
+
+## Short sales: an example, step by step (con't) {.smaller}
 
 ::: {.center}
-![](spacex_launch.png){fig-align="center"}
-
-![](spacex_chart.png){fig-align="center"}
+| Return of Stock A                   |  10% |   0% | -10% | -20% |
+|:------------------------------------|-----:|-----:|-----:|-----:|
+| Cash from the risk-free asset       |  105 |  105 |  105 |  105 |
+| Cost of buying the share back       |  110 |  100 |   90 |   80 |
+| **Gain/loss** (cash minus cost)     |   -5 |    5 |   15 |   25 |
 :::
 
-## Short sales {.smaller}
+- Read down a column: when A **rises** 10%, buying it back costs 110, more than
+  the 105 you have, so you lose 5. When A **falls** 20%, buying it back costs
+  only 80, so you keep 25.
 
-- Example: short sale of Stock A for a value of 100 and investment of
-  the proceeds at the risk-free rate of 5% for one year. Consider the
-  following scenarios at the end of the year:
-
-  ::: {.center}
-  | Return of Stock A           |  10% |   0% | -10% | -20% |
-  |:----------------------------|-----:|-----:|-----:|-----:|
-  | Position in risk-free asset |  105 |  105 |  105 |  105 |
-  | Short position              | -110 | -100 |  -90 |  -80 |
-  | Gain/loss                   |   -5 |    5 |   15 |   25 |
-  :::
-
-- Mathematically, a short position corresponds to a negative portfolio
-  weight in the stock.
+- The short position is worth **minus** the price of the share: a short sale is
+  a **negative weight** in Stock A. The lower A goes, the more you gain.
 
 ## Return of a portfolio with short sales
 
@@ -263,6 +441,30 @@ portfolios of two stocks.
 
 - What is the expected return and the volatility of his portfolio?
 
+## Return of a portfolio with short sales: solution {.smaller}
+
+- **Weights.** Jérôme's own money is 20 000. He holds 30 000 of Intel and owes
+  10 000 of Coca-Cola:
+
+  $$x_{I} = \frac{30\,000}{20\,000} = 1.5 \qquad x_{C} = \frac{-10\,000}{20\,000} = -0.5 \qquad x_{I} + x_{C} = 1$$
+
+- **Expected return.** Same formula as before; the negative weight simply
+  subtracts Coca-Cola's return:
+
+  $$E[R_{p}] = 1.5 \times 26\% + (-0.5) \times 6\% = 39\% - 3\% = 36\%$$
+
+## Return of a portfolio with short sales: solution (con't) {.smaller}
+
+- **Variance and volatility.** Zero correlation, so the covariance term is
+  zero; the negative weight is squared, so it still adds risk:
+
+  $$\text{Var}(R_{p}) = 1.5^{2} \times 0.5^{2} + (-0.5)^{2} \times 0.25^{2} = 0.5625 + 0.0156 = 0.578$$
+
+  $$\sigma_{p} = \sqrt{0.578} = 76\%$$
+
+- More return than Intel alone (36% vs 26%) but much more risk (76% vs 50%):
+  short selling extends the curve beyond Intel, as the next figure shows.
+
 ##
 
 ::: {.center}
@@ -271,18 +473,25 @@ portfolios of two stocks.
 
 ## B. $N$ risky stocks: the efficient frontier {.smaller}
 
-- What is the effect of adding a third stock to a portfolio of Coca-Cola
-  and Intel?
+- What happens to the curve when we add a **third stock** to Intel and
+  Coca-Cola?
 
-- We assume that the stock of Bore Industries is uncorrelated with the
-  other two stocks and that its expected return is only 2% and its
-  volatility is the same as the one of the Coca-Cola stock (25%).
+- Meet **Bore Industries**: expected return only 2%, the same 25% volatility as
+  Coca-Cola, and **uncorrelated** with both. On its own it is a poor investment,
+  dominated by Coca-Cola.
 
-- Reminder: You would have to use this formula: $$\begin{aligned}
-  \text{Var}\left[R_{p}\right] & = \text{Cov}\left[R_{p}, R_{p} \right] = \sum^{N}_{i=1} x_{i} \text{Cov}\left[R_{i}, R_{p} \right], \\
-  & = \sum^{N}_{i=1} x_{i} \text{Cov}\left[R_{i},\sum^{N}_{j=1} x_{j}R_{j} \right]  = \sum^{N}_{i=1} x_{i} \sum^{N}_{j=1} x_{j}\text{Cov}\left[R_{i},R_{j} \right],  \\
-  & = \sum^{N}_{i=1} \sum^{N}_{j=1} x_{i}  x_{j}\text{Cov}\left[R_{i},R_{j} \right].
-  \end{aligned}$$
+- Yet adding it helps. Any pair of stocks gives a curve; mixing Bore with a
+  50/50 Intel-Coca-Cola portfolio gives a **new curve that lies to the left**
+  of the old one: the same returns at lower risk. Bore's returns are unrelated
+  to the other two, so part of its risk cancels out in the mix.
+
+- With three stocks we are no longer limited to a curve: every combination is
+  now possible, and the portfolios fill a whole **region**. The efficient
+  frontier is the **upper-left edge** of that region, further left than the
+  two-stock curve.
+
+- Each extra stock pushes the frontier further left. The next slides show the
+  three-stock case, then three stocks versus ten.
 
 ## Expected return and volatility for selected portfolios of Intel, Coca-Cola, and Bore Industries stocks
 
@@ -294,85 +503,175 @@ portfolios of two stocks.
 
 ## Efficient frontier with three versus ten stocks
 
-![](figure11p8ang.png){fig-align="center"}
+![](figure11p8ang.png){fig-align="center" width="78%"}
+
+Each stock added moves the frontier left: the same return at a lower risk.
 
 ## Summary on efficient portfolios {.smaller}
 
-- We define as efficient, any portfolio with minimum variance for a
-  given expected return.
+- A portfolio is **efficient** when no other portfolio offers more return for
+  the same risk, or less risk for the same return.
 
-  - Or: any portfolio with maximum return for a given level of risk.
+- The **efficient frontier** is the set of all efficient portfolios: the
+  upper-left edge of the region of possible portfolios.
 
-- The efficient frontier is then the set of efficient portfolios.
+- **More stocks, better frontier.** Every stock we add, even a poor one on its
+  own, moves the frontier further left. The best frontier uses all available
+  investments.
 
-  - It can be shown that it is the upper part of a hyperbola in the
-    ($E(R)$, $\sigma$) plane.
+- Efficient portfolios may include **short positions**.
 
-- Augmenting the number of securities included in a portfolio allows to
-  obtain an efficient portfolio with a lower risk, for a given level of
-  expected return.
+- One thing is still missing: so far every portfolio is made only of **risky**
+  stocks. What if we can also lend or borrow at a risk-free rate?
 
-- Remark: an efficient portfolio may contain some short positions.
+## Portfolio variance with $N$ stocks {.smaller}
 
-## C. The "super-efficient" portfolio
+With more stocks the formula is the same, only longer. For three stocks:
 
-- Up to now, the efficient portfolio only contained risky securities.
+$$\text{Var}\left(R_{p}\right) = \underbrace{x_{1}^{2}\sigma_{1}^{2} + x_{2}^{2}\sigma_{2}^{2} + x_{3}^{2}\sigma_{3}^{2}}_{\text{own risk of each stock}}$$
 
-  - The investment decision depends on the preferences ("risk vs
-    return") of each investor
+$$+\ \underbrace{2x_{1}x_{2}\sigma_{1,2} + 2x_{1}x_{3}\sigma_{1,3} + 2x_{2}x_{3}\sigma_{2,3}}_{\text{how the stocks move together}}$$
 
-- Let us allow investors to invest in a risk-free asset
+- **Own risk**: one term per stock, its weight squared times its variance.
 
-  - Its return is denoted by $r_f$ (risk-free rate)
+- **Comovement**: one term for every *pair* of stocks, where $\sigma_{1,2}$ is
+  the covariance between stocks 1 and 2, counted twice.
 
-  - Zero risk
+With 3 stocks: 3 variance terms and 3 pairs. With 50 stocks: 50 variance terms
+and 1,225 pairs. **In a large portfolio the risk comes mostly from the
+covariances**, not from each stock's own variance.
 
-## Risky asset and risk-free investment: the effect of leverage (James Tobin, 1958) {.smaller .dense}
+## Portfolio variance with $N$ stocks (con't) {.smaller .dense}
 
-Two investments are available:
+$$\text{Var}\left(R_{p}\right) = \sum_{i=1}^{N}\sum_{j=1}^{N} x_{i}\,x_{j}\,\sigma_{i,j}$$
 
-- Stocks of Umbrella Inc:
+In words: for every pair of stocks $i$ and $j$, multiply their two weights by
+their covariance, then add up. Written out:
 
-  ::: {.center}
-  +-----------------+-----------------+---------+
-  | Return          | Expected return | St.Dev. |
-  +:========:+:====:+:===============:+:=======:+
-  | Sun      | Rain |                 |         |
-  +----------+------+-----------------+---------+
-  | 1-2 -10% | 30%  | 10%             | 20%     |
-  +----------+------+-----------------+---------+
-  :::
+$$\text{Var}\left(R_{p}\right) = x_{1}^{2}\sigma_{1}^{2} + \cdots + x_{N}^{2}\sigma_{N}^{2} \; + \; 2x_{1}x_{2}\sigma_{1,2} + 2x_{1}x_{3}\sigma_{1,3} + \cdots + 2x_{N-1}x_{N}\sigma_{N-1,N}$$
 
-- A risk-free bank deposit
+Those pairs fit in a square table, one row and one column per stock. **The
+variance is the sum of all its cells.**
 
-  ::: {.center}
-  +---------------+-----------------+---------+
-  | Return        | Expected return | St.Dev. |
-  +:======:+:====:+:===============:+:=======:+
-  | Sun    | Rain |                 |         |
-  +--------+------+-----------------+---------+
-  | 1-2 3% | 3%   | 3%              | 0%      |
-  +--------+------+-----------------+---------+
-  :::
+|             | **Stock 1**               | **Stock 2**               | **Stock 3**               | $\cdots$ | **Stock N**               |
+|-------------|---------------------------|---------------------------|---------------------------|----------|---------------------------|
+| **Stock 1** | $x_{1}^{2}\sigma_{1}^{2}$ | $x_{1}x_{2}\sigma_{1,2}$  | $x_{1}x_{3}\sigma_{1,3}$  | $\cdots$ | $x_{1}x_{N}\sigma_{1,N}$  |
+| **Stock 2** | $x_{2}x_{1}\sigma_{1,2}$  | $x_{2}^{2}\sigma_{2}^{2}$ | $x_{2}x_{3}\sigma_{2,3}$  | $\cdots$ | $x_{2}x_{N}\sigma_{2,N}$  |
+| **Stock 3** | $x_{3}x_{1}\sigma_{1,3}$  | $x_{3}x_{2}\sigma_{2,3}$  | $x_{3}^{2}\sigma_{3}^{2}$ | $\cdots$ | $x_{3}x_{N}\sigma_{3,N}$  |
+| $\vdots$    |                           |                           |                           |          |                           |
+| **Stock N** | $x_{N}x_{1}\sigma_{1,N}$  | $x_{N}x_{2}\sigma_{2,N}$  | $x_{N}x_{3}\sigma_{3,N}$  | $\cdots$ | $x_{N}^{2}\sigma_{N}^{2}$ |
 
-## Risky asset and risk-free investment: the effect of leverage (con't)
+- **The diagonal** ($N$ cells): each stock paired with itself, so the cell is its
+  own variance. These are the first terms of the formula.
 
-Invest 50 in Umbrella Inc and 50 in the bank account:
+- **Off the diagonal** ($N^{2}-N$ cells): the covariances, each pair appearing
+  twice, which is where the $2$ in front of each covariance term comes from. In
+  a large portfolio these cells are the vast majority: **they decide the risk**.
+
+## C. Adding a risk-free asset {.smaller}
+
+- Besides diversifying, there is a second way to control risk: keep part of
+  the money in a **risk-free asset**, such as a bank deposit or Treasury bills.
+
+- Its return, the **risk-free rate** $r_{f}$, is known in advance: zero
+  volatility, and zero correlation with every stock.
+
+- We can also do the reverse: **borrow** at $r_{f}$ and invest more than our own
+  money in risky assets. This is called **leverage**, or buying on margin.
+
+- The question for this section: what do the possible portfolios look like once
+  we mix a risky investment with the risk-free asset? We start with a simple
+  example due to James Tobin (1958).
+
+## Tobin's example: two investments {.smaller}
+
+Next year is either sunny or rainy, each with probability one half.
+
+- **Umbrella Inc.** loses money in the sun and makes money in the rain.
+
+- A **bank deposit** pays 3% whatever the weather.
 
 ::: {.center}
+| Investment | Sun     | Rain    | Expected return | Volatility |
+|:-----------|:-------:|:-------:|:---------------:|:----------:|
+| Umbrella   | $-10\%$ | $+30\%$ | $10\%$          | $20\%$     |
+| Deposit    | $+3\%$  | $+3\%$  | $3\%$           | $0\%$      |
 :::
 
-## Risky asset and risk-free investment: the effect of leverage (con't 2)
+- Umbrella: expected return $0.5 \times (-10\%) + 0.5 \times 30\% = 10\%$; each
+  outcome is 20 points from it, so the volatility is $20\%$.
 
-Borrow 50 and invest 150 in Umbrella Inc:
+- The deposit has no risk but a much lower return. Can we get something in
+  between? Can we get *more* than Umbrella?
+
+## Step 1: 50 in Umbrella, 50 in the bank {.smaller}
+
+- You have 100. Put 50 in Umbrella and 50 in the deposit: weights
+  $x_{U} = 0.5$ and $x_{f} = 0.5$.
+
+- Return in each state, then its mean and spread:
 
 ::: {.center}
+| State | Portfolio return                                   |
+|:------|:---------------------------------------------------|
+| Sun   | $0.5 \times (-10\%) + 0.5 \times 3\% = -3.5\%$     |
+| Rain  | $0.5 \times 30\% + 0.5 \times 3\% = 16.5\%$        |
 :::
 
-## Risky asset and risk-free investment: the effect of leverage (con't 3)
+  $$E[R_{p}] = \frac{-3.5\% + 16.5\%}{2} = 6.5\% \qquad\qquad \sigma_{p} = 10\%$$
 
-Possible combinations in the risk-return diagram
-![](figureBanUmb.png){fig-align="center"}
+- Both numbers sit exactly **halfway** between the deposit (3%, 0%) and
+  Umbrella (10%, 20%). Half the money in the risky asset gives half its risk
+  and half its risk premium.
+
+## What is leverage? {.smaller}
+
+- **Leverage is investing with borrowed money**: you put in part of the amount
+  and borrow the rest, so you control a position bigger than your own cash.
+
+- Everyday example: a EUR 300,000 flat bought with EUR 60,000 of your own money
+  and a EUR 240,000 mortgage. You put up 20% of the price but you get 100% of
+  its moves: if the flat gains 10%, your 60,000 gains 50%; if it loses 10%,
+  half your money is gone. Firms do the same with debt, funds with margin loans.
+
+- The interest is owed whatever happens, so leverage **magnifies gains and
+  losses alike**. It does not make an investment better, it scales it up.
+
+- In our framework nothing new is needed: borrowing at $r_{f}$ is simply a
+  **negative weight on the risk-free asset**, $x_{f} < 0$, with the weight on
+  the risky asset above 1. The weights still add up to 1, and the same return
+  and risk formulas apply.
+
+## Step 2: borrow 50 and put 150 in Umbrella {.smaller}
+
+- Now borrow 50 from the bank at 3% and invest 150 in Umbrella: weights
+  $x_{U} = 1.5$ and $x_{f} = -0.5$. Borrowing is a **negative weight** in the
+  risk-free asset.
+
+::: {.center}
+| State | Portfolio return                                    |
+|:------|:----------------------------------------------------|
+| Sun   | $1.5 \times (-10\%) - 0.5 \times 3\% = -16.5\%$     |
+| Rain  | $1.5 \times 30\% - 0.5 \times 3\% = 43.5\%$         |
+:::
+
+  $$E[R_{p}] = \frac{-16.5\% + 43.5\%}{2} = 13.5\% \qquad\qquad \sigma_{p} = 30\%$$
+
+- More expected return than Umbrella alone (13.5% vs 10%), but also more risk
+  (30% vs 20%). **Leverage scales both up** in the same proportion: 1.5 times
+  the risk, 1.5 times the risk premium.
+
+## All the combinations lie on a straight line {.smaller}
+
+![](figureBanUmb.png){fig-align="center" width="62%"}
+
+- With a fraction $x$ in Umbrella and $1 - x$ in the bank:
+  $E[R_{p}] = r_{f} + x \left( E[R_{U}] - r_{f} \right)$ and
+  $\sigma_{p} = x \, \sigma_{U}$.
+
+- Both grow in proportion to $x$, so every mix is a point on the **straight
+  line** from the deposit through Umbrella: lending puts you between the two,
+  borrowing ($x > 1$) beyond Umbrella.
 
 ## Leverage effect: general formula for the expected portfolio return and risk {.smaller .dense}
 

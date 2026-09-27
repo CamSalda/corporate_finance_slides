@@ -17,3 +17,5 @@ format:
     aspectratio: 43
     include-in-header: ../_beamer-preamble.tex
     theme: default
+    filters:
+      - ../_no-pause-beamer.lua

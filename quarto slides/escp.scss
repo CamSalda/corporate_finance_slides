@@ -30,6 +30,11 @@ $code-color: #240085;
 .reveal mjx-container[display="true"] {
   margin: 0.5em 0;
 }
+// MathJax makes each formula focusable and draws an outline around it when clicked.
+.reveal mjx-container:focus,
+.reveal mjx-container:focus-visible {
+  outline: none;
+}
 .reveal .smaller mjx-container {
   font-size: 0.85em !important;
 }
