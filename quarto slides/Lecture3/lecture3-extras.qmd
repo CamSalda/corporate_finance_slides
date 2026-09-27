@@ -11,7 +11,7 @@ footer: "Lecture 3 extras"
 [Extra 1]{.large}
 
 ::: {.huge}
-Read the news: Eni
+ENI:Ente Nazionale Idrocarburi
 :::
 :::
 :::
@@ -20,7 +20,7 @@ Read the news: Eni
 \vfill
 \begin{center}
 {\Large Extra 1}\\[0.8em]
-{\color{escpblue}\Huge\bfseries Read the news: Eni}
+{\color{escpblue}\Huge\bfseries ENI}
 \end{center}
 \vfill
 ```
@@ -35,7 +35,7 @@ Read the news: Eni
 :::
 
 ::: {.column width="54%"}
-- Italian oil and gas group, listed in Milan (FTSE MIB) and New York. The
+- Italian oil and gas group, listed in Milan and New York. The
   state holds about 30%.
 
 - Share price about **EUR 24**, market cap about **EUR 60 billion**.
@@ -94,7 +94,7 @@ Indices and dividends
 - Most price indices also have an official total return version, e.g. the
   S&P 500 TR or the CAC 40 GR.
 
-## The same index comes in three versions {.smaller}
+## Types of indeces {.smaller}
 
 - **Price index** (price-only or capital index): follows share prices only.
   When a company pays a dividend its price drops and the index drops with it;
@@ -109,8 +109,6 @@ Indices and dividends
   the withholding tax a foreign investor would pay. The usual benchmark for
   international funds and ETFs. Examples: MSCI World Net, S&P 500 Net.
 
-- Same companies, same prices in all three. The only difference is what happens
-  to the dividends, and over the long run that difference is large.
 
 ## {.center}
 
@@ -119,7 +117,7 @@ Indices and dividends
 [Extra 3]{.large}
 
 ::: {.huge}
-Variance and covariance, other ways
+Variance and covariance, alternative expressions
 :::
 :::
 :::
@@ -128,7 +126,7 @@ Variance and covariance, other ways
 \vfill
 \begin{center}
 {\Large Extra 3}\\[0.8em]
-{\color{escpblue}\Huge\bfseries Variance and covariance, other ways}
+{\color{escpblue}\Huge\bfseries Variance and covariance, alternative expressions}
 \end{center}
 \vfill
 ```
@@ -143,9 +141,10 @@ Variance and covariance, other ways
 - The same number can be written without any distances, as the **mean of the
   squares minus the square of the mean**:
 
-  $$\sigma^{2} = \frac{1}{N} \sum_{i=1}^{N} x_{i}^{2} - \bar{x}^{2}
-  \qquad\qquad
-  \text{Var}(X) = \mathbb{E}\left[X^{2}\right] - \left(\mathbb{E}[X]\right)^{2}$$
+  $$\begin{aligned}
+  \pmb{\text{Var}(X)} &= \pmb{\mathbb{E}\left[X^{2}\right] - \left(\mathbb{E}[X]\right)^{2}} \\[8pt]
+  \sigma^{2} &= \frac{1}{N} \sum_{i=1}^{N} x_{i}^{2} - \left( \frac{1}{N} \sum_{i=1}^{N} x_{i} \right)^{2}
+  \end{aligned}$$
 
 - This is the **König-Huygens formula**. It is handy with a calculator: you add
   the values, add their squares, and never compute a single distance.
@@ -184,7 +183,7 @@ Variance and covariance, other ways
 
 - For data, "average" means $\frac{1}{N}\sum$: every observation counts $1/N$.
   For a random variable, "average" means the expectation $\mathbb{E}[\,\cdot\,]$,
-  where every outcome counts with its probability. Same idea, different weights.
+  where every outcome counts with its probability. Same idea.
 
 - Replace each $\frac{1}{N}\sum$ by $\mathbb{E}$ and $\bar{x}$ by $\mathbb{E}[X]$:
 
@@ -255,8 +254,6 @@ The Markowitz problem
 
   $$\sum_{i=1}^{N} x_{i}\, E[R_{i}] = \mu \qquad\qquad \sum_{i=1}^{N} x_{i} = 1$$
 
-- Adding $x_{i} \geq 0$ forbids short sales. Solving once for each $\mu$
-  traces out the efficient frontier.
 
 ## Markowitz: first-order conditions {.smaller}
 
@@ -308,13 +305,10 @@ The Markowitz problem
   $$\sigma_{p}^{2}(\mu) = \frac{A\mu^{2} - 2B\mu + C}{D}$$
 
 - A parabola in $\mu$: that is the minimum-variance frontier, and its upper
-  half is the efficient frontier. Its lowest point, the global minimum-variance
-  portfolio, has weights $\mathbf{x} = \boldsymbol{\Sigma}^{-1}\mathbf{1} / A$.
+  half is the efficient frontier. Its lowest point is the global
+  minimum-variance portfolio, with weights
 
-- **Reading the first-order condition**: in an optimal portfolio, each stock's
-  contribution to risk, its covariance with the portfolio, is a straight-line
-  function of its expected return. Lecture 4 builds the CAPM on exactly this
-  idea.
+  $$\mathbf{x}_{\text{GMV}} = \frac{\boldsymbol{\Sigma}^{-1}\mathbf{1}}{A}$$
 
 ## Markowitz in real life: no closed form {.smaller}
 

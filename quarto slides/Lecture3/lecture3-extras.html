@@ -1073,7 +1073,7 @@ Camilo Saldarriaga
 <div class="center">
 <p><span class="large">Extra 1</span></p>
 <div class="huge">
-<p>Read the news: Eni</p>
+<p>ENI:Ente Nazionale Idrocarburi</p>
 </div>
 </div>
 </section>
@@ -1085,7 +1085,7 @@ Camilo Saldarriaga
 <p><span class="small">Palazzo Eni, Rome</span></p>
 </div><div class="column" style="width:54%;">
 <ul>
-<li><p>Italian oil and gas group, listed in Milan (FTSE MIB) and New York. The state holds about 30%.</p></li>
+<li><p>Italian oil and gas group, listed in Milan and New York. The state holds about 30%.</p></li>
 <li><p>Share price about <strong>EUR 24</strong>, market cap about <strong>EUR 60 billion</strong>.</p></li>
 <li><p>2025: adjusted net profit <strong>EUR 5.0 billion</strong>, operating cash flow <strong>EUR 12.5 billion</strong>.</p></li>
 <li><p>Returned <strong>EUR 5.0 billion</strong> to shareholders in 2025: EUR 3.1 billion of dividends, EUR 1.9 billion of buybacks.</p></li>
@@ -1147,13 +1147,12 @@ Camilo Saldarriaga
 <li><p>Most price indices also have an official total return version, e.g. the S&amp;P 500 TR or the CAC 40 GR.</p></li>
 </ul>
 </section>
-<section id="the-same-index-comes-in-three-versions" class="slide level2 smaller">
-<h2>The same index comes in three versions</h2>
+<section id="types-of-indeces" class="slide level2 smaller">
+<h2>Types of indeces</h2>
 <ul>
 <li><p><strong>Price index</strong> (price-only or capital index): follows share prices only. When a company pays a dividend its price drops and the index drops with it; the cash is never added back. The headline S&amp;P 500, Dow Jones, FTSE 100, CAC 40 and Nikkei 225 are all price indices.</p></li>
 <li><p><strong>Gross total return index</strong> (gross return or performance index): every dividend is reinvested in the index on the day it is paid, before any tax. Examples: the DAX 40 as quoted in the news, the S&amp;P 500 TR, the CAC 40 GR.</p></li>
 <li><p><strong>Net total return index</strong> (net return index): dividends are reinvested after the withholding tax a foreign investor would pay. The usual benchmark for international funds and ETFs. Examples: MSCI World Net, S&amp;P 500 Net.</p></li>
-<li><p>Same companies, same prices in all three. The only difference is what happens to the dividends, and over the long run that difference is large.</p></li>
 </ul>
 </section>
 <section id="section-2" class="slide level2 center">
@@ -1161,7 +1160,7 @@ Camilo Saldarriaga
 <div class="center">
 <p><span class="large">Extra 3</span></p>
 <div class="huge">
-<p>Variance and covariance, other ways</p>
+<p>Variance and covariance, alternative expressions</p>
 </div>
 </div>
 </section>
@@ -1171,9 +1170,10 @@ Camilo Saldarriaga
 <li><p>The variance is the average squared distance to the mean. For <span class="math inline">\(N\)</span> observations <span class="math inline">\(x_{1}, \dots, x_{N}\)</span> with mean <span class="math inline">\(\bar{x}\)</span>:</p>
 <p><span class="math display">\[\sigma^{2} = \frac{1}{N} \sum_{i=1}^{N} \left(x_{i} - \bar{x}\right)^{2}\]</span></p></li>
 <li><p>The same number can be written without any distances, as the <strong>mean of the squares minus the square of the mean</strong>:</p>
-<p><span class="math display">\[\sigma^{2} = \frac{1}{N} \sum_{i=1}^{N} x_{i}^{2} - \bar{x}^{2}
-\qquad\qquad
-\text{Var}(X) = \mathbb{E}\left[X^{2}\right] - \left(\mathbb{E}[X]\right)^{2}\]</span></p></li>
+<p><span class="math display">\[\begin{aligned}
+\pmb{\text{Var}(X)} &amp;= \pmb{\mathbb{E}\left[X^{2}\right] - \left(\mathbb{E}[X]\right)^{2}} \\[8pt]
+\sigma^{2} &amp;= \frac{1}{N} \sum_{i=1}^{N} x_{i}^{2} - \left( \frac{1}{N} \sum_{i=1}^{N} x_{i} \right)^{2}
+\end{aligned}\]</span></p></li>
 <li><p>This is the <strong>König-Huygens formula</strong>. It is handy with a calculator: you add the values, add their squares, and never compute a single distance.</p></li>
 </ul>
 </section>
@@ -1208,7 +1208,7 @@ Camilo Saldarriaga
 <section id="from-data-to-expectations" class="slide level2 smaller">
 <h2>From data to expectations</h2>
 <ul>
-<li><p>For data, “average” means <span class="math inline">\(\frac{1}{N}\sum\)</span>: every observation counts <span class="math inline">\(1/N\)</span>. For a random variable, “average” means the expectation <span class="math inline">\(\mathbb{E}[\,\cdot\,]\)</span>, where every outcome counts with its probability. Same idea, different weights.</p></li>
+<li><p>For data, “average” means <span class="math inline">\(\frac{1}{N}\sum\)</span>: every observation counts <span class="math inline">\(1/N\)</span>. For a random variable, “average” means the expectation <span class="math inline">\(\mathbb{E}[\,\cdot\,]\)</span>, where every outcome counts with its probability. Same idea.</p></li>
 <li><p>Replace each <span class="math inline">\(\frac{1}{N}\sum\)</span> by <span class="math inline">\(\mathbb{E}\)</span> and <span class="math inline">\(\bar{x}\)</span> by <span class="math inline">\(\mathbb{E}[X]\)</span>:</p>
 <p><span class="math display">\[\frac{1}{N}\sum_{i=1}^{N} x_{i}^{2} - \bar{x}^{2}
 \quad\longrightarrow\quad
@@ -1247,7 +1247,6 @@ Camilo Saldarriaga
 <p><span class="math display">\[\min_{x_{1}, \dots, x_{N}} \; \text{Var}(R_{p}) = \sum_{i=1}^{N} \sum_{j=1}^{N} x_{i}\, x_{j}\, \sigma_{ij}\]</span></p></li>
 <li><p><strong>Constraints</strong>: reach a chosen expected return <span class="math inline">\(\mu\)</span>, and invest all the money.</p>
 <p><span class="math display">\[\sum_{i=1}^{N} x_{i}\, E[R_{i}] = \mu \qquad\qquad \sum_{i=1}^{N} x_{i} = 1\]</span></p></li>
-<li><p>Adding <span class="math inline">\(x_{i} \geq 0\)</span> forbids short sales. Solving once for each <span class="math inline">\(\mu\)</span> traces out the efficient frontier.</p></li>
 </ul>
 </section>
 <section id="markowitz-first-order-conditions" class="slide level2 smaller">
@@ -1282,8 +1281,8 @@ Camilo Saldarriaga
 <ul>
 <li><p>Plug the solution back into the variance. The smallest variance reachable for a target return <span class="math inline">\(\mu\)</span> is</p>
 <p><span class="math display">\[\sigma_{p}^{2}(\mu) = \frac{A\mu^{2} - 2B\mu + C}{D}\]</span></p></li>
-<li><p>A parabola in <span class="math inline">\(\mu\)</span>: that is the minimum-variance frontier, and its upper half is the efficient frontier. Its lowest point, the global minimum-variance portfolio, has weights <span class="math inline">\(\mathbf{x} = \boldsymbol{\Sigma}^{-1}\mathbf{1} / A\)</span>.</p></li>
-<li><p><strong>Reading the first-order condition</strong>: in an optimal portfolio, each stock’s contribution to risk, its covariance with the portfolio, is a straight-line function of its expected return. Lecture 4 builds the CAPM on exactly this idea.</p></li>
+<li><p>A parabola in <span class="math inline">\(\mu\)</span>: that is the minimum-variance frontier, and its upper half is the efficient frontier. Its lowest point is the global minimum-variance portfolio, with weights</p>
+<p><span class="math display">\[\mathbf{x}_{\text{GMV}} = \frac{\boldsymbol{\Sigma}^{-1}\mathbf{1}}{A}\]</span></p></li>
 </ul>
 </section>
 <section id="markowitz-in-real-life-no-closed-form" class="slide level2 smaller">

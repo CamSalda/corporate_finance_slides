@@ -27,30 +27,78 @@ C.  The "super-efficient" portfolio
 - The content of this lecture mostly draws on the BDM textbook Chap.
   11.2-5.
 
-## Recap: a portfolio is a set of weights {.smaller}
+## Recap of Lecture 2 {.smaller}
 
-- A portfolio is described by how your money is split between the stocks. Those
-  fractions are the **weights**, and they add up to 1.
+Let's do a recap:
 
-- With EUR 30 of every EUR 100 in stock 1 and EUR 70 in stock 2, the weights are
-  $x_{1} = 0.30$ and $x_{2} = 0.70$, and the portfolio return is
+- Portfolio choice: in what to invest?
 
-  $$R_{p} = x_{1}R_{1} + x_{2}R_{2}$$
+- The mean-variance framework
 
-- The return of the portfolio is simply each stock's return counted in proportion
-  to the money behind it.
+- The utility function
 
-## Recap: portfolio risk depends on comovement {.smaller}
+- The three monsters: covariance, correlation, beta
 
-- Risk does not add up the same way. The variance of a two-stock portfolio is
+- Diversification and its link with correlation
 
-  $$\text{Var}\left(R_{p}\right) = \underbrace{x_{1}^{2}\text{Var}\left(R_{1}\right) + x_{2}^{2}\text{Var}\left(R_{2}\right)}_{\text{individual risks}} + \underbrace{2x_{1}x_{2}\text{Cov}\left(R_{1},R_{2}\right)}_{\text{comovement}}$$
+- Portfolio return, variance and standard deviation
 
-- The last term is what makes a portfolio different from the sum of its parts. It
-  is positive when the two stocks tend to move together and negative when they
-  move in opposite directions.
+## Recap: portfolio choice, in what to invest? {.smaller}
 
-- The volatility of the portfolio is $\sigma_{R_{p}} = \sqrt{\text{Var}\left(R_{p}\right)}$.
+- You have money to invest and many assets to choose from. A **portfolio** is
+  the answer to one question: how much of the money goes into each asset?
+
+- Two assets held together are not the same thing as each asset on its own:
+  the portfolio's risk depends on how the assets move relative to each other.
+
+- Lecture 2 built the tools to describe any portfolio by its expected return
+  and its risk. Today we use them to find the **best** portfolios.
+
+## Recap: the mean-variance framework {.smaller}
+
+- Investors care about two things: **expected return** (more is better) and
+  **risk**, measured by the variance or its square root, the volatility (less
+  is better).
+
+- Every asset is a point on a chart with risk on the horizontal axis and
+  expected return on the vertical axis. Up and to the left is better.
+
+::: {.center}
+![](MVchoice.png){fig-align="center" width="40%"}
+:::
+
+- Two equivalent rules: for a given return, minimise risk; for a given risk,
+  maximise return.
+
+## Recap: the utility function {.smaller}
+
+- The trade-off between return and risk is written as a **utility function**: a
+  score of how satisfied an investor is with a risky investment. The investor
+  picks the highest score.
+
+  $$U = E(W) - \frac{\gamma}{2}\,\text{Var}(W)$$
+
+- $E(W)$ is the expected final wealth and $\text{Var}(W)$ its variance. The
+  score rises with the mean and falls with the variance.
+
+- $\gamma > 0$ is the **risk aversion**: how much variance the investor is
+  willing to give up return to avoid. A higher $\gamma$ means a more cautious
+  investor.
+
+## Recap: the three monsters {.smaller}
+
+| Measure | Formula | What it tells us | Range |
+|:--------|:--------|:-----------------|:------|
+| Covariance | $\sigma_{X,Y}$ | Do $X$ and $Y$ move together? | any number |
+| Correlation | $\sigma_{X,Y} / (\sigma_{X}\sigma_{Y})$ | How strongly, on a fixed scale | $-1$ to $+1$ |
+| Beta | $\sigma_{X,Y} / \sigma_{X}^{2}$ | How much $Y$ moves when $X$ moves 1% | any number |
+
+- All three are built from the covariance: for each year, the distance of $X$
+  from its mean times the distance of $Y$ from its mean, averaged.
+
+  $$\text{Cov}\left(R_{i},R_{j}\right) = \frac{1}{T-1} \sum^{T}_{t=1}\left(R_{it} - \overline{R}_{i}\right)\left(R_{jt} - \overline{R}_{j}\right)$$
+
+- Positive: they tend to move together. Negative: in opposite directions.
 
 ## Recap: correlation drives diversification {.smaller}
 
@@ -74,6 +122,20 @@ $\rho_{12} = -1$ $\Rightarrow$
 $\sigma_{p} = \left|x_{1}\sigma_{1}-x_{2}\sigma_{2}\right|$ The negative
 comovement of the assets reduces the risk of the portfolio.
 :::
+
+## Recap: portfolio return, variance and volatility {.smaller}
+
+- The **weights** $x_{1}, x_{2}$ are the fractions of the money in each stock;
+  they add up to 1. The portfolio return counts each stock in proportion:
+
+  $$R_{p} = x_{1}R_{1} + x_{2}R_{2}$$
+
+- Risk does not add up the same way. The variance of the portfolio is
+
+  $$\text{Var}\left(R_{p}\right) = \underbrace{x_{1}^{2}\text{Var}\left(R_{1}\right) + x_{2}^{2}\text{Var}\left(R_{2}\right)}_{\text{individual risks}} + \underbrace{2x_{1}x_{2}\text{Cov}\left(R_{1},R_{2}\right)}_{\text{comovement}}$$
+
+- The comovement term is what makes a portfolio different from the sum of its
+  parts. The volatility is $\sigma_{R_{p}} = \sqrt{\text{Var}\left(R_{p}\right)}$.
 
 ## A. Efficient portfolios with two stocks
 
