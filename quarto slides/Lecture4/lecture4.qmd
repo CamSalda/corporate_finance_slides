@@ -271,8 +271,7 @@ for the return each stock has to offer: the CAPM.
   (1964), Lintner (1965), Mossin (1966).
 
 - **Why it matters.** The CAPM is the most widely used model linking risk and
-  return. About three firms in four use it to estimate their **cost of
-  capital**: the discount rate for projects, valuations and regulated prices.
+  return. Most firms use it to measure the cost of capital: the discount rate for projects, valuations and regulated prices.
 
 :::::: {.columns}
 ::: {.column width="25%"}
@@ -304,11 +303,11 @@ Harry Markowitz
 
 ## Outline
 
-1.  Efficient portfolio and required returns (Chap. 11.6)
+A.  Required returns: is a stock worth adding to a portfolio? (Chap. 11.6)
 
-2.  Capital Asset Pricing Model (Chap. 11.7)
+B.  From the tangency portfolio to the market portfolio (Chap. 11.7)
 
-3.  Determining the risk premium (according to the CAPM) (Chap. 11.8)
+C.  The CAPM, and how to read it (Chap. 11.8)
 
 ## A. Required returns: the answer first {.smaller}
 
@@ -372,53 +371,106 @@ on its own.
 
   $$\delta\,(E(R_{A}) - r_{f}) \;\geq\; \Delta\sigma \times \left(E(R_{P}) - r_{f}\right) / \sigma_{P}$$
 
-## In a picture: Omega and the REIT {.smaller}
+## In a picture: Intel and Coca-Cola {.smaller}
 
 ::: {.center}
-![](omegaReit.png){width="66%"}
+![](intelCoke.png){width="56%"}
 :::
 
-Zoom around Omega (15%, 20%). The green line is leverage on Omega. Adding a
-little REIT (9%, 35%, correlation 0.10) financed by borrowing traces the blue
-curve, which leaves Omega **above the line**: a small addition raises the Sharpe
-ratio. Add too much and the curve drops below it again.
+- **Setting.** Your portfolio $P$ is Intel (26%, 50%); the stock $A$ on offer is
+  Coca-Cola (6%, 25%), uncorrelated with Intel; the risk-free rate is 3%. The
+  chart zooms in around Intel.
 
-## Step 3: the rule, and the beta {.smaller}
+- **Green line**: Intel mixed with the risk-free asset, the line from Lecture 3
+  (slope = Intel's Sharpe ratio, 0.46). Beyond Intel it is leverage on Intel.
 
-- Buy $A$ if its extra return beats the benchmark:
+## In a picture: Intel and Coca-Cola (con't) {.smaller}
+
+::: {.center}
+![](intelCokeSharpe.png){width="56%"}
+:::
+
+- **Blue curve**: borrow a little at 3% and put it into Coca-Cola, on top of
+  Intel. The dot is $\delta = 20\%$: return 26.6%, volatility 50.3%.
+
+- **The new line**: draw the line from the risk-free rate through that dot. It
+  is **steeper** than the line through Intel: Sharpe ratio 0.47 against 0.46.
+  Adding a little Coca-Cola **raises the Sharpe ratio**, at every level of risk.
+
+## Step 3: from the inequality to the rule {.smaller}
+
+- Start from the inequality of step 2 and put in the extra risk from step 1,
+  $\Delta\sigma = \delta\,\sigma_{A}\,\rho_{A,P}$:
 
   $$\delta\,(E(R_{A}) - r_{f}) \;\geq\; \delta\,\sigma_{A}\,\rho_{A,P} \times \frac{E(R_{P}) - r_{f}}{\sigma_{P}}$$
 
-- Cancel $\delta$ and group the risk terms into one number:
+- $\delta$ appears on both sides, so the size of the purchase does not matter:
+  **cancel it**.
 
-  $$\beta_{A,P} = \rho_{A,P}\,\frac{\sigma_{A}}{\sigma_{P}} = \frac{\text{Cov}(R_{A},R_{P})}{\text{Var}(R_{P})}$$
+  $$E(R_{A}) - r_{f} \;\geq\; \sigma_{A}\,\rho_{A,P} \times \frac{E(R_{P}) - r_{f}}{\sigma_{P}}$$
 
-  The **beta** from Lecture 2, with $P$ as the thing that moves: when $P$ moves
-  by 1%, $A$ moves by $\beta_{A,P}$% on average.
+- Move the volatility of $P$ next to the other risk terms:
 
-- The rule becomes a **required return** $r_{A}$: buy $A$ if it pays at least
-  $r_{A}$, short it if it pays less.
+  $$E(R_{A}) - r_{f} \;\geq\; \underbrace{\rho_{A,P}\,\frac{\sigma_{A}}{\sigma_{P}}}_{\text{a single number}} \times \left(E(R_{P}) - r_{f}\right)$$
+
+## Step 3: that single number is the beta {.smaller}
+
+- **Remember the beta** from Lecture 2, the third monster: the covariance of
+  two things divided by the variance of the one that moves. It tells you how
+  much one moves when the other moves by 1%.
+
+- Here the thing that moves is the portfolio $P$, and we ask how much $A$ moves
+  with it. Using $\text{Cov}(R_{A},R_{P}) = \rho_{A,P}\,\sigma_{A}\,\sigma_{P}$:
+
+  $$\beta_{A,P} = \frac{\text{Cov}(R_{A},R_{P})}{\text{Var}(R_{P})} = \frac{\rho_{A,P}\,\sigma_{A}\,\sigma_{P}}{\sigma_{P}^{2}} = \rho_{A,P}\,\frac{\sigma_{A}}{\sigma_{P}}$$
+
+  Exactly the single number from the previous slide.
+
+- So the rule reads: buy $A$ if $E(R_{A}) - r_{f} \geq \beta_{A,P}\,(E(R_{P}) - r_{f})$.
+  The beta is how we will use comovement from now on: it scales $P$'s risk
+  premium into the premium $A$ must offer.
+
+## Step 3: the required return {.smaller}
+
+- Move $r_{f}$ to the right-hand side. The rule becomes a **required return**
+  $r_{A}$:
 
   $$E(R_{A}) \;\geq\; r_{A} = r_{f} + \beta_{A,P}\,\big(E(R_{P}) - r_{f}\big)$$
 
-## Example: should we add the REIT to Omega? {.smaller}
+- Read it as: **risk-free rate, plus the portfolio's risk premium scaled by how
+  much $A$ moves with the portfolio**.
 
-- Omega: expected return 15%, volatility 20%. Treasury bills: 3%. REIT: expected
-  return 9%, volatility 35%, correlation with Omega 0.10.
+  - $\beta_{A,P} = 1$: $A$ must pay the same premium as $P$.
 
-- Beta of the REIT with respect to Omega:
-  $\beta = 0.10 \times 35\% / 20\% = 0.175$.
+  - $\beta_{A,P} = 0.5$: half the premium is enough, because $A$ adds only half
+    as much risk.
+
+  - $\beta_{A,P} < 0$: $A$ reduces risk, so it is worth holding even below
+    $r_{f}$.
+
+- Buy $A$ if it pays at least $r_{A}$; if it pays less, the best move is to
+  short it.
+
+## Example: should we add Coca-Cola to Intel? {.smaller}
+
+- You hold Intel: expected return 26%, volatility 50%. Treasury bills: 3%.
+  Coca-Cola: expected return 6%, volatility 25%, correlation with Intel 0.
+
+- Beta of Coca-Cola with respect to Intel:
+  $\beta = 0 \times 25\% / 50\% = 0$.
 
 - Required return:
-  $r_{\text{REIT}} = 3\% + 0.175 \times (15\% - 3\%) = 5.1\%$.
+  $r_{\text{Coca-Cola}} = 3\% + 0 \times (26\% - 3\%) = 3\%$.
 
-- The REIT pays 9%, above 5.1%: **yes, buy some.** It looks poor on its own (less
-  return than Omega for more risk), but its low correlation means it adds very
-  little risk.
+- Coca-Cola pays 6%, above 3%: **yes, buy some.** It looks poor next to Intel
+  (a quarter of the return), but being uncorrelated it adds almost no risk, so
+  any return above the risk-free rate is worth having. Lecture 3 agreed: the
+  tangency portfolio holds 34% of Coca-Cola.
 
-- **The twist.** With a correlation of 0.50 instead of 0.10: $\beta = 0.875$,
-  required return $3\% + 0.875 \times 12\% = 13.5\%$, above the 9% it pays: **no.**
-  Same stock, same return, same risk; the correlation alone flips the decision.
+- **The twist.** With a correlation of 0.5 instead of 0: $\beta = 0.5 \times
+  25\% / 50\% = 0.25$, required return $3\% + 0.25 \times 23\% = 8.75\%$, above the
+  6% it pays: **no.** Same stock, same return, same risk; the correlation alone
+  flips the decision.
 
 ## From the required return to the CAPM {.smaller}
 
@@ -432,221 +484,226 @@ ratio. Add too much and the curve drops below it again.
 - Replace $P$ by the market portfolio and the required return becomes the
   **CAPM**.
 
-## B. Capital Asset Pricing Model
+## B. From the tangency portfolio to the market {.smaller}
 
-- Reminder: Markowitz (1952) + Tobin (1958) $\rightarrow$ any investor
-  holds a combination of a risk-free investment and the super-efficient
-  portfolio.
+- Section A gave a rule that works for **any** portfolio $P$:
 
-- How can we extend this result to a theory of market equilibrium?
-  $\Rightarrow$ Let us add a couple of hypotheses to the previous
-  result.
+  $$r_{A} = r_{f} + \beta_{A,P}\,\big(E(R_{P}) - r_{f}\big)$$
 
-## CAPM: hypotheses {.smaller}
+- Two questions decide everything that follows:
 
-- Starting point: Markowitz (1952) / Tobin (1958).
+  1. **Which $P$ does everyone hold?** Lecture 3 said: the tangency portfolio.
+     But which portfolio is that, concretely?
 
-  ::: {.center}
-  ::: {.large}
+  2. **What does that imply for each stock's return?**
 
-  **+**
+- Where we are going, in four steps: the tangency portfolio turns out to be
+  **the whole market**, and every stock must then pay
 
-  :::
-  :::
+  $$E(R_{i}) = r_{f} + \beta_{i}\,\big(E(R_{M}) - r_{f}\big) \qquad \text{the CAPM}$$
 
-- Investors hold homogeneous beliefs about expected returns,
-  volatilities, and correlations of all financial assets.
+## Step 1: three assumptions {.smaller}
 
-- The market is in equilibrium.
-
-- All investors hold an efficient portfolio, that is a portfolio which
-  offers the highest expected return for a given level of volatility.
-
-$\Rightarrow$ The super-efficient portfolio is unique.
-
-## Supply, demand, and the efficiency of the market portfolio {.smaller}
-
-- Reminder: homogeneous beliefs $\rightarrow$ the investors all invest
-  in the same super-efficient portfolio.
-
-  - All risky assets are held by all investors in the same proportions
-    (within the risky portfolio).
-
-- But investors put different weights on the super-efficient portfolio
-  and the risk-free asset depending on their risk aversion.
-
-- Does this permit to pin down the composition of the super-efficient
-  portfolio?
-
-## Supply, demand and the efficiency of the market portfolio: example {.smaller}
-
-- Camille has identified the efficient portfolio and decides to hold it.
-
-- She holds 10 000 EUR in stocks of Capgemini and 5 000 EUR in stocks of
-  Sanofi.
-
-- Tom, more risk averse, only holds 2 000 EUR invested in Sanofi stocks.
-
-  1.  Assuming that his portfolio is also efficient, what is his
-      investment in Capgemini stocks?
-
-  2.  If all investors hold the efficient portfolio, what can we say
-      about the total market capitalisation of Capgemini relative to the
-      one of Sanofi?
-
-## The efficiency of the market portfolio {.smaller}
-
-- It is easy to generalize the preceding example to any market.
-
-  - Investors all hold the same efficient portfolio of risky assets
-    (same weights).
-
-  - Equilibrium between supply and demand $\rightarrow$ efficient
-    portfolio contains all risky assets, weighted by their market
-    capitalisation.
-
-- **In equilibrium, the market portfolio is the super-efficient
-  portfolio/tangency portfolio.**
-
-## The Capital Market Line
-
-- The equation of the efficient frontier is then given by:
-  $$E\left(R_{p}\right) = r_{f} + \frac{E\left( R_{M}\right)-r_{f}}{\sigma_{M}}\sigma_{P}.$$
-  $\Rightarrow$ Equation of the Capital Market Line (CML)
-
-- All portfolios on the CML are made up of the market portfolio and the
-  risk-free asset!
-
-## Capital Market Line: example
-
-::: {.center}
-![](figure11p11.png){fig-align="center"}
+::: {.box .box-a}
+**1. Everyone can lend and borrow at the risk-free rate $r_{f}$.**
+So the efficient set is the straight line from $r_{f}$ tangent to the frontier
+(Lecture 3).
 :::
 
-## C. Determining the risk premium {.smaller}
-
-- Reminder: we are still trying to pin down an equilibrium relation for
-  the returns on individual assets.
-
-- Up to now, we know:
-
-  - The required return on an asset (defined relative to any existing
-    portfolio).
-
-  - The composition of the portfolios on the efficient frontier (CML) +
-    the composition of the portfolios held by each investor.
-
-- It is thus straightforward to establish the relation between the
-  required returns of an asset and the different market parameters!
-
-## Expected returns, required returns and market portfolio
-
-- Special feature of any efficient portfolio: the expected return of all
-  assets is equal to the required return (otherwise ...)!
-
-- And yet, each investor holds the market portfolio! Thus, in
-  equilibrium:
-  $$E\left(R_{i}\right) = r_{i} = r_{f}+\underbrace{\beta_{i} \times \left[E\left(R_{m}\right)-r_{f}\right]}_{\operatorname{Risk \ premium \ of \ security} \ i}.$$
-
-## Market risk and beta {.smaller}
-
-- The previous equation shows the "beta" of an asset with respect to the
-  market portfolio:
-  $$\beta_{i} = \overbrace{\frac{\sigma_{R_{i}}\times Corr\left(R_{i},R_{m}\right)}{\sigma_{R_{m}}}}_{\overset{\operatorname{Volatility \ of \ asset} \ i \ \operatorname{that}}{\operatorname{is \ common \ with \ the  \ market }}} = \frac{Cov\left(R_{i},R_{m}\right)}{Var\left(R_{m}\right)}.$$
-
-- The required return of an asset depends on the sensitivity of that
-  asset to the market risk.
-
-  - It is thus independent from the idiosyncratic risk!
-
-## Example 1: expected return on a stock
-
-- The risk-free rate is 4%.
-
-- The market portfolio has an expected return of 10% and a volatility of
-  16%.
-
-- Stock A has a volatility of 16% and a correlation with the market
-  portfolio of 33%.
-
-1.  What is the beta of stock A and what is its expected return?
-
-2.  What is the portfolio on the CML which has the same risk as Stock A
-    and what is its expected return?
-
-## Example 2:  expected return with negative beta
-
-- The beta of the stock B is -0.3.
-
-- The risk-free rate is 4% and the expected return on the market
-  portfolio is 10%.
-
-What is the expected return according to the CAPM?
-
-What do you think about that?
-
-## Security Market Line
-
-- The CAPM highlights a linear relation between the beta of a security
-  and the expected return.
-
-- This straight line---called the Security Market Line---passes through
-  the risk-free asset ($\beta = 0$) and the market portfolio
-  ($\beta = 1$).
-
-- In equilibrium, all assets are on the SML.
-
-  - But no asset is on the CML!!
-
-## CML and SML: illustration
-
-::: {.center}
-![](figure11p12.png){fig-align="center"} Capital Market Line (CML)
+::: {.box .box-a}
+**2. Everyone shares the same estimates** of expected returns, volatilities and
+correlations. So everyone computes the **same** frontier and the **same**
+tangency portfolio.
 :::
 
-## CML and SML: illustration (con't)
+::: {.box .box-a}
+**3. Everyone holds an efficient portfolio.** So everyone holds that one
+tangency portfolio, mixed with the risk-free asset in their own proportion.
+:::
+
+Strong assumptions. We look at what they imply first, and at their realism at
+the end.
+
+## Step 2: everyone's portfolio is the market {.smaller}
+
+- Camille holds the tangency portfolio: EUR 10 000 of Capgemini and EUR 5 000 of
+  Sanofi, a 2 : 1 mix.
+
+- Tom is more cautious, so he holds less of it, but the **same mix**: his
+  EUR 2 000 of Sanofi comes with EUR 4 000 of Capgemini.
+
+- Now add up **every** investor. Each holds Capgemini and Sanofi 2 : 1, so the
+  total held of Capgemini is twice the total held of Sanofi.
+
+- So the tangency portfolio must contain every stock **in proportion to its market
+  capitalisation**: it represents the whole universe of assets,
+  therefore we call it: the **market portfolio** $M$.
+
+::: {.box .box-a}
+In equilibrium, the tangency (super-efficient) portfolio is the market
+portfolio.
+:::
+
+## Step 3: the Capital Market Line {.smaller}
+
+- Everyone mixes the market and the risk-free asset.
+
+- The line that contains all the combinations of the
+risk free asset and the market portfolio is called the **Capital Market Line** (CML):
+
+  $$E(R_{p}) = r_{f} + \frac{E(R_{M}) - r_{f}}{\sigma_{M}} \times \sigma_{p}$$
+
+
 
 ::: {.center}
-![](figure11p12bis.png){fig-align="center"} Security Market Line (SML)
+![](figure11p11.png){width="38%"}
 :::
+
+## Step 4: every stock pays its required return {.smaller}
+
+- Take any stock $i$ and ask what happens if it did **not** pay its required
+  return with respect to $M$.
+
+- **Suppose it paid more.** By section A, adding a little of $i$ to $M$ would
+  raise the Sharpe ratio. Then $M$ would not be the best portfolio, and
+  everyone would be buying $i$. Its price would rise until the extra return
+  disappears.
+
+- **Suppose it paid less.** Shorting a little of $i$ would raise the Sharpe
+  ratio. Everyone would sell, its price would fall until the gap closes.
+
+- So in equilibrium **no stock can beat or trail its required return**: each pays
+  exactly
+
+  $$E(R_{i}) = r_{f} + \beta_{i}\,\big(E(R_{M}) - r_{f}\big)$$
+
+- If every asset must comply this equation,
+we can use it to evaluate the returns of assets. We say that it is a pricing model: because with today's price,
+if we know the expected return, we know the expected price.
+
+## C. The CAPM, and how to read it {.smaller}
+
+::: {.box .box-a}
+$$E(R_{i}) = r_{f} + \underbrace{\beta_{i}\,\big(E(R_{M}) - r_{f}\big)}_{\text{risk premium of stock } i}
+\qquad\qquad
+\beta_{i} = \frac{\text{Cov}(R_{i},R_{M})}{\text{Var}(R_{M})}$$
+:::
+
+- $\beta_{i}$ is the beta of stock $i$ **with respect to the market**: how much
+  $i$ moves when the market moves by 1%.
+
+- Only the part of $i$'s risk that **moves with the market** is paid for. Its
+  idiosyncratic risk earns nothing: investors can diversify it away for free,
+  so nobody needs to be compensated for it (the two types of risk).
+
+- $\beta_{i} = 1$: the market's own premium. $\beta_{i} = 0$: just $r_{f}$.
+  $\beta_{i} < 0$: below $r_{f}$, since the stock is insurance against market
+  falls.
+
+## Example 1: expected return of a stock {.smaller}
+
+- Risk-free rate 4%. Market: expected return 10%, volatility 16%. Stock A:
+  volatility 16%, correlation with the market 0.33.
+
+- **Beta**: $\beta_{A} = 0.33 \times 16\% / 16\% = 0.33$.
+
+- **Expected return under the CAPM**:
+  $E(R_{A}) = 4\% + 0.33 \times (10\% - 4\%) = 6\%$.
+
+- **The CML portfolio with the same risk.** A 16% volatility on the CML means
+  100% in the market: expected return 10%.
+
+- Same volatility, 10% against 6%. Stock A carries as much risk as the market,
+  but only a third of it is market risk; the rest is idiosyncratic and earns
+  nothing.
+
+## Example 2: a negative beta {.smaller}
+
+- Stock B has a beta of $-0.3$. Risk-free rate 4%, expected market return 10%.
+
+- **Expected return under the CAPM**:
+  $E(R_{B}) = 4\% + (-0.3) \times 6\% = 2.2\%$.
+
+- Below the risk-free rate. Why would anyone hold it? Because B **rises when the
+  market falls**: it is insurance for the rest of the portfolio, and investors
+  pay for insurance by accepting a lower return.
+
+## Two lines: the CML and the SML {.smaller}
+
+- **SML** (right, return against **beta**): the CAPM is a straight line through
+  the risk-free asset ($\beta = 0$) and the market ($\beta = 1$). **Every**
+  stock and portfolio sits on it.
+
+- **CML** (left, return against **volatility**): only mixes of the market and
+  the risk-free asset sit on it. A single stock lies **below** it, because its
+  idiosyncratic risk adds volatility without adding return.
+
+:::: {.columns}
+::: {.column width="50%"}
+![](figure11p12.png){width="88%"}
+:::
+
+::: {.column width="50%"}
+![](figure11p12bis.png){width="88%"}
+:::
+::::
 
 ## The beta of a portfolio {.smaller}
 
-- The beta of a portfolio with return $R_{p}= \sum_{i}x_{i}R_{i}$ is
-  given by: $$\begin{aligned}
-  \beta_{p}= &\frac{Cov\left(R_{p},R_{m}\right)}{Var\left(R_{m}\right)} = \frac{Cov\left(\sum_{i}x_{i}R_{i},R_{m}\right)}{Var\left(R_{m}\right)} \\
-  = & \sum_{i}x_{i}\frac{Cov\left(R_{i},R_{m}\right)}{Var\left(R_{m}\right)} =\sum_{i}x_{i} \beta_{i}.
-  \end{aligned}$$
+- A portfolio with weights $x_{i}$ has return $R_{p} = x_{1}R_{1} + x_{2}R_{2} + \dots$.
+  Covariance is linear, so its beta is the **weighted average of the betas**:
 
-- The beta of a portfolio is equal to the weighted average of the betas
-  of its constituents.
+  $$\beta_{p} = \frac{\text{Cov}(R_{p},R_{M})}{\text{Var}(R_{M})} = x_{1}\beta_{1} + x_{2}\beta_{2} + \dots$$
 
-## Example:  expected return of a portfolio
+- **Example.** Danone has a beta of 0.5, Ubisoft 1.8. Risk-free rate 4%,
+  expected market return 10%. An equally weighted portfolio:
 
-- The betas of Danone (BN.PA) and Ubisoft (UBI.PA) are respectively 0.5
-  and 1.8.
+  $$\beta_{p} = 0.5 \times 0.5 + 0.5 \times 1.8 = 1.15$$
 
-- The risk-free rate is 4%.
+  $$E(R_{p}) = 4\% + 1.15 \times 6\% = 10.9\%$$
 
-- The expected return on the market portfolio is 10%.
+## Summary: the CAPM formula {.smaller}
 
-According to the CAPM, what is the expected return of an
-equally-weighted portfolio of these two stocks?
+::: {.box .box-a}
+$$E(R_{i}) = r_{f} + \beta_{i}\,\big(E(R_{M}) - r_{f}\big)$$
+:::
 
-## Summary: what to remember from the CAPM? {.smaller}
+- $E(R_{i})$: the **expected return of stock $i$**, which in equilibrium is also
+  the return investors require to hold it.
 
-- The market portfolio is the only efficient portfolio. Hence, the
-  highest expected return for a given level of volatility is achieved by
-  combining the market portfolio with the risk-free asset (borrowing or
-  lending).
+- $r_{f}$: the **risk-free rate**, what you earn with no risk at all.
 
-- The risk premium of any asset is proportional to its beta with respect
-  to the market. There is a linear relation between the expected return
-  of an asset and its (systematic) risk called the SML.
+- $E(R_{M}) - r_{f}$: the **market risk premium**, the extra return the market
+  portfolio pays above the risk-free rate.
 
-- Remark: the hypotheses of the CAPM are quite restrictive. Nevertheless
-  the CAPM is used widely to estimate the expected returns of assets or
-  the cost of capital of projects.
+- $\beta_{i} = \text{Cov}(R_{i},R_{M}) / \text{Var}(R_{M})$: the **beta** of
+  stock $i$, how much it moves when the market moves by 1%. It scales the
+  market premium into the premium of stock $i$.
+
+- In words: **the return of a stock is the risk-free rate plus its share of the
+  market premium, and that share is its beta.**
+
+## The Security Market Line
+
+::: {.center}
+![](figure11p12bis.png){fig-align="center"}
+:::
+
+## Summary: what to remember from the CAPM {.smaller}
+
+- **The market portfolio is the only efficient portfolio of risky assets.** The
+  best you can do at any level of risk is to mix it with the risk-free asset:
+  the Capital Market Line.
+
+- **Only market risk is paid.** A stock's premium depends on its beta, its
+  comovement with the market; idiosyncratic risk earns nothing because it can
+  be diversified away. This is the Security Market Line.
+
+- **The assumptions are strong**: everyone shares the same estimates, and
+  everyone can borrow freely at $r_{f}$. Neither is true in practice.
+
+- **Yet the CAPM is the standard tool** for the expected return of a stock and
+  the cost of capital of a project, as we saw in the introduction.
 
 ## Appendix: portfolio volatility approximation {.smaller}
 
