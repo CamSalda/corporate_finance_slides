@@ -524,20 +524,39 @@ tangency portfolio, mixed with the risk-free asset in their own proportion.
 Strong assumptions. We look at what they imply first, and at their realism at
 the end.
 
-## Step 2: everyone's portfolio is the market {.smaller}
+## Step 2: from tangency portfolio to market portfolio {.smaller}
 
-- Camille holds the tangency portfolio: EUR 10 000 of Capgemini and EUR 5 000 of
-  Sanofi, a 2 : 1 mix.
+- Start with Lecture 3. If the world had only Intel and Coca-Cola, everyone
+  would hold the tangency mix: **65.7% Intel, 34.3% Coca-Cola**. The only change between investors would be how they
+  combine it with the risk free asset: the cautious
+  investor holds less of it, the bold one borrows to hold more.
 
-- Tom is more cautious, so he holds less of it, but the **same mix**: his
-  EUR 2 000 of Sanofi comes with EUR 4 000 of Capgemini.
+- **Now add up every investor.** Since each one keeps the 65.7 / 34.3 mix, the
+  total money held in Intel is 65.7% of all the money invested in stocks.
 
-- Now add up **every** investor. Each holds Capgemini and Sanofi 2 : 1, so the
-  total held of Capgemini is twice the total held of Sanofi.
+- But every share of Intel is held by someone. So the total money held in Intel
+  is also the **market value of Intel**: its price times the number of shares.
 
-- So the tangency portfolio must contain every stock **in proportion to its market
-  capitalisation**: it represents the whole universe of assets,
-  therefore we call it: the **market portfolio** $M$.
+- Conclusion: Intel's market value must be 65.7% of the market, and Coca-Cola's
+  34.3%. **The tangency weights are the market-value weights.**
+
+- The same argument works when adding N stocks: the tangency portfolio
+  holds all stocks, each in proportion to its market value.
+
+## Step 2 (con't): what is the market portfolio? {.smaller}
+
+::: {.box .box-a}
+The **market portfolio** $M$ is the portfolio of **all** risky assets, each
+with a weight equal to its market value divided by the total value of the
+market.
+:::
+
+- **Example.** If all stocks together are worth EUR 1 000 billion and a company
+  is worth EUR 60 billion, its weight in the market portfolio is 6%.
+
+- A weight that depends on market value: this is exactly how the value-weighted
+  indices of Lecture 1 are built (CAC 40, S&P 500, MSCI World). **Holding the
+  market** means holding an index fund.
 
 ::: {.box .box-a}
 In equilibrium, the tangency (super-efficient) portfolio is the market
@@ -600,6 +619,29 @@ $$E(R_{i}) = r_{f} + \underbrace{\beta_{i}\,\big(E(R_{M}) - r_{f}\big)}_{\text{r
   $\beta_{i} < 0$: below $r_{f}$, since the stock is insurance against market
   falls.
 
+## The CAPM is a line: the Security Market Line {.smaller}
+
+:::: {.columns}
+::: {.column width="52%"}
+::: {style="text-align: left"}
+- Draw the CAPM with **beta** on the horizontal axis and expected return on
+  the vertical one. The formula is a straight line, the **Security Market
+  Line** (SML):
+
+  - at $\beta = 0$ it gives $r_{f}$, the risk-free asset;
+  - at $\beta = 1$ it gives $E(R_{M})$, the market;
+  - its **slope** is the market risk premium $E(R_{M}) - r_{f}$.
+
+- The CAPM holds for every asset, so **every stock and every portfolio sits
+  on this line**: find its beta, read its expected return.
+:::
+:::
+
+::: {.column width="48%"}
+![](figure11p12bis.png){width="100%" style="max-height: 420px"}
+:::
+::::
+
 ## Example 1: expected return of a stock {.smaller}
 
 - Risk-free rate 4%. Market: expected return 10%, volatility 16%. Stock A:
@@ -617,6 +659,9 @@ $$E(R_{i}) = r_{f} + \underbrace{\beta_{i}\,\big(E(R_{M}) - r_{f}\big)}_{\text{r
   but only a third of it is market risk; the rest is idiosyncratic and earns
   nothing.
 
+- **On the SML**, Stock A sits at beta 0.33, a third of the way from the
+  risk-free asset to the market.
+
 ## Example 2: a negative beta {.smaller}
 
 - Stock B has a beta of $-0.3$. Risk-free rate 4%, expected market return 10%.
@@ -628,25 +673,60 @@ $$E(R_{i}) = r_{f} + \underbrace{\beta_{i}\,\big(E(R_{M}) - r_{f}\big)}_{\text{r
   market falls**: it is insurance for the rest of the portfolio, and investors
   pay for insurance by accepting a lower return.
 
-## Two lines: the CML and the SML {.smaller}
+- **On the SML**, Stock B sits to the left of the risk-free asset, at beta
+  $-0.3$, below $r_{f}$.
 
-- **SML** (right, return against **beta**): the CAPM is a straight line through
-  the risk-free asset ($\beta = 0$) and the market ($\beta = 1$). **Every**
-  stock and portfolio sits on it.
+## CML versus SML: what is different {.smaller}
 
-- **CML** (left, return against **volatility**): only mixes of the market and
-  the risk-free asset sit on it. A single stock lies **below** it, because its
-  idiosyncratic risk adds volatility without adding return.
+|                          | Capital Market Line (CML)                         | Security Market Line (SML)                    |
+|--------------------------|---------------------------------------------------|-----------------------------------------------|
+| **Horizontal axis**      | Volatility (total risk)                           | Beta (market risk only)                       |
+| **What sits on it**      | Only mixes of the market and the risk-free asset  | Every stock and every portfolio               |
+| **Slope**                | Sharpe ratio of the market                        | Market risk premium $E(R_{M}) - r_{f}$        |
+| **Question it answers**  | Best return for a given total risk                | Return a given asset must pay                 |
+
+- **CML**: where you should invest. It comes from Lecture 3: the efficient
+  frontier once the risk-free asset exists.
+
+- **SML**: what each asset pays. It is the CAPM equation drawn.
+
+## CML versus SML: one stock on both {.smaller}
 
 :::: {.columns}
 ::: {.column width="50%"}
-![](figure11p12.png){width="88%"}
+![](figure11p12.png){width="92%"}
 :::
 
 ::: {.column width="50%"}
-![](figure11p12bis.png){width="88%"}
+![](figure11p12bis.png){width="92%"}
 :::
 ::::
+
+- **Left**: McDonald's lies **below** the CML. Its total volatility is 15%,
+  but only part of it moves with the market; the rest is diversifiable and
+  earns nothing, so the stock pays less than a CML portfolio of the same risk.
+
+- **Right**: the same stock sits **exactly on** the SML at its beta of 0.45.
+  Only market risk is paid, and the SML pays it.
+
+## How it all connects {.smaller}
+
+1. **Lecture 3**: combining risky stocks traces the efficient frontier.
+
+2. **Add the risk-free asset**: the best mixes lie on the steepest line from
+   $r_{f}$, tangent to the frontier. Everyone holds the tangency portfolio.
+
+3. **Add the three assumptions**: everyone holds the same tangency portfolio,
+   so it must be **the market**.
+
+4. **The CML** is that tangent line with the market as tangency point: where
+   every investor sits, more or less far from $r_{f}$ depending on their taste
+   for risk.
+
+5. **The CAPM** is what each asset must pay for the market to be the best
+   portfolio: $E(R_{i}) = r_{f} + \beta_{i}\,(E(R_{M}) - r_{f})$.
+
+6. **The SML** is the CAPM drawn, with beta on the horizontal axis.
 
 ## The beta of a portfolio {.smaller}
 
@@ -682,12 +762,6 @@ $$E(R_{i}) = r_{f} + \beta_{i}\,\big(E(R_{M}) - r_{f}\big)$$
 
 - In words: **the return of a stock is the risk-free rate plus its share of the
   market premium, and that share is its beta.**
-
-## The Security Market Line
-
-::: {.center}
-![](figure11p12bis.png){fig-align="center"}
-:::
 
 ## Summary: what to remember from the CAPM {.smaller}
 
