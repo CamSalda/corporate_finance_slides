@@ -881,27 +881,95 @@ $\downarrow$
 :::::
 ::::::::::
 
-## Exercise 1: Optimal Portfolio Choice with one risky asset {.smaller}
+## Exercise 1: one risky asset and a risk-free asset {.smaller}
 
-- Stock A trades today for a price of EUR 100. Depending on the
-  evolution of the economy, the price of Stock A in one year will be:
+- Stock A trades today at EUR 100. In one year it will be worth **120** if the
+  economy expands (probability 0.5) or **100** in a recession (probability 0.5).
 
-  - 120 with probability 0.5 (expansion)
+- The risk-free rate is 5%.
 
-  - 100 with probability 0.5 (recession)
+- The fund **AlwaysMore** claims to offer a product superior to Stock A. For an
+  initial investment of **220** it commits to pay in one year **320** in the
+  expansion and **200** in the recession.
 
-- The risk-free rate is 5%
+1. What are the expected return, the volatility and the Sharpe ratio of Stock A?
 
-- The investment fund AlwaysMore claims to offer an investment product
-  which is superior to Stock A. For an initial investment of 220, it
-  commits itself to pay in one year:
+2. Same three numbers for the AlwaysMore product, at its price of 220.
 
-  - 320 in the expansion
+3. Is the product superior to Stock A? Can you do better on your own?
 
-  - 200 in the recession.
+4. What is the highest price you would pay for the product?
 
-- Should you accept this offer? If not, what is the highest price you
-  are willing to pay for this investment?
+## Exercise 1, question 1: Stock A {.smaller}
+
+- **Return in each state.** Expansion: $120/100 - 1 = +20\%$. Recession:
+  $100/100 - 1 = 0\%$.
+
+- **Expected return**: the average of the two, each with probability one half:
+
+  $$E(R_{A}) = 0.5 \times 20\% + 0.5 \times 0\% = 10\%$$
+
+- **Volatility**: each outcome is 10 points from the mean, so the variance is
+  100 and $\sigma_{A} = \sqrt{100} = 10\%$.
+
+- **Sharpe ratio**: extra return over the risk-free rate, per unit of risk:
+
+  $$\frac{E(R_{A}) - r_{f}}{\sigma_{A}} = \frac{10\% - 5\%}{10\%} = 0.50$$
+
+## Exercise 1, question 2: the AlwaysMore product {.smaller}
+
+- Same steps, starting from the price of 220.
+
+- **Return in each state.** Expansion: $320/220 - 1 = +45.5\%$. Recession:
+  $200/220 - 1 = -9.1\%$.
+
+- **Expected return**:
+  $0.5 \times 45.5\% + 0.5 \times (-9.1\%) = 18.2\%$.
+
+- **Volatility**: each outcome is 27.3 points from the mean, so
+  $\sigma = 27.3\%$.
+
+- **Sharpe ratio**:
+
+  $$\frac{18.2\% - 5\%}{27.3\%} = 0.48$$
+
+- More return than Stock A, but much more risk. The Sharpe ratio tells us
+  whether the extra return pays for the extra risk.
+
+## Exercise 1, question 3: is the product superior? {.smaller}
+
+- **Compare Sharpe ratios.** Stock A: 0.50. AlwaysMore: 0.48. The product pays
+  **less** extra return per unit of risk. It is not superior.
+
+- **Do it yourself.** Lecture 3 showed that leverage on Stock A moves you along
+  the line with slope 0.50. To reach the product's risk of 27.3%, put
+  $x = 27.3 / 10 = 2.73$ times your money in Stock A, borrowing the rest at 5%:
+
+  $$E(R) = 5\% + 2.73 \times (10\% - 5\%) = 18.6\%$$
+
+- Same risk as the product, 18.6% against 18.2%. **Borrowing to buy Stock A
+  beats AlwaysMore.** Reject the offer at 220.
+
+## Exercise 1, question 4: the highest price {.smaller}
+
+- The product is just a bundle of Stock A and borrowing. Find the bundle that
+  pays exactly 320 and 200: buy $a$ shares of A and put $b$ in the risk-free
+  asset (negative $b$ means borrowing).
+
+  $$\begin{aligned}
+  \text{Expansion: } & 120\,a + 1.05\,b = 320 \\
+  \text{Recession: } & 100\,a + 1.05\,b = 200
+  \end{aligned}$$
+
+- Subtract the second line from the first: $20\,a = 120$, so $a = 6$ shares.
+  Then $1.05\,b = 200 - 600 = -400$, so $b = -381$: borrow 381.
+
+- **Cost of the bundle today**: 6 shares at 100, minus the 381 borrowed, is
+  **EUR 219**. The bundle pays exactly what the product pays, so 219 is the
+  most the product is worth.
+
+- AlwaysMore asks 220, one euro more than it costs to build yourself. At 219 its
+  Sharpe ratio would be exactly 0.50, the same as Stock A.
 
 ## Exercise 2: Optimal Portfolio Choice with two risky assets {.smaller}
 
