@@ -1,0 +1,722 @@
+---
+title: "Corporate Finance"
+subtitle: "Lecture 7: Capital Structure in a Perfect Market (I)"
+footer: "Lecture 7: Capital Structure in a Perfect Market (I)"
+---
+
+## Plan
+
+- Recap from lecture 6
+
+- Ask whether financing a project with debt or with equity changes what it is
+  worth
+
+- Follow one entrepreneur who finances the same project two ways, and see why
+  debt makes the equity riskier
+
+- Meet Modigliani and Miller's first proposition, and the arbitrage behind it
+
+- Read a market value balance sheet and follow a leveraged recapitalization
+
+Mostly based on the BDM textbook Chap. 14.1-14.2.
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Recap lecture 6
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Recap lecture 6}
+\end{center}
+\vfill
+```
+
+## Recap of Lecture 6 {.smaller}
+
+Let's do a recap:
+
+- The equity cost of capital
+
+- The market risk premium
+
+- Estimating beta
+
+- The debt cost of capital
+
+- A project's cost of capital: unlevering a comparable
+
+- Cash as negative debt
+
+- The weighted average cost of capital (WACC)
+
+## Recap: the equity cost of capital {.smaller}
+
+::: {.box .box-a}
+The cost of capital of an investment is the expected return of the available
+investments with the same beta (Chap. 12.1). With the CAPM:
+$$r_{E} = r_{f} + \beta_{E}\,\big(E[R_{M}] - r_{f}\big)$$
+:::
+
+- $r_{f}$ is the risk-free rate, $E[R_{M}] - r_{f}$ the market risk premium,
+  and $\beta_{E}$ how much the stock moves when the market moves by 1%.
+
+- **Example.** Risk-free rate 3%, expected market return 8%. Saint-Gobain has a
+  beta of 1.45: cost of equity $3\% + 1.45 \times 5\% = 10.25\%$. ENGIE has a
+  beta of 0.82: $3\% + 0.82 \times 5\% = 7.1\%$.
+
+- ENGIE is the more volatile stock (38% against 30%), yet its equity is
+  cheaper. **Only market risk is paid**; the rest can be diversified away.
+
+## Recap: the market risk premium {.smaller}
+
+::: {.box .box-a}
+The premium $E[R_{M}] - r_{f}$ cannot be observed, so it has to be estimated
+(Chap. 12.2).
+:::
+
+- **Historical approach**: what the market actually paid over the risk-free rate
+  in the past. Data-hungry, and backward looking.
+
+- **Fundamental approach**: the return that justifies today's index level, given
+  what firms are expected to pay out. With dividends growing at a constant rate
+  $g$:
+  $$r_{M} = \frac{\text{Div}_{1}}{P_{0}} + g$$
+  the dividend yield plus the growth rate.
+
+- Same number seen from two ends: past realised returns, or expected future
+  cash flows.
+
+## Recap: estimating beta {.smaller}
+
+::: {.box .box-a}
+Beta is the slope of the best-fitting line through the stock's excess returns
+plotted against the market's excess returns (Chap. 12.3).
+:::
+
+- **Example.** LVMH, monthly data: estimated beta 1.13, with a 95% confidence
+  interval of [0.98; 1.27].
+
+- With a risk-free rate of 3% and a market risk premium of 5%, the cost of
+  equity lies between $3\% + 0.98 \times 5\% = 7.9\%$ and
+  $3\% + 1.27 \times 5\% = 9.35\%$.
+
+- A beta is an estimate, so the cost of capital it gives is a range, not a
+  point.
+
+## Recap: the debt cost of capital {.smaller}
+
+::: {.box .box-a}
+The yield to maturity of a bond overstates what lenders expect to earn when the
+borrower may default (Chap. 12.4):
+$$r_{D} = \text{YTM} - p \times L$$
+:::
+
+- $p$ is the probability of default and $L$ the expected loss rate when it
+  happens. For a safe borrower $p$ is close to zero and $r_{D}$ is the yield.
+
+- Alternatively, use the CAPM with a **debt beta**. Debt betas are small: close
+  to zero for investment-grade bonds, higher for risky ones.
+
+- **Example.** A BB-rated Lafarge bond with a yield of 3.7%, a 60% loss rate,
+  and the default rate of its rating class: the expected return is well below
+  the yield.
+
+## Recap: a project's cost of capital {.smaller}
+
+::: {.box .box-a}
+To price a project, find a listed **comparable** with the same business risk,
+then **unlever** it: remove the effect of its borrowing (Chap. 12.5).
+$$r_{U} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}
+\qquad\qquad
+\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}$$
+:::
+
+- $E$ and $D$ are the market values of the comparable's equity and debt. The
+  assets are owned by shareholders and lenders together, so their return is the
+  **weighted average** of what each group earns. Same for the betas.
+
+- **Example.** Danone: equity 30 billion, debt 10 billion, equity beta 0.4, debt
+  yield 3.5% with negligible default risk. Cost of equity $3\% + 0.4 \times 5\% =
+  5\%$, so $r_{U} = 0.75 \times 5\% + 0.25 \times 3.5\% = 4.6\%$.
+
+- **Borrowing does not make the business riskier.** It only decides who carries
+  the risk: lenders take the safe part, shareholders the rest.
+
+## Recap: cash as negative debt {.smaller}
+
+::: {.box .box-a}
+Cash that could be used to repay debt at once acts as **negative debt**:
+$\text{net debt} = \text{debt} - \text{cash}$.
+:::
+
+- **Example.** Accenture, end of 2010: market capitalisation 25 billion, no
+  debt, 4 billion in cash, equity beta 1.
+
+- Net debt is $0 - 4 = -4$ billion, so the business itself (the enterprise
+  value) is worth $25 - 4 = 21$ billion.
+
+- The beta of the business is $\beta_{U} = \frac{25}{21} \times 1 = 1.19$: the
+  cash made the shares **safer** than the business behind them.
+
+## Recap: the WACC {.smaller}
+
+::: {.box .box-a}
+When a firm borrows, interest is tax deductible, so the effective cost of debt
+is $r_{D}(1 - \tau_{C})$ and the **weighted average cost of capital** is
+(Chap. 12.6)
+$$r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})$$
+:::
+
+- $\tau_{C}$ is the corporate tax rate. Without the tax term the formula is the
+  unlevered cost of capital $r_{U}$ of the previous slide, also called the
+  **pre-tax WACC**.
+
+- **Example.** Michelon: equity 100 million, debt 25 million, cost of equity
+  10%, cost of debt 6%, tax rate 33%. Pre-tax WACC $0.8 \times 10\% + 0.2
+  \times 6\% = 9.2\%$; WACC $0.8 \times 10\% + 0.2 \times 6\% \times 0.67 =
+  8.8\%$.
+
+- **Today we switch taxes off** and ask what borrowing does on its own.
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Beginning of lecture 7 content
+:::
+
+::: {.center .small}
+Lecture 6 measured the cost of equity and the cost of debt, and debt looked
+cheaper. Today we ask whether borrowing more therefore makes a firm worth more.
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Beginning of lecture 7 content}
+
+\vspace{1.5em}
+\begin{minipage}{0.8\textwidth}
+\small\centering
+Lecture 6 measured the cost of equity and the cost of debt, and debt looked
+cheaper. Today we ask whether borrowing more therefore makes a firm worth more.
+\end{minipage}
+\end{center}
+\vfill
+```
+
+## Introduction {.smaller}
+
+- Dan Harris is the CFO of Electronic Business Services (EBS). The firm plans a
+  big expansion and must **raise 50 million** from outside investors.
+
+- Selling shares: given the firm's risk, equity investors want a 10% premium
+  over the 5% risk-free rate. The **cost of equity is 15%**.
+
+- Some executives object: EBS has never borrowed and has a strong balance sheet,
+  so it could **borrow at 6%**. Why pay 15% when money is available at 6%?
+
+- Three questions for Dan:
+
+  1. Does the low interest rate make borrowing the better choice?
+
+  2. Does the choice change the NPV of the expansion?
+
+  3. Does it change the value of the firm, and its share price?
+
+::: {.box .box-a}
+**In a perfect capital market the answer is no, no and no.** Today we see why.
+The next lectures see what changes in the real world.
+:::
+
+## What CFOs think matters most {.smaller}
+
+::: {.center}
+![](img0001.png){fig-align="center" height="240"}
+:::
+
+- CFOs rank **capital structure** as the finance function that adds the most
+  value. Modigliani and Miller say that in a perfect market it adds none. The
+  gap between the two is the subject of Lectures 7 to 11.
+
+## Not this Modigliani...
+
+::: {.center}
+![](modiglianiPainting.jpg){height="400"}
+
+[Amedeo Modigliani, *Jeanne Hébuterne*, 1919]{.tiny}
+:::
+
+## This Modigliani, and Miller {.smaller}
+
+::::: {.columns}
+::: {.column width="30%"}
+![](modigliani.png){height="220"}
+
+Franco Modigliani (1918-2003), Nobel prize 1985
+:::
+
+::: {.column width="30%"}
+![](miller.png){height="220"}
+
+Merton H. Miller (1923-2000), Nobel prize 1990
+:::
+
+::: {.column width="40%"}
+::: {style="text-align: left"}
+- "The Cost of Capital, Corporation Finance and the Theory of Investment,"
+  *American Economic Review*, 1958.
+
+- Their two propositions tell us what leverage does to the value of the firm
+  (today) and to its cost of capital (Lecture 8).
+:::
+:::
+:::::
+
+## Outline
+
+A.  Financing a project with equity (Chap. 14.1)
+
+B.  Adding debt: levered equity and the 543 fallacy (Chap. 14.1)
+
+C.  Perfect markets and Modigliani-Miller Proposition I (Chap. 14.2)
+
+D.  Homemade leverage and arbitrage (Chap. 14.2)
+
+E.  The market value balance sheet (Chap. 14.2)
+
+## A. Financing with equity: the answer first {.smaller}
+
+::: {.box .box-a}
+**The answer first.** The financing mix changes **who receives** the project's
+cash flows, not **how much** there is. In a perfect market the firm is worth
+the same with or without debt.
+:::
+
+- An entrepreneur (call the firm Tour moche SA) has a project: invest **800**
+  today; next year it pays **1400** if the economy is strong or **900** if it is
+  weak. Both outcomes are equally likely.
+
+  | Year 0: investment | Year 1: strong (prob. 0.5) | Year 1: weak (prob. 0.5) |
+  |:------------------:|:--------------------------:|:------------------------:|
+  | $-800$             | $1400$                     | $900$                    |
+
+- The cash flows depend on the economy, so they carry market risk. The
+  risk-free rate is 5% and the appropriate risk premium is 10%: the project's
+  **cost of capital is 15%**.
+
+- Two steps: what is the project worth, and what do shareholders earn if the
+  firm sells only equity?
+
+## Step 1: what is the project worth? {.smaller}
+
+- Expected cash flow next year: $0.5 \times 1400 + 0.5 \times 900 = 1150$.
+
+- Discounted at 15%:
+  $$\text{PV} = \frac{1150}{1.15} = 1000
+  \qquad\qquad
+  \text{NPV} = -800 + 1000 = 200$$
+
+- If the firm has no debt, shareholders receive all the cash flows. So the
+  entrepreneur can sell the **whole equity for 1000**, pay the 800 investment,
+  and **keep 200**: the NPV goes to the current owner.
+
+- Equity in a firm with no debt is called **unlevered equity**.
+
+## Step 2: returns to unlevered equity {.smaller}
+
+- The shares cost 1000 today and pay 1400 or 900 next year:
+
+  | Unlevered equity | Year 0 | Strong | Weak | Return strong | Return weak |
+  |:-----------------|:------:|:------:|:----:|:-------------:|:-----------:|
+  | Value            | 1000   | 1400   | 900  | $+40\%$       | $-10\%$     |
+
+- Expected return: $0.5 \times 40\% + 0.5 \times (-10\%) = 15\%$.
+
+- The risk of the unlevered equity **is** the risk of the project, so 15% is
+  exactly the fair return for the risk shareholders take.
+
+::: {.box .box-a}
+With equity only: the firm is worth 1000, the shareholders expect 15%, the
+entrepreneur pockets 200.
+:::
+
+## B. Adding debt: the answer first {.smaller}
+
+::: {.box .box-a}
+**The answer first.** Borrow 500 at 5% and the equity is worth $1000 - 500 =
+500$. The firm as a whole is **still worth 1000**.
+:::
+
+- The entrepreneur can also **borrow 500** and sell equity for the rest. The
+  project pays at least 900, always enough to repay, so the debt is risk free
+  and costs the risk-free rate: the firm will owe $500 \times 1.05 = 525$.
+
+- Lenders are paid first. Shareholders get what is left: $1400 - 525 = 875$ or
+  $900 - 525 = 375$. Equity in a firm that also has debt is **levered equity**.
+
+  | Levered firm   | Year 0  | Strong | Weak |
+  |:---------------|:-------:|:------:|:----:|
+  | Debt           | 500     | 525    | 525  |
+  | Levered equity | $E = ?$ | 875    | 375  |
+  | Firm           | ?       | 1400   | 900  |
+
+## Step 1: the Law of One Price {.smaller}
+
+- Add up what the lenders and the shareholders receive:
+
+  - strong economy: $525 + 875 = 1400$
+
+  - weak economy: $525 + 375 = 900$
+
+- Together they receive **exactly the project's cash flows**. Two claims with
+  the same cash flows must have the same price (Law of One Price), so
+  $$D + E = 1000 \qquad \Rightarrow \qquad E = 1000 - 500 = 500.$$
+
+- The entrepreneur raises $500 + 500 = 1000$, just as before, and still keeps
+  the NPV of 200.
+
+::: {.box .box-a}
+Levered equity sells for less (500 against 1000) because it receives less. But
+the entrepreneur is not worse off: she raises the same 1000. She is
+**indifferent** between the two financings.
+:::
+
+## Step 2: the 543 fallacy {.smaller}
+
+- Before MM, most people thought leverage **would** add value: levered equity
+  pays $0.5 \times 875 + 0.5 \times 375 = 625$ on average, so
+  $$E = \frac{625}{1.15} = 543 > 500 \;?!$$
+
+- **Where is the mistake?**
+
+  | Security         | Year 0 | Strong | Weak | Return strong | Return weak | Expected |
+  |:-----------------|:------:|:------:|:----:|:-------------:|:-----------:|:--------:|
+  | Debt             | 500    | 525    | 525  | $5\%$         | $5\%$       | $5\%$    |
+  | Levered equity   | 500    | 875    | 375  | $+75\%$       | $-25\%$     | $25\%$   |
+  | Unlevered equity | 1000   | 1400   | 900  | $+40\%$       | $-10\%$     | $15\%$   |
+
+- Levered equity swings $+75\%$ / $-25\%$: **riskier**, so it requires 25%,
+  and $625 / 1.25 = 500$.
+
+## Step 3: how much riskier? {.smaller}
+
+- In a two-state world, a security's exposure to the economy is simply the gap
+  between its return in the strong and in the weak state (the two-state version
+  of beta):
+
+  | Security         | Return strong $-$ return weak | Risk premium (expected $-$ 5%) |
+  |:-----------------|:-----------------------------:|:------------------------------:|
+  | Debt             | $5\% - 5\% = 0\%$             | $0\%$                          |
+  | Unlevered equity | $40\% - (-10\%) = 50\%$       | $10\%$                         |
+  | Levered equity   | $75\% - (-25\%) = 100\%$      | $20\%$                         |
+
+- Levered equity has **twice** the systematic risk of unlevered equity and earns
+  **twice** the risk premium. The extra return is exactly the pay for the extra
+  risk.
+
+- Note that the debt is risk free: leverage raises the risk of equity **even
+  when there is no risk of default**.
+
+## Step 4: debt is cheap, equity gets dearer {.smaller}
+
+- Debt costs 5% and levered equity 25%. The average cost of the two sources,
+  weighted by their values, is
+  $$\tfrac{500}{1000} \times 5\% + \tfrac{500}{1000} \times 25\% = 15\%,$$
+  the same as with equity alone.
+
+- **Example 14.1.** Borrow only 200. The firm owes 210; equity is worth 800 and
+  receives $1400 - 210 = 1190$ or $900 - 210 = 690$: returns $+48.75\%$ or
+  $-13.75\%$, expected **17.5%**. Average cost: $0.8 \times 17.5\% + 0.2 \times
+  5\% = 15\%$ again.
+
+::: {.box .box-a}
+Debt is cheaper when looked at on its own. But each unit of debt makes the
+equity riskier and dearer, by exactly enough to keep the average at 15%.
+Lecture 8 turns this into a formula.
+:::
+
+## C. Perfect markets and MM Proposition I {.smaller}
+
+- Modigliani and Miller showed that the result holds in general, as long as
+  capital markets are **perfect**:
+
+  1. Investors and firms can trade the same securities at competitive prices
+     equal to the present value of their cash flows.
+
+  2. There are no taxes, transaction costs, or issuance costs.
+
+  3. Financing decisions do not change the cash flows of the firm's
+     investments, and do not reveal new information about them.
+
+::: {.box .box-a}
+**MM Proposition I.** In a perfect capital market, the total value of a firm's
+securities is equal to the market value of the total cash flows generated by
+its assets, and is not affected by its choice of capital structure.
+:::
+
+- In plain words: **the pie is the same size however you slice it.**
+
+## Why MM I holds: two ways to see it {.smaller}
+
+- **The Law of One Price.** Without taxes or transaction costs, everything the
+  firm's assets produce is paid to its security holders, and nothing else is.
+  Same total cash flows, so same total value, whatever the mix of securities.
+
+- **The separation principle.** When securities are fairly priced, buying or
+  selling them is a **zero-NPV** transaction. The repayments a firm promises on
+  its debt are worth exactly the loan it receives today. So borrowing creates
+  no gain and no loss, and the value of the firm comes from its investments
+  alone.
+
+- Miller's version: the pizza delivery man asks Yogi Berra whether he wants his
+  pizza cut into four or eight slices. Yogi: "Cut it in eight pieces, I'm
+  feeling hungry tonight." Cutting the pizza differently does not make more
+  pizza.
+
+## MM and the real world {.smaller}
+
+- Students often ask why MM matters if real markets are not perfect.
+
+- Galileo showed that **without friction**, all bodies fall at the same speed.
+  Drop a feather and a stone and it does not hold. The reason is not that
+  Galileo was wrong, but that **air friction** slows some objects more than
+  others.
+
+- MM is the same kind of result. In practice capital structure **does** affect
+  value. MM tells us that any such effect must come from a **friction** in the
+  capital market: taxes, bankruptcy costs, information problems.
+
+::: {.box .box-a}
+MM tells us where to look: at the frictions, not at the mix itself. Lectures 9
+to 11 are about those frictions.
+:::
+
+## D. Homemade leverage: the answer first {.smaller}
+
+::: {.box .box-a}
+**The answer first.** Investors can borrow or lend on their own to **undo or
+redo** the firm's leverage. The firm's choice gives them nothing they cannot
+make themselves, so it cannot be worth anything to them.
+:::
+
+- Suppose investors would prefer a different capital structure from the one the
+  firm has chosen.
+
+- An investor who wants more leverage can borrow and buy the shares: this is
+  **homemade leverage**. One who wants less can hold the firm's debt as well as
+  its shares.
+
+- Condition: investors can borrow at the same rate as the firm. In a perfect
+  market the rate depends only on the risk of the loan, not on who borrows.
+
+- Three steps: make levered equity yourself, undo the firm's leverage yourself,
+  and see what happens if the two firms are not priced the same.
+
+## Step 1: make levered equity yourself {.smaller}
+
+- The firm has no debt. An investor who would like levered equity buys the
+  unlevered shares with a **margin loan** of 500 at 5%:
+
+  | Portfolio            | Year 0: cost | Strong  | Weak    |
+  |:---------------------|:------------:|:-------:|:-------:|
+  | Unlevered equity     | $1000$       | $1400$  | $900$   |
+  | Margin loan          | $-500$       | $-525$  | $-525$  |
+  | **Total**            | **$500$**    | **$875$** | **$375$** |
+
+- The shares are enough collateral, so the loan is risk free and costs 5%.
+
+- The portfolio pays **exactly what levered equity pays**, for a cost of 500.
+  By the Law of One Price, levered equity must also be worth 500.
+
+## Step 2: undo the firm's leverage {.smaller}
+
+- Now the firm has borrowed 500, but the investor would prefer unlevered
+  equity. He buys **both** the debt and the levered equity:
+
+  | Portfolio            | Year 0: cost | Strong   | Weak    |
+  |:---------------------|:------------:|:--------:|:-------:|
+  | Debt                 | $500$        | $525$    | $525$   |
+  | Levered equity       | $500$        | $875$    | $375$   |
+  | **Total**            | **$1000$**   | **$1400$** | **$900$** |
+
+- Same cash flows as unlevered equity, for 1000.
+
+::: {.box .box-a}
+Either way, the investor picks the leverage he wants. The firm's choice
+changes nothing for him, so he will not pay more for one structure than for
+the other.
+:::
+
+## Step 3: if MM I failed, free money {.smaller}
+
+- **Example 14.2.** Two firms with the same project (1400 or 900). Firm U has
+  no debt and its equity trades at **990**. Firm L has borrowed 500 and its
+  equity trades at **510**, so L is worth $510 + 500 = 1010$.
+
+- Identical assets, different prices: the Law of One Price is violated. Build
+  L's equity at home and sell the real one:
+
+  | Trade                    | Year 0 | Strong  | Weak   |
+  |:-------------------------|:------:|:-------:|:------:|
+  | Borrow 500               | $+500$ | $-525$  | $-525$ |
+  | Buy U's equity           | $-990$ | $+1400$ | $+900$ |
+  | Sell L's equity          | $+510$ | $-875$  | $-375$ |
+  | **Total**                | **$+20$** | **$0$** | **$0$** |
+
+- **20 today, nothing to pay later**: an arbitrage. Everyone does it, the price
+  of U rises and the price of L falls, until both firms are worth the same.
+  That is what forces MM I to hold.
+
+## E. The market value balance sheet {.smaller}
+
+::: {.box .box-a}
+**The answer first.** The market value of **all** the securities a firm has
+issued equals the market value of **all** its assets. At market values,
+$$\text{Equity} = \text{Assets} - \text{Debt and other liabilities}.$$
+:::
+
+::: {.center}
+![](table14p8.png){fig-align="center" height="175"}
+:::
+
+- Two differences with accounting: **every** asset counts (brand, people), all
+  at **market value**. ATTENTION: single assets are often hard to value.
+
+## More than two securities {.smaller}
+
+- MM I is not about debt and equity only. It holds for **any** set of
+  securities, because investors can buy or sell them on their own.
+
+- **Example 14.3.** The entrepreneur sells the firm as three securities: 500 of
+  debt, equity, and a **warrant** that pays 210 if the economy is strong and
+  nothing otherwise. The warrant is fairly priced at 60.
+
+- Total value of the securities = value of the assets = 1000, so
+  $$E = 1000 - 500 - 60 = 440.$$
+
+- The firm is worth 1000 whatever it issues. Adding a security only changes how
+  the 1000 is divided.
+
+## A leveraged recapitalization {.smaller}
+
+- MM I also applies **after** the firm is created. Harrison Industries is an
+  all-equity firm with 50 million shares at 4 each: equity, and assets, are
+  worth **200 million**.
+
+- Harrison **borrows 80 million** and uses the cash to **buy back 20 million
+  shares**: a leveraged recapitalization. Two stages, in millions:
+
+  | Market value balance sheet | Initial | After borrowing | After repurchase |
+  |:---------------------------|:-------:|:---------------:|:----------------:|
+  | Cash                       | 0       | 80              | 0                |
+  | Existing assets            | 200     | 200             | 200              |
+  | **Total assets**           | **200** | **280**         | **200**          |
+  | Debt                       | 0       | 80              | 80               |
+  | Equity                     | 200     | 200             | 120              |
+  | Shares outstanding (M)     | 50      | 50              | 30               |
+  | Value per share            | 4.00    | 4.00            | 4.00             |
+
+## Why the share price does not move {.smaller}
+
+- **After borrowing**: assets and liabilities both rise by 80 (the cash in, the
+  debt out). Equity is unchanged at 200, and so is the share price.
+
+- **After the repurchase**: the 80 of cash is gone, the debt remains, so equity
+  must fall by 80, to 120. But only $50 - 20 = 30$ million shares are left:
+  $$\frac{120}{30} = 4 \text{ per share, as before.}$$
+
+::: {.box .box-a}
+Harrison sold 80 of debt and bought 80 of equity, both at fair prices. Benefits
+equal costs: a **zero-NPV** transaction, so it cannot change the price of the
+shares.
+:::
+
+- Market capitalisation falls (200 to 120) because there are fewer shares, not
+  because each share is worth less.
+
+## How it all connects {.smaller}
+
+1. **The project is worth 1000** whatever the financing: its cash flows do not
+   depend on who receives them.
+
+2. **Debt gives equity a smaller but riskier slice**: 500 instead of 1000,
+   swinging $+75\%$ / $-25\%$.
+
+3. **The 543 fallacy** is discounting the riskier slice at the unlevered rate.
+   Twice the risk, twice the premium: 25%, not 15%.
+
+4. **MM Proposition I**: in a perfect market the value of the firm does not
+   depend on its capital structure, by the Law of One Price.
+
+5. **Homemade leverage** makes the result bite: any gap between two identical
+   firms is an arbitrage that investors close themselves.
+
+6. **The market value balance sheet**: financing re-slices the value of the
+   assets; a leveraged recap leaves the share price unchanged.
+
+## What to remember {.smaller}
+
+- **MM Proposition I.** In a perfect capital market the total value of a firm's
+  securities equals the value of its assets, whatever the capital structure.
+
+- **Perfect market** means: securities trade at fair prices, no taxes or
+  transaction costs, and financing changes neither the investment cash flows
+  nor the information about them.
+
+- **Leverage makes equity riskier**, even when the debt is risk free. Debt is
+  cheaper on its own but raises the cost of equity.
+
+- **Homemade leverage**: investors can borrow or lend to get the leverage they
+  want, so the firm's choice is worth nothing to them.
+
+- **Equity = assets $-$ liabilities** at market values. Issuing debt to buy back
+  shares at fair prices does not change the share price.
+
+## Next time {.smaller}
+
+- In every example today the average cost of capital stayed at **15%**: debt
+  cost 5%, equity became dearer, and the two effects cancelled.
+
+- **Lecture 8** puts a formula on that: MM Proposition II tells us exactly how
+  much the cost of equity rises with leverage, first in returns, then in betas.
+
+- We will then use it to dismantle two popular arguments for debt: "leverage
+  raises earnings per share" and "issuing equity dilutes shareholders".
+
+## Quiz
+
+- Why is the levered equity of Tour moche SA worth 500 and not 543?
+
+- Name the three conditions of a perfect capital market.
+
+- The entrepreneur borrows 750 instead of 500. What is the value of the equity,
+  what are its cash flows, and what is its expected return?
+
+- A firm borrows to buy back shares in a perfect market. What happens to its
+  share price? To its market capitalisation?
+
+## Quiz: answers {.smaller}
+
+- **500, not 543.** The 543 discounts the expected levered cash flow of 625 at
+  the unlevered rate of 15%. Levered equity is riskier and requires 25%:
+  $625 / 1.25 = 500$. The 500 also follows from the Law of One Price:
+  $1000 - 500$.
+
+- **Perfect market.** Fair prices for all securities; no taxes, transaction or
+  issuance costs; financing does not change the investment cash flows nor
+  reveal information about them.
+
+- **Borrow 750.** Equity is worth $1000 - 750 = 250$. The firm owes $750 \times
+  1.05 = 787.5$, so equity receives $1400 - 787.5 = 612.5$ or $900 - 787.5 =
+  112.5$: returns $+145\%$ or $-55\%$, expected **45%**. Risk premium 40%, four
+  times the unlevered premium, for four times the sensitivity.
+
+- **Buyback.** The share price does not change (zero-NPV trade). Market
+  capitalisation falls by the amount borrowed: fewer shares, same price.
