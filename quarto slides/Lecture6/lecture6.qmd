@@ -6,17 +6,115 @@ footer: "Lecture 6: Estimating the Cost of Capital"
 
 ## Plan
 
-A.  The equity cost of capital (Chap. 12.1)
+- Recap from lecture 5
 
-B.  The market portfolio (Chap. 12.2)
+- How to measure the cost of money for a project
 
-C.  Beta estimation (Chap. 12.3)
+- Build the CAPM recipe, one input at a time
 
-D.  The debt cost of capital (Chap. 12.4)
+- Price the debt, then a non-traded project
 
-E.  A project's cost of capital (Chap. 12.5 and 12.6)
+- Adjust for risk and financing: the WACC
 
-F.  Conclusion about the use of the CAPM (Chap. 12.7)
+Mostly based on the BDM textbook Chap. 12.
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Recap lecture 5
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Recap lecture 5}
+\end{center}
+\vfill
+```
+
+## Recap of Lecture 5 {.smaller}
+
+Let's do a recap:
+
+- Alpha, and what "beating the market" means
+
+- Every buyer needs a seller: the average investor has an alpha of zero
+
+- Investors' mistakes, and fund managers' fees
+
+- Size, value and momentum: patterns the CAPM misses
+
+- Why the CAPM stays the standard anyway
+
+## Recap: the CAPM and the alpha {.smaller}
+
+- The **CAPM** (Lecture 4) gives the return a stock must pay for its beta, the
+  **required return**:
+  $$r_{i} = r_{f} + \beta_{i}\,\big(E(R_{M}) - r_{f}\big)$$
+
+- **Alpha** is the expected return of a stock minus the return the CAPM
+  requires for its beta:
+  $$\alpha_{i} = \underbrace{E(R_{i})}_{\text{expected return}} - \underbrace{\big(r_{f} + \beta_{i}\,(E(R_{M}) - r_{f})\big)}_{\text{required return}}$$
+
+- **Positive alpha**: the stock pays more than its risk requires, it sits above
+  the Security Market Line. **Negative alpha**: below the line.
+
+- Under the CAPM, every stock is on the line: **every alpha is zero.**
+
+## Recap: beating the market {.smaller}
+
+- A positive alpha attracts buyers, the price rises, the expected return falls:
+  **competition pushes alphas back to zero.**
+
+- Every buyer needs a seller, so every positive alpha is someone else's negative
+  alpha. **Holding the market guarantees an alpha of zero**, with no skill and
+  no information.
+
+
+- Yet a survey of 392 chief financial officers found:
+
+::: {.center}
+| Method                         | Share of firms  |
+|:-------------------------------|:---------------:|
+| CAPM                           | 73.5%           |
+| Historical average returns     | 40%             |
+| A model with several factors   | about one third |
+:::
+
+::: {.box .box-a}
+The CAPM is simple and well founded, and the discount rate is only one
+imprecise input. Today we use it to compute the cost of capital.
+:::
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Beginning of lecture 6 content
+:::
+
+::: {.center .small}
+Lecture 5 ended on: firms use the CAPM for the cost of capital. Today we do
+exactly that, step by step.
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Beginning of lecture 6 content}
+
+\vspace{1.5em}
+\begin{minipage}{0.8\textwidth}
+\small\centering
+Lecture 5 ended on: firms use the CAPM for the cost of capital. Today we do
+exactly that, step by step.
+\end{minipage}
+\end{center}
+\vfill
+```
 
 ## Some questions to start
 
@@ -27,14 +125,14 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
 -   You are the manager of a big company, and you want to execute a big
     investment project, how can you get the money?
 
-## Example 1
+## Example 1 {.smaller}
 
 ::: {.center}
 ![](newsPark1.png){height="70"}
 :::
 
 ::: {.center}
-![](newsDragonBall.jpg){height="250"}
+![](newsDragonBall.jpg){height="230"}
 :::
 
 :::: {.columns}
@@ -47,7 +145,9 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
 :::
 ::::
 
-## Example 2
+- **EUR 1 billion.** Who pays, and what do they want back?
+
+## Example 2 {.smaller}
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -59,7 +159,10 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
 :::
 ::::
 
-## What this lecture is about
+- **EUR 800 million, halted.** Was the expected return worth what the money
+  costs?
+
+## What this lecture is about {.smaller}
 
 - There are two ways to raise that money, and today we study how to measure
   the cost of each one:
@@ -68,28 +171,88 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
 
   - **Debt**: borrow the money and pay it back with interest.
 
-- Why measure it at all? Because the money is not free. Whoever provides it
-  expects a return, and that expected return is your cost of capital.
+- First we will evaluate their cost independently, then we are going to see how companies combine them.
 
 - You then compare the cost of capital with the return your project is
   expected to earn: if the project earns less than the money costs, it is not
   worth doing.
 
-## A. The equity cost of capital
+::: {.box .box-a}
+**Cost of capital** = the return investors could earn elsewhere on an
+investment with the same risk.
+:::
 
-- Cost of capital of any investment opportunity = expected return of
-  available investments with the same beta.
+## Outline
 
-- This cost of capital takes into account the risk borne by the equity
-  holders.
+A.  The equity cost of capital: the recipe (Chap. 12.1)
 
-  - Risk premium
+B.  Inputs 1 to 3: the market portfolio, the risk-free rate, the premium (Chap. 12.2)
 
-## Example: computing the equity cost of capital
+C.  Input 4: beta (Chap. 12.3)
+
+D.  The debt cost of capital (Chap. 12.4)
+
+E.  A project's cost of capital (Chap. 12.5)
+
+F.  Project risk and financing: the WACC (Chap. 12.6)
+
+G.  Why we keep the CAPM (Chap. 12.7)
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+The cost of equity
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries The cost of equity}
+\end{center}
+\vfill
+```
+
+## A. The recipe: the CAPM formula {.smaller}
+
+- The cost of capital of any investment is the expected return of the
+  investments available in the market **with the same beta**.
+
+- The CAPM, from Lecture 4, tells us what that return is:
+  $$r_{E} = r_{f} + \beta_{E} \times \left(E[R_{Mkt}] - r_{f}\right)$$
+
+- In words: the risk-free rate, plus beta times the premium the market pays.
+
+::: {.box .box-a}
+Investors require the same risk premium they would earn by taking the same
+market risk through the market portfolio itself.
+:::
+
+
+## Example 12.1: Disney and Domino's {.smaller}
+
+- Disney (DIS): volatility 20%, beta 1.29. Domino's Pizza (DPZ): volatility
+  30%, beta 0.62. Risk-free rate 3%, expected market return 8%.
+
+- **Total risk** is volatility: Domino's (30%) has more than Disney (20%).
+
+- **Market risk** is beta: Disney (1.29) has more than Domino's (0.62).
+
+- **Equity cost of capital.** The market premium is $8\% - 3\% = 5\%$.
+
+  - Disney: $r_{DIS} = 3\% + 1.29 \times 5\% = 9.45\%$.
+
+  - Domino's: $r_{DPZ} = 3\% + 0.62 \times 5\% = 6.10\%$.
+
+- Domino's is the more volatile stock, yet its capital is cheaper. Only market
+  risk is paid for, because the rest can be diversified away.
+
+## Exercise: Saint-Gobain and ENGIE {.smaller}
 
 - SGO (Saint-Gobain): volatility = 30%; beta = 1.45
 
-- ENGI (ENGIE) : volatility = 38%; beta = 0.82
+- ENGI (ENGIE): volatility = 38%; beta = 0.82
 
 - Which of these stocks carries more total risk?
 
@@ -99,202 +262,308 @@ F.  Conclusion about the use of the CAPM (Chap. 12.7)
   the market portfolio is 8%. Calculate and compare the equity cost of
   capital for Saint-Gobain and ENGIE.
 
-## B. The market portfolio {.smaller}
+## Exercise: Saint-Gobain and ENGIE (con't) {.smaller}
 
-- The portfolio weight of each security in the market portfolio is
-  $$\begin{aligned}
-  x_{i} & = \frac{\operatorname{Market \ value \ of \ } i}{\operatorname{Market \ value \ of \ all \ securities \ in \ the \ portfolio}} \\
-  & = \frac{MV_{i}}{\sum_{j} MV_{j}},
-  \end{aligned}$$ where $$\begin{aligned}
-  MV_{i}  = & \left(\text{Number of shares of firm \ }i\text{ outstanding}\right) \\
-  & \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \ \ \ \ \times \left(\text{price of firm \ } i \text{ \ per share}\right), \\
-  = & N_{i} \times P_{i}.
-  \end{aligned}$$
+- **Total risk**: ENGIE, 38% against 30%.
 
-- Passive portfolio.
+- **Market risk**: Saint-Gobain, beta 1.45 against 0.82.
 
-- How to invest in the market portfolio?
+- **Market risk premium**: $8\% - 3\% = 5\%$.
 
-  - Identify an index that captures the performance of the overall stock
-    market.
+- **Equity cost of capital**:
 
-  - Buy the index via an index fund or an exchange-traded fund (ETF).
+  - Saint-Gobain: $r_{SGO} = 3\% + 1.45 \times 5\% = 10.25\%$.
 
-## The market risk premium {.smaller}
+  - ENGIE: $r_{ENGI} = 3\% + 0.82 \times 5\% = 7.10\%$.
 
-- Key component of the CAPM $\Rightarrow$ market risk premium
+- Same lesson as Disney and Domino's: the more volatile stock (ENGIE) has the
+  lower cost of capital, because less of its risk is market risk.
 
-  - Expected excess return of the market portfolio over the risk-free
-    rate
 
-  - $E[R_m] - r_f$
+## The inputs we need {.smaller}
 
-- Which risk-free rate?
+- The formula is easy. The work is in the inputs:
 
-  - Interest rates on government bonds? Corporate bonds rated AAA? (See
-    Chap. 8)
+  1. **The market portfolio** $R_{Mkt}$: the portfolio of all stocks that the
+     CAPM compares every investment with. The other inputs are measured
+     against it (section B).
 
-  - Which maturity? $\Rightarrow$ Between 10 and 30 years (Remark: in
-    investment analysis it is more common to use the short-term interest
-    rate.)
+  2. **The risk-free rate** $r_{f}$ (section B).
 
-## Two ways to estimate the premium {.smaller}
+  3. **The market risk premium** $E[R_{Mkt}] - r_{f}$: what the market
+     portfolio pays above the risk-free rate (section B).
 
-- The premium cannot be observed directly, so it has to be estimated:
+  4. **The beta** $\beta_{E}$: how much the stock moves with the market
+     portfolio (section C).
 
-1.  **The historical approach**: what the market actually paid over the
-    risk-free rate in the past.
+## B. Input 1: the market portfolio {.smaller}
 
-2.  **The fundamental approach**: the return that justifies today's index
-    level, given what firms are expected to pay out.
+- The CAPM needs a market portfolio: **every stock, held in proportion to its
+  market value.** Big firms weigh more, small firms less.
+
+- The market value of a firm is its market capitalisation:
+  $$\text{Market value of firm } i = \text{number of shares} \times \text{price per share}$$
+
+- The weight of firm $i$ in the market portfolio is then
+  $$x_{i} = \frac{\text{market value of firm } i}{\text{market value of all firms together}}$$
+
+- A portfolio built this way is called **value-weighted**.
+
+## Value-weighted means passive {.smaller}
+
+- Holding every firm in proportion to its market value is the same as owning
+  **the same fraction of every firm**: say 0.01% of Nvidia, 0.01% of LVMH, and
+  so on. An equal-ownership portfolio.
+
+- When prices move, the market weights move, but so does the value of what you
+  hold, and by exactly the same amount. **No trading is needed** to stay
+  value-weighted.
+
+- Trading is needed only when a firm issues or buys back shares, or enters or
+  leaves the market.
+
+::: {.box .box-a}
+The market portfolio is a **passive** portfolio: cheap to hold, which is one
+reason it is the benchmark.
+:::
+
+## In practice: an index and an ETF {.smaller}
+
+- Nobody builds the true market portfolio. In practice we use a **market
+  index** as a proxy:
+
+  - The **S&P 500**: 500 of the largest US firms, value-weighted. Only 500 of
+    some 4,000 listed firms, but about 80% of the US market value.
+
+  - In Europe: the **Euro Stoxx 50**, the **CAC 40**, or a broad world index.
+
+- How to invest in it: buy an **index fund** or an **exchange-traded fund
+  (ETF)**, a security that trades like a share but holds the whole index.
+
+- Keep in mind: the index is a proxy. How well the CAPM works depends on how
+  closely the proxy tracks the true market.
+
+## Input 2: which risk-free rate? {.smaller}
+
+- The CAPM's $r_{f}$ is the rate at which investors can save and borrow
+  without risk. We take it from **government bond yields**.
+
+- **Which maturity?** Match it to the investment: a short rate for a short
+  project, a long rate for a long one. For a firm's cost of capital, most
+  analysts use **10- to 30-year** bonds.
+
+
+## Input 3: the market risk premium {.smaller}
+
+- The premium $E[R_{Mkt}] - r_{f}$ is how much the market is expected to pay
+  above the risk-free rate. It sets the price of market risk.
+
+- It cannot be observed, so it has to be estimated. Two ways:
+
+  1.  **The historical approach**: what the market actually paid over the
+      risk-free rate in the past.
+
+  2.  **The fundamental approach**: the return that justifies today's index
+      level, given what firms are expected to pay out.
 
 - Same number seen from two ends: past realised returns, or expected future
   cash flows.
 
-## Determining the market risk premium: historical approach
+## The historical approach {.smaller}
 
-![](table12p1ang.png){fig-align="center"}
+![](table12p1ang.png){fig-align="center" width="70%"}
 
-- Drawbacks:
+- The average excess return of the S&P 500 over the risk-free rate.
 
-  - Data intensive but not necessarily precise.
+- **Lower against 10-year bonds** than against 1-year bills: long rates are
+  usually higher than short rates.
 
-  - Backward looking, so may not represent current expectations.
+- **Lower since 1965**: more people invest in stocks, diversifying is cheaper
+  (funds, ETFs), and market volatility has fallen. Most analysts now use
+  **4-6% over bills, 3-5% over long bonds**.
 
-## Determining the market risk premium: fundamental approach {.smaller}
+- Drawbacks: imprecise (even since 1926 the margin of error is about
+  $\pm 4\%$) and backward looking.
 
-- Given an assessment of firms' future cash flows, estimate the expected
-  return of the market by solving for the discount rate that is
-  consistent with the current level of the index.
+## The fundamental approach {.smaller}
 
-- Example: via the constant expected growth model (see Chap. 9)
-  $$\begin{aligned}
-  r_{\text{Mkt}} = \underbrace{\frac{\text{Div}_{1}}{P_{0}}}_{\text{Dividend yield}} + \underbrace{g}_{\operatorname{Expected \ dividend \ growth \ rate}}
-  \end{aligned}$$
+- Look forward instead: given what firms are expected to pay out, which
+  discount rate makes today's index level fair?
 
-- Remark: this method assumes that the future expected dividends grow at
-  a constant rate---a reasonable hypothesis for the overall market.
+- With the constant growth model of Chap. 9, the expected return of the market
+  is $$r_{Mkt} = \underbrace{\frac{\text{Div}_{1}}{P_{0}}}_{\text{dividend yield}} + \underbrace{g}_{\text{expected dividend growth}}$$
 
-## The constant expected growth model {.smaller .dense}
+- $\text{Div}_{1}$: next year's dividend; $P_{0}$: today's index level; $g$:
+  the rate at which dividends are expected to grow.
 
-- The price of an asset is the present value of the dividends it pays:
+- Example: dividend yield 2%, expected growth 6%: $r_{Mkt} = 8\%$.
+
+- Constant growth is a poor assumption for one firm, a reasonable one for the
+  whole market. Studies using it find a premium of **3-5%**.
+
+## Where the formula comes from {.smaller .dense}
+
+- The price of a stock is the present value of the dividends it pays:
   $$P_{0} = \frac{\text{Div}_{1}}{1+r} + \frac{\text{Div}_{2}}{(1+r)^{2}} + \frac{\text{Div}_{3}}{(1+r)^{3}} + \dots$$
 
-- Assume the dividends grow at a constant rate $g$, so that each dividend is
-  $(1+g)$ times the one before. As long as growth is below the discount rate,
-  the whole sum collapses to $$P_{0} = \frac{\text{Div}_{1}}{r-g}.$$
+- If each dividend is $(1+g)$ times the one before, and growth stays below the
+  discount rate, the whole sum collapses to
+  $$P_{0} = \frac{\text{Div}_{1}}{r-g}$$
 
-- Read the other way round, the expected return is the dividend yield
-  ($\text{Div}_{1}/P_{0}$, next year's dividend as a share of today's price)
-  plus the growth rate:
+- Read the other way round, solving for $r$:
 
 ::: {.box .box-a}
 $$r = \frac{\text{Div}_{1}}{P_{0}} + g$$
 :::
 
-## The constant expected growth model (con't) {.smaller}
-
-- Starting from $$P_{0} = \frac{\text{Div}_{1}}{r-g},$$ solving for the
-  expected return gives
-  $$r = \underbrace{\frac{\text{Div}_{1}}{P_{0}}}_{\text{Dividend yield}} + \underbrace{g}_{\text{Growth}}$$
-
 - Intuition: investors earn what the asset pays out today, plus the rate at
-  which that payout grows.
+  which that payout grows. The step-by-step derivation is in the Appendix.
 
-- Where does $P_{0} = \text{Div}_{1}/(r-g)$ itself come from? The step-by-step
-  derivation is in the Appendix at the end of this deck.
+## C. Input 4: beta, what we are estimating {.smaller}
 
-## C. Beta estimation {.smaller}
+- The third input. **Beta** measures how much a stock moves when the market
+  moves: a beta of 2 means a 1% move in the market comes with a 2% move in
+  the stock, on average.
 
-- Once you have the historical market returns and the historical returns of
-  your stock, you can compute the beta.
+- From Lecture 2, beta is the covariance of the stock with the market, scaled
+  by the variance of the market:
+  $$\beta_{i} = \frac{\text{Cov}\left(R_{i}, R_{Mkt}\right)}{\text{Var}\left(R_{Mkt}\right)}$$
 
-- Other key parameter to implement the CAPM: beta
+- Ideally we would want the **future** beta. We cannot see it, so we estimate
+  it from **past returns**, which works because betas are fairly stable over
+  time.
 
-  - Determine the sensitivity of the security's returns to those of the
-    market $$\begin{aligned}
-    \beta^{m}_{i} \equiv \beta_{i} = \frac{\sigma_{R_{i}}\times \text{Corr}\left( R_{i}, R_{m}\right)}{\sigma_{R_{m}}} = \frac{\text{Cov}\left(R_{i},R_{m}\right)}{\text{Var}\left(R_{m}\right)}.
-    \end{aligned}$$
+- Data providers use two to five years of weekly or monthly returns, with the
+  S&P 500 (or a local index) as the market.
 
-- Example: $\beta = 2$ $\Rightarrow$ an increase of the market risk
-  premium of 1% leads to an increase of 2% of the required return.
+## Step 1: look at the returns over time {.smaller}
 
-## Estimate beta from historical data
+![](figure12p1.png){fig-align="center" style="max-height: 440px"}
 
-![](figure12p1.png){fig-align="center"}
+- Cisco's monthly returns against the S&P 500. Cisco moves in the same
+  direction as the market, with **bigger swings**: its beta is above 1.
 
-## Monthly excess return on Cisco versus the S\&P500
-
-::: {.center}
-![](figure12p2.png){fig-align="center"}
-:::
-
-## Estimation of beta: minimum least squared method / linear regression {.smaller}
-
-For a sample of returns indexed with $t=1,\dots, T;$ run a linear
-regression $$\begin{aligned}
-R_{it}-r_{f} = \alpha_{i}+\beta_{i} \left( R_{mt}-r_{f}\right)+\epsilon_{it}
-\end{aligned}$$
-
-::::: {.columns}
-::: {.column width="40%"}
-$\hat{\beta}_{i} =$slope of the best-fitting line in the plot of the
-security $i$'s excess returns versus the market excess returns.
-:::
-
-::: {.column width="60%"}
-![](scatterplotOLS.png){fig-align="center"}
-:::
-:::::
-
-## Example: Estimation of the beta of LVMH from monthly data (2000-2013)
-
-- Estimated beta of = 1.13
-
-  - With a 95% confidence interval of \[0.98; 1.27\]
-
-- The risk-free rate is 3% and the market risk premium is 5%.
-
-  - What range for LVMH's equity cost of capital is consistent with the
-    95% confidence interval for its beta?
-
-## D. The debt cost of capital
+## Step 2: plot the stock against the market {.smaller}
 
 ::: {.center}
-![](balanceSheet.png){fig-align="center"}
+![](figure12p2.png){fig-align="center" style="max-height: 380px"}
 :::
 
-## Debt yields {.smaller}
+- Each dot is one month: the market's excess return across, Cisco's up. Draw
+  the best-fitting line. **Its slope is the beta.** The distance of each dot
+  from the line is the diversifiable, firm-specific part of the return.
 
-- The yield to maturity of a bond (YTM) = IRR an investor will earn from
-  holding the bond to maturity.
+## Step 3: the regression, in words {.smaller}
 
-- If there is no default risk: YTM = expected return for investors.
+- The best-fitting line is found by **linear regression**. It writes each
+  month's excess return of the stock as three parts:
+  $$R_{i} - r_{f} = \alpha_{i} + \beta_{i} \left( R_{Mkt} - r_{f}\right) + \epsilon_{i}$$
 
-- Otherwise two more things matter:
+- $\beta_{i}$, the **slope**: the part explained by the market. The number we
+  want.
 
-  - $p$ = the probability that the borrower defaults.
+- $\alpha_{i}$, the **intercept**: the stock's alpha from Lecture 5, how far
+  its average return sat above or below the Security Market Line. The CAPM
+  says it should be close to zero.
 
-  - $L$ = the expected loss rate, the share of the promised return lost when
-    it does default.
+- $\epsilon_{i}$, the **leftover**: firm-specific noise, zero on average. It is
+  the diversifiable risk.
 
-- The expected return on the debt is then $$\begin{aligned}
-  r_{D} & = \left(1-p\right)\text{YTM} + p \left( \text{YTM} - L\right), \\
-  & = \text{YTM} - p L.
-  \end{aligned}$$
+## {.center}
 
-## Annual default rates by debt rating
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+The cost of debt
+:::
+:::
 
-![](table12p2ang.png){fig-align="center"}
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries The cost of debt}
+\end{center}
+\vfill
+```
 
-## Debt betas
+## D. The other half of the balance sheet {.smaller}
 
-- Estimate the debt cost of capital via the CAPM $\Rightarrow$
-  $\beta_{D}$?
+::: {.center}
+![](balanceSheet.png){fig-align="center" style="max-height: 400px"}
+:::
 
-![](table12p3ang.png){fig-align="center"}
+- Sections A to C priced the equity. A firm also borrows, and lenders expect a
+  return too: the **debt cost of capital** $r_{D}$. We will need it to price a
+  project in section E.
 
-## Estimating the debt cost of capital: example
+## Promised is not expected {.smaller}
+
+- The **yield to maturity** (YTM) of a bond is the return an investor earns
+  **if every promised payment is made** (Chap. 6).
+
+- If the borrower is very unlikely to default, the yield is a fine estimate of
+  the expected return.
+
+- If default is a real possibility, the yield is a **promised** return, and
+  the **expected** return is lower: some of the time, the investor will not be
+  paid in full.
+
+::: {.box .box-a}
+Using the yield as the cost of debt is a common mistake. It is only right for
+very safe debt.
+:::
+
+## One-year bond, two outcomes {.smaller}
+
+- Invest 1 euro in a one-year bond with yield $y$. The bond promises $1 + y$.
+
+- **No default**, with probability $1 - p$: you receive $1 + y$.
+
+- **Default**, with probability $p$: you lose a fraction $L$ of what was
+  promised, and receive $1 + y - L$.
+
+- The expected return is the average of the two, weighted by their
+  probabilities:
+  $$r_{D} = (1-p)\, y + p\,(y - L) = y - p \times L$$
+
+- In words: **the yield, minus the probability of default times the loss when
+  it happens.**
+
+## How often does debt default? {.smaller}
+
+```{=latex}
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}
+```
+
+|Rating:|AAA|AA|A|BBB|BB|B|CCC|CC-C|
+|:--|--:|--:|--:|--:|--:|--:|--:|--:|
+|**Default rate:**|||||||||
+|Average|0.0%|0.1%|0.2%|0.5%|2.2%|5.5%|12.2%|14.1%|
+|In recessions|0.0%|1.0%|3.0%|3.0%|8.0%|16.0%|48.0%|79.0%|
+
+```{=latex}
+\endgroup
+```
+
+::: {.footnotesize}
+*Source*: "Corporate Defaults and Recovery Rates, 1920–2011," *Moody's Global
+Credit Policy*, February 2012.
+:::
+
+
+## Second route: a debt beta {.smaller}
+
+- We could also use the CAPM for debt: $r_{D} = r_{f} + \beta_{D} \times$
+  market risk premium.
+
+- Most bonds and all bank loans trade rarely, so a firm's own debt beta cannot
+  be estimated from returns. Instead, use **average debt betas by rating**:
+
+![](table12p3ang.png){fig-align="center" width="85%"}
+
+- Debt betas are low, but rise with lower ratings and longer maturities.
+
+
+## Exercise: Lafarge {.smaller}
 
 - In January 2014, the bond of Lafarge (coupon rate of 4.75%) with
   maturity 30/09/2020, rated BB, had a yield to maturity of 3.7%. The
@@ -302,26 +571,52 @@ security $i$'s excess returns versus the market excess returns.
 
 - The risk-free rate was 0.6%. The market risk premium was 3.1%.
 
-- Estimate the expected return of Lafarge debt.
+- Estimate the expected return of Lafarge debt, by both routes.
 
-## E. A project's cost of capital {.smaller}
+## Exercise: Lafarge (con't) {.smaller}
 
-- Only the cost of capital of a company listed on a stock exchange can
-  be directly identified.
+- **Route 1, yield minus expected loss.** A BB bond defaults 2.2% of the time
+  in a normal year; loss rate 60%:
+  $$r_{D} = 3.7\% - 2.2\% \times 0.60 = 3.7\% - 1.32\% = 2.38\%$$
 
-- For privately held companies or companies which invest outside of
-  their usual line of business, it is necessary to find a comparable
-  listed firm
+- **Route 2, the CAPM.** The average beta of BB debt is 0.17:
+  $$r_{D} = 0.6\% + 0.17 \times 3.1\% = 0.6\% + 0.53\% = 1.13\%$$
 
-  - Comparable (Levered or all-equity)
 
-  - The unlevered cost of capital
+## E. A project is not traded {.smaller}
 
-  - Industry asset betas
+- A stock has a price history, so we could estimate its beta. **A new project
+  has none.**
 
-- Remark: we assume for now that a project is only financed by equity.
+- So we borrow the beta of a **comparable firm**: a listed firm in the same
+  business. Often that is the firm doing the project.
 
-## A simple example: estimating the beta of a project from a single-product firm
+- Two cases:
+
+  - **Case 1**: the comparable has no debt. Its beta is the project's beta.
+
+  - **Case 2**: the comparable has debt. We first have to **unlever** it.
+
+::: {.box .box-a}
+**Assumption until section F:** the firm pays for the project with
+**shareholders' money only**; it borrows nothing for it. The debt in Case 2
+belongs to the *comparable firm*; our project still uses none.
+:::
+
+## Case 1: a comparable with no debt {.smaller}
+
+- If the comparable firm has no debt, owning its shares is the same as owning
+  its assets: all the cash the assets produce goes to the shareholders.
+
+- So the firm's **equity beta is the beta of its assets**, and we can use it
+  directly as the project beta:
+  $$r_{\text{project}} = r_{f} + \beta_{\text{comparable}} \times \text{market risk premium}$$
+
+- Behind the formula: instead of doing the project, your investors could simply
+  buy shares of the comparable. The project must offer at least that return.
+
+
+## Exercise: 1000mercis {.smaller}
 
 - You wish to launch a data marketing firm using as reference the company
   1000mercis.com (ALMIL).
@@ -333,30 +628,58 @@ security $i$'s excess returns versus the market excess returns.
 - To construct your business plan, you need to estimate the cost of
   capital of the project.
 
-## Using a levered firm as a comparable for a project's risk
+## Exercise: 1000mercis (con't) {.smaller}
 
-![](figure12p3.png){fig-align="center"}
+- **Step 1**: no debt, so the asset beta of 1000mercis is its equity beta,
+  0.59.
 
-## The unlevered cost of capital {.smaller .dense}
+- **Step 2**: the project's cost of capital:
+  $$r_{\text{project}} = 3\% + 0.59 \times 5\% = 5.95\%$$
 
-$$
-\substack{\operatorname{Assets \ or} \\ 
-\operatorname{Unlevered} \\
-\operatorname{Cost \ of} \\ 
-\operatorname{Capital}} = \left(\substack{\operatorname{Fraction \ of} \\ 
-\operatorname{Firm \ Value} \\
-\operatorname{Financed} \\ 
-\operatorname{by \ Equity}} \right) \times \left(\substack{\operatorname{Equity} \\ \operatorname{Cost} \\ \operatorname{of}\\ \operatorname{Capital}} \right) +\left(\substack{\operatorname{Fraction\ of} \\ 
-\operatorname{Firm \ value} \\
-\operatorname{Financed} \\ 
-\operatorname{by \ Debt}} \right) \times \left(\substack{\operatorname{Debt} \\ \operatorname{Cost} \\ \operatorname{of} \\ \operatorname{Capital}} \right)
-$$ Asset or unlevered cost of capital $$
-r_{U} = \frac{E}{E+D} r_{E} + \frac{D}{E+D} r_{D}.
-$$ Asset or unlevered beta $$
-\beta_{U} = \frac{E}{E+D} \beta_{E} + \frac{D}{E+D} \beta_{D}.
-$$
+- A low beta, so a low bar: data marketing revenues do not swing much with the
+  economy. Any cash-flow forecast in the business plan should be discounted at
+  about 6%.
 
-## The unlevered cost of capital: intuition {.smaller}
+## Case 2: the comparable has debt {.smaller}
+
+::: {.center}
+![](figure12p3.png){fig-align="center" style="max-height: 300px"}
+:::
+
+- With debt, the cash the assets produce is split between lenders and
+  shareholders. The shares alone are **riskier than the assets**, so the equity
+  beta overstates the project's risk.
+
+- To own the assets, hold **the debt and the equity together**. The risk of
+  that combination is the risk of the assets.
+
+## The unlevered cost of capital {.smaller}
+
+- The return on the assets is the return of a portfolio made of the firm's
+  equity and debt.
+
+- With $E$ the market value of the equity and $D$ the market value of the debt:
+  $$r_{U} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}$$
+
+- $r_{U}$ is the **unlevered** (or asset) cost of capital: what investors
+  require to hold the whole business, regardless of how it is financed.
+
+## The unlevered beta {.smaller}
+
+- Betas combine in exactly the same way as returns (Lecture 4: the beta of a
+  portfolio is the weighted average of the betas):
+  $$\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}$$
+
+- $\beta_{U}$ is the **unlevered** (or asset) beta. It is the project beta we
+  were looking for.
+
+- Then back to the recipe of section A:
+  $$r_{\text{project}} = r_{f} + \beta_{U} \times \text{market risk premium}$$
+
+- Two routes to the same number: average the returns ($r_{U}$), or average the
+  betas ($\beta_{U}$) and apply the CAPM.
+
+## Unlevering: the intuition {.smaller}
 
 - The firm's assets are owned by two groups: the shareholders, who hold $E$ of
   firm value, and the lenders, who hold $D$. Between them they own the whole
@@ -376,7 +699,8 @@ $$
 - To find the risk of the underlying business, we therefore have to put the two
   pieces back together, i.e. **unlever** the comparable firm.
 
-## Unlevering the cost of capital: example {.smaller}
+
+## Exercise: Danone {.smaller}
 
 - A company wants to launch a new biscuit. It has identified Danone (BN)
   as the most representative company for its project.
@@ -388,25 +712,68 @@ $$
 - Estimate the cost of capital of your firm's investment assuming that
   the risk-free rate is 3% and the market risk premium is 5%.
 
-## Cash, net debt, and beta
+## Exercise: Danone (con't) {.smaller}
 
-- Under some conditions, the cash balances can be considered as
-  "negative debt."
+- **Step 1, the equity cost of capital**: $r_{E} = 3\% + 0.4 \times 5\% = 5\%$.
 
-  - Cash available "instantly" to reduce the debt
+- **Step 2, the debt cost of capital**: negligible default risk, so
+  $r_{D} = \text{YTM} = 3.5\%$.
 
-  - We speak then of net debt = debt -- cash.
+- **Step 3, the weights**: $E + D = 40$; equity $30/40 = 75\%$, debt
+  $10/40 = 25\%$.
 
-- Example: at the end of 2010, Accenture (ACN) had a market
-  capitalisation of 25 billion EUR, no debt and 4 billion EUR in cash.
+- **Step 4, average the returns**:
+  $r_{U} = 0.75 \times 5\% + 0.25 \times 3.5\% = 3.75\% + 0.875\% = 4.625\%$.
+
+- **Or average the betas**, with $\beta_{D} = 0$:
+  $\beta_{U} = 0.75 \times 0.4 = 0.30$. Then $r_{U} = 3\% + 0.30 \times 5\% = 4.5\%$.
+
+- The biscuit project should be discounted at about **4.5-4.6%**: a safe,
+  low-beta business.
+
+## Cash is negative debt {.smaller}
+
+- Many firms hold more cash than they need. Cash is a risk-free asset sitting
+  on the balance sheet, and it makes the firm's shares **safer** than its
+  actual business.
+
+- If a firm holds 1 euro of cash and owes 1 euro of risk-free debt, the two
+  cancel: the interest earned pays the interest owed. So we measure leverage
+  with **net debt**:
+  $$\text{Net debt} = \text{Debt} - \text{Excess cash}$$
+
+- Use net debt in place of $D$ in the unlevering formulas. If a firm has more
+  cash than debt, net debt is **negative**, and the beta of its business ends
+  up **above** its equity beta.
+
+
+## Exercise: Accenture {.smaller}
+
+- At the end of 2010, Accenture (ACN) had a market capitalisation of 25
+  billion EUR, no debt and 4 billion EUR in cash.
 
 - If its equity beta was 1, estimate the beta of its assets.
 
-## Industry asset betas: example
+## Exercise: Accenture (con't) {.smaller}
 
-![](figure12p4.png){fig-align="center"}
+- **Step 1, net debt**: $0 - 4 = -4$ billion.
 
-## Industry asset betas  (con't) {.smaller}
+- **Step 2, the value of the business**: $25 - 4 = 21$ billion.
+
+- **Step 3, unlever**, with cash risk-free:
+  $$\beta_{U} = \frac{25}{21} \times 1 + \frac{-4}{21} \times 0 = 1.19$$
+
+- The consulting business is riskier (1.19) than Accenture's shares (1.0): the
+  cash dilutes the risk the shareholders see.
+
+
+## Industry asset betas {.smaller}
+
+![](figure12p4.png){fig-align="center" style="max-height: 440px"}
+
+- Median and quartiles of asset betas by industry (US, textbook Figure 12.4).
+
+## Industry asset betas (con't) {.smaller}
 
 - Companies which are very sensitive to the market and economic
   conditions have high betas, more stable or counter-cyclical companies
@@ -430,73 +797,79 @@ $$
   - Firm asset betas reflect the market risk of the average project in a
     firm.
 
-  - Identify a set of "pure play" comparables for each division to
-    estimate appropriate divisional or project specific costs of
-    capital.
+  - Identify a set of "pure play" comparables for each division to estimate
+    appropriate divisional or project specific costs of capital.
 
-- Operating leverage: reflects the proportions of fixed costs relative
-  to the variable costs.
+- Operating leverage: reflects the proportions of fixed costs relative to the
+  variable costs.
 
   - A higher proportion of fixed costs will increase a project's beta
     (ceteris paribus).
 
-## Operating leverage and beta {.smaller}
+## Common mistake: execution risk {.smaller}
 
-- Consider a project with expected annual revenues of 120 EUR and costs
-  of 50 EUR in perpetuity (the operating margin is constant).
+- A new product can fail because of delays or marketing mistakes: **execution
+  risk**. Firms are tempted to punish it with a higher discount rate.
 
-- The project beta is 1. The risk-free rate and the expected return on
-  the market are 5% and 10%, respectively.
+- That is wrong. Execution risk is **firm-specific**, so diversifiable, and
+  the cost of capital only pays for market risk.
 
-- What is the value of this project?
+- Put it in the **cash flows** instead. A project expected to pay 100 next
+  year, with a 20% chance of paying nothing, has an expected cash flow of
+  $0.8 \times 100 = 80$. Discount 80 at the unchanged cost of capital.
 
-- What would its value and beta be if the revenues continued to vary
-  with a beta of 1, but the costs were instead completely fixed at 50
-  EUR per year?
+::: {.box .box-a}
+Risk that can be diversified goes into the expected cash flows, never into the
+discount rate.
+:::
 
-## Financing and the weighted average cost of capital {.smaller}
+## Does the financing change the cost? {.smaller}
 
-- How might the project's cost of capital change if the firm does use
-  leverage to finance the project?
+- So far we assumed the project was financed with equity only (section E).
+  Now we drop that assumption: what if the firm borrows to finance it?
 
-- Perfect capital markets (no taxes, transaction costs, or other
-  frictions):
+In next lecture we will evaluate two scenarios:
 
-  - Choice of financing does not affect the cost of capital or NPV of a
-    project.
+- **In perfect capital markets** (no taxes, no transaction costs): nothing
+  changes.
 
-  - Project's cost of capital and NPV are solely determined by its free
-    cash flows.
+- **With corporate taxes**.
 
-  - Intuition: all financing transactions are zero-NPV transactions that
-    do not affect value.
+- Debt gets cheaper for the firm, and the project's cost of capital falls with
+  it.
 
-- Let us now consider a big imperfection: taxes.
+## The WACC {.smaller}
 
-  - Once tax deduction is accounted for, the net cost of debt to the
-    firm is:
-    $$\text{Effective after-tax interest rate} = r \left(1 - \tau_{C} \right),$$
-    where $\tau_{C}$ is the firm's corporate tax rate.
+- The **weighted average cost of capital** is cost of capital when we combine equity and
+debt to finance the project:
+  $$r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})$$
 
-## The Weighted Average Cost of Capital {.smaller}
 
-- **Weighted Average Cost of Capital (WACC)** $$\begin{aligned}
-  r_{WACC} = \frac{E}{E+D} r_{E} + \frac{D}{E+D} r_{D}\left(1- \tau_{C} \right),
-  \end{aligned}$$ $\Rightarrow$ effective after tax-cost of the capital
-  to the firm.
+## The unleveraged version
+- It can also be expressed as:
+  $$r_{WACC} = r_{U} - \frac{D}{E+D}\, \tau_{C}\, r_{D}$$
 
-  $$\begin{aligned}
-  r_{WACC} = r_{U} - \frac{D}{E+D} \tau_{C} r_{D}.
-  \end{aligned}$$
+- With $r_{U}$ the unlevered cost of capital
 
-- Remark 1: the unlevered cost of capital is also referred to as the
-  **pre-tax WACC** (for all-equity financed projects).
+- In words: **the unlevered cost of capital, minus the tax saving on the
+  debt.**
 
-- Remark 2: WACC is less than the expected return of the firm's asset
-  and should be used to evaluate a project with the same risk and
-  financing as the firm itself.
+- For this reason $r_{U}$ is also called the **pre-tax WACC**.
 
-## Estimating the WACC: example
+## Unlevered cost or WACC: which one? {.smaller}
+
+::: {.center}
+| | Unlevered cost $r_{U}$ (pre-tax WACC) | WACC |
+|:--|:--|:--|
+| **What it is** | The return investors require to hold the firm's assets | The after-tax cost of capital to the firm |
+| **Use it for** | A project with the same risk as the firm, financed with **equity only** | A project with the same risk **and the same debt mix** as the firm |
+| **Size** | Higher | Lower, by the tax saving on interest |
+:::
+
+- Lectures 9-10 return to this: how much debt a firm should carry, and what the
+  tax saving is really worth.
+
+## Exercise: Michelon {.smaller}
 
 - Michelon has a market capitalisation of 100 million EUR and a debt of
   25 million EUR.
@@ -510,7 +883,23 @@ $$
 
 - What is its WACC?
 
-## F. Conclusion about the use of the CAPM {.smaller}
+## Exercise: Michelon (con't) {.smaller}
+
+- **Step 1, the weights**: equity $100/125 = 80\%$, debt $25/125 = 20\%$.
+
+- **Step 2, the unlevered cost of capital**:
+  $r_{U} = 0.8 \times 10\% + 0.2 \times 6\% = 8\% + 1.2\% = 9.2\%$.
+
+- **Step 3, the WACC**, long form:
+  $0.8 \times 10\% + 0.2 \times 6\% \times (1 - 0.33) = 8\% + 0.80\% = 8.80\%$.
+
+- **Check with the short form**:
+  $9.2\% - 0.2 \times 0.33 \times 6\% = 9.2\% - 0.40\% = 8.80\%$.
+
+- Same firm as Dunlap, a higher tax rate: a bigger tax saving, so a lower WACC
+  (8.80% against 8.9%).
+
+## G. Conclusion about the use of the CAPM {.smaller}
 
 - Limitations
 
@@ -522,12 +911,66 @@ $$
 
 - Advantages
 
-  - Revenue and other cash flow projections are far more speculative
-    than the cost of capital estimation.
+  - Revenue and other cash flow projections are far more speculative than the
+    cost of capital estimation.
 
   - Practical and straightforward to implement.
 
   - Discipline and rigor.
+
+
+## What to remember {.smaller}
+
+- **The recipe**: $r_{E} = r_{f} + \beta_{E} \times$ market risk premium.
+  Risk-free rate from long government bonds, premium of 3-5%, beta from a
+  regression.
+
+- **Yield is not the cost of debt.** $r_{D} = \text{YTM} - p \times L$, or
+  the CAPM with a debt beta by rating.
+
+- **A project has no beta of its own.** Unlever a comparable:
+  $\beta_{U} = \frac{E}{E+D}\beta_{E} + \frac{D}{E+D}\beta_{D}$, with net
+  debt for $D$.
+
+- **The WACC** is the unlevered cost minus the tax saving on debt:
+  $r_{WACC} = r_{U} - \frac{D}{E+D}\tau_{C} r_{D}$. Use it only for projects
+  with the firm's risk and the firm's debt mix.
+
+- **The discount rate is the least uncertain input of an NPV.** Spend your
+  worry on the cash flows.
+
+## Quiz
+
+- Which three inputs do you need to estimate a firm's equity cost of capital
+  with the CAPM, and where does each come from?
+
+- Why does the yield to maturity of a firm's debt generally overstate its
+  debt cost of capital?
+
+- Why does the equity beta of a levered firm differ from the beta of its
+  assets, and why does that matter for a project?
+
+- Under what conditions can a project be evaluated with the firm's WACC
+  rather than its unlevered cost of capital?
+
+## Quiz: answers {.smaller}
+
+- **Three inputs.** The risk-free rate (long government bond yield), the
+  market risk premium (historical average or dividend yield plus growth, about
+  3-5%), and the beta (slope of the regression of the stock's excess returns on
+  the market's).
+
+- **Yield versus cost of debt.** The yield assumes every promised payment is
+  made. With default risk, some payments will be missed, so the expected return
+  is the yield minus the probability of default times the loss rate.
+
+- **Equity beta versus asset beta.** Debt takes the safer part of the firm's
+  cash flows, so the equity carries more risk than the assets. A project is
+  like the assets, so the comparable's equity beta must be unlevered first.
+
+- **When to use the WACC.** When the project has the same market risk **and**
+  the same debt mix as the firm, so that the tax saving built into the WACC is
+  the one the project actually generates. Otherwise, start from $r_{U}$.
 
 ## Appendix: why the constant growth formula works {.smaller}
 

@@ -28,9 +28,9 @@ quarto slides/
 
 Decks: L1 pricing of risk (+ `intro.qmd`, the course-admin deck), L2 portfolio choice and
 diversification (+ `lecture2-extras.qmd`), L3 efficient frontier, L4 CAPM,
-L5 market efficiency, L6 cost of capital, L7-8 capital structure (perfect market), L9 debt and
-taxes, L10 payout policy, L11 long-term financing, L12 options and risk management (+
-`final-exam.qmd`). Rendered `.html` and `.pdf` are committed next to their source.
+L5 market efficiency, L6 cost of capital, L7 capital structure I (MM I, firm value),
+L8 capital structure II (MM II, betas, fallacies), L9 debt and taxes, L10 payout policy,
+L11 long-term financing, L12 options and risk management (+ `final-exam.qmd`). Rendered `.html` and `.pdf` are committed next to their source.
 
 Restyling the whole course means editing `escp.scss` alone — do not put per-deck CSS in a `.qmd`.
 
