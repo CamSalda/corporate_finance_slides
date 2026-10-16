@@ -118,7 +118,11 @@ formula on "exactly enough".**
 
   2. there are no taxes, transaction costs or issuance costs;
 
-  3. financing decisions change neither the cash flows of the investments nor
+  3. there are no bankruptcy costs;
+
+  4. all investors borrow and lend without restrictions at the risk-free rate;
+
+  5. financing decisions change neither the cash flows of the investments nor
      the information about them.
 
 ::: {.box .box-a}
@@ -683,7 +687,7 @@ neither add nor destroy value. They **repackage** risk, and therefore return
 
 ::: {.box .box-a}
 MM in a perfect market is the benchmark. Every reason for leverage to matter is
-a departure from one of its three conditions.
+a departure from one of its five conditions.
 :::
 
 ## F. Exercise 1: cost of capital and leverage {.smaller .dense .shrink}

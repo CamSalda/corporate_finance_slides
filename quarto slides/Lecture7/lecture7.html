@@ -1133,6 +1133,23 @@ Camilo Saldarriaga
 </div>
 </div></div>
 </section>
+<section id="what-the-mm-theorems-give-us" class="slide level2 smaller">
+<h2>What the MM theorems give us</h2>
+<ul>
+<li><p>The theorems of Modigliani and Miller (MM) identify the effect of leverage on</p>
+<ul>
+<li><p>the value of the firm (today, Proposition I),</p></li>
+<li><p>the cost of equity (Lecture 8, Proposition II),</p></li>
+<li><p>the cost of capital (Lecture 8).</p></li>
+</ul></li>
+<li><p>We will use MM to</p>
+<ul>
+<li><p>optimize the capital structure,</p></li>
+<li><p>take investment decisions: which discount rate to use for a project,</p></li>
+<li><p>understand how financing decisions can change the value of the firm.</p></li>
+</ul></li>
+</ul>
+</section>
 <section id="outline" class="slide level2">
 <h2>Outline</h2>
 <ol type="A">
@@ -1162,6 +1179,13 @@ Camilo Saldarriaga
 <ul>
 <li><p><strong>Why:</strong> the firm’s assets produce the same cash flows however they are financed. Debt and equity only decide <strong>who receives</strong> those cash flows: lenders, shareholders, or both. The total to share stays the same.</p></li>
 <li><p><strong>How we will see it:</strong> we follow one project, first financed with equity only (section A), then partly with debt (section B), and compare its value in the two cases. Section C states the result in general.</p></li>
+</ul>
+</section>
+<section id="no-taxes-what-it-does-to-the-wacc" class="slide level2 smaller">
+<h2>No taxes: what it does to the WACC</h2>
+<ul>
+<li><p>MM I assumes <strong>no taxes</strong>. The WACC has a tax term on the debt because interest is tax deductible: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})\]</span></p></li>
+<li><p>With a corporate tax rate <span class="math inline">\(\tau_{C} = 0\)</span>, the factor <span class="math inline">\((1 - \tau_{C})\)</span> equals 1 and disappears: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\]</span></p></li>
 </ul>
 </section>
 <section id="a.-financing-a-project-with-equity-only" class="slide level2 smaller">
@@ -1562,10 +1586,10 @@ Camilo Saldarriaga
 <li><p><strong>The shortcut’s mistake was the discount rate</strong>: 15% is the rate for unlevered risk. Discount at the right rate and the puzzle disappears: <span class="math display">\[625 / 1.25 = 500\]</span></p></li>
 </ul>
 </section>
-<section id="step-6-of-6-cheap-debt-dearer-equity" class="slide level2 smaller">
-<h2>Step 6 of 6: cheap debt, dearer equity</h2>
+<section id="cheap-debt-dearer-equity" class="slide level2 smaller">
+<h2>Cheap debt, dearer equity</h2>
 <ul>
-<li><p>Looked at on its own, debt is cheap: 5% against 25% for the equity.</p></li>
+<li><p>Looked at on its own, debt is cheap: 5% against 25% for the levered equity.</p></li>
 <li><p>But the firm uses both. Its <strong>average cost of capital</strong>, weighting each source by its value, is <span class="math display">\[\frac{500}{1000} \times 5\% + \frac{500}{1000} \times 25\% = 15\%\]</span></p></li>
 <li><p>The same 15% as with equity alone.</p></li>
 </ul>
@@ -1606,11 +1630,13 @@ Camilo Saldarriaga
 <section id="c.-what-is-a-perfect-capital-market" class="slide level2 smaller">
 <h2>C. What is a perfect capital market?</h2>
 <ul>
-<li><p>Our example made three hidden assumptions. Modigliani and Miller spell them out; together they define a <strong>perfect capital market</strong>:</p>
+<li><p>Our example made hidden assumptions. Modigliani and Miller (1958) spell them out; together they define a <strong>perfect capital market</strong>:</p>
 <ol type="1">
-<li><p><strong>Investors and firms can trade the same securities at fair prices</strong>, equal to the present value of their cash flows. (Our entrepreneur borrowed at the same 5% as anyone else.)</p></li>
+<li><p><strong>Investors and firms trade the same securities at fair prices</strong>, equal to the present value of their cash flows.</p></li>
 <li><p><strong>No taxes, transaction costs or issuance costs.</strong> (Nothing leaked out when she sold the equity or took the loan.)</p></li>
-<li><p><strong>Financing does not change the project’s cash flows</strong>, and does not reveal new information about them. (The project paid 1400 or 900 regardless of how it was financed.)</p></li>
+<li><p><strong>No bankruptcy costs.</strong> Default itself destroys no cash flow; lenders simply receive what is left.</p></li>
+<li><p><strong>All investors can borrow and lend without restrictions at the risk-free rate.</strong> (Our entrepreneur borrowed at the same 5% as anyone else.)</p></li>
+<li><p><strong>Financing does not change the project’s cash flows</strong>, and does not reveal new information about them.</p></li>
 </ol></li>
 <li><p>Remove any one of them and the conclusion can change. That is the subject of the next lectures.</p></li>
 </ul>
@@ -1629,7 +1655,6 @@ Camilo Saldarriaga
 <h2>Why MM I holds: two ways to see it</h2>
 <ul>
 <li><p><strong>The Law of One Price.</strong> Without taxes or transaction costs, everything the firm’s assets produce is paid to its security holders, and nothing else is. Same total cash flows, so same total value, whatever the mix of securities.</p></li>
-<li><p><strong>The separation principle.</strong> When securities are fairly priced, buying or selling them is a <strong>zero-NPV</strong> transaction (you pay exactly what you win). So borrowing creates no gain and no loss, and the value of the firm comes from its investments alone.</p></li>
 <li><p>Miller’s version: the pizza delivery man asks Yogi Berra whether he wants his pizza cut into four or eight slices. Yogi: “Cut it in eight pieces, I’m feeling hungry tonight.” Cutting the pizza differently does not make more pizza.</p></li>
 </ul>
 </section>
@@ -1727,10 +1752,115 @@ Camilo Saldarriaga
 <p>Either way, the investor picks the leverage he wants. The firm’s choice changes nothing for him, so he will not pay more for one structure than for the other.</p>
 </div>
 </section>
+<section id="proof-of-mm-i-with-homemade-leverage-and-the-law-of-one-price" class="slide level2 smaller">
+<h2>Proof of MM I with homemade leverage and the law of one price</h2>
+<ul>
+<li><p>We already showed that the firm has the same value independently of the capital structure.</p></li>
+<li><p>Now we will reinforce that conclusion: given the homemade leverage and the law of one price, the can’t have different firm value.</p></li>
+<li><p>Take two firms with <strong>the same assets</strong>, paying 1400 or 900 next year:</p>
+<ul>
+<li><p><strong>U</strong> has no debt. Its shares are worth <span class="math inline">\(V_U\)</span>.</p></li>
+<li><p><strong>L</strong> has borrowed 500 at 5%. Its debt is worth <span class="math inline">\(D = 500\)</span> and its shares <span class="math inline">\(E_L\)</span>. The firm is worth <span class="math inline">\(V_L = D + E_L\)</span>.</p></li>
+</ul></li>
+<li><p><strong>Claim (MM I):</strong> <span class="math inline">\(V_U = V_L\)</span>. The two firms must sell for the same price.</p></li>
+<li><p><strong>How we prove it.</strong> Suppose the prices were <strong>different</strong>. Using the two homemade-leverage tricks, an investor could pocket money today without changing what he receives next year: free money. Everyone would rush for it and prices would move until both prices become equal.</p></li>
+</ul>
+</section>
+<section id="proof-of-mm-i-cont-u-is-too-expensive" class="slide level2 smaller">
+<h2>Proof of MM I (con’t): U is too expensive</h2>
+<ul>
+<li><p>Suppose <strong>U sells for 1050</strong> while L’s debt and shares sell for <span class="math inline">\(500 + 500 = 1000\)</span>. An investor who owns U’s shares <strong>undoes</strong> L’s leverage (slide 41): he sells U and buys all of L’s debt and all of L’s shares.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Trade</th>
+<th style="text-align: center;">Year 0</th>
+<th style="text-align: center;">Strong</th>
+<th style="text-align: center;">Weak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sell U’s shares</td>
+<td style="text-align: center;"><span class="math inline">\(+1050\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-1400\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-900\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Buy L’s debt</td>
+<td style="text-align: center;"><span class="math inline">\(-500\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+525\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+525\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Buy L’s shares</td>
+<td style="text-align: center;"><span class="math inline">\(-500\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+875\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+375\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(+50\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(0\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(0\)</span></strong></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Next year nothing changes for him: he gave up 1400 or 900 and receives exactly 1400 or 900. Today he earned <strong>50 today</strong>.</p></li>
+<li><p>Every investor sells U and buys L. U’s price falls, L’s rises, until <span class="math inline">\(V_U = D + E_L\)</span>.</p></li>
+</ul>
+</section>
+<section id="proof-of-mm-i-cont-2-u-is-too-cheap" class="slide level2 smaller">
+<h2>Proof of MM I (con’t 2): U is too cheap</h2>
+<ul>
+<li><p>Now suppose <strong>U sells for 990</strong> while L’s shares sell for 510, so <span class="math inline">\(V_L = 500 + 510 = 1010\)</span>. An investor who owns L’s shares <strong>makes his own leverage</strong> (slide 40): he sells L’s shares, borrows 500 himself and buys U.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Trade</th>
+<th style="text-align: center;">Year 0</th>
+<th style="text-align: center;">Strong</th>
+<th style="text-align: center;">Weak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sell L’s shares</td>
+<td style="text-align: center;"><span class="math inline">\(+510\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-875\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-375\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Borrow 500 at 5%</td>
+<td style="text-align: center;"><span class="math inline">\(+500\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-525\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-525\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Buy U’s shares</td>
+<td style="text-align: center;"><span class="math inline">\(-990\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+1400\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+900\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(+20\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(0\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(0\)</span></strong></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Same cash flows next year, <strong>20</strong> in his pocket today. Everyone sells L and buys U until <span class="math inline">\(V_U = D + E_L\)</span> again.</p></li>
+</ul>
+<div class="box box-a">
+<p>Both directions lead to the same place: by the <strong>law of one price</strong>, <span class="math inline">\(V_U = V_L = D + E_L\)</span>. Firm value does not depend on the debt. This is MM I.</p>
+</div>
+</section>
 <section id="e.-the-market-value-balance-sheet" class="slide level2 smaller">
 <h2>E. The market value balance sheet</h2>
 <div class="box box-a">
-<p>The market value of <strong>all</strong> the securities a firm has issued equals the market value of <strong>all</strong> its assets. At market values, <span class="math display">\[\text{Equity} = \text{Assets} - \text{Debt and other liabilities}.\]</span></p>
+<p>According to MM1, the <strong>market value</strong> of the firm’s assets is equal to the <strong>market value</strong> of the securities issued by the firm.</p>
+<p><span class="math display">\[\text{Equity} = \text{Assets} - \text{Debt and other liabilities}.\]</span></p>
 </div>
 <div class="center">
 <div class="quarto-figure quarto-figure-center">
@@ -1740,104 +1870,34 @@ Camilo Saldarriaga
 </div>
 </div>
 <ul>
-<li>Unlike accounting: <strong>every</strong> asset counts, at <strong>market value</strong> (often hard to estimate).</li>
-</ul>
-</section>
-<section id="a-leveraged-recapitalization" class="slide level2 smaller">
-<h2>A leveraged recapitalization</h2>
-<ul>
-<li><p>MM I also applies <strong>after</strong> the firm is created. Harrison Industries is an all-equity firm with 50 million shares at 4 each: equity, and assets, are worth <strong>200 million</strong>.</p></li>
-<li><p>Harrison <strong>borrows 80 million</strong> and uses the cash to <strong>buy back 20 million shares</strong>: a leveraged recapitalization. Two stages, in millions:</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 38%">
-<col style="width: 12%">
-<col style="width: 23%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Market value balance sheet</th>
-<th style="text-align: center;">Initial</th>
-<th style="text-align: center;">After borrowing</th>
-<th style="text-align: center;">After repurchase</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Cash</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Existing assets</td>
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">200</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Total assets</strong></td>
-<td style="text-align: center;"><strong>200</strong></td>
-<td style="text-align: center;"><strong>280</strong></td>
-<td style="text-align: center;"><strong>200</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Debt</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">80</td>
-<td style="text-align: center;">80</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Equity</td>
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">120</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Shares outstanding (M)</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">30</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Value per share</td>
-<td style="text-align: center;">4.00</td>
-<td style="text-align: center;">4.00</td>
-<td style="text-align: center;">4.00</td>
-</tr>
-</tbody>
-</table></li>
+<li>Unlike accounting: every asset counts, at <strong>market value</strong> (often hard to estimate).</li>
 </ul>
 </section>
 <section id="what-to-remember" class="slide level2 smaller">
 <h2>What to remember</h2>
 <ul>
 <li><p><strong>MM Proposition I.</strong> In a perfect capital market the total value of a firm’s securities equals the value of its assets, whatever the capital structure.</p></li>
-<li><p><strong>Perfect market</strong> means: securities trade at fair prices, no taxes or transaction costs, and financing changes neither the investment cash flows nor the information about them.</p></li>
-<li><p><strong>Leverage makes equity riskier</strong>, even when the debt is risk free. Debt is cheaper on its own but raises the cost of equity.</p></li>
-<li><p><strong>Homemade leverage</strong>: investors can borrow or lend to get the leverage they want, so the firm’s choice gives them nothing extra. If two identical firms were priced differently, arbitrage would close the gap.</p></li>
-<li><p><strong>Equity = assets <span class="math inline">\(-\)</span> liabilities</strong> at market values. Issuing debt to buy back shares at fair prices does not change the share price.</p></li>
+<li><p><strong>Perfect market</strong> means: fair prices; no taxes, transaction or issuance costs; no bankruptcy costs; everyone borrows and lends at the risk-free rate; financing changes neither the investment cash flows nor the information about them.</p></li>
+<li><p><strong>Leverage makes equity riskier</strong>, greater leverage increases the risk for shareholders, as the debt has payment priority. They will demand grater compensation which raises the cost of equity.</p></li>
+<li><p><strong>Homemade leverage</strong>: investors can borrow or lend to get the leverage they want, so the firm’s choice gives them nothing extra.</p></li>
 </ul>
 </section>
 <section id="quiz" class="slide level2">
 <h2>Quiz</h2>
 <ul>
 <li><p>Why is the levered equity of Tour moche SA worth 500 and not 543?</p></li>
-<li><p>Name the three conditions of a perfect capital market.</p></li>
+<li><p>Name the five conditions of a perfect capital market.</p></li>
 <li><p>The entrepreneur borrows 750 instead of 500. What is the value of the equity, what are its cash flows, and what is its expected return?</p></li>
-<li><p>A firm borrows to buy back shares in a perfect market. What happens to its share price? To its market capitalisation?</p></li>
 </ul>
 </section>
 <section id="quiz-answers" class="slide level2 smaller">
 <h2>Quiz: answers</h2>
 <ul>
 <li><p><strong>500, not 543.</strong> The 543 discounts the expected levered cash flow of 625 at the unlevered rate of 15%. Levered equity is riskier and requires 25%: <span class="math inline">\(625 / 1.25 = 500\)</span>. The 500 also follows from the Law of One Price: <span class="math inline">\(1000 - 500\)</span>.</p></li>
-<li><p><strong>Perfect market.</strong> Fair prices for all securities; no taxes, transaction or issuance costs; financing does not change the investment cash flows nor reveal information about them.</p></li>
+<li><p><strong>Perfect market.</strong> Fair prices for all securities; no taxes, transaction or issuance costs; no bankruptcy costs; unrestricted borrowing and lending at the risk-free rate; financing does not change the investment cash flows nor reveal information about them.</p></li>
 <li><p><strong>Borrow 750.</strong> Equity is worth <span class="math inline">\(1000 - 750 = 250\)</span>. The firm owes <span class="math inline">\(750 \times
 1.05 = 787.5\)</span>, so equity receives <span class="math inline">\(1400 - 787.5 = 612.5\)</span> or <span class="math inline">\(900 - 787.5 =
 112.5\)</span>: returns <span class="math inline">\(+145\%\)</span> or <span class="math inline">\(-55\%\)</span>, expected <strong>45%</strong>. Risk premium 40%, four times the unlevered premium, for four times the sensitivity.</p></li>
-<li><p><strong>Buyback.</strong> The share price does not change (zero-NPV trade). Market capitalisation falls by the amount borrowed: fewer shares, same price.</p></li>
 </ul>
 
 </section>

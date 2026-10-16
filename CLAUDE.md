@@ -59,6 +59,19 @@ Restyling the whole course means editing `escp.scss` alone — do not put per-de
 - Chapter references point at the Berk & DeMarzo textbook, e.g. `(Chap. 12.3)`. Keep them.
 - Most decks end with a `## Quiz` slide.
 
+## Baseline slides: never remove content
+
+The original beamer decks (Paul's slides) are the baseline for every lecture:
+
+```
+C:\Users\camil\Documents\PhD -ESCP\teaching\corporate_finance\paul_slides\Lecture<N>\
+```
+
+When improving a deck, compare against that baseline. Adding content or explaining a point in
+more detail is fine. Removing content is not: every formula, example, figure, table, bullet and
+chapter reference in the baseline must still appear in the Quarto deck. Shortening a slide to fit
+means rewording or splitting into a `(con't)` slide, never dropping material.
+
 ## Writing for this audience
 
 Management students with mixed backgrounds, not necessarily strong in mathematics. Write every
