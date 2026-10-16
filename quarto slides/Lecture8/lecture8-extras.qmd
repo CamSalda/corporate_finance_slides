@@ -1,0 +1,42 @@
+---
+title: "Corporate Finance"
+subtitle: "Lecture 8 extras: How a project is evaluated"
+footer: "Lecture 8 extras"
+---
+
+## How a project is evaluated {.smaller}
+
+- A project costs $I$ today and pays a cash flow $c$ at the end of each of the
+  next $N$ years. Its **cost of capital** $r$ is the return investors could earn
+  elsewhere at the same risk (Lecture 6).
+
+- **Way 1: compute a return, then compare it with the cost of capital.** Ask what return the project
+  itself earns: the rate that makes the NPV zero. That rate is the **internal
+  rate of return** (IRR) :
+  $$\text{NPV} = -I + \frac{c}{1+\text{IRR}} + \frac{c}{(1+\text{IRR})^2}
+  + \dots + \frac{c}{(1+\text{IRR})^N} = 0$$
+
+  $$I = \frac{c}{1+\text{IRR}} + \frac{c}{(1+\text{IRR})^2} + \dots +
+  \frac{c}{(1+\text{IRR})^N}$$
+
+- Solve for $IRR$. Accept the project when the IRR is above the cost of capital: the project earns more than the money
+  costs. Here the test is a rate against a rate.
+
+## How a project is evaluated (con't) {.smaller}
+
+- **Way 2: discount, then compare amounts.** Do not compute the project's own
+  return. Instead, discount every $c$ at the cost of capital $r$ and add up:
+  $$\text{PV} = \frac{c}{1+r} + \frac{c}{(1+r)^2} + \dots + \frac{c}{(1+r)^N}
+  \qquad\qquad \text{NPV} = \text{PV} - I$$
+
+- Accept when the NPV is positive: the project is worth more than it costs.
+
+- Here the **discount rate** is the cost of capital. Once it has been used,
+  there is nothing left to compare it with: the test is an amount against an
+  amount, PV against $I$.
+
+::: {.box .box-a}
+Two equivalent approaches: a return above the cost of capital is exactly what
+makes the discounted cash flows exceed the investment. The two analyses give
+the same answer.
+:::
