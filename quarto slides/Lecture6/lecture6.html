@@ -1136,6 +1136,29 @@ Camilo Saldarriaga
 <p><strong>Cost of capital</strong> = the return investors could earn elsewhere on an investment with the same risk.</p>
 </div>
 </section>
+<section id="how-a-project-is-evaluated" class="slide level2 smaller">
+<h2>How a project is evaluated</h2>
+<ul>
+<li><p>A project costs <span class="math inline">\(I\)</span> today and pays a cash flow <span class="math inline">\(c\)</span> at the end of each of the next <span class="math inline">\(N\)</span> years. Its <strong>cost of capital</strong> <span class="math inline">\(r\)</span> is the return investors could earn elsewhere at the same risk (previous slide).</p></li>
+<li><p><strong>Way 1: compute a return, then compare rates.</strong> Ask what return the project itself earns: the rate that makes the NPV zero. That rate is the <strong>internal rate of return</strong>, IRR (Chap. 7): <span class="math display">\[\text{NPV} = -I + \frac{c}{1+\text{IRR}} + \frac{c}{(1+\text{IRR})^2}
++ \dots + \frac{c}{(1+\text{IRR})^N} = 0\]</span></p></li>
+<li><p>Move <span class="math inline">\(I\)</span> to the other side: the discounted cash flows exactly repay the investment, <span class="math display">\[I = \frac{c}{1+\text{IRR}} + \frac{c}{(1+\text{IRR})^2} + \dots +
+\frac{c}{(1+\text{IRR})^N}\]</span></p></li>
+<li><p>Accept when the IRR is above <span class="math inline">\(r\)</span>: the project earns more than the money costs. Here the test is a rate against a rate.</p></li>
+</ul>
+</section>
+<section id="how-a-project-is-evaluated-cont" class="slide level2 smaller">
+<h2>How a project is evaluated (con’t)</h2>
+<ul>
+<li><p><strong>Way 2: discount, then compare amounts.</strong> Do not compute the project’s own return. Instead, discount every <span class="math inline">\(c\)</span> at the cost of capital <span class="math inline">\(r\)</span> and add up: <span class="math display">\[\text{PV} = \frac{c}{1+r} + \frac{c}{(1+r)^2} + \dots + \frac{c}{(1+r)^N}
+\qquad\qquad \text{NPV} = \text{PV} - I\]</span></p></li>
+<li><p>Accept when the NPV is positive: the project is worth more than it costs.</p></li>
+<li><p>Here the cost of capital is the <strong>discount rate</strong>. Once it has been used, there is nothing left to compare it with: the test is an amount against an amount, PV against <span class="math inline">\(I\)</span>.</p></li>
+</ul>
+<div class="box box-a">
+<p>Two equivalent approaches: a return above the cost of capital is exactly what makes the discounted cash flows exceed the investment. The two analyses give the same answer.</p>
+</div>
+</section>
 <section id="outline" class="slide level2">
 <h2>Outline</h2>
 <ol type="A">
@@ -1741,18 +1764,6 @@ Camilo Saldarriaga
 <li><p>Discipline and rigor.</p></li>
 </ul></li>
 </ul>
-</section>
-<section id="how-it-all-connects" class="slide level2 smaller">
-<h2>How it all connects</h2>
-<ol type="1">
-<li><p><strong>The price of money</strong> is the return investors could earn elsewhere at the same risk. The CAPM gives it from <strong>three inputs</strong>.</p></li>
-<li><p><strong>The market portfolio</strong> is a value-weighted index; its <strong>premium</strong> over the risk-free rate is estimated at about 3-5% from history or from dividends.</p></li>
-<li><p><strong>Beta</strong> is the slope of the stock’s returns against the market’s, from two to five years of data.</p></li>
-<li><p><strong>Debt</strong> costs less than its yield: subtract the expected loss from default, or use a debt beta.</p></li>
-<li><p><strong>A project</strong> borrows the risk of a comparable firm: <strong>unlever</strong> its equity beta with the firm’s debt and cash.</p></li>
-<li><p><strong>Adjust</strong> for the project’s own risk (operating leverage, not execution risk). With debt and taxes, the <strong>WACC</strong> is the unlevered cost minus the tax saving.</p></li>
-<li><p><strong>The CAPM stays</strong>: imprecise, but less so than everything else in the NPV.</p></li>
-</ol>
 </section>
 <section id="what-to-remember" class="slide level2 smaller">
 <h2>What to remember</h2>
