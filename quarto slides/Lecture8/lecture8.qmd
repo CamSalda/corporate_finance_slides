@@ -42,88 +42,142 @@ Recap lecture 7
 
 Let's do a recap:
 
-- One project, and what it is worth
+- The assumptions of MM I, and what "no taxes" does to the WACC
 
-- Unlevered and levered equity
+- Tour moche SA financed with equity only: what the firm is worth
 
-- The 543 fallacy
+- The same project with 500 of debt, step by step: the value did not change
 
-- Perfect capital markets and MM Proposition I
+- The 543 fallacy: cheap debt, dearer equity, same average
 
-- Homemade leverage and arbitrage
+- MM Proposition I
 
-- The market value balance sheet and a leveraged recap
+- Homemade leverage, and how it proves MM I with the law of one price
+
+- The market value balance sheet
 
 - And from Lecture 6: the unlevered cost of capital
 
-## Recap: one project, and what it is worth {.smaller}
+## Recap: the assumptions of MM I {.smaller}
+
+- Modigliani and Miller (1958) work in a **perfect capital market**
+  (Chap. 14.2):
+
+  1. investors and firms trade the same securities at **fair prices**, equal to
+     the present value of their cash flows;
+
+  2. **no taxes**, transaction costs or issuance costs;
+
+  3. **no bankruptcy costs**;
+
+  4. all investors can **borrow and lend without restrictions at the risk-free
+     rate**;
+
+  5. financing changes neither the **cash flows** of the investments nor the
+     **information** about them.
+
+- Remove any one of them and the conclusions below can change. That is where
+  Lectures 9 to 11 go.
+
+## Recap: no taxes, so the WACC loses its tax term {.smaller}
+
+- In Lecture 6 the WACC carried a tax term on the debt, because interest is tax
+  deductible:
+  $$r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})$$
+
+- Assumption 2 sets the corporate tax rate $\tau_{C}$ to zero, so
+  $(1 - \tau_{C}) = 1$ and the term disappears:
+  $$r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}$$
+
+- This is the **pre-tax WACC**: the plain weighted average of what shareholders
+  and lenders require. Debt has no tax advantage here.
+
+::: {.box .box-a}
+So the only question left in Lectures 7 and 8 is whether cheap debt lowers this
+average **on its own**. Lecture 7 said no with an example. Today we say why
+with a formula.
+:::
+
+## Recap: Tour moche SA with equity only {.smaller}
 
 ::: {.box .box-a}
 Invest **800** today; receive **1400** (strong economy) or **900** (weak), each
-with probability one half. Cost of capital 15% (Chap. 14.1).
+with probability one half. Cost of equity 15%, given (Chap. 14.1).
 :::
+
+- With equity only, the cost of capital **is** the cost of equity: 15%.
 
 - Expected cash flow $0.5 \times 1400 + 0.5 \times 900 = 1150$.
 
-- Present value $1150 / 1.15 = 1000$. NPV $= -800 + 1000 = 200$.
+- Value of the firm $= 1150 / 1.15 = 1000$. NPV $= -800 + 1000 = 200$.
 
-- Sell the whole equity for 1000, pay the 800, keep the 200: the NPV goes to
-  the entrepreneur.
+- The entrepreneur sells the whole equity for 1000, pays the 800 and keeps
+  the 200. This equity is called **unlevered equity**; by construction its
+  shareholders earn 15% on average.
 
-- The cash flows do not depend on how the 800 is raised. Everything that follows
-  is about how the 1000 is **split**, not about how big it is.
+## Recap: the same project with 500 of debt, step by step {.smaller}
 
-## Recap: unlevered and levered equity {.smaller}
+- **Step 1, the lenders.** The firm borrows 500 at the risk-free 5%, because
+  even the weak outcome (900) repays the loan. Next year it owes
+  $500 \times 1.05 = 525$ in both states.
 
-- Borrow 500 at 5%: the firm owes 525, and shareholders get what is left.
+- **Step 2, the shareholders.** Lenders are paid first; shareholders take what
+  is left: $1400 - 525 = 875$ or $900 - 525 = 375$. This is **levered equity**.
 
-  | Security         | Year 0 | Strong | Weak | Return strong | Return weak | Expected |
-  |:-----------------|:------:|:------:|:----:|:-------------:|:-----------:|:--------:|
-  | Debt             | 500    | 525    | 525  | $5\%$         | $5\%$       | $5\%$    |
-  | Levered equity   | 500    | 875    | 375  | $+75\%$       | $-25\%$     | $25\%$   |
-  | Unlevered equity | 1000   | 1400   | 900  | $+40\%$       | $-10\%$     | $15\%$   |
+- **Step 3, add them up.** $525 + 875 = 1400$ and $525 + 375 = 900$: debt and
+  equity together receive **exactly the project's cash flows**.
+
+  | Levered firm   | Year 0   | Strong   | Weak    |
+  |:---------------|:--------:|:--------:|:-------:|
+  | Debt           | 500      | 525      | 525     |
+  | Levered equity | ?        | 875      | 375     |
+  | Firm           | ?        | **1400** | **900** |
+
+## Recap: step by step (con't): the value did not change {.smaller}
+
+- **Step 4, the law of one price.** Two investments that pay the same cash
+  flows in every state must sell for the same price. Debt plus equity pays what
+  the unlevered firm pays, so the levered firm is also worth **1000**.
+
+- **Step 5, the equity.** $E = 1000 - 500 = 500$.
+
+  | Levered firm   | Year 0   | Strong | Weak |
+  |:---------------|:--------:|:------:|:----:|
+  | Debt           | 500      | 525    | 525  |
+  | Levered equity | **500**  | 875    | 375  |
+  | Firm           | **1000** | 1400   | 900  |
+
+- **Step 6, the entrepreneur.** She raises $500 + 500 = 1000$ either way, pays
+  800 and keeps 200 either way. She is **indifferent** between the two
+  financings.
 
 ::: {.box .box-a}
-Leverage raises the risk of equity **even when the debt is risk free**:
-$+75\%$ / $-25\%$ against $+40\%$ / $-10\%$. Shareholders are paid for it:
-25% expected instead of 15%.
+Changing the mix of debt and equity moved money between lenders and
+shareholders. It did not change the size of the pie.
 :::
-
-- Debt and levered equity together receive exactly the project's cash flows,
-  so by the Law of One Price $D + E = 1000$ and $E = 500$.
 
 ## Recap: the 543 fallacy {.smaller}
 
-- The levered equity pays 625 on average. Discounting it at the unlevered rate
-  gives $625 / 1.15 = 543$, more than 500. **Wrong**: 15% is the rate for
-  unlevered risk. Levered equity requires 25%, and $625 / 1.25 = 500$.
+- Levered equity pays $0.5 \times 875 + 0.5 \times 375 = 625$ on average.
+  Discounting at the unlevered 15% gives $625 / 1.15 = 543$, more than 500.
+  **Wrong**: the discount rate changed.
 
-- Two-state "beta": return strong minus return weak. Debt 0%, unlevered equity
-  50%, levered equity 100%. Twice the risk, twice the premium (20% against 10%).
+- Shareholders pay 500 and receive 875 or 375: returns $+75\%$ or $-25\%$,
+  **25%** expected, against $+40\%$ / $-10\%$ and 15% without debt. The swing
+  doubled, so did the premium. And $625 / 1.25 = 500$.
 
-- The average cost of the two sources is unchanged:
-  $$\tfrac{500}{1000} \times 5\% + \tfrac{500}{1000} \times 25\% = 15\%.$$
+  | Debt | Equity | $r_{E}$ | Average cost of capital                     |
+  |:----:|:------:|:-------:|:-------------------------------------------:|
+  | 0    | 1000   | 15%     | 15%                                         |
+  | 200  | 800    | 17.5%   | $0.2 \times 5\% + 0.8 \times 17.5\% = 15\%$ |
+  | 500  | 500    | 25%     | $0.5 \times 5\% + 0.5 \times 25\% = 15\%$   |
 
 ::: {.box .box-a}
 Debt is cheaper, but equity gets dearer by exactly enough. **Today we put a
 formula on "exactly enough".**
 :::
 
-## Recap: perfect markets and MM I {.smaller}
-
-- A capital market is **perfect** when (Chap. 14.2):
-
-  1. securities trade at competitive prices equal to the present value of their
-     cash flows;
-
-  2. there are no taxes, transaction costs or issuance costs;
-
-  3. there are no bankruptcy costs;
-
-  4. all investors borrow and lend without restrictions at the risk-free rate;
-
-  5. financing decisions change neither the cash flows of the investments nor
-     the information about them.
+## Recap: MM Proposition I {.smaller}
 
 ::: {.box .box-a}
 **MM Proposition I.** In a perfect capital market, the total value of a firm's
@@ -131,46 +185,70 @@ securities equals the market value of the cash flows generated by its assets,
 and is not affected by its choice of capital structure.
 :::
 
-- Miller's pizza: cutting it in eight slices instead of four does not make more
-  pizza. Any real effect of capital structure must come from a **friction**.
+- **Why.** Everything the assets produce goes to the security holders, and
+  nothing else does. Same total cash flows, so same total value, whatever the
+  slices.
 
-## Recap: homemade leverage and arbitrage {.smaller}
+- Miller's pizza: Yogi Berra asks for eight slices instead of four because he
+  is hungry. Cutting the pizza differently does not make more pizza.
 
-- Investors can **redo** the firm's leverage (buy unlevered shares with a margin
-  loan) or **undo** it (hold the debt and the levered equity together). The
-  firm's choice gives them nothing they cannot make at home.
+- Galileo without friction: all bodies fall at the same speed. Capital
+  structure matters in practice only through a **friction**: taxes, bankruptcy
+  costs, information.
 
-- If two identical firms were priced differently, there would be free money.
-  Firm U at 990 and firm L at $510 + 500 = 1010$:
+## Recap: homemade leverage {.smaller}
 
-  | Trade                    | Year 0 | Strong  | Weak   |
-  |:-------------------------|:------:|:-------:|:------:|
-  | Borrow 500               | $+500$ | $-525$  | $-525$ |
-  | Buy U's equity           | $-990$ | $+1400$ | $+900$ |
-  | Sell L's equity          | $+510$ | $-875$  | $-375$ |
-  | **Total**                | **$+20$** | **$0$** | **$0$** |
+- Investors can build the leverage they want **themselves**, as long as they
+  borrow at the same rate as the firm.
+
+- **More leverage**: borrow 500 and buy the unlevered firm. Same payoffs as
+  levered equity, for 500.
+
+  | Portfolio                | Year 0     | Strong     | Weak       |
+  |:-------------------------|:----------:|:----------:|:----------:|
+  | Buy unlevered equity     | $-1000$    | $+1400$    | $+900$     |
+  | Borrow 500               | $+500$     | $-525$     | $-525$     |
+  | **Total**                | **$-500$** | **$+875$** | **$+375$** |
+
+- **Less leverage**: buy the levered firm's debt **and** equity, $500 + 500$.
+  The debt you own cancels the firm's debt: payoffs 1400 or 900, like
+  unlevered equity, for 1000.
+
+## Recap: homemade leverage proves MM I {.smaller}
+
+- Firms **U** (no debt, worth $V_U$) and **L** (debt 500, equity $E_L$) have
+  the same assets. Suppose their prices differ.
+
+- **U too expensive** (1050 against 1000). Sell U, buy L's debt and shares:
+
+  | Trade            | Year 0    | Strong  | Weak   |
+  |:-----------------|:---------:|:-------:|:------:|
+  | Sell U's shares  | $+1050$   | $-1400$ | $-900$ |
+  | Buy L's debt     | $-500$    | $+525$  | $+525$ |
+  | Buy L's shares   | $-500$    | $+875$  | $+375$ |
+  | **Total**        | **$+50$** | **$0$** | **$0$** |
+
+- **U too cheap** (990 against $500 + 510$). Sell L's shares, borrow 500, buy
+  U: $+20$ today, $0$ next year in both states.
 
 ::: {.box .box-a}
-Everyone trades this way until the two firms are worth the same. That is what
-makes MM I hold.
+Free money today, nothing changed tomorrow: everyone trades until
+$V_U = V_L$. The **law of one price** makes MM I hold.
 :::
 
 ## Recap: the market value balance sheet {.smaller}
 
 ::: {.box .box-a}
-Market value of equity $=$ market value of all assets $-$ market value of debt
-and other liabilities. All assets, including intangibles, at market values.
+By MM I, the market value of the firm's assets equals the market value of the
+securities it has issued:
+$$\text{Equity} = \text{Assets} - \text{Debt and other liabilities}$$
 :::
 
-- **Harrison Industries**: 50 million shares at 4, no debt. It borrows 80
-  million and buys back 20 million shares.
+- Unlike the accounting balance sheet, **every** asset counts, including
+  intangibles, and all at **market value**.
 
-- Equity falls from 200 to 120, but only 30 million shares remain:
-  $120 / 30 = 4$. **The share price does not move.**
-
-- Issuing debt and buying back equity at fair prices is a **zero-NPV**
-  transaction. Market capitalisation falls because there are fewer shares, not
-  because each is worth less.
+- Attention: the market value of an asset is often hard, or impossible, to pin
+  down.
 
 ## Recap: the unlevered cost of capital (L6) {.smaller}
 

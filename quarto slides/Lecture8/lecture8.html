@@ -1024,50 +1024,66 @@ Camilo Saldarriaga
 <h2>Recap of Lecture 7</h2>
 <p>Let’s do a recap:</p>
 <ul>
-<li><p>One project, and what it is worth</p></li>
-<li><p>Unlevered and levered equity</p></li>
-<li><p>The 543 fallacy</p></li>
-<li><p>Perfect capital markets and MM Proposition I</p></li>
-<li><p>Homemade leverage and arbitrage</p></li>
-<li><p>The market value balance sheet and a leveraged recap</p></li>
+<li><p>The assumptions of MM I, and what “no taxes” does to the WACC</p></li>
+<li><p>Tour moche SA financed with equity only: what the firm is worth</p></li>
+<li><p>The same project with 500 of debt, step by step: the value did not change</p></li>
+<li><p>The 543 fallacy: cheap debt, dearer equity, same average</p></li>
+<li><p>MM Proposition I</p></li>
+<li><p>Homemade leverage, and how it proves MM I with the law of one price</p></li>
+<li><p>The market value balance sheet</p></li>
 <li><p>And from Lecture 6: the unlevered cost of capital</p></li>
 </ul>
 </section>
-<section id="recap-one-project-and-what-it-is-worth" class="slide level2 smaller">
-<h2>Recap: one project, and what it is worth</h2>
-<div class="box box-a">
-<p>Invest <strong>800</strong> today; receive <strong>1400</strong> (strong economy) or <strong>900</strong> (weak), each with probability one half. Cost of capital 15% (Chap. 14.1).</p>
-</div>
+<section id="recap-the-assumptions-of-mm-i" class="slide level2 smaller">
+<h2>Recap: the assumptions of MM I</h2>
 <ul>
-<li><p>Expected cash flow <span class="math inline">\(0.5 \times 1400 + 0.5 \times 900 = 1150\)</span>.</p></li>
-<li><p>Present value <span class="math inline">\(1150 / 1.15 = 1000\)</span>. NPV <span class="math inline">\(= -800 + 1000 = 200\)</span>.</p></li>
-<li><p>Sell the whole equity for 1000, pay the 800, keep the 200: the NPV goes to the entrepreneur.</p></li>
-<li><p>The cash flows do not depend on how the 800 is raised. Everything that follows is about how the 1000 is <strong>split</strong>, not about how big it is.</p></li>
+<li><p>Modigliani and Miller (1958) work in a <strong>perfect capital market</strong> (Chap. 14.2):</p>
+<ol type="1">
+<li><p>investors and firms trade the same securities at <strong>fair prices</strong>, equal to the present value of their cash flows;</p></li>
+<li><p><strong>no taxes</strong>, transaction costs or issuance costs;</p></li>
+<li><p><strong>no bankruptcy costs</strong>;</p></li>
+<li><p>all investors can <strong>borrow and lend without restrictions at the risk-free rate</strong>;</p></li>
+<li><p>financing changes neither the <strong>cash flows</strong> of the investments nor the <strong>information</strong> about them.</p></li>
+</ol></li>
+<li><p>Remove any one of them and the conclusions below can change. That is where Lectures 9 to 11 go.</p></li>
 </ul>
 </section>
-<section id="recap-unlevered-and-levered-equity" class="slide level2 smaller">
-<h2>Recap: unlevered and levered equity</h2>
+<section id="recap-no-taxes-so-the-wacc-loses-its-tax-term" class="slide level2 smaller">
+<h2>Recap: no taxes, so the WACC loses its tax term</h2>
 <ul>
-<li><p>Borrow 500 at 5%: the firm owes 525, and shareholders get what is left.</p>
-<table class="caption-top" style="width:100%;">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 7%">
-<col style="width: 19%">
-<col style="width: 16%">
-<col style="width: 12%">
-</colgroup>
+<li><p>In Lecture 6 the WACC carried a tax term on the debt, because interest is tax deductible: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})\]</span></p></li>
+<li><p>Assumption 2 sets the corporate tax rate <span class="math inline">\(\tau_{C}\)</span> to zero, so <span class="math inline">\((1 - \tau_{C}) = 1\)</span> and the term disappears: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\]</span></p></li>
+<li><p>This is the <strong>pre-tax WACC</strong>: the plain weighted average of what shareholders and lenders require. Debt has no tax advantage here.</p></li>
+</ul>
+<div class="box box-a">
+<p>So the only question left in Lectures 7 and 8 is whether cheap debt lowers this average <strong>on its own</strong>. Lecture 7 said no with an example. Today we say why with a formula.</p>
+</div>
+</section>
+<section id="recap-tour-moche-sa-with-equity-only" class="slide level2 smaller">
+<h2>Recap: Tour moche SA with equity only</h2>
+<div class="box box-a">
+<p>Invest <strong>800</strong> today; receive <strong>1400</strong> (strong economy) or <strong>900</strong> (weak), each with probability one half. Cost of equity 15%, given (Chap. 14.1).</p>
+</div>
+<ul>
+<li><p>With equity only, the cost of capital <strong>is</strong> the cost of equity: 15%.</p></li>
+<li><p>Expected cash flow <span class="math inline">\(0.5 \times 1400 + 0.5 \times 900 = 1150\)</span>.</p></li>
+<li><p>Value of the firm <span class="math inline">\(= 1150 / 1.15 = 1000\)</span>. NPV <span class="math inline">\(= -800 + 1000 = 200\)</span>.</p></li>
+<li><p>The entrepreneur sells the whole equity for 1000, pays the 800 and keeps the 200. This equity is called <strong>unlevered equity</strong>; by construction its shareholders earn 15% on average.</p></li>
+</ul>
+</section>
+<section id="recap-the-same-project-with-500-of-debt-step-by-step" class="slide level2 smaller">
+<h2>Recap: the same project with 500 of debt, step by step</h2>
+<ul>
+<li><p><strong>Step 1, the lenders.</strong> The firm borrows 500 at the risk-free 5%, because even the weak outcome (900) repays the loan. Next year it owes <span class="math inline">\(500 \times 1.05 = 525\)</span> in both states.</p></li>
+<li><p><strong>Step 2, the shareholders.</strong> Lenders are paid first; shareholders take what is left: <span class="math inline">\(1400 - 525 = 875\)</span> or <span class="math inline">\(900 - 525 = 375\)</span>. This is <strong>levered equity</strong>.</p></li>
+<li><p><strong>Step 3, add them up.</strong> <span class="math inline">\(525 + 875 = 1400\)</span> and <span class="math inline">\(525 + 375 = 900\)</span>: debt and equity together receive <strong>exactly the project’s cash flows</strong>.</p>
+<table class="caption-top">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Security</th>
+<th style="text-align: left;">Levered firm</th>
 <th style="text-align: center;">Year 0</th>
 <th style="text-align: center;">Strong</th>
 <th style="text-align: center;">Weak</th>
-<th style="text-align: center;">Return strong</th>
-<th style="text-align: center;">Return weak</th>
-<th style="text-align: center;">Expected</th>
 </tr>
 </thead>
 <tbody>
@@ -1076,73 +1092,164 @@ Camilo Saldarriaga
 <td style="text-align: center;">500</td>
 <td style="text-align: center;">525</td>
 <td style="text-align: center;">525</td>
-<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Levered equity</td>
-<td style="text-align: center;">500</td>
+<td style="text-align: center;">?</td>
 <td style="text-align: center;">875</td>
 <td style="text-align: center;">375</td>
-<td style="text-align: center;"><span class="math inline">\(+75\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-25\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(25\%\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Unlevered equity</td>
-<td style="text-align: center;">1000</td>
+<td style="text-align: left;">Firm</td>
+<td style="text-align: center;">?</td>
+<td style="text-align: center;"><strong>1400</strong></td>
+<td style="text-align: center;"><strong>900</strong></td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</section>
+<section id="recap-step-by-step-cont-the-value-did-not-change" class="slide level2 smaller">
+<h2>Recap: step by step (con’t): the value did not change</h2>
+<ul>
+<li><p><strong>Step 4, the law of one price.</strong> Two investments that pay the same cash flows in every state must sell for the same price. Debt plus equity pays what the unlevered firm pays, so the levered firm is also worth <strong>1000</strong>.</p></li>
+<li><p><strong>Step 5, the equity.</strong> <span class="math inline">\(E = 1000 - 500 = 500\)</span>.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Levered firm</th>
+<th style="text-align: center;">Year 0</th>
+<th style="text-align: center;">Strong</th>
+<th style="text-align: center;">Weak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Debt</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">525</td>
+<td style="text-align: center;">525</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Levered equity</td>
+<td style="text-align: center;"><strong>500</strong></td>
+<td style="text-align: center;">875</td>
+<td style="text-align: center;">375</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Firm</td>
+<td style="text-align: center;"><strong>1000</strong></td>
 <td style="text-align: center;">1400</td>
 <td style="text-align: center;">900</td>
-<td style="text-align: center;"><span class="math inline">\(+40\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-10\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(15\%\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Step 6, the entrepreneur.</strong> She raises <span class="math inline">\(500 + 500 = 1000\)</span> either way, pays 800 and keeps 200 either way. She is <strong>indifferent</strong> between the two financings.</p></li>
+</ul>
+<div class="box box-a">
+<p>Changing the mix of debt and equity moved money between lenders and shareholders. It did not change the size of the pie.</p>
+</div>
+</section>
+<section id="recap-the-543-fallacy" class="slide level2 smaller">
+<h2>Recap: the 543 fallacy</h2>
+<ul>
+<li><p>Levered equity pays <span class="math inline">\(0.5 \times 875 + 0.5 \times 375 = 625\)</span> on average. Discounting at the unlevered 15% gives <span class="math inline">\(625 / 1.15 = 543\)</span>, more than 500. <strong>Wrong</strong>: the discount rate changed.</p></li>
+<li><p>Shareholders pay 500 and receive 875 or 375: returns <span class="math inline">\(+75\%\)</span> or <span class="math inline">\(-25\%\)</span>, <strong>25%</strong> expected, against <span class="math inline">\(+40\%\)</span> / <span class="math inline">\(-10\%\)</span> and 15% without debt. The swing doubled, so did the premium. And <span class="math inline">\(625 / 1.25 = 500\)</span>.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Debt</th>
+<th style="text-align: center;">Equity</th>
+<th style="text-align: center;"><span class="math inline">\(r_{E}\)</span></th>
+<th style="text-align: center;">Average cost of capital</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">15%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">200</td>
+<td style="text-align: center;">800</td>
+<td style="text-align: center;">17.5%</td>
+<td style="text-align: center;"><span class="math inline">\(0.2 \times 5\% + 0.8 \times 17.5\% = 15\%\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;"><span class="math inline">\(0.5 \times 5\% + 0.5 \times 25\% = 15\%\)</span></td>
 </tr>
 </tbody>
 </table></li>
 </ul>
 <div class="box box-a">
-<p>Leverage raises the risk of equity <strong>even when the debt is risk free</strong>: <span class="math inline">\(+75\%\)</span> / <span class="math inline">\(-25\%\)</span> against <span class="math inline">\(+40\%\)</span> / <span class="math inline">\(-10\%\)</span>. Shareholders are paid for it: 25% expected instead of 15%.</p>
-</div>
-<ul>
-<li>Debt and levered equity together receive exactly the project’s cash flows, so by the Law of One Price <span class="math inline">\(D + E = 1000\)</span> and <span class="math inline">\(E = 500\)</span>.</li>
-</ul>
-</section>
-<section id="recap-the-543-fallacy" class="slide level2 smaller">
-<h2>Recap: the 543 fallacy</h2>
-<ul>
-<li><p>The levered equity pays 625 on average. Discounting it at the unlevered rate gives <span class="math inline">\(625 / 1.15 = 543\)</span>, more than 500. <strong>Wrong</strong>: 15% is the rate for unlevered risk. Levered equity requires 25%, and <span class="math inline">\(625 / 1.25 = 500\)</span>.</p></li>
-<li><p>Two-state “beta”: return strong minus return weak. Debt 0%, unlevered equity 50%, levered equity 100%. Twice the risk, twice the premium (20% against 10%).</p></li>
-<li><p>The average cost of the two sources is unchanged: <span class="math display">\[\tfrac{500}{1000} \times 5\% + \tfrac{500}{1000} \times 25\% = 15\%.\]</span></p></li>
-</ul>
-<div class="box box-a">
 <p>Debt is cheaper, but equity gets dearer by exactly enough. <strong>Today we put a formula on “exactly enough”.</strong></p>
 </div>
 </section>
-<section id="recap-perfect-markets-and-mm-i" class="slide level2 smaller">
-<h2>Recap: perfect markets and MM I</h2>
-<ul>
-<li><p>A capital market is <strong>perfect</strong> when (Chap. 14.2):</p>
-<ol type="1">
-<li><p>securities trade at competitive prices equal to the present value of their cash flows;</p></li>
-<li><p>there are no taxes, transaction costs or issuance costs;</p></li>
-<li><p>there are no bankruptcy costs;</p></li>
-<li><p>all investors borrow and lend without restrictions at the risk-free rate;</p></li>
-<li><p>financing decisions change neither the cash flows of the investments nor the information about them.</p></li>
-</ol></li>
-</ul>
+<section id="recap-mm-proposition-i" class="slide level2 smaller">
+<h2>Recap: MM Proposition I</h2>
 <div class="box box-a">
 <p><strong>MM Proposition I.</strong> In a perfect capital market, the total value of a firm’s securities equals the market value of the cash flows generated by its assets, and is not affected by its choice of capital structure.</p>
 </div>
 <ul>
-<li>Miller’s pizza: cutting it in eight slices instead of four does not make more pizza. Any real effect of capital structure must come from a <strong>friction</strong>.</li>
+<li><p><strong>Why.</strong> Everything the assets produce goes to the security holders, and nothing else does. Same total cash flows, so same total value, whatever the slices.</p></li>
+<li><p>Miller’s pizza: Yogi Berra asks for eight slices instead of four because he is hungry. Cutting the pizza differently does not make more pizza.</p></li>
+<li><p>Galileo without friction: all bodies fall at the same speed. Capital structure matters in practice only through a <strong>friction</strong>: taxes, bankruptcy costs, information.</p></li>
 </ul>
 </section>
-<section id="recap-homemade-leverage-and-arbitrage" class="slide level2 smaller">
-<h2>Recap: homemade leverage and arbitrage</h2>
+<section id="recap-homemade-leverage" class="slide level2 smaller">
+<h2>Recap: homemade leverage</h2>
 <ul>
-<li><p>Investors can <strong>redo</strong> the firm’s leverage (buy unlevered shares with a margin loan) or <strong>undo</strong> it (hold the debt and the levered equity together). The firm’s choice gives them nothing they cannot make at home.</p></li>
-<li><p>If two identical firms were priced differently, there would be free money. Firm U at 990 and firm L at <span class="math inline">\(510 + 500 = 1010\)</span>:</p>
+<li><p>Investors can build the leverage they want <strong>themselves</strong>, as long as they borrow at the same rate as the firm.</p></li>
+<li><p><strong>More leverage</strong>: borrow 500 and buy the unlevered firm. Same payoffs as levered equity, for 500.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Portfolio</th>
+<th style="text-align: center;">Year 0</th>
+<th style="text-align: center;">Strong</th>
+<th style="text-align: center;">Weak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Buy unlevered equity</td>
+<td style="text-align: center;"><span class="math inline">\(-1000\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+1400\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+900\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Borrow 500</td>
+<td style="text-align: center;"><span class="math inline">\(+500\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-525\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-525\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(-500\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(+875\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(+375\)</span></strong></td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Less leverage</strong>: buy the levered firm’s debt <strong>and</strong> equity, <span class="math inline">\(500 + 500\)</span>. The debt you own cancels the firm’s debt: payoffs 1400 or 900, like unlevered equity, for 1000.</p></li>
+</ul>
+</section>
+<section id="recap-homemade-leverage-proves-mm-i" class="slide level2 smaller">
+<h2>Recap: homemade leverage proves MM I</h2>
+<ul>
+<li><p>Firms <strong>U</strong> (no debt, worth <span class="math inline">\(V_U\)</span>) and <strong>L</strong> (debt 500, equity <span class="math inline">\(E_L\)</span>) have the same assets. Suppose their prices differ.</p></li>
+<li><p><strong>U too expensive</strong> (1050 against 1000). Sell U, buy L’s debt and shares:</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1154,45 +1261,45 @@ Camilo Saldarriaga
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Borrow 500</td>
-<td style="text-align: center;"><span class="math inline">\(+500\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-525\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-525\)</span></td>
+<td style="text-align: left;">Sell U’s shares</td>
+<td style="text-align: center;"><span class="math inline">\(+1050\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-1400\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-900\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Buy U’s equity</td>
-<td style="text-align: center;"><span class="math inline">\(-990\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+1400\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(+900\)</span></td>
+<td style="text-align: left;">Buy L’s debt</td>
+<td style="text-align: center;"><span class="math inline">\(-500\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+525\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+525\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Sell L’s equity</td>
-<td style="text-align: center;"><span class="math inline">\(+510\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-875\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-375\)</span></td>
+<td style="text-align: left;">Buy L’s shares</td>
+<td style="text-align: center;"><span class="math inline">\(-500\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+875\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+375\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: center;"><strong><span class="math inline">\(+20\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(+50\)</span></strong></td>
 <td style="text-align: center;"><strong><span class="math inline">\(0\)</span></strong></td>
 <td style="text-align: center;"><strong><span class="math inline">\(0\)</span></strong></td>
 </tr>
 </tbody>
 </table></li>
+<li><p><strong>U too cheap</strong> (990 against <span class="math inline">\(500 + 510\)</span>). Sell L’s shares, borrow 500, buy U: <span class="math inline">\(+20\)</span> today, <span class="math inline">\(0\)</span> next year in both states.</p></li>
 </ul>
 <div class="box box-a">
-<p>Everyone trades this way until the two firms are worth the same. That is what makes MM I hold.</p>
+<p>Free money today, nothing changed tomorrow: everyone trades until <span class="math inline">\(V_U = V_L\)</span>. The <strong>law of one price</strong> makes MM I hold.</p>
 </div>
 </section>
 <section id="recap-the-market-value-balance-sheet" class="slide level2 smaller">
 <h2>Recap: the market value balance sheet</h2>
 <div class="box box-a">
-<p>Market value of equity <span class="math inline">\(=\)</span> market value of all assets <span class="math inline">\(-\)</span> market value of debt and other liabilities. All assets, including intangibles, at market values.</p>
+<p>By MM I, the market value of the firm’s assets equals the market value of the securities it has issued: <span class="math display">\[\text{Equity} = \text{Assets} - \text{Debt and other liabilities}\]</span></p>
 </div>
 <ul>
-<li><p><strong>Harrison Industries</strong>: 50 million shares at 4, no debt. It borrows 80 million and buys back 20 million shares.</p></li>
-<li><p>Equity falls from 200 to 120, but only 30 million shares remain: <span class="math inline">\(120 / 30 = 4\)</span>. <strong>The share price does not move.</strong></p></li>
-<li><p>Issuing debt and buying back equity at fair prices is a <strong>zero-NPV</strong> transaction. Market capitalisation falls because there are fewer shares, not because each is worth less.</p></li>
+<li><p>Unlike the accounting balance sheet, <strong>every</strong> asset counts, including intangibles, and all at <strong>market value</strong>.</p></li>
+<li><p>Attention: the market value of an asset is often hard, or impossible, to pin down.</p></li>
 </ul>
 </section>
 <section id="recap-the-unlevered-cost-of-capital-l6" class="slide level2 smaller">
