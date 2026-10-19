@@ -38,26 +38,6 @@ Recap lecture 7
 \vfill
 ```
 
-## Recap of Lecture 7 {.smaller}
-
-Let's do a recap:
-
-- The assumptions of MM I, and what "no taxes" does to the WACC
-
-- Tour moche SA financed with equity only: what the firm is worth
-
-- The same project with 500 of debt, step by step: the value did not change
-
-- The 543 fallacy: cheap debt, dearer equity, same average
-
-- MM Proposition I
-
-- Homemade leverage, and how it proves MM I with the law of one price
-
-- The market value balance sheet
-
-- And from Lecture 6: the unlevered cost of capital
-
 ## Recap: the assumptions of MM I {.smaller}
 
 - Modigliani and Miller (1958) work in a **perfect capital market**
@@ -76,27 +56,20 @@ Let's do a recap:
   5. financing changes neither the **cash flows** of the investments nor the
      **information** about them.
 
-- Remove any one of them and the conclusions below can change. That is where
-  Lectures 9 to 11 go.
+- Remove any one of them and the conclusions below can change.
 
 ## Recap: no taxes, so the WACC loses its tax term {.smaller}
 
 - In Lecture 6 the WACC carried a tax term on the debt, because interest is tax
   deductible:
-  $$r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})$$
+  $$r_{WACC} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})$$
 
 - Assumption 2 sets the corporate tax rate $\tau_{C}$ to zero, so
   $(1 - \tau_{C}) = 1$ and the term disappears:
-  $$r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}$$
+  $$r_{WACC} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D}$$
 
 - This is the **pre-tax WACC**: the plain weighted average of what shareholders
   and lenders require. Debt has no tax advantage here.
-
-::: {.box .box-a}
-So the only question left in Lectures 7 and 8 is whether cheap debt lowers this
-average **on its own**. Lecture 7 said no with an example. Today we say why
-with a formula.
-:::
 
 ## Recap: Tour moche SA with equity only {.smaller}
 
@@ -115,10 +88,15 @@ with probability one half. Cost of equity 15%, given (Chap. 14.1).
   the 200. This equity is called **unlevered equity**; by construction its
   shareholders earn 15% on average.
 
+  | Unlevered firm | Year 0   | Strong   | Weak     |
+  |:---------------|:--------:|:------:  |:----:    |
+  | Debt           | 0        | 0        | 0        |
+  | Levered equity | 1000     | 1400     | 900      |
+  | Firm           | **1000** | **1400** | **900**  |
+
 ## Recap: the same project with 500 of debt, step by step {.smaller}
 
-- **Step 1, the lenders.** The firm borrows 500 at the risk-free 5%, because
-  even the weak outcome (900) repays the loan. Next year it owes
+- **Step 1, the lenders.** The firm borrows 500 at the risk-free 5%. Next year it owes
   $500 \times 1.05 = 525$ in both states.
 
 - **Step 2, the shareholders.** Lenders are paid first; shareholders take what
@@ -133,7 +111,7 @@ with probability one half. Cost of equity 15%, given (Chap. 14.1).
   | Levered equity | ?        | 875      | 375     |
   | Firm           | ?        | **1400** | **900** |
 
-## Recap: step by step (con't): the value did not change {.smaller}
+## Recap: step by step (con't) {.smaller}
 
 - **Step 4, the law of one price.** Two investments that pay the same cash
   flows in every state must sell for the same price. Debt plus equity pays what
@@ -148,33 +126,28 @@ with probability one half. Cost of equity 15%, given (Chap. 14.1).
   | Firm           | **1000** | 1400   | 900  |
 
 - **Step 6, the entrepreneur.** She raises $500 + 500 = 1000$ either way, pays
-  800 and keeps 200 either way. She is **indifferent** between the two
-  financings.
+  800 and keeps 200 either way.
 
 ::: {.box .box-a}
-Changing the mix of debt and equity moved money between lenders and
-shareholders. It did not change the size of the pie.
+Changing the capital structure did not change the size of the pie.
 :::
 
-## Recap: the 543 fallacy {.smaller}
+## The fallacy: discount the levered equity at the same rate {.smaller}
 
 - Levered equity pays $0.5 \times 875 + 0.5 \times 375 = 625$ on average.
   Discounting at the unlevered 15% gives $625 / 1.15 = 543$, more than 500.
   **Wrong**: the discount rate changed.
 
 - Shareholders pay 500 and receive 875 or 375: returns $+75\%$ or $-25\%$,
-  **25%** expected, against $+40\%$ / $-10\%$ and 15% without debt. The swing
-  doubled, so did the premium. And $625 / 1.25 = 500$.
+  **25%** expected, the cost of equity increased due to the risk. And $625 / 1.25 = 500$.
 
-  | Debt | Equity | $r_{E}$ | Average cost of capital                     |
+  | Debt | Equity | $r^{L}_{E}$ | Average cost of capital                     |
   |:----:|:------:|:-------:|:-------------------------------------------:|
   | 0    | 1000   | 15%     | 15%                                         |
-  | 200  | 800    | 17.5%   | $0.2 \times 5\% + 0.8 \times 17.5\% = 15\%$ |
   | 500  | 500    | 25%     | $0.5 \times 5\% + 0.5 \times 25\% = 15\%$   |
 
 ::: {.box .box-a}
-Debt is cheaper, but equity gets dearer by exactly enough. **Today we put a
-formula on "exactly enough".**
+Debt is cheaper, but equity gets more expensive.
 :::
 
 ## Recap: MM Proposition I {.smaller}
@@ -185,16 +158,13 @@ securities equals the market value of the cash flows generated by its assets,
 and is not affected by its choice of capital structure.
 :::
 
-- **Why.** Everything the assets produce goes to the security holders, and
-  nothing else does. Same total cash flows, so same total value, whatever the
+- **Why.** Everything the assets produce goes to the security holders.
+ Same total cash flows, so same total value, whatever the
   slices.
 
 - Miller's pizza: Yogi Berra asks for eight slices instead of four because he
   is hungry. Cutting the pizza differently does not make more pizza.
 
-- Galileo without friction: all bodies fall at the same speed. Capital
-  structure matters in practice only through a **friction**: taxes, bankruptcy
-  costs, information.
 
 ## Recap: homemade leverage {.smaller}
 
@@ -255,21 +225,18 @@ $$\text{Equity} = \text{Assets} - \text{Debt and other liabilities}$$
 ::: {.box .box-a}
 The assets are owned by shareholders and lenders together, so their expected
 return is the **weighted average** of what each group earns (Chap. 12.5):
-$$r_{U} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}
+$$r^{U}_{E} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D}
 \qquad\qquad
-\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}$$
+\beta^{U}_{E} = \frac{E}{E+D}\, \beta^{L}_{E} + \frac{D}{E+D}\, \beta_{D}$$
 :::
 
-- $E$, $D$: market values of equity and debt. $r_{E}$, $r_{D}$: their costs of
-  capital. $r_{U}$: the **unlevered** cost of capital, the return of the
-  business itself.
+- $E$, $D$: market values of equity and debt. $r^{L}_{E}$, $r_{D}$: the costs
+  of capital of the **levered** firm's equity and debt. $r^{U}_{E}$: the cost of
+  **unlevered** equity, the return of the business itself (Lecture 6 wrote it
+  $r_{U}$).
 
-- **Danone**: equity 30 billion at 5%, debt 10 billion at 3.5%, so
-  $r_{U} = 0.75 \times 5\% + 0.25 \times 3.5\% = 4.6\%$.
-
-- Lecture 6 went **from $r_{E}$ to $r_{U}$**, to price a project. Today we go
-  the other way: given the business ($r_{U}$) and the leverage, **what must
-  $r_{E}$ be?**
+- Notation from now on: superscript $L$ for the levered firm, $U$ for the
+  unlevered one.
 
 ## {.center}
 
@@ -307,16 +274,10 @@ equity rises exactly enough. Today we see by how much.
   by debt and the average cost of capital drops from 15% to 10%. So why not
   borrow as much as possible, at least while the debt stays safe?"
 
-- **A banker's version.** In 2010 Josef Ackermann, then CEO of Deutsche Bank,
-  warned that stricter capital requirements (less leverage) would "depress ROE
-  to levels that make investment into the banking sector unattractive".
-
-- Both arguments sound right. Both are wrong for the same reason.
-
 ::: {.box .box-a}
 Leverage changes the **risk** of equity, and therefore the return shareholders
 require. Today we put a number on how much, and show that the saving on cheap
-debt is given back, cent for cent, through dearer equity.
+debt is given back, cent for cent, through more expensive equity.
 :::
 
 ## Outline
@@ -333,17 +294,14 @@ E.  Conservation of value (Chap. 14.5)
 
 F.  Exercises
 
-## A. MM Proposition II: the answer first {.smaller}
+## A. MM Proposition II{.smaller}
 
 ::: {.box .box-a}
-**The answer first. MM Proposition II.** The cost of levered equity is the
+**MM Proposition II.** The cost of levered equity is the
 unlevered cost of capital plus a premium that grows with the debt-to-equity
 ratio:
-$$r_{E} = r_{U} + \frac{D}{E}\,\big(r_{U} - r_{D}\big)$$
+$$r^{L}_{E} = r^{U}_{E} + \frac{D}{E}\,\big(r^{U}_{E} - r_{D}\big)$$
 :::
-
-- In words: cost of equity $=$ cost of the business $+$ (debt $\div$ equity)
-  $\times$ (cost of the business $-$ cost of debt).
 
 - The second term is the **price of leverage**. It is zero without debt and
   grows with every euro of debt per euro of equity.
@@ -366,70 +324,91 @@ $$r_{E} = r_{U} + \frac{D}{E}\,\big(r_{U} - r_{D}\big)$$
   without leverage:
   $$E + D = U = A$$
 
-- Our entrepreneur: $500 + 500 = 1000$.
-
 - Read the first equality through homemade leverage: holding **both** the debt
-  and the levered equity gives exactly the cash flows of the unlevered equity
-  (Lecture 7, Step 2 of homemade leverage).
+  and the levered equity gives exactly the cash flows of the unlevered equity.
 
 ## Step 2: the return of the portfolio {.smaller}
 
 - The return of a portfolio is the weighted average of the returns of what is
-  in it (Lecture 2). A portfolio holding all the debt and all the equity has
+  in it. A portfolio holding all the debt and all the equity has
   weights $E/(E+D)$ and $D/(E+D)$, and earns the unlevered return:
-  $$\frac{E}{E+D}\, R_{E} + \frac{D}{E+D}\, R_{D} = R_{U}$$
+  $$\frac{E}{E+D}\, R^{L}_{E} + \frac{D}{E+D}\, R_{D} = R^{U}_{E}$$
 
-- $R_{E}$, $R_{D}$, $R_{U}$ are the **realised** returns of levered equity,
+- $R^{L}_{E}$, $R_{D}$, $R^{U}_{E}$ are the **realised** returns of levered equity,
   debt and unlevered equity.
 
-- **Check with the entrepreneur**, weights one half each:
-
-  - strong economy: $0.5 \times 75\% + 0.5 \times 5\% = 40\%$
-
-  - weak economy: $0.5 \times (-25\%) + 0.5 \times 5\% = -10\%$
-
-  Exactly the returns of unlevered equity.
 
 ## Step 3: solve for the return of equity {.smaller}
 
-- Multiply both sides by $(E+D)/E$ and move the debt term across:
-  $$R_{E} = R_{U} + \frac{D}{E}\,\big(R_{U} - R_{D}\big)$$
+- Start from Step 2:
+  $$\frac{E}{E+D}\, R^{L}_{E} + \frac{D}{E+D}\, R_{D} = R^{U}_{E}$$
+
+- **(a) Multiply both sides by $(E+D)/E$.** On the left, the fractions simplify:
+  $$R^{L}_{E} + \frac{D}{E}\, R_{D} = \frac{E+D}{E}\, R^{U}_{E}$$
+
+- **(b) Split the fraction on the right**, since $(E+D)/E = 1 + D/E$:
+  $$R^{L}_{E} + \frac{D}{E}\, R_{D} = R^{U}_{E} + \frac{D}{E}\, R^{U}_{E}$$
+
+- **(c) Subtract $\frac{D}{E} R_{D}$ from both sides**, so $R^{L}_{E}$ is alone on
+  the left:
+  $$R^{L}_{E} = R^{U}_{E} + \frac{D}{E}\, R^{U}_{E} - \frac{D}{E}\, R_{D}$$
+
+## Step 3 (con't): solve for the return of equity {.smaller}
+
+- **(d) Factor out $D/E$** from the last two terms:
+  $$R^{L}_{E} = R^{U}_{E} + \frac{D}{E}\,\big(R^{U}_{E} - R_{D}\big)$$
 
 - The return on levered equity is the return without leverage **plus an extra
-  kick**. When the business does well ($R_{U} > R_{D}$) the kick is positive;
-  when it does badly ($R_{U} < R_{D}$) the kick is negative. The size of the
+  kick**. It is the extra return levered shareholders require because of leverage. The size of the
   kick is $D/E$.
+
+- Assuming everything constant, what we move with capital structure is the $D/E$.
 
 - The equation holds for realised returns, so it holds for **expected** returns
   too. Replace $R$ by $r$:
 
 ::: {.box .box-a}
-**MM Proposition II** (Chap. 14.3): $\;r_{E} = r_{U} + \dfrac{D}{E}\,(r_{U} - r_{D})$.
+**MM Proposition II**: $\;r^{L}_{E} = r^{U}_{E} + \dfrac{D}{E}\,(r^{U}_{E} - r_{D})$.
 The cost of levered equity increases with the market-value debt-to-equity ratio.
 :::
 
-## MM II with the entrepreneur's numbers {.smaller}
+## Apply it to Tour moche SA: the portfolio of Step 2 {.smaller}
 
-- Unlevered cost of capital $r_{U} = 15\%$, debt cost $r_{D} = 5\%$.
+- From Lecture 7: debt 500 and levered equity 500, so weights one half each.
 
-  | Debt $D$ | Equity $E$ | $D/E$ | $r_{E} = r_{U} + \frac{D}{E}(r_{U} - r_{D})$ | Lecture 7 said |
-  |:--------:|:----------:|:-----:|:---------------------------------------------:|:--------------:|
-  | 500      | 500        | 1     | $15\% + 1 \times (15\% - 5\%) = 25\%$          | 25%            |
-  | 200      | 800        | 0.25  | $15\% + 0.25 \times (15\% - 5\%) = 17.5\%$     | 17.5%          |
+  | Security      | Today    | Strong   | Weak    | Return strong | Return weak |
+  |:--------------|:--------:|:--------:|:-------:|:-------------:|:-----------:|
+  | Debt          | 500      | 525      | 525     | $+5\%$        | $+5\%$      |
+  | Equity        | 500      | 875      | 375     | $+75\%$       | $-25\%$     |
+  | **Portfolio** | **1000** | **1400** | **900** | **$+40\%$**   | **$-10\%$** |
 
-- Both numbers match what we found last week by looking at the cash flows
-  state by state. Now we have them **without** listing the states.
+- The portfolio return is the weighted average of the two rows above it:
+
+  - strong economy: $0.5 \times 5\% + 0.5 \times 75\% = 40\%$
+
+  - weak economy: $0.5 \times 5\% + 0.5 \times (-25\%) = -10\%$
+
+- $+40\%$ / $-10\%$ are the returns of the **unlevered** equity in Lecture 7
+  (pay 1000, receive 1400 or 900). Step 2 holds with real numbers.
+
+## Apply it to Tour moche SA (con't): MM II {.smaller}
+
+- Unlevered cost of capital $r^{U}_{E} = 15\%$, debt cost $r_{D} = 5\%$.
+
+  | Debt $D$ | Equity $E$ | $D/E$ | $r^{L}_{E} = r^{U}_{E} + \frac{D}{E}(r^{U}_{E} - r_{D})$ |
+  |:--------:|:----------:|:-----:|:---------------------------------------------:|
+  | 500      | 500        | 1     | $15\% + 1 \times (15\% - 5\%) = 25\%$          |
+  | 200      | 800        | 0.25  | $15\% + 0.25 \times (15\% - 5\%) = 17.5\%$     |
 
 - The formula also says what happens at **any** level of debt: with 750 of
-  debt ($D/E = 3$), $r_{E} = 15\% + 3 \times 10\% = 45\%$, the quiz answer of
-  Lecture 7.
+  debt ($D/E = 3$), $r^{L}_{E} = 15\% + 3 \times 10\% = 45\%$.
 
-## B. The WACC does not move: the answer first {.smaller}
+## B. The WACC does not move. {.smaller}
 
 ::: {.box .box-a}
-**The answer first.** In a perfect market the weighted average cost of capital
-is the unlevered cost of capital, whatever the mix (Chap. 14.3):
-$$r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D} = r_{U} = r_{A}$$
+In a perfect market the weighted average cost of capital
+is the unlevered cost of capital, whatever the mix:
+$$r_{WACC} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D} = r^{U}_{E}$$
 :::
 
 - This is Step 2 read with expected returns: the portfolio of all the firm's
@@ -447,7 +426,7 @@ $$r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D} = r_{U} = r_{A}$$
 
 - The entrepreneur's project with more and more debt (Figure 14.1b):
 
-  | $E$  | $D$ | $r_{E}$ | $r_{D}$  | $r_{WACC} = \frac{E}{E+D} r_{E} + \frac{D}{E+D} r_{D}$ |
+  | $E$  | $D$ | $r^{L}_{E}$ | $r_{D}$  | $r_{WACC} = \frac{E}{E+D} r^{L}_{E} + \frac{D}{E+D} r_{D}$ |
   |:----:|:---:|:-------:|:--------:|:------------------------------------------------------:|
   | 1000 | 0   | 15.0%   | 5.0%     | $1.0 \times 15\% + 0 \times 5\% = 15\%$                |
   | 800  | 200 | 17.5%   | 5.0%     | $0.8 \times 17.5\% + 0.2 \times 5\% = 15\%$            |
@@ -479,14 +458,14 @@ $^*$ With 900 of debt the firm defaults in the weak state: lenders are promised
   and equity one third.
 
 - **Unlevered cost of capital** (and WACC):
-  $$r_{U} = \tfrac{1}{3} \times 12\% + \tfrac{2}{3} \times 6\% = 8\%.$$
+  $$r^{U}_{E} = \tfrac{1}{3} \times 12\% + \tfrac{2}{3} \times 6\% = 8\%.$$
 
 - NRG issues equity to repay debt until $D/E = 1$. Safer debt now costs 5.5%.
-  **New cost of equity**: $r_{E} = 8\% + 1 \times (8\% - 5.5\%) = 10.5\%$.
+  **New cost of equity**: $r^{L}_{E} = 8\% + 1 \times (8\% - 5.5\%) = 10.5\%$.
 
 - **New WACC**: $0.5 \times 10.5\% + 0.5 \times 5.5\% = 8\%$. Unchanged.
 
-- If NRG repaid all its debt, its equity would cost $r_{U} = 8\%$: the WACC
+- If NRG repaid all its debt, its equity would cost $r^{U}_{E} = 8\%$: the WACC
   again.
 
 ::: {.box .box-a}
@@ -519,13 +498,13 @@ therefore the **enterprise value** are the same in all three cases.
 ::: {.box .box-a}
 **The answer first.** Betas obey the same rule as expected returns
 (Chap. 14.3):
-$$\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}
+$$\beta^{U}_{E} = \frac{E}{E+D}\, \beta^{L}_{E} + \frac{D}{E+D}\, \beta_{D}
 \qquad\qquad
-\beta_{E} = \beta_{U} + \frac{D}{E}\,\big(\beta_{U} - \beta_{D}\big)$$
+\beta^{L}_{E} = \beta^{U}_{E} + \frac{D}{E}\,\big(\beta^{U}_{E} - \beta_{D}\big)$$
 :::
 
-- $\beta_{U}$ is the **unlevered** (or asset) beta: the market risk of the
-  business, as if it had no debt. $\beta_{E}$ is the **levered** (or equity)
+- $\beta^{U}_{E}$ is the **unlevered** (or asset) beta: the market risk of the
+  business, as if it had no debt. $\beta^{L}_{E}$ is the **levered** (or equity)
   beta: business risk plus the risk added by leverage. $\beta_{D}$ is the debt
   beta.
 
@@ -534,14 +513,14 @@ $$\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}
   the risk of the assets.
 
 - When a firm changes its capital structure without changing its investments,
-  **$\beta_{U}$ stays put and $\beta_{E}$ moves.**
+  **$\beta^{U}_{E}$ stays put and $\beta^{L}_{E}$ moves.**
 
 ## If the debt is risk free {.smaller}
 
 - With risk-free debt, $\beta_{D} = 0$ and the second formula simplifies to
-  $$\beta_{E} = \beta_{U} \times \frac{E + D}{E} = \beta_{U}\,\Big(1 + \frac{D}{E}\Big).$$
+  $$\beta^{L}_{E} = \beta^{U}_{E} \times \frac{E + D}{E} = \beta^{U}_{E}\,\Big(1 + \frac{D}{E}\Big).$$
 
-- Intuition: each euro of equity controls $(E+D)/E$ euros of assets, so it
+- Intuition: each euro of equity controls $(E+D)/E$ euros of assets, and
   carries that many times the business risk.
 
 - **Example.** A firm with a debt-to-equity ratio of 2 has an equity beta of
@@ -550,8 +529,8 @@ $$\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}
 - A firm in the same industry with a debt ratio $D/(D+E) = 0.5$, that is
   $D/E = 1$, would have an equity beta of $0.57 \times (1 + 1) = 1.13$.
 
-- The relation between leverage and equity betas is due to Hamada (*Journal of
-  Finance*, 1972).
+- Reference: Hamada, "Portfolio analysis, market equilibrium and corporation
+  finance", *Journal of Finance*, 1969.
 
 ## Example: CVS raises its leverage {.smaller}
 
@@ -559,14 +538,14 @@ $$\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}
   debt-to-equity ratio of 0.1. Its debt beta is zero.
 
 - **Unlever**: equity is $1/1.1$ of the firm, so
-  $$\beta_{U} = \frac{1}{1.1} \times 0.8 + \frac{0.1}{1.1} \times 0 = 0.73.$$
+  $$\beta^{U}_{E} = \frac{1}{1.1} \times 0.8 + \frac{0.1}{1.1} \times 0 = 0.73.$$
 
 - CVS borrows until $D/E = 0.5$, with the debt still risk free. **Relever**:
-  $$\beta_{E} = 0.73 + 0.5 \times (0.73 - 0) = 1.09.$$
+  $$\beta^{L}_{E} = 0.73 + 0.5 \times (0.73 - 0) = 1.09.$$
 
 - The equity beta, and with it the cost of equity, rises with leverage. If the
   debt had taken on some market risk ($\beta_{D} > 0$), the equity would bear
-  less of it and $\beta_{E}$ would rise by less.
+  less of it and $\beta^{L}_{E}$ would rise by less.
 
 ## Cash as negative debt {.smaller}
 
@@ -580,7 +559,7 @@ $$\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}
 - Net debt $12 - 25 = -13$ billion. Enterprise value $230 - 13 = 217$ billion.
 
 - Unlevered beta, using net debt in place of $D$:
-  $$\beta_{U} = \frac{230}{217} \times 0.95 + \frac{-13}{217} \times 0 = 1.01.$$
+  $$\beta^{U}_{E} = \frac{230}{217} \times 0.95 + \frac{-13}{217} \times 0 = 1.01.$$
 
 - With a risk-free rate of 2.75% and a market risk premium of 5%, the cost of
   capital of Cisco's business is $2.75\% + 1.01 \times 5\% = 7.8\%$. Because of
@@ -611,7 +590,7 @@ $$\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}
 
 - Four listed firms in the same industry, all with risk-free debt:
 
-  | Firm    | Equity beta | $D/E$  | Asset beta $= \beta_{E} / (1 + D/E)$ |
+  | Firm    | Equity beta | $D/E$  | Asset beta $= \beta^{L}_{E} / (1 + D/E)$ |
   |:--------|:-----------:|:------:|:------------------------------------:|
   | A       | 1.1         | 23.31% | 0.892                                |
   | B       | 1.3         | 44.35% | 0.901                                |
@@ -622,7 +601,7 @@ $$\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}
 - Firm P is not listed, operates in the same industry and has $D/E = 0.2$.
   What is its equity beta?
 
-- Relever the average: $\beta_{E} = 0.960 \times (1 + 0.2) = 1.15$.
+- Relever the average: $\beta^{L}_{E} = 0.960 \times (1 + 0.2) = 1.15$.
 
 ## D. Fallacy 1: leverage raises EPS {.smaller}
 
@@ -669,11 +648,11 @@ the share price does not move (Chap. 14.4).
 - **Example 14.9.** Suppose LVI's EBIT does not grow and all earnings are paid
   out. The shares are then a perpetuity, and the price tells us the unlevered
   cost of capital:
-  $$7.50 = \frac{1.00}{r_{U}} \qquad \Rightarrow \qquad r_{U} = 13.33\%.$$
+  $$7.50 = \frac{1.00}{r^{U}_{E}} \qquad \Rightarrow \qquad r^{U}_{E} = 13.33\%.$$
 
 - After the recap, equity is worth $75 - 15 = 60$ million (MM I), so
   $D/E = 15/60 = 0.25$. By MM II,
-  $$r_{E} = 13.33\% + 0.25 \times (13.33\% - 8\%) = 14.66\%.$$
+  $$r^{L}_{E} = 13.33\% + 0.25 \times (13.33\% - 8\%) = 14.66\%.$$
 
 - Price per share with the new EPS and the new required return:
   $$P = \frac{1.10}{14.66\%} = 7.50.$$
@@ -691,7 +670,7 @@ across firms with different capital structures. Analysts prefer EV/EBIT.
   typical non-financial firm. With such a thin cushion, a small drop in asset
   values means insolvency: a key ingredient of the 2008 crisis.
 
-- When regulators asked for more equity, bankers (Ackermann, slide 13) replied
+- When regulators asked for more equity, bankers (Ackermann, slide 12) replied
   that it would lower their **return on equity** and make bank shares
   unattractive.
 
@@ -703,15 +682,18 @@ across firms with different capital structures. Analysts prefer EV/EBIT.
 
 ## Fallacy 2: issuing equity dilutes {.smaller}
 
+- **Dilution**: an increase in the number of shares that will divide a fixed
+  amount of earnings. An equity issue usually dilutes EPS, so it is argued
+  (wrongly) that it dilutes existing shareholders and debt should be used instead.
+
 ::: {.box .box-a}
-**The answer first.** Selling new shares at a fair price does not dilute value:
-the cash raised adds to the assets exactly as much as the new shares add to the
-share count.
+**The answer first.** Selling new shares at a fair price does not dilute
+**value**: the cash raised adds to the assets as much as the new shares add to
+the share count.
 :::
 
-- **Jet Sky Airlines**: no debt, 500 million shares at 16: worth 8 billion,
-  expansion included. It needs 1 billion of planes and sells **62.5 million new
-  shares at 16**.
+- **Jet Sky Airlines**: no debt, 500 million shares at 16, worth 8 billion.
+  It needs 1 billion of planes and sells **62.5 million new shares at 16**.
 
   | In millions            | Before the issue | After the issue |
   |:-----------------------|:----------------:|:---------------:|
@@ -880,7 +862,7 @@ a departure from one of its five conditions.
    equity is holding the business.
 
 2. **The return of that portfolio** is the return of the business, so solving
-   for the equity return gives **MM II**: $r_{E}$ rises with $D/E$.
+   for the equity return gives **MM II**: $r^{L}_{E}$ rises with $D/E$.
 
 3. **The WACC is flat** at the unlevered cost of capital: the saving on cheap
    debt is returned through dearer equity. Enterprise value does not depend on
@@ -897,15 +879,15 @@ a departure from one of its five conditions.
 
 ## What to remember {.smaller}
 
-- **MM II**: $r_{E} = r_{U} + \frac{D}{E}(r_{U} - r_{D})$. Debt is cheaper than
+- **MM II**: $r^{L}_{E} = r^{U}_{E} + \frac{D}{E}(r^{U}_{E} - r_{D})$. Debt is cheaper than
   equity, but leverage raises the cost of equity, even with risk-free debt.
 
 - **Without taxes, the WACC equals the unlevered cost of capital**, whatever
   the capital structure. Leverage does not lower the discount rate for the
   firm's projects.
 
-- **Same formulas with betas**: $\beta_{E} = \beta_{U} + \frac{D}{E}(\beta_{U} -
-  \beta_{D})$; with risk-free debt, $\beta_{E} = \beta_{U}(1 + D/E)$.
+- **Same formulas with betas**: $\beta^{L}_{E} = \beta^{U}_{E} + \frac{D}{E}(\beta^{U}_{E} -
+  \beta_{D})$; with risk-free debt, $\beta^{L}_{E} = \beta^{U}_{E}(1 + D/E)$.
 
 - **Unlever before you average** comparables, and use net debt.
 
@@ -936,7 +918,7 @@ a departure from one of its five conditions.
   to keep the weighted average at the unlevered cost of capital.
 
 - **Equity beta.** Debt is 50% of the assets, so $D/E = 1$ and
-  $\beta_{E} = \beta_{U}(1 + D/E) = 1 \times (1 + 1) = 2$.
+  $\beta^{L}_{E} = \beta^{U}_{E}(1 + D/E) = 1 \times (1 + 1) = 2$.
 
 - **LVI.** The required return on equity rose from 13.33% to 14.66% along with
   the EPS, because the EPS became riskier. $1.10 / 14.66\% = 7.50$: the two

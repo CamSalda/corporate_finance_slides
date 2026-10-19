@@ -34,32 +34,6 @@ Recap lecture 3
 \vfill
 ```
 
-## Recap of Lecture 3 {.smaller}
-
-Let's do a recap:
-
-- Combining two stocks: many portfolios, many risk-return pairs
-
-- Efficient portfolios and the efficient frontier
-
-- The shape of the frontier depends on the correlation
-
-- The minimum-variance portfolio
-
-- Short sales extend the frontier
-
-- From two stocks to N: the frontier moves left
-
-- Adding the risk-free asset
-
-- Borrowing and leverage
-
-- The Sharpe ratio, and how it picks the efficient frontier
-
-- The super-efficient (tangency) portfolio
-
-- Two types of risk
-
 ## Recap: combining two stocks {.smaller}
 
 - Given two stocks, we choose the **weights** $x_{1}$ and $x_{2}$, with

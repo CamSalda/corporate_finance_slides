@@ -1020,20 +1020,6 @@ Camilo Saldarriaga
 <p>Recap lecture 7</p>
 </div>
 </section>
-<section id="recap-of-lecture-7" class="slide level2 smaller">
-<h2>Recap of Lecture 7</h2>
-<p>Let’s do a recap:</p>
-<ul>
-<li><p>The assumptions of MM I, and what “no taxes” does to the WACC</p></li>
-<li><p>Tour moche SA financed with equity only: what the firm is worth</p></li>
-<li><p>The same project with 500 of debt, step by step: the value did not change</p></li>
-<li><p>The 543 fallacy: cheap debt, dearer equity, same average</p></li>
-<li><p>MM Proposition I</p></li>
-<li><p>Homemade leverage, and how it proves MM I with the law of one price</p></li>
-<li><p>The market value balance sheet</p></li>
-<li><p>And from Lecture 6: the unlevered cost of capital</p></li>
-</ul>
-</section>
 <section id="recap-the-assumptions-of-mm-i" class="slide level2 smaller">
 <h2>Recap: the assumptions of MM I</h2>
 <ul>
@@ -1045,19 +1031,16 @@ Camilo Saldarriaga
 <li><p>all investors can <strong>borrow and lend without restrictions at the risk-free rate</strong>;</p></li>
 <li><p>financing changes neither the <strong>cash flows</strong> of the investments nor the <strong>information</strong> about them.</p></li>
 </ol></li>
-<li><p>Remove any one of them and the conclusions below can change. That is where Lectures 9 to 11 go.</p></li>
+<li><p>Remove any one of them and the conclusions below can change.</p></li>
 </ul>
 </section>
 <section id="recap-no-taxes-so-the-wacc-loses-its-tax-term" class="slide level2 smaller">
 <h2>Recap: no taxes, so the WACC loses its tax term</h2>
 <ul>
-<li><p>In Lecture 6 the WACC carried a tax term on the debt, because interest is tax deductible: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})\]</span></p></li>
-<li><p>Assumption 2 sets the corporate tax rate <span class="math inline">\(\tau_{C}\)</span> to zero, so <span class="math inline">\((1 - \tau_{C}) = 1\)</span> and the term disappears: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}\]</span></p></li>
+<li><p>In Lecture 6 the WACC carried a tax term on the debt, because interest is tax deductible: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})\]</span></p></li>
+<li><p>Assumption 2 sets the corporate tax rate <span class="math inline">\(\tau_{C}\)</span> to zero, so <span class="math inline">\((1 - \tau_{C}) = 1\)</span> and the term disappears: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D}\]</span></p></li>
 <li><p>This is the <strong>pre-tax WACC</strong>: the plain weighted average of what shareholders and lenders require. Debt has no tax advantage here.</p></li>
 </ul>
-<div class="box box-a">
-<p>So the only question left in Lectures 7 and 8 is whether cheap debt lowers this average <strong>on its own</strong>. Lecture 7 said no with an example. Today we say why with a formula.</p>
-</div>
 </section>
 <section id="recap-tour-moche-sa-with-equity-only" class="slide level2 smaller">
 <h2>Recap: Tour moche SA with equity only</h2>
@@ -1068,13 +1051,43 @@ Camilo Saldarriaga
 <li><p>With equity only, the cost of capital <strong>is</strong> the cost of equity: 15%.</p></li>
 <li><p>Expected cash flow <span class="math inline">\(0.5 \times 1400 + 0.5 \times 900 = 1150\)</span>.</p></li>
 <li><p>Value of the firm <span class="math inline">\(= 1150 / 1.15 = 1000\)</span>. NPV <span class="math inline">\(= -800 + 1000 = 200\)</span>.</p></li>
-<li><p>The entrepreneur sells the whole equity for 1000, pays the 800 and keeps the 200. This equity is called <strong>unlevered equity</strong>; by construction its shareholders earn 15% on average.</p></li>
+<li><p>The entrepreneur sells the whole equity for 1000, pays the 800 and keeps the 200. This equity is called <strong>unlevered equity</strong>; by construction its shareholders earn 15% on average.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Unlevered firm</th>
+<th style="text-align: center;">Year 0</th>
+<th style="text-align: center;">Strong</th>
+<th style="text-align: center;">Weak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Debt</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Levered equity</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">1400</td>
+<td style="text-align: center;">900</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Firm</td>
+<td style="text-align: center;"><strong>1000</strong></td>
+<td style="text-align: center;"><strong>1400</strong></td>
+<td style="text-align: center;"><strong>900</strong></td>
+</tr>
+</tbody>
+</table></li>
 </ul>
 </section>
 <section id="recap-the-same-project-with-500-of-debt-step-by-step" class="slide level2 smaller">
 <h2>Recap: the same project with 500 of debt, step by step</h2>
 <ul>
-<li><p><strong>Step 1, the lenders.</strong> The firm borrows 500 at the risk-free 5%, because even the weak outcome (900) repays the loan. Next year it owes <span class="math inline">\(500 \times 1.05 = 525\)</span> in both states.</p></li>
+<li><p><strong>Step 1, the lenders.</strong> The firm borrows 500 at the risk-free 5%. Next year it owes <span class="math inline">\(500 \times 1.05 = 525\)</span> in both states.</p></li>
 <li><p><strong>Step 2, the shareholders.</strong> Lenders are paid first; shareholders take what is left: <span class="math inline">\(1400 - 525 = 875\)</span> or <span class="math inline">\(900 - 525 = 375\)</span>. This is <strong>levered equity</strong>.</p></li>
 <li><p><strong>Step 3, add them up.</strong> <span class="math inline">\(525 + 875 = 1400\)</span> and <span class="math inline">\(525 + 375 = 900\)</span>: debt and equity together receive <strong>exactly the project’s cash flows</strong>.</p>
 <table class="caption-top">
@@ -1109,8 +1122,8 @@ Camilo Saldarriaga
 </table></li>
 </ul>
 </section>
-<section id="recap-step-by-step-cont-the-value-did-not-change" class="slide level2 smaller">
-<h2>Recap: step by step (con’t): the value did not change</h2>
+<section id="recap-step-by-step-cont" class="slide level2 smaller">
+<h2>Recap: step by step (con’t)</h2>
 <ul>
 <li><p><strong>Step 4, the law of one price.</strong> Two investments that pay the same cash flows in every state must sell for the same price. Debt plus equity pays what the unlevered firm pays, so the levered firm is also worth <strong>1000</strong>.</p></li>
 <li><p><strong>Step 5, the equity.</strong> <span class="math inline">\(E = 1000 - 500 = 500\)</span>.</p>
@@ -1144,17 +1157,17 @@ Camilo Saldarriaga
 </tr>
 </tbody>
 </table></li>
-<li><p><strong>Step 6, the entrepreneur.</strong> She raises <span class="math inline">\(500 + 500 = 1000\)</span> either way, pays 800 and keeps 200 either way. She is <strong>indifferent</strong> between the two financings.</p></li>
+<li><p><strong>Step 6, the entrepreneur.</strong> She raises <span class="math inline">\(500 + 500 = 1000\)</span> either way, pays 800 and keeps 200 either way.</p></li>
 </ul>
 <div class="box box-a">
-<p>Changing the mix of debt and equity moved money between lenders and shareholders. It did not change the size of the pie.</p>
+<p>Changing the capital structure did not change the size of the pie.</p>
 </div>
 </section>
-<section id="recap-the-543-fallacy" class="slide level2 smaller">
-<h2>Recap: the 543 fallacy</h2>
+<section id="the-fallacy-discount-the-levered-equity-at-the-same-rate" class="slide level2 smaller">
+<h2>The fallacy: discount the levered equity at the same rate</h2>
 <ul>
 <li><p>Levered equity pays <span class="math inline">\(0.5 \times 875 + 0.5 \times 375 = 625\)</span> on average. Discounting at the unlevered 15% gives <span class="math inline">\(625 / 1.15 = 543\)</span>, more than 500. <strong>Wrong</strong>: the discount rate changed.</p></li>
-<li><p>Shareholders pay 500 and receive 875 or 375: returns <span class="math inline">\(+75\%\)</span> or <span class="math inline">\(-25\%\)</span>, <strong>25%</strong> expected, against <span class="math inline">\(+40\%\)</span> / <span class="math inline">\(-10\%\)</span> and 15% without debt. The swing doubled, so did the premium. And <span class="math inline">\(625 / 1.25 = 500\)</span>.</p>
+<li><p>Shareholders pay 500 and receive 875 or 375: returns <span class="math inline">\(+75\%\)</span> or <span class="math inline">\(-25\%\)</span>, <strong>25%</strong> expected, the cost of equity increased due to the risk. And <span class="math inline">\(625 / 1.25 = 500\)</span>.</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 8%">
@@ -1166,7 +1179,7 @@ Camilo Saldarriaga
 <tr class="header">
 <th style="text-align: center;">Debt</th>
 <th style="text-align: center;">Equity</th>
-<th style="text-align: center;"><span class="math inline">\(r_{E}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(r^{L}_{E}\)</span></th>
 <th style="text-align: center;">Average cost of capital</th>
 </tr>
 </thead>
@@ -1178,12 +1191,6 @@ Camilo Saldarriaga
 <td style="text-align: center;">15%</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">800</td>
-<td style="text-align: center;">17.5%</td>
-<td style="text-align: center;"><span class="math inline">\(0.2 \times 5\% + 0.8 \times 17.5\% = 15\%\)</span></td>
-</tr>
-<tr class="odd">
 <td style="text-align: center;">500</td>
 <td style="text-align: center;">500</td>
 <td style="text-align: center;">25%</td>
@@ -1193,7 +1200,7 @@ Camilo Saldarriaga
 </table></li>
 </ul>
 <div class="box box-a">
-<p>Debt is cheaper, but equity gets dearer by exactly enough. <strong>Today we put a formula on “exactly enough”.</strong></p>
+<p>Debt is cheaper, but equity gets more expensive.</p>
 </div>
 </section>
 <section id="recap-mm-proposition-i" class="slide level2 smaller">
@@ -1202,9 +1209,8 @@ Camilo Saldarriaga
 <p><strong>MM Proposition I.</strong> In a perfect capital market, the total value of a firm’s securities equals the market value of the cash flows generated by its assets, and is not affected by its choice of capital structure.</p>
 </div>
 <ul>
-<li><p><strong>Why.</strong> Everything the assets produce goes to the security holders, and nothing else does. Same total cash flows, so same total value, whatever the slices.</p></li>
+<li><p><strong>Why.</strong> Everything the assets produce goes to the security holders. Same total cash flows, so same total value, whatever the slices.</p></li>
 <li><p>Miller’s pizza: Yogi Berra asks for eight slices instead of four because he is hungry. Cutting the pizza differently does not make more pizza.</p></li>
-<li><p>Galileo without friction: all bodies fall at the same speed. Capital structure matters in practice only through a <strong>friction</strong>: taxes, bankruptcy costs, information.</p></li>
 </ul>
 </section>
 <section id="recap-homemade-leverage" class="slide level2 smaller">
@@ -1305,14 +1311,13 @@ Camilo Saldarriaga
 <section id="recap-the-unlevered-cost-of-capital-l6" class="slide level2 smaller">
 <h2>Recap: the unlevered cost of capital (L6)</h2>
 <div class="box box-a">
-<p>The assets are owned by shareholders and lenders together, so their expected return is the <strong>weighted average</strong> of what each group earns (Chap. 12.5): <span class="math display">\[r_{U} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D}
+<p>The assets are owned by shareholders and lenders together, so their expected return is the <strong>weighted average</strong> of what each group earns (Chap. 12.5): <span class="math display">\[r^{U}_{E} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D}
 \qquad\qquad
-\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}\]</span></p>
+\beta^{U}_{E} = \frac{E}{E+D}\, \beta^{L}_{E} + \frac{D}{E+D}\, \beta_{D}\]</span></p>
 </div>
 <ul>
-<li><p><span class="math inline">\(E\)</span>, <span class="math inline">\(D\)</span>: market values of equity and debt. <span class="math inline">\(r_{E}\)</span>, <span class="math inline">\(r_{D}\)</span>: their costs of capital. <span class="math inline">\(r_{U}\)</span>: the <strong>unlevered</strong> cost of capital, the return of the business itself.</p></li>
-<li><p><strong>Danone</strong>: equity 30 billion at 5%, debt 10 billion at 3.5%, so <span class="math inline">\(r_{U} = 0.75 \times 5\% + 0.25 \times 3.5\% = 4.6\%\)</span>.</p></li>
-<li><p>Lecture 6 went <strong>from <span class="math inline">\(r_{E}\)</span> to <span class="math inline">\(r_{U}\)</span></strong>, to price a project. Today we go the other way: given the business (<span class="math inline">\(r_{U}\)</span>) and the leverage, <strong>what must <span class="math inline">\(r_{E}\)</span> be?</strong></p></li>
+<li><p><span class="math inline">\(E\)</span>, <span class="math inline">\(D\)</span>: market values of equity and debt. <span class="math inline">\(r^{L}_{E}\)</span>, <span class="math inline">\(r_{D}\)</span>: the costs of capital of the <strong>levered</strong> firm’s equity and debt. <span class="math inline">\(r^{U}_{E}\)</span>: the cost of <strong>unlevered</strong> equity, the return of the business itself (Lecture 6 wrote it <span class="math inline">\(r_{U}\)</span>).</p></li>
+<li><p>Notation from now on: superscript <span class="math inline">\(L\)</span> for the levered firm, <span class="math inline">\(U\)</span> for the unlevered one.</p></li>
 </ul>
 </section>
 <section id="section-1" class="slide level2 center">
@@ -1327,12 +1332,10 @@ Camilo Saldarriaga
 <section id="introduction" class="slide level2 smaller">
 <h2>Introduction</h2>
 <ul>
-<li><p><strong>A common argument.</strong> “Debt costs 5%, equity 15%. Replace half of the equity by debt and the average cost of capital drops from 15% to 10%. So why not borrow as much as possible, at least while the debt stays safe?”</p></li>
-<li><p><strong>A banker’s version.</strong> In 2010 Josef Ackermann, then CEO of Deutsche Bank, warned that stricter capital requirements (less leverage) would “depress ROE to levels that make investment into the banking sector unattractive”.</p></li>
-<li><p>Both arguments sound right. Both are wrong for the same reason.</p></li>
+<li><strong>A common argument.</strong> “Debt costs 5%, equity 15%. Replace half of the equity by debt and the average cost of capital drops from 15% to 10%. So why not borrow as much as possible, at least while the debt stays safe?”</li>
 </ul>
 <div class="box box-a">
-<p>Leverage changes the <strong>risk</strong> of equity, and therefore the return shareholders require. Today we put a number on how much, and show that the saving on cheap debt is given back, cent for cent, through dearer equity.</p>
+<p>Leverage changes the <strong>risk</strong> of equity, and therefore the return shareholders require. Today we put a number on how much, and show that the saving on cheap debt is given back, cent for cent, through more expensive equity.</p>
 </div>
 </section>
 <section id="outline" class="slide level2">
@@ -1346,13 +1349,12 @@ Camilo Saldarriaga
 <li><p>Exercises</p></li>
 </ol>
 </section>
-<section id="a.-mm-proposition-ii-the-answer-first" class="slide level2 smaller">
-<h2>A. MM Proposition II: the answer first</h2>
+<section id="a.-mm-proposition-ii" class="slide level2 smaller">
+<h2>A. MM Proposition II</h2>
 <div class="box box-a">
-<p><strong>The answer first. MM Proposition II.</strong> The cost of levered equity is the unlevered cost of capital plus a premium that grows with the debt-to-equity ratio: <span class="math display">\[r_{E} = r_{U} + \frac{D}{E}\,\big(r_{U} - r_{D}\big)\]</span></p>
+<p><strong>MM Proposition II.</strong> The cost of levered equity is the unlevered cost of capital plus a premium that grows with the debt-to-equity ratio: <span class="math display">\[r^{L}_{E} = r^{U}_{E} + \frac{D}{E}\,\big(r^{U}_{E} - r_{D}\big)\]</span></p>
 </div>
 <ul>
-<li><p>In words: cost of equity <span class="math inline">\(=\)</span> cost of the business <span class="math inline">\(+\)</span> (debt <span class="math inline">\(\div\)</span> equity) <span class="math inline">\(\times\)</span> (cost of the business <span class="math inline">\(-\)</span> cost of debt).</p></li>
 <li><p>The second term is the <strong>price of leverage</strong>. It is zero without debt and grows with every euro of debt per euro of equity.</p></li>
 <li><p>Three steps to get there:</p>
 <ol type="1">
@@ -1367,53 +1369,112 @@ Camilo Saldarriaga
 <ul>
 <li><p>Let <span class="math inline">\(E\)</span> be the market value of the levered equity, <span class="math inline">\(D\)</span> the market value of the debt, <span class="math inline">\(U\)</span> what the equity would be worth if the firm had no debt, and <span class="math inline">\(A\)</span> the market value of the firm’s assets.</p></li>
 <li><p>MM Proposition I says that the securities are worth the assets, with or without leverage: <span class="math display">\[E + D = U = A\]</span></p></li>
-<li><p>Our entrepreneur: <span class="math inline">\(500 + 500 = 1000\)</span>.</p></li>
-<li><p>Read the first equality through homemade leverage: holding <strong>both</strong> the debt and the levered equity gives exactly the cash flows of the unlevered equity (Lecture 7, Step 2 of homemade leverage).</p></li>
+<li><p>Read the first equality through homemade leverage: holding <strong>both</strong> the debt and the levered equity gives exactly the cash flows of the unlevered equity.</p></li>
 </ul>
 </section>
 <section id="step-2-the-return-of-the-portfolio" class="slide level2 smaller">
 <h2>Step 2: the return of the portfolio</h2>
 <ul>
-<li><p>The return of a portfolio is the weighted average of the returns of what is in it (Lecture 2). A portfolio holding all the debt and all the equity has weights <span class="math inline">\(E/(E+D)\)</span> and <span class="math inline">\(D/(E+D)\)</span>, and earns the unlevered return: <span class="math display">\[\frac{E}{E+D}\, R_{E} + \frac{D}{E+D}\, R_{D} = R_{U}\]</span></p></li>
-<li><p><span class="math inline">\(R_{E}\)</span>, <span class="math inline">\(R_{D}\)</span>, <span class="math inline">\(R_{U}\)</span> are the <strong>realised</strong> returns of levered equity, debt and unlevered equity.</p></li>
-<li><p><strong>Check with the entrepreneur</strong>, weights one half each:</p>
-<ul>
-<li><p>strong economy: <span class="math inline">\(0.5 \times 75\% + 0.5 \times 5\% = 40\%\)</span></p></li>
-<li><p>weak economy: <span class="math inline">\(0.5 \times (-25\%) + 0.5 \times 5\% = -10\%\)</span></p></li>
-</ul>
-<p>Exactly the returns of unlevered equity.</p></li>
+<li><p>The return of a portfolio is the weighted average of the returns of what is in it. A portfolio holding all the debt and all the equity has weights <span class="math inline">\(E/(E+D)\)</span> and <span class="math inline">\(D/(E+D)\)</span>, and earns the unlevered return: <span class="math display">\[\frac{E}{E+D}\, R^{L}_{E} + \frac{D}{E+D}\, R_{D} = R^{U}_{E}\]</span></p></li>
+<li><p><span class="math inline">\(R^{L}_{E}\)</span>, <span class="math inline">\(R_{D}\)</span>, <span class="math inline">\(R^{U}_{E}\)</span> are the <strong>realised</strong> returns of levered equity, debt and unlevered equity.</p></li>
 </ul>
 </section>
 <section id="step-3-solve-for-the-return-of-equity" class="slide level2 smaller">
 <h2>Step 3: solve for the return of equity</h2>
 <ul>
-<li><p>Multiply both sides by <span class="math inline">\((E+D)/E\)</span> and move the debt term across: <span class="math display">\[R_{E} = R_{U} + \frac{D}{E}\,\big(R_{U} - R_{D}\big)\]</span></p></li>
-<li><p>The return on levered equity is the return without leverage <strong>plus an extra kick</strong>. When the business does well (<span class="math inline">\(R_{U} &gt; R_{D}\)</span>) the kick is positive; when it does badly (<span class="math inline">\(R_{U} &lt; R_{D}\)</span>) the kick is negative. The size of the kick is <span class="math inline">\(D/E\)</span>.</p></li>
+<li><p>Start from Step 2: <span class="math display">\[\frac{E}{E+D}\, R^{L}_{E} + \frac{D}{E+D}\, R_{D} = R^{U}_{E}\]</span></p></li>
+<li><p><strong>(a) Multiply both sides by <span class="math inline">\((E+D)/E\)</span>.</strong> On the left, the fractions simplify: <span class="math display">\[R^{L}_{E} + \frac{D}{E}\, R_{D} = \frac{E+D}{E}\, R^{U}_{E}\]</span></p></li>
+<li><p><strong>(b) Split the fraction on the right</strong>, since <span class="math inline">\((E+D)/E = 1 + D/E\)</span>: <span class="math display">\[R^{L}_{E} + \frac{D}{E}\, R_{D} = R^{U}_{E} + \frac{D}{E}\, R^{U}_{E}\]</span></p></li>
+<li><p><strong>(c) Subtract <span class="math inline">\(\frac{D}{E} R_{D}\)</span> from both sides</strong>, so <span class="math inline">\(R^{L}_{E}\)</span> is alone on the left: <span class="math display">\[R^{L}_{E} = R^{U}_{E} + \frac{D}{E}\, R^{U}_{E} - \frac{D}{E}\, R_{D}\]</span></p></li>
+</ul>
+</section>
+<section id="step-3-cont-solve-for-the-return-of-equity" class="slide level2 smaller">
+<h2>Step 3 (con’t): solve for the return of equity</h2>
+<ul>
+<li><p><strong>(d) Factor out <span class="math inline">\(D/E\)</span></strong> from the last two terms: <span class="math display">\[R^{L}_{E} = R^{U}_{E} + \frac{D}{E}\,\big(R^{U}_{E} - R_{D}\big)\]</span></p></li>
+<li><p>The return on levered equity is the return without leverage <strong>plus an extra kick</strong>. It is the extra return levered shareholders require because of leverage. The size of the kick is <span class="math inline">\(D/E\)</span>.</p></li>
+<li><p>Assuming everything constant, what we move with capital structure is the <span class="math inline">\(D/E\)</span>.</p></li>
 <li><p>The equation holds for realised returns, so it holds for <strong>expected</strong> returns too. Replace <span class="math inline">\(R\)</span> by <span class="math inline">\(r\)</span>:</p></li>
 </ul>
 <div class="box box-a">
-<p><strong>MM Proposition II</strong> (Chap. 14.3): <span class="math inline">\(\;r_{E} = r_{U} + \dfrac{D}{E}\,(r_{U} - r_{D})\)</span>. The cost of levered equity increases with the market-value debt-to-equity ratio.</p>
+<p><strong>MM Proposition II</strong>: <span class="math inline">\(\;r^{L}_{E} = r^{U}_{E} + \dfrac{D}{E}\,(r^{U}_{E} - r_{D})\)</span>. The cost of levered equity increases with the market-value debt-to-equity ratio.</p>
 </div>
 </section>
-<section id="mm-ii-with-the-entrepreneurs-numbers" class="slide level2 smaller">
-<h2>MM II with the entrepreneur’s numbers</h2>
+<section id="apply-it-to-tour-moche-sa-the-portfolio-of-step-2" class="slide level2 smaller">
+<h2>Apply it to Tour moche SA: the portfolio of Step 2</h2>
 <ul>
-<li><p>Unlevered cost of capital <span class="math inline">\(r_{U} = 15\%\)</span>, debt cost <span class="math inline">\(r_{D} = 5\%\)</span>.</p>
+<li><p>From Lecture 7: debt 500 and levered equity 500, so weights one half each.</p>
 <table class="caption-top">
 <colgroup>
-<col style="width: 10%">
+<col style="width: 20%">
 <col style="width: 13%">
-<col style="width: 7%">
-<col style="width: 51%">
-<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 20%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Security</th>
+<th style="text-align: center;">Today</th>
+<th style="text-align: center;">Strong</th>
+<th style="text-align: center;">Weak</th>
+<th style="text-align: center;">Return strong</th>
+<th style="text-align: center;">Return weak</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Debt</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">525</td>
+<td style="text-align: center;">525</td>
+<td style="text-align: center;"><span class="math inline">\(+5\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(+5\%\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Equity</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">875</td>
+<td style="text-align: center;">375</td>
+<td style="text-align: center;"><span class="math inline">\(+75\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-25\%\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Portfolio</strong></td>
+<td style="text-align: center;"><strong>1000</strong></td>
+<td style="text-align: center;"><strong>1400</strong></td>
+<td style="text-align: center;"><strong>900</strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(+40\%\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="math inline">\(-10\%\)</span></strong></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>The portfolio return is the weighted average of the two rows above it:</p>
+<ul>
+<li><p>strong economy: <span class="math inline">\(0.5 \times 5\% + 0.5 \times 75\% = 40\%\)</span></p></li>
+<li><p>weak economy: <span class="math inline">\(0.5 \times 5\% + 0.5 \times (-25\%) = -10\%\)</span></p></li>
+</ul></li>
+<li><p><span class="math inline">\(+40\%\)</span> / <span class="math inline">\(-10\%\)</span> are the returns of the <strong>unlevered</strong> equity in Lecture 7 (pay 1000, receive 1400 or 900). Step 2 holds with real numbers.</p></li>
+</ul>
+</section>
+<section id="apply-it-to-tour-moche-sa-cont-mm-ii" class="slide level2 smaller">
+<h2>Apply it to Tour moche SA (con’t): MM II</h2>
+<ul>
+<li><p>Unlevered cost of capital <span class="math inline">\(r^{U}_{E} = 15\%\)</span>, debt cost <span class="math inline">\(r_{D} = 5\%\)</span>.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 15%">
+<col style="width: 9%">
+<col style="width: 61%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Debt <span class="math inline">\(D\)</span></th>
 <th style="text-align: center;">Equity <span class="math inline">\(E\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(D/E\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(r_{E} = r_{U} + \frac{D}{E}(r_{U} - r_{D})\)</span></th>
-<th style="text-align: center;">Lecture 7 said</th>
+<th style="text-align: center;"><span class="math inline">\(r^{L}_{E} = r^{U}_{E} + \frac{D}{E}(r^{U}_{E} - r_{D})\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1422,25 +1483,22 @@ Camilo Saldarriaga
 <td style="text-align: center;">500</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;"><span class="math inline">\(15\% + 1 \times (15\% - 5\%) = 25\%\)</span></td>
-<td style="text-align: center;">25%</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">200</td>
 <td style="text-align: center;">800</td>
 <td style="text-align: center;">0.25</td>
 <td style="text-align: center;"><span class="math inline">\(15\% + 0.25 \times (15\% - 5\%) = 17.5\%\)</span></td>
-<td style="text-align: center;">17.5%</td>
 </tr>
 </tbody>
 </table></li>
-<li><p>Both numbers match what we found last week by looking at the cash flows state by state. Now we have them <strong>without</strong> listing the states.</p></li>
-<li><p>The formula also says what happens at <strong>any</strong> level of debt: with 750 of debt (<span class="math inline">\(D/E = 3\)</span>), <span class="math inline">\(r_{E} = 15\% + 3 \times 10\% = 45\%\)</span>, the quiz answer of Lecture 7.</p></li>
+<li><p>The formula also says what happens at <strong>any</strong> level of debt: with 750 of debt (<span class="math inline">\(D/E = 3\)</span>), <span class="math inline">\(r^{L}_{E} = 15\% + 3 \times 10\% = 45\%\)</span>.</p></li>
 </ul>
 </section>
-<section id="b.-the-wacc-does-not-move-the-answer-first" class="slide level2 smaller">
-<h2>B. The WACC does not move: the answer first</h2>
+<section id="b.-the-wacc-does-not-move." class="slide level2 smaller">
+<h2>B. The WACC does not move.</h2>
 <div class="box box-a">
-<p><strong>The answer first.</strong> In a perfect market the weighted average cost of capital is the unlevered cost of capital, whatever the mix (Chap. 14.3): <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r_{E} + \frac{D}{E+D}\, r_{D} = r_{U} = r_{A}\]</span></p>
+<p>In a perfect market the weighted average cost of capital is the unlevered cost of capital, whatever the mix: <span class="math display">\[r_{WACC} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D} = r^{U}_{E}\]</span></p>
 </div>
 <ul>
 <li><p>This is Step 2 read with expected returns: the portfolio of all the firm’s securities has the risk of the assets, so it earns the return of the assets.</p></li>
@@ -1464,9 +1522,9 @@ Camilo Saldarriaga
 <tr class="header">
 <th style="text-align: center;"><span class="math inline">\(E\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(D\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(r_{E}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(r^{L}_{E}\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(r_{D}\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(r_{WACC} = \frac{E}{E+D} r_{E} + \frac{D}{E+D} r_{D}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(r_{WACC} = \frac{E}{E+D} r^{L}_{E} + \frac{D}{E+D} r_{D}\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1523,10 +1581,10 @@ Camilo Saldarriaga
 <h2>Example: NRG reduces its leverage</h2>
 <ul>
 <li><p><strong>Example 14.5.</strong> NRG Energy has a debt-to-equity ratio of 2, a debt cost of 6% and an equity cost of 12%. With <span class="math inline">\(D/E = 2\)</span>, debt is two thirds of the firm and equity one third.</p></li>
-<li><p><strong>Unlevered cost of capital</strong> (and WACC): <span class="math display">\[r_{U} = \tfrac{1}{3} \times 12\% + \tfrac{2}{3} \times 6\% = 8\%.\]</span></p></li>
-<li><p>NRG issues equity to repay debt until <span class="math inline">\(D/E = 1\)</span>. Safer debt now costs 5.5%. <strong>New cost of equity</strong>: <span class="math inline">\(r_{E} = 8\% + 1 \times (8\% - 5.5\%) = 10.5\%\)</span>.</p></li>
+<li><p><strong>Unlevered cost of capital</strong> (and WACC): <span class="math display">\[r^{U}_{E} = \tfrac{1}{3} \times 12\% + \tfrac{2}{3} \times 6\% = 8\%.\]</span></p></li>
+<li><p>NRG issues equity to repay debt until <span class="math inline">\(D/E = 1\)</span>. Safer debt now costs 5.5%. <strong>New cost of equity</strong>: <span class="math inline">\(r^{L}_{E} = 8\% + 1 \times (8\% - 5.5\%) = 10.5\%\)</span>.</p></li>
 <li><p><strong>New WACC</strong>: <span class="math inline">\(0.5 \times 10.5\% + 0.5 \times 5.5\% = 8\%\)</span>. Unchanged.</p></li>
-<li><p>If NRG repaid all its debt, its equity would cost <span class="math inline">\(r_{U} = 8\%\)</span>: the WACC again.</p></li>
+<li><p>If NRG repaid all its debt, its equity would cost <span class="math inline">\(r^{U}_{E} = 8\%\)</span>: the WACC again.</p></li>
 </ul>
 <div class="box box-a">
 <p>Less leverage: cheaper equity, dearer average? No. The WACC, the cash flows and therefore the <strong>enterprise value</strong> are the same in all three cases.</p>
@@ -1548,33 +1606,33 @@ Camilo Saldarriaga
 <section id="c.-levered-and-unlevered-betas" class="slide level2 smaller">
 <h2>C. Levered and unlevered betas</h2>
 <div class="box box-a">
-<p><strong>The answer first.</strong> Betas obey the same rule as expected returns (Chap. 14.3): <span class="math display">\[\beta_{U} = \frac{E}{E+D}\, \beta_{E} + \frac{D}{E+D}\, \beta_{D}
+<p><strong>The answer first.</strong> Betas obey the same rule as expected returns (Chap. 14.3): <span class="math display">\[\beta^{U}_{E} = \frac{E}{E+D}\, \beta^{L}_{E} + \frac{D}{E+D}\, \beta_{D}
 \qquad\qquad
-\beta_{E} = \beta_{U} + \frac{D}{E}\,\big(\beta_{U} - \beta_{D}\big)\]</span></p>
+\beta^{L}_{E} = \beta^{U}_{E} + \frac{D}{E}\,\big(\beta^{U}_{E} - \beta_{D}\big)\]</span></p>
 </div>
 <ul>
-<li><p><span class="math inline">\(\beta_{U}\)</span> is the <strong>unlevered</strong> (or asset) beta: the market risk of the business, as if it had no debt. <span class="math inline">\(\beta_{E}\)</span> is the <strong>levered</strong> (or equity) beta: business risk plus the risk added by leverage. <span class="math inline">\(\beta_{D}\)</span> is the debt beta.</p></li>
+<li><p><span class="math inline">\(\beta^{U}_{E}\)</span> is the <strong>unlevered</strong> (or asset) beta: the market risk of the business, as if it had no debt. <span class="math inline">\(\beta^{L}_{E}\)</span> is the <strong>levered</strong> (or equity) beta: business risk plus the risk added by leverage. <span class="math inline">\(\beta_{D}\)</span> is the debt beta.</p></li>
 <li><p>Why the same rule? The beta of a portfolio is the weighted average of the betas in it (Lecture 4), and the portfolio of all the firm’s securities has the risk of the assets.</p></li>
-<li><p>When a firm changes its capital structure without changing its investments, <strong><span class="math inline">\(\beta_{U}\)</span> stays put and <span class="math inline">\(\beta_{E}\)</span> moves.</strong></p></li>
+<li><p>When a firm changes its capital structure without changing its investments, <strong><span class="math inline">\(\beta^{U}_{E}\)</span> stays put and <span class="math inline">\(\beta^{L}_{E}\)</span> moves.</strong></p></li>
 </ul>
 </section>
 <section id="if-the-debt-is-risk-free" class="slide level2 smaller">
 <h2>If the debt is risk free</h2>
 <ul>
-<li><p>With risk-free debt, <span class="math inline">\(\beta_{D} = 0\)</span> and the second formula simplifies to <span class="math display">\[\beta_{E} = \beta_{U} \times \frac{E + D}{E} = \beta_{U}\,\Big(1 + \frac{D}{E}\Big).\]</span></p></li>
-<li><p>Intuition: each euro of equity controls <span class="math inline">\((E+D)/E\)</span> euros of assets, so it carries that many times the business risk.</p></li>
+<li><p>With risk-free debt, <span class="math inline">\(\beta_{D} = 0\)</span> and the second formula simplifies to <span class="math display">\[\beta^{L}_{E} = \beta^{U}_{E} \times \frac{E + D}{E} = \beta^{U}_{E}\,\Big(1 + \frac{D}{E}\Big).\]</span></p></li>
+<li><p>Intuition: each euro of equity controls <span class="math inline">\((E+D)/E\)</span> euros of assets, and carries that many times the business risk.</p></li>
 <li><p><strong>Example.</strong> A firm with a debt-to-equity ratio of 2 has an equity beta of 1.7 and risk-free debt. Its asset beta is <span class="math inline">\(1.7 / (1 + 2) = 0.57\)</span>.</p></li>
 <li><p>A firm in the same industry with a debt ratio <span class="math inline">\(D/(D+E) = 0.5\)</span>, that is <span class="math inline">\(D/E = 1\)</span>, would have an equity beta of <span class="math inline">\(0.57 \times (1 + 1) = 1.13\)</span>.</p></li>
-<li><p>The relation between leverage and equity betas is due to Hamada (<em>Journal of Finance</em>, 1972).</p></li>
+<li><p>Reference: Hamada, “Portfolio analysis, market equilibrium and corporation finance”, <em>Journal of Finance</em>, 1969.</p></li>
 </ul>
 </section>
 <section id="example-cvs-raises-its-leverage" class="slide level2 smaller">
 <h2>Example: CVS raises its leverage</h2>
 <ul>
 <li><p><strong>Example 14.7.</strong> The drug retailer CVS has an equity beta of 0.8 and a debt-to-equity ratio of 0.1. Its debt beta is zero.</p></li>
-<li><p><strong>Unlever</strong>: equity is <span class="math inline">\(1/1.1\)</span> of the firm, so <span class="math display">\[\beta_{U} = \frac{1}{1.1} \times 0.8 + \frac{0.1}{1.1} \times 0 = 0.73.\]</span></p></li>
-<li><p>CVS borrows until <span class="math inline">\(D/E = 0.5\)</span>, with the debt still risk free. <strong>Relever</strong>: <span class="math display">\[\beta_{E} = 0.73 + 0.5 \times (0.73 - 0) = 1.09.\]</span></p></li>
-<li><p>The equity beta, and with it the cost of equity, rises with leverage. If the debt had taken on some market risk (<span class="math inline">\(\beta_{D} &gt; 0\)</span>), the equity would bear less of it and <span class="math inline">\(\beta_{E}\)</span> would rise by less.</p></li>
+<li><p><strong>Unlever</strong>: equity is <span class="math inline">\(1/1.1\)</span> of the firm, so <span class="math display">\[\beta^{U}_{E} = \frac{1}{1.1} \times 0.8 + \frac{0.1}{1.1} \times 0 = 0.73.\]</span></p></li>
+<li><p>CVS borrows until <span class="math inline">\(D/E = 0.5\)</span>, with the debt still risk free. <strong>Relever</strong>: <span class="math display">\[\beta^{L}_{E} = 0.73 + 0.5 \times (0.73 - 0) = 1.09.\]</span></p></li>
+<li><p>The equity beta, and with it the cost of equity, rises with leverage. If the debt had taken on some market risk (<span class="math inline">\(\beta_{D} &gt; 0\)</span>), the equity would bear less of it and <span class="math inline">\(\beta^{L}_{E}\)</span> would rise by less.</p></li>
 </ul>
 </section>
 <section id="cash-as-negative-debt" class="slide level2 smaller">
@@ -1583,7 +1641,7 @@ Camilo Saldarriaga
 <li><p>Cash and risk-free securities on the balance sheet are the opposite of leverage: they make the equity <strong>safer</strong> than the business. Measure leverage with <strong>net debt</strong> <span class="math inline">\(=\)</span> debt <span class="math inline">\(-\)</span> cash.</p></li>
 <li><p><strong>Example 14.8.</strong> Cisco, March 2022: market capitalisation 230 billion, debt 12 billion, cash 25 billion, equity beta 0.95, debt beta about zero.</p></li>
 <li><p>Net debt <span class="math inline">\(12 - 25 = -13\)</span> billion. Enterprise value <span class="math inline">\(230 - 13 = 217\)</span> billion.</p></li>
-<li><p>Unlevered beta, using net debt in place of <span class="math inline">\(D\)</span>: <span class="math display">\[\beta_{U} = \frac{230}{217} \times 0.95 + \frac{-13}{217} \times 0 = 1.01.\]</span></p></li>
+<li><p>Unlevered beta, using net debt in place of <span class="math inline">\(D\)</span>: <span class="math display">\[\beta^{U}_{E} = \frac{230}{217} \times 0.95 + \frac{-13}{217} \times 0 = 1.01.\]</span></p></li>
 <li><p>With a risk-free rate of 2.75% and a market risk premium of 5%, the cost of capital of Cisco’s business is <span class="math inline">\(2.75\% + 1.01 \times 5\% = 7.8\%\)</span>. Because of its cash, Cisco’s shares are <strong>less</strong> risky than its business.</p></li>
 </ul>
 </section>
@@ -1618,7 +1676,7 @@ Camilo Saldarriaga
 <th style="text-align: left;">Firm</th>
 <th style="text-align: center;">Equity beta</th>
 <th style="text-align: center;"><span class="math inline">\(D/E\)</span></th>
-<th style="text-align: center;">Asset beta <span class="math inline">\(= \beta_{E} / (1 + D/E)\)</span></th>
+<th style="text-align: center;">Asset beta <span class="math inline">\(= \beta^{L}_{E} / (1 + D/E)\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1655,7 +1713,7 @@ Camilo Saldarriaga
 </tbody>
 </table></li>
 <li><p>Firm P is not listed, operates in the same industry and has <span class="math inline">\(D/E = 0.2\)</span>. What is its equity beta?</p></li>
-<li><p>Relever the average: <span class="math inline">\(\beta_{E} = 0.960 \times (1 + 0.2) = 1.15\)</span>.</p></li>
+<li><p>Relever the average: <span class="math inline">\(\beta^{L}_{E} = 0.960 \times (1 + 0.2) = 1.15\)</span>.</p></li>
 </ul>
 </section>
 <section id="d.-fallacy-1-leverage-raises-eps" class="slide level2 smaller">
@@ -1687,8 +1745,8 @@ Camilo Saldarriaga
 <section id="step-2-the-price-does-not-change" class="slide level2 smaller">
 <h2>Step 2: the price does not change</h2>
 <ul>
-<li><p><strong>Example 14.9.</strong> Suppose LVI’s EBIT does not grow and all earnings are paid out. The shares are then a perpetuity, and the price tells us the unlevered cost of capital: <span class="math display">\[7.50 = \frac{1.00}{r_{U}} \qquad \Rightarrow \qquad r_{U} = 13.33\%.\]</span></p></li>
-<li><p>After the recap, equity is worth <span class="math inline">\(75 - 15 = 60\)</span> million (MM I), so <span class="math inline">\(D/E = 15/60 = 0.25\)</span>. By MM II, <span class="math display">\[r_{E} = 13.33\% + 0.25 \times (13.33\% - 8\%) = 14.66\%.\]</span></p></li>
+<li><p><strong>Example 14.9.</strong> Suppose LVI’s EBIT does not grow and all earnings are paid out. The shares are then a perpetuity, and the price tells us the unlevered cost of capital: <span class="math display">\[7.50 = \frac{1.00}{r^{U}_{E}} \qquad \Rightarrow \qquad r^{U}_{E} = 13.33\%.\]</span></p></li>
+<li><p>After the recap, equity is worth <span class="math inline">\(75 - 15 = 60\)</span> million (MM I), so <span class="math inline">\(D/E = 15/60 = 0.25\)</span>. By MM II, <span class="math display">\[r^{L}_{E} = 13.33\% + 0.25 \times (13.33\% - 8\%) = 14.66\%.\]</span></p></li>
 <li><p>Price per share with the new EPS and the new required return: <span class="math display">\[P = \frac{1.10}{14.66\%} = 7.50.\]</span></p></li>
 </ul>
 <div class="box box-a">
@@ -1699,18 +1757,21 @@ Camilo Saldarriaga
 <h2>Aside: banks and the ROE fallacy</h2>
 <ul>
 <li><p>Banks are extremely levered: international rules allow common equity to be as little as <strong>3%</strong> of total funding (Basel III), against more than 50% for a typical non-financial firm. With such a thin cushion, a small drop in asset values means insolvency: a key ingredient of the 2008 crisis.</p></li>
-<li><p>When regulators asked for more equity, bankers (Ackermann, slide 13) replied that it would lower their <strong>return on equity</strong> and make bank shares unattractive.</p></li>
+<li><p>When regulators asked for more equity, bankers (Ackermann, slide 12) replied that it would lower their <strong>return on equity</strong> and make bank shares unattractive.</p></li>
 <li><p>MM: lower leverage lowers the <strong>average</strong> ROE and lowers its <strong>risk</strong> by the same token. In a perfect market, shareholders are no worse off.</p></li>
 <li><p>Bank leverage is attractive only because of imperfections, mostly government guarantees. The gains come largely at the taxpayer’s expense.</p></li>
 </ul>
 </section>
 <section id="fallacy-2-issuing-equity-dilutes" class="slide level2 smaller">
 <h2>Fallacy 2: issuing equity dilutes</h2>
+<ul>
+<li><strong>Dilution</strong>: an increase in the number of shares that will divide a fixed amount of earnings. An equity issue usually dilutes EPS, so it is argued (wrongly) that it dilutes existing shareholders and debt should be used instead.</li>
+</ul>
 <div class="box box-a">
-<p><strong>The answer first.</strong> Selling new shares at a fair price does not dilute value: the cash raised adds to the assets exactly as much as the new shares add to the share count.</p>
+<p><strong>The answer first.</strong> Selling new shares at a fair price does not dilute <strong>value</strong>: the cash raised adds to the assets as much as the new shares add to the share count.</p>
 </div>
 <ul>
-<li><p><strong>Jet Sky Airlines</strong>: no debt, 500 million shares at 16: worth 8 billion, expansion included. It needs 1 billion of planes and sells <strong>62.5 million new shares at 16</strong>.</p>
+<li><p><strong>Jet Sky Airlines</strong>: no debt, 500 million shares at 16, worth 8 billion. It needs 1 billion of planes and sells <strong>62.5 million new shares at 16</strong>.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1865,7 +1926,7 @@ Camilo Saldarriaga
 <h2>How it all connects</h2>
 <ol type="1">
 <li><p><strong>MM I as an equation</strong>: <span class="math inline">\(E + D = U = A\)</span>. Holding all the debt and all the equity is holding the business.</p></li>
-<li><p><strong>The return of that portfolio</strong> is the return of the business, so solving for the equity return gives <strong>MM II</strong>: <span class="math inline">\(r_{E}\)</span> rises with <span class="math inline">\(D/E\)</span>.</p></li>
+<li><p><strong>The return of that portfolio</strong> is the return of the business, so solving for the equity return gives <strong>MM II</strong>: <span class="math inline">\(r^{L}_{E}\)</span> rises with <span class="math inline">\(D/E\)</span>.</p></li>
 <li><p><strong>The WACC is flat</strong> at the unlevered cost of capital: the saving on cheap debt is returned through dearer equity. Enterprise value does not depend on financing.</p></li>
 <li><p><strong>Betas follow the same rule.</strong> Unlever comparables before averaging, relever to the target; treat cash as negative debt.</p></li>
 <li><p><strong>EPS, ROE and P/E rise or fall with leverage</strong> only as compensation for risk; selling shares at a fair price dilutes nothing.</p></li>
@@ -1875,10 +1936,10 @@ Camilo Saldarriaga
 <section id="what-to-remember" class="slide level2 smaller">
 <h2>What to remember</h2>
 <ul>
-<li><p><strong>MM II</strong>: <span class="math inline">\(r_{E} = r_{U} + \frac{D}{E}(r_{U} - r_{D})\)</span>. Debt is cheaper than equity, but leverage raises the cost of equity, even with risk-free debt.</p></li>
+<li><p><strong>MM II</strong>: <span class="math inline">\(r^{L}_{E} = r^{U}_{E} + \frac{D}{E}(r^{U}_{E} - r_{D})\)</span>. Debt is cheaper than equity, but leverage raises the cost of equity, even with risk-free debt.</p></li>
 <li><p><strong>Without taxes, the WACC equals the unlevered cost of capital</strong>, whatever the capital structure. Leverage does not lower the discount rate for the firm’s projects.</p></li>
-<li><p><strong>Same formulas with betas</strong>: <span class="math inline">\(\beta_{E} = \beta_{U} + \frac{D}{E}(\beta_{U} -
-\beta_{D})\)</span>; with risk-free debt, <span class="math inline">\(\beta_{E} = \beta_{U}(1 + D/E)\)</span>.</p></li>
+<li><p><strong>Same formulas with betas</strong>: <span class="math inline">\(\beta^{L}_{E} = \beta^{U}_{E} + \frac{D}{E}(\beta^{U}_{E} -
+\beta_{D})\)</span>; with risk-free debt, <span class="math inline">\(\beta^{L}_{E} = \beta^{U}_{E}(1 + D/E)\)</span>.</p></li>
 <li><p><strong>Unlever before you average</strong> comparables, and use net debt.</p></li>
 <li><p><strong>EPS, P/E and ROE are not comparable</strong> across capital structures. Fair-price equity issues do not dilute value.</p></li>
 <li><p><strong>Value comes from investments.</strong> Financing matters only through frictions.</p></li>
@@ -1898,7 +1959,7 @@ Camilo Saldarriaga
 <ul>
 <li><p><strong>Debt is cheaper</strong> because lenders are paid first and carry little of the business risk. The equity carries the rest, so it must be dearer.</p></li>
 <li><p><strong>The WACC does not fall</strong> because every euro of cheap debt makes the remaining equity riskier. By MM II the cost of equity rises by exactly enough to keep the weighted average at the unlevered cost of capital.</p></li>
-<li><p><strong>Equity beta.</strong> Debt is 50% of the assets, so <span class="math inline">\(D/E = 1\)</span> and <span class="math inline">\(\beta_{E} = \beta_{U}(1 + D/E) = 1 \times (1 + 1) = 2\)</span>.</p></li>
+<li><p><strong>Equity beta.</strong> Debt is 50% of the assets, so <span class="math inline">\(D/E = 1\)</span> and <span class="math inline">\(\beta^{L}_{E} = \beta^{U}_{E}(1 + D/E) = 1 \times (1 + 1) = 2\)</span>.</p></li>
 <li><p><strong>LVI.</strong> The required return on equity rose from 13.33% to 14.66% along with the EPS, because the EPS became riskier. <span class="math inline">\(1.10 / 14.66\% = 7.50\)</span>: the two effects cancel.</p></li>
 </ul>
 

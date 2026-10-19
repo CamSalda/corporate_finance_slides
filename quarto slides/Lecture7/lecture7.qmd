@@ -36,22 +36,6 @@ Recap lecture 6
 \vfill
 ```
 
-## Recap of Lecture 6 {.smaller}
-
-Let's do a recap:
-
-- The investment decision: expected return against cost of capital
-
-- Projects are financed with equity, debt, or a mix of the two
-
-- The cost of equity: the CAPM formula and each of its components
-
-- The cost of debt: yield versus expected return, and the debt beta
-
-- A project's cost of capital: comparables with and without debt, unlevering
-
-- The weighted average cost of capital (WACC)
-
 ## Recap: the investment decision {.smaller}
 
 ::: {.box .box-a}
@@ -704,7 +688,7 @@ the can't have different firm value.
 
 - Suppose **U sells for 1050** while L's debt and shares sell for
   $500 + 500 = 1000$. An investor who owns U's shares **undoes** L's leverage
-  (slide 41): he sells U and buys all of L's debt and all of L's shares.
+  (slide 40): he sells U and buys all of L's debt and all of L's shares.
 
   | Trade                 | Year 0     | Strong     | Weak      |
   |:----------------------|:----------:|:----------:|:---------:|
@@ -723,7 +707,7 @@ the can't have different firm value.
 
 - Now suppose **U sells for 990** while L's shares sell for 510, so
   $V_L = 500 + 510 = 1010$. An investor who owns L's shares **makes his own
-  leverage** (slide 40): he sells L's shares, borrows 500 himself and buys U.
+  leverage** (slide 39): he sells L's shares, borrows 500 himself and buys U.
 
   | Trade                 | Year 0     | Strong     | Weak      |
   |:----------------------|:----------:|:----------:|:---------:|

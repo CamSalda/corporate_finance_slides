@@ -34,20 +34,6 @@ Recap lecture 5
 \vfill
 ```
 
-## Recap of Lecture 5 {.smaller}
-
-Let's do a recap:
-
-- Alpha, and what "beating the market" means
-
-- Every buyer needs a seller: the average investor has an alpha of zero
-
-- Investors' mistakes, and fund managers' fees
-
-- Size, value and momentum: patterns the CAPM misses
-
-- Why the CAPM stays the standard anyway
-
 ## Recap: the CAPM and the alpha {.smaller}
 
 - The **CAPM** (Lecture 4) gives the return a stock must pay for its beta, the

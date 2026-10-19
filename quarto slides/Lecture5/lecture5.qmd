@@ -34,25 +34,6 @@ Recap lecture 4
 \vfill
 ```
 
-## Recap of Lecture 4 {.smaller}
-
-Let's do a recap:
-
-- The capital market line
-
-- Is a stock worth adding to the portfolio?
-
-- The CAPM assumptions
-
-- How the assumptions take us from the tangency portfolio to the market
-  portfolio
-
-- From the required return to the CAPM
-
-- The CAPM and how to read it
-
-- The security market line
-
 ## Recap: the capital market line {.smaller .shrink}
 
 :::: {.columns}
