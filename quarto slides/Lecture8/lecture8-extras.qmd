@@ -86,12 +86,9 @@ swings both grow.
 ![](etf_annual.png){fig-align="center" height="255"}
 :::
 
-- 2024: SPY $+24.9\%$, SSO $+43.5\%$, UPRO $+63.6\%$. 2022: $-18.2\%$,
-  $-39.0\%$, $-56.8\%$. In 2020 UPRO made $+10\%$ against $+18\%$ for SPY:
-  the March crash plus the daily reset.
-
 ::: {.tiny}
-Total returns, dividends reinvested, calendar years. Source: totalrealreturns.com, read 16 October 2026.
+Source: annual total returns, dividends reinvested, calendar years, from
+totalrealreturns.com/n/SPY,SSO,UPRO, read 16 October 2026. Chart by the author.
 :::
 
 ## Recent returns (con't): the long run {.smaller .shrink}
@@ -103,5 +100,11 @@ Total returns, dividends reinvested, calendar years. Source: totalrealreturns.co
 - Over a long bull market the leveraged funds won by a wide margin. The price:
   in March 2020 SPY fell 34% from its peak, SSO 59% and UPRO 77%.
 
-- Nothing here contradicts Lecture 7: more leverage, more expected return
+- More leverage, more expected return
   **and** more risk. The fund creates no value; it repackages risk.
+
+::: {.tiny}
+Source: growth of 100 compounded from the annual total returns, and maximum
+drawdowns, from totalrealreturns.com/n/SPY,SSO,UPRO, read 16 October 2026.
+Chart by the author.
+:::

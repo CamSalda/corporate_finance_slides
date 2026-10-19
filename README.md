@@ -1,7 +1,7 @@
 # Corporate Finance slides
 
 Quarto slide decks for the Corporate Finance course, ESCP Business School (Camilo Saldarriaga,
-2025/2026). Migrated from the original beamer decks in `../slides/`.
+2026/2027). Migrated from the original beamer decks in `../slides/`.
 
 Each deck renders to two formats: a reveal.js HTML deck for teaching and a beamer PDF for
 handouts.
