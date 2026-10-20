@@ -247,7 +247,7 @@ F.  So, do we keep the CAPM? (Chap. 13.8)
 ## A. Beating the market: the alpha {.smaller}
 
 ::: {.box .box-a}
-**The answer first.** To beat the market you need stocks that pay more than the
+To beat the market you need stocks that pay more than the
 CAPM says they must. Competition between investors leaves few of them, and not
 for long.
 :::

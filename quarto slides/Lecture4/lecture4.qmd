@@ -283,7 +283,7 @@ B.  From the tangency portfolio to the market portfolio (Chap. 11.7)
 
 C.  The CAPM, and how to read it (Chap. 11.8)
 
-## A. Required returns: the answer first {.smaller}
+## A. Required returns {.smaller}
 
 - Last class we met the **Sharpe ratio**: the extra return we get for every
   unit of risk we take. Today we use it to decide whether an asset is **worth

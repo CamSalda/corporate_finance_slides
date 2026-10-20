@@ -411,15 +411,12 @@ is the unlevered cost of capital, whatever the mix:
 $$r_{WACC} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D} = r^{U}_{E}$$
 :::
 
-- This is Step 2 read with expected returns: the portfolio of all the firm's
-  securities has the risk of the assets, so it earns the return of the assets.
+- If the WACC is the same no matter the capital structure, we can take the simplest
+case as baseline value: 100% equity.
 
-- In Lecture 6 we called this the **pre-tax WACC**, and the WACC had a
-  $(1 - \tau_{C})$ on the debt term. Here there are no taxes, so the two
-  coincide.
 
-- Consequence: the enterprise value is the free cash flow discounted at the
-  WACC (Chap. 9). The cash flows do not depend on financing, and neither does
+- Consequence: We can use the WACC as discount rate with any capital structure.
+ The cash flows do not depend on financing, and neither does
   the WACC, so **neither does the value of the firm**. That is MM I again.
 
 ## The WACC at four debt levels {.smaller}
@@ -453,7 +450,7 @@ $^*$ With 900 of debt the firm defaults in the weak state: lenders are promised
 
 ## Example: NRG reduces its leverage {.smaller}
 
-- **Example 14.5.** NRG Energy has a debt-to-equity ratio of 2, a debt cost of
+- **Example.** NRG Energy has a debt-to-equity ratio of 2, a debt cost of
   6% and an equity cost of 12%. With $D/E = 2$, debt is two thirds of the firm
   and equity one third.
 
@@ -473,31 +470,22 @@ Less leverage: cheaper equity, dearer average? No. The WACC, the cash flows and
 therefore the **enterprise value** are the same in all three cases.
 :::
 
-## Back to EBS: is debt better than equity? {.smaller}
+## C. Capital structure and betas {.smaller}
 
-- Dan Harris can raise the 50 million at 15% (equity) or 6% (debt). With
-  perfect capital markets:
+- We saw that the WACC does not change with the capital structure. The
+cost of equity increases but it is compensated by a greater share of cheaper debt.
+For the betas it is the same.
 
-  - borrowing at 6% raises the cost of equity above 15%, by MM II;
+- Beta is a measure of risk exposure. Changing the capital structure moves
+ risk between lenders and shareholders, it does not create or destroy it.
 
-  - the **WACC does not change**, so the NPV of the expansion does not change;
+- So the firm betas don't change with capital structure, what changes is the
+equity beta.
 
-  - the value of the firm and its share price do not depend on the choice.
-
-- A tempting objection: "if the debt is risk free, there is no chance of
-  default, so the risk of equity does not change". **Wrong**: the entrepreneur's
-  debt was risk free and the equity still went from 15% to 25%. Leverage
-  concentrates the **business** risk on fewer euros of equity.
-
-- The same holds with any number of securities. **Example 14.6**: 440 of equity
-  at 18.18%, 500 of debt at 5% and 60 of warrants at 75% give
-  $0.44 \times 18.18\% + 0.5 \times 5\% + 0.06 \times 75\% = 15\%$.
-
-## C. Levered and unlevered betas {.smaller}
+## C. Equity beta: levered and unlevered. {.smaller}
 
 ::: {.box .box-a}
-**The answer first.** Betas obey the same rule as expected returns
-(Chap. 14.3):
+Unlevered Betas follow the same formula:
 $$\beta^{U}_{E} = \frac{E}{E+D}\, \beta^{L}_{E} + \frac{D}{E+D}\, \beta_{D}
 \qquad\qquad
 \beta^{L}_{E} = \beta^{U}_{E} + \frac{D}{E}\,\big(\beta^{U}_{E} - \beta_{D}\big)$$
@@ -509,43 +497,127 @@ $$\beta^{U}_{E} = \frac{E}{E+D}\, \beta^{L}_{E} + \frac{D}{E+D}\, \beta_{D}
   beta.
 
 - Why the same rule? The beta of a portfolio is the weighted average of the
-  betas in it (Lecture 4), and the portfolio of all the firm's securities has
+  betas in it, and the portfolio of all the firm's securities has
   the risk of the assets.
 
-- When a firm changes its capital structure without changing its investments,
-  **$\beta^{U}_{E}$ stays put and $\beta^{L}_{E}$ moves.**
+## Beta and leverage: deriving the formula {.smaller}
+
+- **Step 1.** Hold all the debt and all the equity of the levered firm. This
+  portfolio receives every cash flow of the assets, so it has the same risk as
+  the **unlevered** firm: the two betas are equal.
+
+- **Step 2.** The beta of a portfolio is the weighted average of the betas of
+  what is in it (Lecture 4). The weights are the shares of debt and equity in
+  the firm's value:
+  $$\beta^{U}_{E} = \beta^{\text{Portfolio}}_{D+E}
+  = \frac{D}{D+E}\, \beta_{D} + \frac{E}{D+E}\, \beta^{L}_{E}$$
+
+- This is the first formula of the box. Next slide: solve it for the stock
+  beta to get the second one.
+
+## Beta and leverage: deriving the formula (con't) {.smaller}
+
+- **Step 3.** Solve for the stock beta $\beta^{L}_{E}$.
+
+  - **(a)** Multiply both sides by $(D+E)$:
+    $(D+E)\, \beta^{U}_{E} = D\, \beta_{D} + E\, \beta^{L}_{E}$
+
+  - **(b)** Move the debt term to the left and divide by $E$:
+    $$\beta^{L}_{E} = \frac{(D+E)\, \beta^{U}_{E} - D\, \beta_{D}}{E}$$
+
+  - **(c)** Split the fraction, using $(D+E)/E = 1 + D/E$:
+    $$\beta^{L}_{E} = \beta^{U}_{E} + \frac{D}{E}\,\big(\beta^{U}_{E} - \beta_{D}\big)$$
+
+- In words: the equity carries the business risk, minus the part the lenders
+  take, spread over the euros of equity alone.
+
 
 ## If the debt is risk free {.smaller}
 
-- With risk-free debt, $\beta_{D} = 0$ and the second formula simplifies to
-  $$\beta^{L}_{E} = \beta^{U}_{E} \times \frac{E + D}{E} = \beta^{U}_{E}\,\Big(1 + \frac{D}{E}\Big).$$
+- With risk-free debt, $\beta_{D} = 0$ and the second formula simplifies to:
+
+::: {.box .box-a}
+$$\beta^{L}_{E} = \beta^{U}_{E} \times \frac{E + D}{E} = \beta^{U}_{E}\,\Big(1 + \frac{D}{E}\Big)$$
+:::
 
 - Intuition: each euro of equity controls $(E+D)/E$ euros of assets, and
   carries that many times the business risk.
 
 - **Example.** A firm with a debt-to-equity ratio of 2 has an equity beta of
-  1.7 and risk-free debt. Its asset beta is $1.7 / (1 + 2) = 0.57$.
+  1.7 and risk-free debt. What is its asset beta? Next slide, step by step.
 
-- A firm in the same industry with a debt ratio $D/(D+E) = 0.5$, that is
-  $D/E = 1$, would have an equity beta of $0.57 \times (1 + 1) = 1.13$.
+## Example: from the equity beta to the asset beta {.smaller}
 
-- Reference: Hamada, "Portfolio analysis, market equilibrium and corporation
-  finance", *Journal of Finance*, 1969.
+- **What we know.** The stock's beta $\beta^{L}_{E} = 1.7$, the ratio $D/E = 2$,
+  and the debt is risk free, so $\beta_{D} = 0$.
+
+- **What we want.** The asset beta $\beta^{U}_{E}$: the risk of the business
+  as if it had no debt.
+
+- **Step 1.** With risk-free debt the formula is
+  $$\beta^{L}_{E} = \beta^{U}_{E}\,\Big(1 + \frac{D}{E}\Big)$$
+
+- **Step 2.** Put in the numbers: $1.7 = \beta^{U}_{E} \times (1 + 2) = 3 \times \beta^{U}_{E}$.
+
+- **Step 3.** Solve for the unknown: $\beta^{U}_{E} = 1.7 / 3 = 0.57$.
+
+- **Reading.** Each euro of equity controls 3 euros of assets, so the stock is
+  three times as risky as the business. Strip the leverage and 1.7 becomes 0.57.
+
+## Example (con't): back to an equity beta {.smaller}
+
+- **Question.** A firm in the same industry has a debt ratio $D/(D+E) = 0.5$.
+  What is the beta of its stock? (Same business, so same asset beta 0.57.)
+
+- **Step 1. Convert the debt ratio into $D/E$.** Debt is half of the firm,
+  so debt equals equity: $D = E$ and $D/E = 1$.
+
+- **Step 2.** Same formula, now solving for the stock beta:
+  $$\beta^{L}_{E} = \beta^{U}_{E}\,\Big(1 + \frac{D}{E}\Big) = 0.57 \times (1 + 1) = 1.13$$
+
+- **Reading.** This firm has less leverage than the first one ($D/E = 1$
+  instead of 2), so its stock is less risky: 1.13 instead of 1.7. It is still
+  riskier than the business itself (0.57), because it does carry some debt.
+
+- This two-way use of the formula, **unlever** then **relever**, is exactly
+  what we do next for a whole industry.
+
 
 ## Example: CVS raises its leverage {.smaller}
 
-- **Example 14.7.** The drug retailer CVS has an equity beta of 0.8 and a
+- **Example** The drug retailer CVS has an equity beta of 0.8 and a
   debt-to-equity ratio of 0.1. Its debt beta is zero.
 
-- **Unlever**: equity is $1/1.1$ of the firm, so
+- CVS plans to borrow more, raising its debt-to-equity ratio from 0.1 to 0.5,
+without changing its business and keeping its debt risk free.
+What will its equity beta be after the change?
+
+- Two steps: first **unlever** the current beta to find the beta of the
+  business, then **relever** it at the new debt-to-equity ratio.
+
+## Example: CVS raises its leverage (con't) {.smaller}
+
+- **Unlever.** The formula needs the shares of equity and debt in the firm's
+  value, $E/(E+D)$ and $D/(E+D)$, but we only know $D/E = 0.1$.
+
+- **The trick** is to measure everything in units of equity. If $D/E = 0.1$, then
+  for every 1 of equity there is 0.1 of debt, so the firm is worth
+  $1 + 0.1 = 1.1$ in those units. Then:
+
+  - equity share: $E/(E+D) = 1 / 1.1 = 0.909$
+
+  - debt share: $D/(E+D) = 0.1 / 1.1 = 0.091$
+
+- Now apply the formula:
   $$\beta^{U}_{E} = \frac{1}{1.1} \times 0.8 + \frac{0.1}{1.1} \times 0 = 0.73.$$
 
-- CVS borrows until $D/E = 0.5$, with the debt still risk free. **Relever**:
+## Example: CVS raises its leverage (con't 2) {.smaller}
+
+- CVS borrows until $D/E = 0.5$, with the debt still risk free. **Relever**,
+  using the second formula, which takes $D/E$ directly:
   $$\beta^{L}_{E} = 0.73 + 0.5 \times (0.73 - 0) = 1.09.$$
 
-- The equity beta, and with it the cost of equity, rises with leverage. If the
-  debt had taken on some market risk ($\beta_{D} > 0$), the equity would bear
-  less of it and $\beta^{L}_{E}$ would rise by less.
+- The equity beta, and with it the cost of equity, rises with leverage.
 
 ## Cash as negative debt {.smaller}
 
@@ -553,17 +625,33 @@ $$\beta^{U}_{E} = \frac{E}{E+D}\, \beta^{L}_{E} + \frac{D}{E+D}\, \beta_{D}
   leverage: they make the equity **safer** than the business. Measure leverage
   with **net debt** $=$ debt $-$ cash.
 
-- **Example 14.8.** Cisco, March 2022: market capitalisation 230 billion, debt
+- **Example** Cisco, March 2022: market capitalisation 230 billion, debt
   12 billion, cash 25 billion, equity beta 0.95, debt beta about zero.
+  Risk-free rate 2.75%, market risk premium 5%.
 
-- Net debt $12 - 25 = -13$ billion. Enterprise value $230 - 13 = 217$ billion.
+- **Question.** What is the cost of capital of Cisco's **business**, the
+  unlevered cost of capital we would use to evaluate one of its projects?
 
-- Unlevered beta, using net debt in place of $D$:
+- **Plan.** Find the net debt, then the value of the business, then unlever
+  the equity beta with net debt in place of $D$, then apply the CAPM.
+
+## Cash as negative debt (con't) {.smaller}
+
+- **Step 1, net debt.** $12 - 25 = -13$ billion: Cisco holds more cash than
+  debt, so its net debt is negative.
+
+- **Step 2, value of the business.** Equity plus net debt:
+  $230 - 13 = 217$ billion (the enterprise value).
+
+- **Step 3, unlever.** Same formula as before, with net debt in place of $D$:
   $$\beta^{U}_{E} = \frac{230}{217} \times 0.95 + \frac{-13}{217} \times 0 = 1.01.$$
 
-- With a risk-free rate of 2.75% and a market risk premium of 5%, the cost of
-  capital of Cisco's business is $2.75\% + 1.01 \times 5\% = 7.8\%$. Because of
-  its cash, Cisco's shares are **less** risky than its business.
+- **Step 4, the CAPM.** Cost of capital of the business:
+  $2.75\% + 1.01 \times 5\% = 7.8\%$.
+
+- **Reading.** The business beta (1.01) is **above** the equity beta (0.95):
+  because of its cash, Cisco's shares are **less** risky than its business.
+  Cash dilutes the business risk the way debt concentrates it.
 
 ## The cost of capital of an industry {.smaller}
 
@@ -603,65 +691,28 @@ $$\beta^{U}_{E} = \frac{E}{E+D}\, \beta^{L}_{E} + \frac{D}{E+D}\, \beta_{D}
 
 - Relever the average: $\beta^{L}_{E} = 0.960 \times (1 + 0.2) = 1.15$.
 
-## D. Fallacy 1: leverage raises EPS {.smaller}
+## D. Capital structure fallacies
 
-::: {.box .box-a}
-**The answer first.** Leverage raises **expected** earnings per share (EPS),
-but it also makes EPS riskier. The extra EPS is the pay for the extra risk, so
-the share price does not move (Chap. 14.4).
-:::
+- MM1 framework: the capital structure does not affect the value of the firm.
 
-- **Levitron Industries (LVI)**: all-equity, expected EBIT of 10 million next
-  year, 10 million shares at 7.50. No taxes, so earnings $=$ EBIT and
-  $$\text{EPS} = \frac{10}{10} = 1.00.$$
+- But, even in this framework, wrong arguments are used to argue in favor of
+  using leverage:
 
-- LVI borrows 15 million at 8% and buys back 2 million shares at 7.50.
-  Interest: $15 \times 8\% = 1.2$ million. Earnings after interest 8.8 million,
-  shared among 8 million shares:
-  $$\text{EPS} = \frac{8.8}{8} = 1.10.$$
+  1. Leverage and Earnings per Share
 
-- EPS up 10%. Shouldn't the share price go up too?
+  2. Equity issuance and dilution
 
-## Step 1: EPS in a bad year {.smaller}
+## Leverage and EPS
 
-:::: {.columns}
-::: {.column width="55%"}
-![](figure14p2.png){width="100%" style="max-height: 400px"}
-:::
+- Leverage can increase expected Earnings per Share (EPS).
 
-::: {.column width="45%"}
-::: {style="text-align: left"}
-- Suppose EBIT is only **4 million**. Without debt EPS is $4/10 = 0.40$. With
-  debt it is $(4 - 1.2)/8 = 0.35$: **lower**.
+  - Some stockholders therefore conclude that leverage should increase the
+    stock price.
 
-- The two lines cross at EBIT $= 6$ million. Below it leverage hurts; below
-  1.2 million (the interest) EPS turns negative.
+- However, the risk of earnings also changes and the average increase of EPS
+  is necessary to compensate shareholders.
 
-- The levered line is **steeper**: the same swing in EBIT gives a bigger swing
-  in EPS. Higher average, higher risk.
-:::
-:::
-::::
-
-## Step 2: the price does not change {.smaller}
-
-- **Example 14.9.** Suppose LVI's EBIT does not grow and all earnings are paid
-  out. The shares are then a perpetuity, and the price tells us the unlevered
-  cost of capital:
-  $$7.50 = \frac{1.00}{r^{U}_{E}} \qquad \Rightarrow \qquad r^{U}_{E} = 13.33\%.$$
-
-- After the recap, equity is worth $75 - 15 = 60$ million (MM I), so
-  $D/E = 15/60 = 0.25$. By MM II,
-  $$r^{L}_{E} = 13.33\% + 0.25 \times (13.33\% - 8\%) = 14.66\%.$$
-
-- Price per share with the new EPS and the new required return:
-  $$P = \frac{1.10}{14.66\%} = 7.50.$$
-
-::: {.box .box-a}
-Higher EPS, higher required return: the two cancel. EPS, the P/E ratio and the
-return on equity (ROE) all depend on leverage, so they **cannot be compared**
-across firms with different capital structures. Analysts prefer EV/EBIT.
-:::
+- In perfect capital markets, the price should not change!
 
 ## Aside: banks and the ROE fallacy {.smaller}
 
@@ -687,7 +738,7 @@ across firms with different capital structures. Analysts prefer EV/EBIT.
   (wrongly) that it dilutes existing shareholders and debt should be used instead.
 
 ::: {.box .box-a}
-**The answer first.** Selling new shares at a fair price does not dilute
+Selling new shares at a fair price does not dilute
 **value**: the cash raised adds to the assets as much as the new shares add to
 the share count.
 :::
@@ -905,9 +956,6 @@ a departure from one of its five conditions.
 - A firm without debt has a beta of 1. What is its equity beta if it takes on
   debt equal to 50% of the value of its assets? (The debt beta is zero.)
 
-- LVI's expected EPS rose from 1.00 to 1.10 after its recap. Why did the share
-  price stay at 7.50?
-
 ## Quiz: answers {.smaller}
 
 - **Debt is cheaper** because lenders are paid first and carry little of the
@@ -919,7 +967,3 @@ a departure from one of its five conditions.
 
 - **Equity beta.** Debt is 50% of the assets, so $D/E = 1$ and
   $\beta^{L}_{E} = \beta^{U}_{E}(1 + D/E) = 1 \times (1 + 1) = 2$.
-
-- **LVI.** The required return on equity rose from 13.33% to 14.66% along with
-  the EPS, because the EPS became riskier. $1.10 / 14.66\% = 7.50$: the two
-  effects cancel.
