@@ -290,7 +290,7 @@ C.  Levered and unlevered betas (Chap. 14.3)
 
 D.  Two fallacies: earnings per share and dilution (Chap. 14.4)
 
-E.  Conservation of value (Chap. 14.5)
+E.  Summary: the theorems of Modigliani and Miller (Chap. 14.5)
 
 F.  Exercises
 
@@ -714,92 +714,44 @@ What will its equity beta be after the change?
 
 - In perfect capital markets, the price should not change!
 
-## Aside: banks and the ROE fallacy {.smaller}
+## Equity issuance and dilution {.smaller}
 
-- Banks are extremely levered: international rules allow common equity to be as
-  little as **3%** of total funding (Basel III), against more than 50% for a
-  typical non-financial firm. With such a thin cushion, a small drop in asset
-  values means insolvency: a key ingredient of the 2008 crisis.
+- Dilution: an increase in the total of shares that will divide a fixed amount
+  of earnings.
 
-- When regulators asked for more equity, bankers (Ackermann, slide 12) replied
-  that it would lower their **return on equity** and make bank shares
-  unattractive.
+- An increase in capital usually dilutes the EPS.
 
-- MM: lower leverage lowers the **average** ROE and lowers its **risk** by the
-  same token. In a perfect market, shareholders are no worse off.
+- It is sometimes (incorrectly) argued that issuing equity will dilute existing
+  shareholders' ownership, so debt financing should be used instead.
 
-- Bank leverage is attractive only because of imperfections, mostly government
-  guarantees. The gains come largely at the taxpayer's expense.
+- In fact: no dilution of value if the stocks are sold at their market value.
 
-## Fallacy 2: issuing equity dilutes {.smaller}
+  - Any gain or loss associated with the transaction will result from the NPV
+    of the investments the firm makes with the funds raised.
 
-- **Dilution**: an increase in the number of shares that will divide a fixed
-  amount of earnings. An equity issue usually dilutes EPS, so it is argued
-  (wrongly) that it dilutes existing shareholders and debt should be used instead.
+  - The decrease in stock price which is often observed at the announcement of
+    an increase in capital corresponds to an information effect (thus: it is
+    related to market frictions).
 
-::: {.box .box-a}
-Selling new shares at a fair price does not dilute
-**value**: the cash raised adds to the assets as much as the new shares add to
-the share count.
-:::
+## E. Summary: Modigliani-Miller theorems {.smaller}
 
-- **Jet Sky Airlines**: no debt, 500 million shares at 16, worth 8 billion.
-  It needs 1 billion of planes and sells **62.5 million new shares at 16**.
+- Perfect capital markets $\Rightarrow$ Conservation of value
 
-  | In millions            | Before the issue | After the issue |
-  |:-----------------------|:----------------:|:---------------:|
-  | Cash                   | 0                | 1000            |
-  | Existing assets        | 8000             | 8000            |
-  | **Total value**        | **8000**         | **9000**        |
-  | Shares outstanding     | 500              | 562.5           |
-  | Value per share        | 16.00            | 16.00           |
+  - Financial transactions neither add nor destroy value, but instead represent
+    a repackaging of risk (and therefore return).
 
-- More shares, but also more assets: $9000 / 562.5 = 16$. Gains or losses come
-  only from the **NPV of what the money buys**. Announcement price drops are an
-  information effect, a friction.
+  - **The cost of capital depends on the assets of the firm and their risk.**
 
-## E. Conservation of value {.smaller}
+- Modigliani-Miller for dummies:
 
-::: {.box .box-a}
-**Conservation of value.** With perfect capital markets, financial transactions
-neither add nor destroy value. They **repackage** risk, and therefore return
-(Chap. 14.5).
-:::
+  - The total amount of pizza does not change if you slice it up differently!
 
-- John Burr Williams wrote it down in 1938, twenty years before MM: the value of
-  a firm is the present value of everything it will ever pay out, and that does
-  not depend on whether the payments are called interest or dividends. He
-  compared it to the conservation of matter or energy in physics.
+- Practical implications:
 
-- The principle goes far beyond debt versus equity. **Any** financial deal that
-  seems to create value is either too good to be true or exploits a market
-  imperfection. Before believing in the value, **name the imperfection**.
+  - Investment decisions are more important than financing decisions.
 
-- Modigliani and Miller's real legacy: the role of financial policy is to deal
-  with, and sometimes exploit, the frictions of real markets.
-
-## What this means for a CFO {.smaller}
-
-- **Value comes from investments, not from financing.** Positive-NPV projects
-  make the pizza bigger; the capital structure only cuts it into slices.
-
-- It is far easier to create or destroy value with investment decisions than
-  with financing decisions.
-
-- So why do CFOs rank capital structure first (Lecture 7)? Because real markets
-  have frictions, and each friction gives financing a role:
-
-  - **taxes**: interest is deductible, dividends are not (Lecture 9);
-
-  - **financial distress** and the costs of going bankrupt;
-
-  - **managers' incentives** and what financing choices **signal** to investors
-    (Lectures 10 and 11).
-
-::: {.box .box-a}
-MM in a perfect market is the benchmark. Every reason for leverage to matter is
-a departure from one of its five conditions.
-:::
+  - It is easier to create or destroy value with investment decisions than
+    with financing decisions.
 
 ## F. Exercise 1: cost of capital and leverage {.smaller .dense .shrink}
 
@@ -827,6 +779,60 @@ a departure from one of its five conditions.
 
   (d) What is the WACC of Amalgamated?
 
+## Exercise 1: answer (a) {.smaller}
+
+- **(a) Asset betas.** The debt is risk free, so each competitor's asset beta is
+  its stock beta times the equity share of the firm, $E/(D+E) = 1 - D/(D+E)$.
+
+- Step 1, the equity share of each comparable: Foods $1 - 0.4 = 0.6$,
+  Electronics $1 - 0.2 = 0.8$, Chemicals $1 - 0.3 = 0.7$.
+
+- Step 2, apply the formula, equity share times stock beta plus debt share
+  times the debt beta of zero:
+
+  | Division    | Stock beta | Asset beta                             |
+  |:------------|:----------:|:--------------------------------------:|
+  | Food        | 0.8        | $0.6 \times 0.8 + 0.4 \times 0 = 0.48$ |
+  | Electronics | 1.6        | $0.8 \times 1.6 + 0.2 \times 0 = 1.28$ |
+  | Chemicals   | 1.2        | $0.7 \times 1.2 + 0.3 \times 0 = 0.84$ |
+
+- Each division of Amalgamated gets the asset beta of its comparable: same
+  business, same business risk.
+
+## Exercise 1: answer (b) {.smaller}
+
+- **(b) Stock beta of Amalgamated.**
+
+- Step 1, the asset beta of the whole firm is the average of the division
+  betas, weighted by their share of the value:
+  $$\beta^{U}_{E} = 0.4 \times 0.48 + 0.3 \times 1.28 + 0.3 \times 0.84 = 0.828$$
+
+- Step 2, relever. With $D/(D+E) = 0.4$, equity is $0.6$ of the firm, so
+  $$\beta^{L}_{E} = \beta^{U}_{E} \times \frac{D+E}{E} = \frac{0.828}{0.6} = 1.38$$
+
+- Reading: the stock is riskier than the businesses it owns (1.38 against
+  0.828), because 40% of the firm is financed with debt that carries no risk.
+
+## Exercise 1: answer (c) and (d) {.smaller}
+
+- **(c) Cost of capital of each division.** The CAPM with the **asset** beta,
+  because a division is a business, not a stock. Market premium
+  $r_{M} - r_{f} = 15\% - 7\% = 8\%$:
+
+  | Division    | $\beta^{U}_{E}$ | $r = 7\% + \beta^{U}_{E} \times 8\%$ |
+  |:------------|:---------------:|:------------------------------------:|
+  | Food        | 0.48            | $7\% + 0.48 \times 8\% = 10.84\%$    |
+  | Electronics | 1.28            | $7\% + 1.28 \times 8\% = 17.24\%$    |
+  | Chemicals   | 0.84            | $7\% + 0.84 \times 8\% = 13.72\%$    |
+
+- **(d) WACC of Amalgamated.** Without taxes the WACC is the unlevered cost of
+  capital, so use the firm's asset beta from (b):
+  $$r_{WACC} = r^{U}_{E} = 7\% + 0.828 \times 8\% = 13.62\%$$
+
+- Check by the long route: cost of equity $7\% + 1.38 \times 8\% = 18.04\%$,
+  debt at $r_{f} = 7\%$, weights 0.6 and 0.4:
+  $0.6 \times 18.04\% + 0.4 \times 7\% = 13.62\%$. Same number, as MM says.
+
 ## Exercise 2: reducing leverage {.smaller}
 
 - Infonian AG is a very leveraged firm with a debt to equity ratio of
@@ -839,12 +845,32 @@ a departure from one of its five conditions.
   - What is the cost of equity if Infonian issues equity and reduces its
     debt to achieve a debt to equity ratio of 50%?
 
+## Exercise 2: answer {.smaller}
+
+- **Step 1, the weights.** $D/E = 1.5$ means 1.5 of debt for every 1 of
+  equity, so the firm is worth 2.5 in those units: debt is $1.5/2.5 = 0.6$ of
+  the firm and equity $1/2.5 = 0.4$.
+
+- **Step 2, the WACC.** No taxes, so the plain weighted average:
+  $$r_{WACC} = 0.4 \times 20\% + 0.6 \times 5\% = 8\% + 3\% = 11\%$$
+
+- **Step 3, what stays and what moves.** Issuing equity to repay debt does not
+  change the assets, so the WACC stays at 11% (MM I). It is the cost of
+  equity that falls, by MM II.
+
+- **Step 4, the new cost of equity** at $D/E = 0.5$:
+  $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E}\,(r^{U}_{E} - r_{D})
+  = 11\% + 0.5 \times (11\% - 5\%) = 14\%$$
+
+- **Check.** New weights: equity $1/1.5 = 2/3$, debt $1/3$. WACC
+  $= \tfrac{2}{3} \times 14\% + \tfrac{1}{3} \times 5\% = 11\%$. Unchanged.
+
 ## Exercise 3: increasing leverage {.smaller .dense}
 
 - Mr. Goodman the CFO of Perkscom comes back thoughtful from the
   shareholder meeting of his firm. The investment fund who owns 10% of
   the capital of Perkscom has announced to the CFO Mr. Goodman at the
-  annual shareholder meeting that it expects an earnings yield of at
+  annual shareholder meeting that it expects an **earnings yield** of at
   least 20% for the current year, otherwise it would take away the stock
   options for the managers of the firm. Because Mr. Goodman counts on
   his stock options to repay the mortgage for his villa, he is a bit
@@ -891,42 +917,122 @@ a departure from one of its five conditions.
 7.  Has the investment fund chosen a good performance measure? Should it
     be satisfied by the measures taken by Mr. Goodman?
 
-## Next time: taxes break the symmetry {.smaller}
+## Exercise 3: the earnings yield {.smaller}
 
-- Everything today rested on condition 2 of a perfect market: **no taxes**. In
-  the real world, firms pay tax on their profits **after** interest, and
-  dividends come out of **after-tax** profit.
+- The investment fund asks for an **earnings yield** of at least 20%, twice
+  the current one, as we will see. First, what is that ratio?
 
-- **Macy's, 2014**: EBIT 2.8 billion, interest 400 million, tax rate 35%. The
-  interest reduced taxable profit by 400 million, so Macy's paid
-  $35\% \times 400 = 140$ million **less tax** than an unlevered Macy's.
+::: {.box .box-a}
+$$\text{Earnings yield} = \frac{\text{Earnings}}{\text{Market value of equity}}$$
+:::
 
-- That 140 million a year is the **interest tax shield**: more pizza for
-  investors, because less goes to the tax authority.
 
-- Lecture 9 (Chap. 15): a levered firm is worth an unlevered firm **plus** the
-  present value of its tax shields, and the WACC now **falls** with leverage.
+- **Perkscom today.** Earnings are the EBIT, 10 million: no interest (no
+  debt) and no tax. Market capitalisation is 100 million:
+  $$\text{Earnings yield} = \frac{10}{100} = 10\%$$
 
-## How it all connects {.smaller}
+- Compare with the accounting **return on equity**, which divides by the book
+  value instead: $10 / 80 = 12.5\%$. Same numerator, different denominator.
 
-1. **MM I as an equation**: $E + D = U = A$. Holding all the debt and all the
-   equity is holding the business.
+## Exercise 3: answer, question 1 {.smaller}
 
-2. **The return of that portfolio** is the return of the business, so solving
-   for the equity return gives **MM II**: $r^{L}_{E}$ rises with $D/E$.
+- **1. Cost of capital.** Perkscom pays out all its cash flow as dividends, so
+  the firm is worth the present value of its dividends: 10 million next year,
+  growing at 10% a year for ever.
 
-3. **The WACC is flat** at the unlevered cost of capital: the saving on cheap
-   debt is returned through dearer equity. Enterprise value does not depend on
-   financing.
+- Reminder, the **dividend discount model** with constant growth: when the
+  dividend grows at a rate $g$ below the cost of capital $r$,
+  $$V = \frac{\text{Div}_{1}}{1+r} + \frac{\text{Div}_{1}(1+g)}{(1+r)^{2}}
+  + \frac{\text{Div}_{1}(1+g)^{2}}{(1+r)^{3}} + \dots = \frac{\text{Div}_{1}}{r - g}$$
 
-4. **Betas follow the same rule.** Unlever comparables before averaging, relever
-   to the target; treat cash as negative debt.
+- The market says the firm is worth 100 million, so
+  $$100 = \frac{10}{r^{U}_{E} - 10\%} \qquad \Rightarrow \qquad r^{U}_{E} = 10\% + 10\% = 20\%$$
 
-5. **EPS, ROE and P/E rise or fall with leverage** only as compensation for
-   risk; selling shares at a fair price dilutes nothing.
+- Note that the earnings yield of 10% is the cost of capital minus the growth
+  rate, $20\% - 10\%$: a low yield here is the price of growth, not a sign of
+  poor performance.
 
-6. **Conservation of value**: when a financial deal seems to create value, look
-   for the friction.
+## Exercise 3: answer, question 2 {.smaller}
+
+- **2. The reorganisation.** Cash flow 15 million, same growth, same risk, so
+  same cost of capital of 20%:
+  $$V = \frac{15}{20\% - 10\%} = 150 \text{ million}$$
+
+- Shareholders gain **50 million** of value: real value, created by a better
+  operation.
+
+- But the earnings yield is $15 / 150 = 10\%$, **unchanged**, and the return on
+  equity is $15 / 80 = 18.75\%$, still below 20%.
+
+- The fund's measure does not see the 50 million that was created.
+
+## Exercise 3: answer, questions 3 and 4 {.smaller}
+
+- **3. The recapitalisation.** Back to the initial setting: value 100, cash
+  flow 10. By MM I, borrowing changes nothing to the value of the firm, so
+  after the operation $D + E = 100$ still holds.
+
+- Target $D/E = 3$: debt is $3/4$ of the firm and equity $1/4$, so
+  $D = 75$ million and $E = 25$ million.
+
+- Transactions: issue **75 million of debt** at 5%, and use the proceeds to
+  **buy back 75 million of shares** (or pay a special dividend of 75). The
+  assets and the cash flows are untouched; only the slices change.
+
+- **4. WACC and cost of equity.** No taxes, so the WACC is still the unlevered
+  cost of capital: $r_{WACC} = 20\%$. The cost of equity, by MM II:
+  $$r^{L}_{E} = 20\% + 3 \times (20\% - 5\%) = 65\%$$
+
+- Shareholders now require 65% because they carry the whole business risk on
+  a quarter of the capital.
+
+## Exercise 3: answer, question 5 {.smaller}
+
+- **5. Earnings yield and return on equity after the recapitalisation.**
+
+- Step 1, interest: $5\% \times 75 = 3.75$ million a year.
+
+- Step 2, earnings left for shareholders this year: $10 - 3.75 = 6.25$ million.
+
+- Step 3, earnings yield on the market value of equity:
+  $$\frac{6.25}{25} = 25\%$$
+  above the 20% the fund asked for.
+
+- Step 4, accounting return on equity. The buyback also shrinks the book
+  equity, from 80 to $80 - 75 = 5$ million:
+  $$\text{ROE} = \frac{6.25}{5} = 125\%$$
+
+- Both ratios jumped, yet the firm is worth exactly what it was worth before:
+  100 million, now split 75 debt and 25 equity.
+
+## Exercise 3: answer, question 6 {.smaller}
+
+- **6. Lowest leverage that reaches 20%.** With debt $D$ and equity
+  $100 - D$, earnings are $10 - 0.05 \times D$, so the earnings yield is
+  $$\frac{10 - 0.05\,D}{100 - D}$$
+
+- Set it equal to 20% and solve:
+  $$10 - 0.05\,D = 0.20 \times (100 - D) = 20 - 0.20\,D$$
+  $$0.15\,D = 10 \qquad \Rightarrow \qquad D = 66.7$$
+
+- So $D = 66.7$ million, $E = 33.3$ million, $D/E = 2$. Check: interest
+  3.33, earnings 6.67, $6.67 / 33.3 = 20\%$.
+
+## Exercise 3: answer, question 7 {.smaller}
+
+- **7. Is the earnings yield a good measure?** No. In a perfect market it can
+  be pushed to any level with leverage, without creating a cent of value
+  (question 5), while a real improvement left it unchanged (question 2).
+
+- It rises with leverage only because the equity became riskier: the cost of
+  equity went from 20% to 65%. More earnings per euro of equity is the pay for
+  more risk per euro of equity.
+
+- The fund should look at **value**, the 100 or 150 million, not at a ratio
+  that depends on the capital structure.
+
+- Should it be satisfied? No. Mr. Goodman met the target by repackaging risk,
+  and the fund's own shares are worth exactly what they were.
 
 ## What to remember {.smaller}
 
@@ -940,10 +1046,7 @@ a departure from one of its five conditions.
 - **Same formulas with betas**: $\beta^{L}_{E} = \beta^{U}_{E} + \frac{D}{E}(\beta^{U}_{E} -
   \beta_{D})$; with risk-free debt, $\beta^{L}_{E} = \beta^{U}_{E}(1 + D/E)$.
 
-- **Unlever before you average** comparables, and use net debt.
-
-- **EPS, P/E and ROE are not comparable** across capital structures. Fair-price
-  equity issues do not dilute value.
+- **Unlever before you average or compare**, and use net debt .
 
 - **Value comes from investments.** Financing matters only through frictions.
 

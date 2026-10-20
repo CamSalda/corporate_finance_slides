@@ -1,8 +1,24 @@
 ---
 title: "Corporate Finance"
-subtitle: "Lecture 8 extras: How a project is evaluated"
+subtitle: "Lecture 8 extras: Evaluating a project, reading a bond headline"
 footer: "Lecture 8 extras"
 ---
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+How projects are evaluated
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries How projects are evaluated}
+\end{center}
+\vfill
+```
 
 ## How a project is evaluated {.smaller}
 
@@ -41,70 +57,134 @@ makes the discounted cash flows exceed the investment. The two analyses give
 the same answer.
 :::
 
-## What is a leveraged ETF? {.smaller}
+## {.center}
 
-- An **ETF** (exchange-traded fund) is a fund you buy and sell like a share.
-  A plain S&P 500 ETF such as **SPY** holds the 500 stocks of the index: put in
-  100, and you own 100 of stocks. Leverage: none.
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Bond yields
+:::
+:::
 
-- A **leveraged ETF** promises a **multiple of the index's daily return**:
-  **SSO** targets 2 times the daily return of the S&P 500, **UPRO** 3 times.
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Bond yields}
+\end{center}
+\vfill
+```
 
-- How: the fund borrows, or uses futures and swaps that do the borrowing for
-  it. For every 100 you put into SSO, it holds 200 of exposure: your 100 plus
-  100 borrowed. The borrowing cost and a fee of about 0.9% a year (against
-  0.09% for SPY) are taken out of the fund.
+## In the news this morning {.smaller}
+
+:::: {.columns}
+::: {.column width="55%"}
+![](franceBondYields.png){width="100%"}
+:::
+
+::: {.column width="45%"}
+- Protests over the weekend, a budget to be voted, investors worried about
+  how France will pay its debt.
+
+- French bonds **fell** in price and their **yields rose**: the 10-year
+  yield went from about **3.35%** a year ago to **4.95%** today.
+
+- For a bond, a lower price **is** a higher yield. To see why, we need four
+  words: **face value**, **coupon**, **price** and **yield**.
+:::
+::::
+
+## What is a bond? {.smaller}
+
+A bond is a loan cut into small pieces and sold to investors. France borrows by
+selling bonds; so do companies via corporate bonds. The contract fixes:
+
+- **Face value** (or principal): the amount repaid at the end. Say 100 euros.
+
+- **Coupon rate**: the interest paid every year, as a percentage of the face
+  value. A 3.35% coupon (France's rate a year ago) on 100 of face value pays
+  $3.35\% \times 100 = 3.35$ euros a year.
+
+- **Maturity**: when the face value is repaid. Say 10 years.
+
+Two more words are **not** in the contract. They come from the market:
+
+- **Price**: what an investor pays today to own the bond. It changes every
+  minute, as investors buy and sell.
+
+- **Yield** (yield to maturity): the return an investor earns if they pay
+  today's price and hold the bond until it is repaid.
+
+## The cash flows of the bond {.smaller}
+
+Face value 100, coupon 3.35%, 10 years. The holder receives
+$3.35\% \times 100 = 3.35$ every year, and 100 back with the last coupon:
+
+| Year       | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 10         |
+|:-----------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----------:|
+| Coupon     | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35       |
+| Face value |      |      |      |      |      |      |      |      |      | 100        |
+| **Total**  | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | **103.35** |
+
+Added up, the bond pays $10 \times 3.35 + 100 = 133.5$ euros over its life.
 
 ::: {.box .box-a}
-This is **homemade leverage sold as a product**: the fund borrows for you,
-exactly as the investor of Lecture 7 who borrowed 500 and bought the unlevered
-firm. Twice the exposure means twice the risk, so the expected return and the
-swings both grow.
+These cash flows are **fixed by the contract**. Protests, budgets and
+investor moods do not change a single one of them. The only thing that moves
+is the **price** people are willing to pay today for this fixed stream.
 :::
 
-## The daily reset: why 2x a day is not 2x a year {.smaller}
+## From the price to the yield {.smaller}
 
-- The multiple holds for **one day**. Every evening the fund rebalances so
-  that tomorrow it is again at 2 times. Over longer periods the result drifts.
+The price is what you pay today; the cash flows are what you get. The yield is
+the discount rate that makes the two sides equal:
 
-- Example: the index rises 10% then falls 10%.
+$$\text{Price} = \frac{3.35}{1+y} + \frac{3.35}{(1+y)^2} + \dots
++ \frac{3.35}{(1+y)^{9}} + \frac{103.35}{(1+y)^{10}}$$
 
-  | Day     | Index                   | 2x ETF                  |
-  |:--------|:-----------------------:|:-----------------------:|
-  | Start   | 100                     | 100                     |
-  | Day 1   | $100 \times 1.10 = 110$ | $100 \times 1.20 = 120$ |
-  | Day 2   | $110 \times 0.90 = 99$  | $120 \times 0.80 = 96$  |
-  | Result  | $-1\%$                  | $-4\%$                  |
+- Same logic as the IRR of a project (first slides of this deck): the
+  investment is the price, the project is the bond, and $y$ is the return it
+  earns.
 
-- The fund lost four times the index, not two. Ups and downs eat into a
-  leveraged fund: **volatility decay**. In a steady rise it compounds in the
-  fund's favour; in a choppy market it loses even if the index ends flat.
+- The market sets the price; the yield is then **computed** from it. Nobody
+  sets a yield directly.
 
-## Recent returns: SPY, SSO and UPRO {.smaller .shrink}
+- If the price is exactly 100, the yield is exactly 3.35%: you lend 100, you
+  receive 3.35 a year on it, you get your 100 back. Yield = coupon rate. That
+  was the situation a year ago, when the bond was issued.
 
-::: {.center}
-![](etf_annual.png){fig-align="center" height="255"}
+## Price falls, yield rises {.smaller}
+
+A year of sell-offs: the price fell from 100 to about **87.6**.
+
+- The buyer at 87.6 still receives 3.35 a year and 100 at the end: the same
+  133.5 euros of cash flows for 12.4 euros less.
+
+- Two sources of return instead of one: the coupon of 3.35 and the price discount.
+
+- Solving the price equation with Price $= 87.6$ gives $y \approx 4.95\%$.
+
+| Price paid today | Cash flows received | Yield |
+|:----------------:|:-------------------:|:-----:|
+| 100              | 3.35 a year + 100   | 3.35% |
+| 96               | 3.35 a year + 100   | 3.85% |
+| 87.6             | 3.35 a year + 100   | 4.95% |
+
+::: {.box .box-a}
+Fixed cash flows, lower price, higher return. Price and yield move in
+**opposite directions**: "yields rose" and "bonds fell" say the same thing.
 :::
 
-::: {.tiny}
-Source: annual total returns, dividends reinvested, calendar years, from
-totalrealreturns.com/n/SPY,SSO,UPRO, read 16 October 2026. Chart by the author.
-:::
+## So what does the headline mean? {.smaller}
 
-## Recent returns (con't): the long run {.smaller .shrink}
+- Investors fear France's budget will not be brought under control, so lending
+  to France looks riskier than it did on Friday.
 
-::: {.center}
-![](etf_growth.png){fig-align="center" height="255"}
-:::
+- For the same cash flows, they now demand a higher return. The only way to
+  get it is to pay **less**: they sell, the price drops, the yield climbs.
 
-- Over a long bull market the leveraged funds won by a wide margin. The price:
-  in March 2020 SPY fell 34% from its peak, SSO 59% and UPRO 77%.
+- **Who loses today:** anyone who bought French bonds a year ago. Their bond
+  pays the same 3.35 a year, but is worth about 87.6 instead of 100 if sold
+  now: a loss of 12% in a year.
 
-- More leverage, more expected return
-  **and** more risk. The fund creates no value; it repackages risk.
-
-::: {.tiny}
-Source: growth of 100 compounded from the annual total returns, and maximum
-drawdowns, from totalrealreturns.com/n/SPY,SSO,UPRO, read 16 October 2026.
-Chart by the author.
-:::
+- **Who pays tomorrow:** France. The next bond it issues must offer about
+  4.95% to find buyers, instead of 3.35%. Higher yield = higher cost of debt
+  for the borrower, which deepens the budget problem.
