@@ -1,73 +1,104 @@
 ---
 title: "Corporate Finance"
-subtitle: "Lecture 9 extras: Leveraged ETFs"
+subtitle: "Lecture 9 extras: Following finance day to day"
 footer: "Lecture 9 extras"
 ---
 
-## What is a leveraged ETF? {.smaller}
+## Why follow finance every day? {.smaller}
 
-- An **ETF** (exchange-traded fund) is a fund you buy and sell like a share.
-  A plain S&P 500 ETF such as **SPY** holds the 500 stocks of the index: put in
-  100, and you own 100 of stocks. Leverage: none.
+- The ideas of this course (risk and return, the CAPM, market efficiency,
+  capital structure) show up in the news **every day**: a firm borrows to buy
+  back shares, a bank fails, a fund beats the market, or does not.
 
-- A **leveraged ETF** promises a **multiple of the index's daily return**:
-  **SSO** targets 2 times the daily return of the S&P 500, **UPRO** 3 times.
+- A few minutes a day with a good source turns the formulas into stories you
+  remember, and teaches you the vocabulary of the people who work in finance.
 
-- How: the fund borrows, or uses futures and swaps that do the borrowing for
-  it. For every 100 you put into SSO, it holds 200 of exposure: your 100 plus
-  100 borrowed. The borrowing cost and a fee of about 0.9% a year (against
-  0.09% for SPY) are taken out of the fund.
+- Two free sources to start with:
 
-::: {.box .box-a}
-This is **homemade leverage sold as a product**: the fund borrows for you,
-exactly as the investor of Lecture 7 who borrowed 500 and bought the unlevered
-firm. Twice the exposure means twice the risk, so the expected return and the
-swings both grow.
+  1. **Unhedged**, a podcast from the *Financial Times*.
+
+  2. **Money Stuff**, a daily newsletter by Matt Levine at *Bloomberg*.
+
+## Unhedged: the FT markets podcast {.smaller}
+
+::::: {.columns}
+::: {.column width="44%"}
+![](unhedgedPodcast.jpg){height="250" style="height: 440px; max-height: none; margin-top: 10px"}
 :::
 
-## The daily reset: why 2x a day is not 2x a year {.smaller}
+::: {.column width="56%"}
+- A markets podcast from the **Financial Times**, every **Tuesday and
+  Thursday**.
 
-- The multiple holds for **one day**. Every evening the fund rebalances so
-  that tomorrow it is again at 2 times. Over longer periods the result drifts.
+- Hosted by **Rob Armstrong** and **Katie Martin**, FT markets journalists.
+  They explain the big ideas behind what is happening in finance right now.
 
-- Example: the index rises 10% then falls 10%.
+- **Free.** Listen on:
 
-  | Day     | Index                   | 2x ETF                  |
-  |:--------|:-----------------------:|:-----------------------:|
-  | Start   | 100                     | 100                     |
-  | Day 1   | $100 \times 1.10 = 110$ | $100 \times 1.20 = 120$ |
-  | Day 2   | $110 \times 0.90 = 99$  | $120 \times 0.80 = 96$  |
-  | Result  | $-1\%$                  | $-4\%$                  |
+  - [Spotify](https://open.spotify.com/show/42KqGvg4MxWwUPqZ0t98OC)
 
-- The fund lost four times the index, not two. Ups and downs eat into a
-  leveraged fund: **volatility decay**. In a steady rise it compounds in the
-  fund's favour; in a choppy market it loses even if the index ends flat.
+  - [Apple Podcasts](https://podcasts.apple.com/podcast/id1691284824)
 
-## Recent returns: SPY, SSO and UPRO {.smaller .shrink}
+  - [Acast](https://shows.acast.com/unhedged), or any podcast app: search
+    "Unhedged".
+:::
+:::::
+
+## Money Stuff: Matt Levine's newsletter {.smaller}
 
 ::: {.center}
-![](etf_annual.png){fig-align="center" height="255"}
+![](levineBloomberg.png){height="150"}
+:::
+
+- A column by **Matt Levine** at *Bloomberg Opinion*, sent by email **every
+  weekday**. Deals, scandals and market oddities, explained clearly and with
+  a lot of humour.
+
+- **How to subscribe for free:**
+
+  1. Go to
+     [bloomberg.com/account/newsletters/money-stuff](https://www.bloomberg.com/account/newsletters/money-stuff).
+
+  2. Create a free Bloomberg account with your email address.
+
+  3. Sign up to *Money Stuff*. The full column arrives in your inbox each
+     weekday, even though most Bloomberg articles on the website are behind a
+     paywall.
+
+## A story to follow: Anthropic's IPO {.smaller}
+
+- **IPO**: a firm sells its shares to the public for the first time
+  (Chap. 23.2, Lecture 11).
+
+- **26 October 2026**: Anthropic filed its IPO document (S-1) with the SEC.
+  Listing on the **Nasdaq**, ticker **ANT**. Price and size not yet set.
+
+- **Last private value**: \$965bn (May 2026), up from \$380bn in February.
+
+- **Founders keep 50.1% of the votes**: new shareholders get cash flows,
+  little control.
+
+## Anthropic: the income statement {.smaller}
+
+::: {.center}
+![](anthropicIncomeStatement.png){style="height: 520px; max-height: none"}
 :::
 
 ::: {.tiny}
-Source: annual total returns, dividends reinvested, calendar years, from
-totalrealreturns.com/n/SPY,SSO,UPRO, read 16 October 2026. Chart by the author.
+Source: Anthropic, PBC, Form S-1 filed with the SEC, 26 October 2026. Amounts
+in \$ millions.
 :::
 
-## Recent returns (con't): the long run {.smaller .shrink}
+## Anthropic: reading the numbers {.smaller}
 
-::: {.center}
-![](etf_growth.png){fig-align="center" height="255"}
-:::
+- **Revenue explodes**: \$4.6bn in 2025, \$33.2bn in nine months of 2026.
 
-- Over a long bull market the leveraged funds won by a wide margin. The price:
-  in March 2020 SPY fell 34% from its peak, SSO 59% and UPRO 77%.
+- **Operating loss shrinks**: \$8.1bn in 2025, \$1.3bn in nine months of 2026.
+  Biggest cost: **compute**.
 
-- More leverage, more expected return
-  **and** more risk. The fund creates no value; it repackages risk.
+- **Why a net loss of \$104bn?** \$94.3bn comes from **convertible notes**
+  (loans that can turn into shares). As the firm grew more valuable, they
+  became worth more: an accounting loss, with no cash paid out.
 
-::: {.tiny}
-Source: growth of 100 compounded from the annual total returns, and maximum
-drawdowns, from totalrealreturns.com/n/SPY,SSO,UPRO, read 16 October 2026.
-Chart by the author.
-:::
+- **Course link**: about \$417bn promised to compute providers. **Fixed
+  costs** raise risk: operating leverage (Lecture 6).
