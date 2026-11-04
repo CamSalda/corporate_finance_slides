@@ -175,6 +175,41 @@ Today we see how much that is worth.
 \vfill
 ```
 
+## MM1 and MM2: the four propositions {.smaller}
+
+::::: {.columns}
+::: {.column width="49%"}
+**MM1: no taxes (Lecture 8)**
+
+::: {.box .box-a}
+**MM1 Proposition 1.** Firm value does not depend on debt:
+$$V^{L} = V^{U}$$
+:::
+
+::: {.box .box-a}
+**MM1 Proposition 2.** The cost of equity rises with debt:
+$$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}\left(r^{U}_{E}-r_D\right)$$
+:::
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+**MM2: with corporate taxes (Lecture 9)**
+
+::: {.box .box-b}
+**MM2 Proposition 1.** Debt adds the value of the tax it saves:
+$$V^{L} = V^{U} + \tau_{C} D$$
+:::
+
+::: {.box .box-b}
+**Equation (1).** The cost of equity rises more slowly:
+$$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}(1-\tau_C)\left(r^{U}_{E}-r_D\right)$$
+:::
+:::
+:::::
+
 ## Introduction {.smaller}
 
 - In practice, firms choose very different amounts of debt. In March 2022
@@ -195,26 +230,13 @@ as interest instead of dividends saves tax. Today: how much is that saving
 worth, and why do firms not borrow even more?
 :::
 
-## Outline
-
-A.  The interest tax deduction (Chap. 15.1, 15.2)
-
-B.  Modigliani and Miller 2: debt, tax, and firm value (Chap. 15.2)
-
-C.  Modigliani and Miller 2: debt, tax and the cost of capital (Chap.
-    15.2, 15.3)
-
-D.  Personal taxes (Chap 15.4)
-
-E.  Optimal capital structure with taxes (Chap. 15.5; elements of Chap. 16)
-
 ## A. The interest tax deduction {.smaller}
 
 - In most countries: interests = expenses
 
   - Interest expenses are thus (fully or partially) deductible
 
-  - Remark: the dividends are paid from after-tax profits!
+  - Remark: the dividends are paid from after-tax profits! So interests have a tax advantage over dividends.
 
 - Example:
 
@@ -308,17 +330,23 @@ Net income falls (3.96 against 6.6), but investors as a group receive more
 
 - Consequences $\Rightarrow$ increases revenues available for stock- and
   debtholders
-  $$\begin{aligned}
-  & \text{Cash flows to investors with leverage} \\
-  = {} & \text{Cash flows to investors without leverage} \\
-  + {} & \text{Interest tax shield}
-  \end{aligned}$$
+
+::: {.content-visible when-format="revealjs"}
+$$\binom{\text{Cash Flows to Investors}}{\text{with Leverage}}
+= \binom{\text{Cash Flows to Investors}}{\text{without Leverage}}
++ \binom{\text{Interest Tax}}{\text{Shield}}$$
+:::
+
+```{=latex}
+\[\resizebox{0.92\linewidth}{!}{$\displaystyle
+\binom{\text{Cash Flows to Investors}}{\text{with Leverage}}
+= \binom{\text{Cash Flows to Investors}}{\text{without Leverage}}
++ \binom{\text{Interest Tax}}{\text{Shield}}$}\]
+```
 
 - Thus: the total value of the company (V = E + D) increases.
 
-- **Why.** The pie (EBIT) is the same, but the government's slice shrinks: it
-  takes a slice of what goes to shareholders, and none of what goes to lenders.
-  More of the pie is left for investors.
+- **Why.** The pie (EBIT) is the same, but the government's slice shrinks. More of the pie is left for investors.
 
 ## Cash Flows of the unlevered and levered firm {.smaller}
 
@@ -329,9 +357,6 @@ Net income falls (3.96 against 6.6), but investors as a group receive more
 - Same EBIT of 1000 (tax rate 40%). Unlevered: tax 400, shareholders 600.
   Levered: interest 500, tax 200, shareholders 300. Investors get
   $500 + 300 = 800$, so 200 more: the interest tax shield, $40\% \times 500$.
-
-> "You must pay taxes. But there is no law that says you gotta leave a tip."
-> (Morgan Stanley)
 
 ## B. MM2: debt, tax, and firm value {.smaller}
 
@@ -353,7 +378,7 @@ $$V^{L} = V^{U} + PV(\text{Interest tax shield}).$$
 
 - In words: debt adds value only through the tax it saves.
 
-## MM2: the yearly tax shield {.smaller}
+## MM2: the yearly tax shield
 
 - Hypothesis: the company has a perpetual and constant debt at the
   constant risk-free rate of $r$. Then:
@@ -362,9 +387,16 @@ $$V^{L} = V^{U} + PV(\text{Interest tax shield}).$$
 - $\tau_{C}$: corporate tax rate. $D$: amount of debt. $r\,D$: interest paid
   each year.
 
-- **Example** (section A): debt 80 at 5%, tax 34%. Each year the firm pays
-  $5\% \times 80 = 4$ of interest and saves
-  $$34\% \times 5\% \times 80 = 1.36 \text{ of tax, every year, forever.}$$
+## MM2: the yearly tax shield (con't) {.smaller}
+
+- **Example** (the one from section A): a firm earns a profit of 10 and pays
+  34% tax on it. It borrows 80 at an interest rate of 5% and keeps this debt
+  forever.
+
+  - Interest paid each year: $5\% \times 80 = 4$.
+  - The 4 of interest is deducted from profit, so the firm pays
+    $34\% \times 4 = 1.36$ less tax:
+    $$\text{Annual tax shield} = 34\% \times 5\% \times 80 = 1.36 \text{ every year, forever.}$$
 
 - Next step: what is this stream of savings worth **today**?
 
@@ -401,7 +433,7 @@ $$V^{L} = V^{U} + PV(\text{Interest tax shield}).$$
 
 - **Step 1.** The firm without debt is worth $V^{U} = 500$.
 
-- **Step 2.** The tax shield on 250 of permanent debt is worth
+- **Step 2.** The companyhas 250 of permanent debt. The tax shield is worth
   $\tau_{C} D = 0.30 \times 250 = 75$.
 
 - **Step 3.** Add them:
@@ -412,8 +444,7 @@ $$V^{L} = V^{U} + PV(\text{Interest tax shield}).$$
   extra euro of debt adds 30 cents of value.
 
 ::: {.box .box-a}
-Taken literally, MM2 says: borrow as much as possible. Section E explains why
-firms do not.
+Taken literally, MM2 1 says: borrow as much as possible.
 :::
 
 ## C. MM2: debt, tax, and the cost of capital {.smaller}
@@ -423,19 +454,26 @@ firms do not.
 
 - **Question:** what does that formula become with corporate taxes?
 
-- Notation:
-
-  - $\Pi$: operating income (EBIT), the same with or without debt;
-
-  - $r^{U}_{E}$: cost of capital of the firm without debt; $r^{L}_{E}$: cost of
-    equity of the firm with debt; $r_{D}$: cost of debt;
-
-  - $E^{L}$: value of the levered equity; $D$: value of the debt;
-    $V^{U}$, $V^{L}$: value of the firm without and with debt; $\tau_{C}$:
-    corporate tax rate.
-
 - As in section B, debt is permanent and the firm does not grow, so every
   year looks the same. Three steps, as in Lecture 8.
+
+## Notation. {.smaller .spaced}
+
+- $\Pi$: operating income (EBIT), the same with or without debt;
+
+- $r^{U}_{E}$: cost of equity of the firm without debt;
+
+- $r^{L}_{E}$: cost of equity of the firm with debt;
+
+- $r_{D}$: cost of debt;
+
+- $E^{L}$: value of the levered equity;
+
+- $D$: value of the debt;
+
+- $V^{U}$, $V^{L}$: value of the firm without and with debt;
+
+- $\tau_{C}$: corporate tax rate.
 
 ## Step 1: what the shareholders earn {.smaller}
 
@@ -452,17 +490,22 @@ firm and the cost of equity of the unlevered firm.
   $\Pi(1-\tau_{C})$, and the after-tax cost of the interest
   $r_{D} D (1-\tau_{C})$.
 
-## Step 2: two ingredients {.smaller}
+## Step 2 {.smaller}
 
-- **Ingredient 1.** Without debt, the after-tax operating income is exactly
+We decompose the after-tax operating income
+  $\Pi(1-\tau_{C})$
+
+- Without debt, the after-tax operating income is exactly
   what pays the owners their required return on the whole firm. We know that
   $$\Pi \left(1-\tau_{C}\right) = r_{WACC}^{U} V^{U} = r^{U}_{E} V^{U},$$
 
-- **Ingredient 2.** MM2 Proposition 1, read backwards: the firm without debt
-  is worth the levered firm minus the tax shield, and that
-  $$V^{U} = V^{L} - \tau_{C} D = \left(E^{L} + D \right) - \tau_{C} D.$$
+ - We now take $V^{U},$
 
-- Next step: put ingredient 2 into ingredient 1, and the result into Step 1.
+- From MM2 Proposition 1:  $V^{U} + \tau_{C} D = V^{L}$
+
+- Switch the side of $\tau_{C} D$: the firm without debt
+  is worth the levered firm minus the tax shield:
+  $$V^{U} = V^{L} - \tau_{C} D = \left(E^{L} + D \right) - \tau_{C} D.$$
 
 ## Step 3: substitute and simplify {.smaller}
 
@@ -491,17 +534,24 @@ $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}} \left(1-\tau_{C} \right)\left(r^{U}_{E
   from shareholders in bad years. Equity still gets riskier with leverage, but
   more slowly than without taxes.
 
+## Equation (1) next to Lecture 8 (con't) {.smaller}
+
 - **Example.** $r^{U}_{E} = 10\%$, $r_{D} = 5\%$, $D/E^{L} = 1$, $\tau_{C} = 25\%$:
 
   - with taxes: $10\% + 1 \times 0.75 \times (10\% - 5\%) = 13.75\%$;
 
   - without taxes: $10\% + 1 \times (10\% - 5\%) = 15\%$.
 
-## Tax and the effective cost of debt {.smaller}
+## Tax and the effective cost of debt
 
 - Because debt creates tax savings, its effective cost is lower than the
   interest payments
-  $$\text{Effective cost of debt} = r_{D} \left(1-\tau_{C}\right) D.$$
+
+&nbsp;
+
+$$\text{Effective cost of debt} = r_{D} \left(1-\tau_{C}\right) D.$$
+
+## Tax and the effective cost of debt (con't) {.smaller}
 
 - Example:
 
@@ -512,9 +562,10 @@ $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}} \left(1-\tau_{C} \right)\left(r^{U}_{E
 
   - Effective cost of debt = 0.1\*100000 - 3400 = 6600
 
-- **As a rate.** Divide by the debt: $6600 / 100000 = 6.6\%$, which is
-  $r_{D}(1-\tau_{C}) = 10\% \times (1 - 0.34)$. This **after-tax cost of debt**
-  is the rate that enters the WACC (Lecture 6).
+- **As a rate.** Divide by the debt: $6600 / 100000 = 6.6\%$.
+
+  - This is $r_{D}(1-\tau_{C}) = 10\% \times (1 - 0.34)$, the **after-tax
+    cost of debt**: the rate that enters the WACC (Lecture 6).
 
 ## MM2: WACC with taxes {.smaller}
 
@@ -528,28 +579,16 @@ $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}} \left(1-\tau_{C} \right)\left(r^{U}_{E
   same, split in two. The first two terms are the **pre-tax WACC**; the last
   term is what the tax shield saves.
 
+## MM2: WACC with taxes, the result {.smaller}
+
 - By using the expression in Equation (1) for $r^{L}_{E}$, we obtain:
-  $$r_{WACC}^{L}=\underbrace{r_{WACC}^{U}}_{\begin{array}{c}\text{WACC without} \\ \text{leverage}\end{array}} \underbrace{\left(1-\tau_{C} \frac{D}{D+E^{L}}\right)}_{\begin{array}{c}\text{Reduction due} \\ \text{to interest tax shield}\end{array}}$$
+
+::: {.box .box-a}
+$$r_{WACC}^{L}=\underbrace{r_{WACC}^{U}}_{\begin{array}{c}\text{WACC without} \\ \text{leverage}\end{array}} \underbrace{\left(1-\tau_{C} \frac{D}{D+E^{L}}\right)}_{\begin{array}{c}\text{Reduction due} \\ \text{to interest tax shield}\end{array}}$$
+:::
 
 - **In words:** without taxes the WACC stayed flat (Lecture 8). With taxes it
   **falls** as the share of debt rises.
-
-## MM2: WACC with taxes (con't) {.smaller}
-
-- **Example.** $r^{U}_{E} = 10\%$, $r_{D} = 5\%$, $\tau_{C} = 25\%$, so the
-  after-tax cost of debt is $5\% \times 0.75 = 3.75\%$. Equation (1) gives
-  $r^{L}_{E}$:
-
-  | $D/E^{L}$ | $\frac{D}{D+E^{L}}$ | $r^{L}_{E}$ | $r_{WACC}^{L} = \frac{E^{L}}{D+E^{L}} r^{L}_{E} + \frac{D}{D+E^{L}} r_{D}(1-\tau_{C})$ |
-  |:---------:|:-------------------:|:-----------:|:---------------------------------------------------------:|
-  | 0         | 0                   | 10%         | $1 \times 10\% = 10\%$                                    |
-  | 0.5       | 1/3                 | 11.875%     | $\tfrac{2}{3} \times 11.875\% + \tfrac{1}{3} \times 3.75\% = 9.17\%$ |
-  | 1         | 1/2                 | 13.75%      | $\tfrac{1}{2} \times 13.75\% + \tfrac{1}{2} \times 3.75\% = 8.75\%$  |
-
-- Check with the short formula: $10\% \times (1 - 0.25 \times \tfrac{1}{2}) = 8.75\%$.
-
-- Equity gets dearer, but the WACC falls: the government pays part of the
-  interest.
 
 ## MM2: Summary in a graph {.smaller}
 
@@ -567,7 +606,7 @@ $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}} \left(1-\tau_{C} \right)\left(r^{U}_{E
 
 - Remark: In MM2, we have (this can be derived using the expression in
   Equation (1)):
-  $$\beta^{L}_{E} = \beta^{U}_{E} \left(1+\left(1-\tau_{C} \right)\frac{D}{E^{L}} \right).$$
+  $$\beta^{L}_{E} = \beta^{U}_{E} \left(1+\left(1-\tau_{C} \right)\frac{D}{E} \right).$$
 
 - Lecture 8, risk-free debt and no taxes:
   $\beta^{L}_{E} = \beta^{U}_{E}\,\big(1 + \frac{D}{E}\big)$. Taxes add the
@@ -594,6 +633,19 @@ $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}} \left(1-\tau_{C} \right)\left(r^{U}_{E
 
   - Remark: "general" case $\Rightarrow$
     $V^{L} = V^{U} + PV(\text{Interest tax shield}).$
+
+## Beyond MM2: "uncertain" debt levels (con't) {.smaller}
+
+- When debt is permanent and fixed, the tax shield is simply worth
+  $\tau_C D$.
+
+- When debt grows with the firm, the future tax savings are uncertain, and
+  adding them up one by one is hard.
+
+- We use a shortcut in these cases. The shortcut values the firm twice, once **with** the tax benefit and once
+  **without**, and takes the difference.
+
+## Beyond MM2: "uncertain" debt levels (con't 2)
 
 - "Special" case: target debt-equity ratio
 
@@ -729,38 +781,6 @@ capture the whole tax shield: $20 \times 1.65 = 33$. The price cannot stay at
 - Debt still wins if $1 - \tau_{i}$ is larger.
 :::
 :::::
-
-## The effective tax advantage of debt {.smaller}
-
-- **Step 1.** Compare what investors keep from 1 euro of EBIT: $1 - \tau_{i}$
-  through debt, $(1-\tau_{C})(1-\tau_{e})$ through equity.
-
-- **Step 2.** The **effective tax advantage of debt** $\tau^{*}$ measures how
-  much more debt holders keep, as a share of what they keep:
-  $$\tau^{*} = 1 - \frac{(1-\tau_{C})(1-\tau_{e})}{1-\tau_{i}}$$
-
-- **Step 3, special cases.** If interest and equity income are taxed alike
-  ($\tau_{i} = \tau_{e}$), $\tau^{*} = \tau_{C}$: back to MM2. If interest is
-  taxed more ($\tau_{i} > \tau_{e}$), $\tau^{*}$ is smaller than $\tau_{C}$.
-
-- **Step 4.** With permanent debt, $\tau^{*}$ replaces $\tau_{C}$:
-  $$V^{L} = V^{U} + \tau^{*} D$$
-
-## Personal taxes: examples {.smaller}
-
-- **US, 2018 top rates.** $\tau_{C} = 21\%$, $\tau_{i} = 37\%$,
-  $\tau_{e} = 20\%$. Debt holders keep 0.63, shareholders
-  $0.79 \times 0.80 = 0.632$:
-  $$\tau^{*} = 1 - \frac{0.632}{0.63} = -0.3\%$$
-  For these investors debt has **no** tax advantage. But many investors
-  (pension funds, retirement accounts) pay no personal tax, so the true
-  $\tau^{*}$ lies between this and $\tau_{C}$.
-
-- **Example 15.6.** A firm worth 500 million (40 million shares at 12.50),
-  $\tau_{C} = 21\%$, $\tau_{i} = 20\%$, $\tau_{e} = 10\%$, recap with 220
-  million of permanent debt:
-  $\tau^{*} = 1 - \frac{0.79 \times 0.90}{0.80} = 11.1\%$; value rises by
-  $11.1\% \times 220 = 24.4$ million, $0.61$ per share: price 13.11.
 
 ## E. Optimal capital structure with taxes
 
@@ -903,13 +923,13 @@ Negative Pre-tax Income, S&P 500 1975-2021
 
 ## Other theories of optimal capital structure
 
-- Trade-off theory
+**Trade-off theory**
 
   - Optimal capital structure weighs the benefits of debt that result
     from shielding cash flows from taxes against the costs of financial
     distress associated with leverage.
 
-- "Pecking order theory" (linked to signalling)
+**Pecking order theory** (linked to signalling)
 
   - Managers prefer to use retained earnings first, then debt and will
     issue equity only as a last resort.
