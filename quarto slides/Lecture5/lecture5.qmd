@@ -34,25 +34,6 @@ Recap lecture 4
 \vfill
 ```
 
-## Recap of Lecture 4 {.smaller}
-
-Let's do a recap:
-
-- The capital market line
-
-- Is a stock worth adding to the portfolio?
-
-- The CAPM assumptions
-
-- How the assumptions take us from the tangency portfolio to the market
-  portfolio
-
-- From the required return to the CAPM
-
-- The CAPM and how to read it
-
-- The security market line
-
 ## Recap: the capital market line {.smaller .shrink}
 
 :::: {.columns}
@@ -266,7 +247,7 @@ F.  So, do we keep the CAPM? (Chap. 13.8)
 ## A. Beating the market: the alpha {.smaller}
 
 ::: {.box .box-a}
-**The answer first.** To beat the market you need stocks that pay more than the
+To beat the market you need stocks that pay more than the
 CAPM says they must. Competition between investors leaves few of them, and not
 for long.
 :::

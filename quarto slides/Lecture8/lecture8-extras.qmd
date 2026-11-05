@@ -1,8 +1,24 @@
 ---
 title: "Corporate Finance"
-subtitle: "Lecture 8 extras: How a project is evaluated"
+subtitle: "Lecture 8 extras: Evaluating a project, reading a bond headline"
 footer: "Lecture 8 extras"
 ---
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+How projects are evaluated
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries How projects are evaluated}
+\end{center}
+\vfill
+```
 
 ## How a project is evaluated {.smaller}
 
@@ -40,3 +56,134 @@ Two equivalent approaches: a return above the cost of capital is exactly what
 makes the discounted cash flows exceed the investment. The two analyses give
 the same answer.
 :::
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Bond yields
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Bond yields}
+\end{center}
+\vfill
+```
+
+## In the news this morning {.smaller}
+
+:::: {.columns}
+::: {.column width="55%"}
+![](franceDebt5pct.png){width="100%"}
+:::
+
+::: {.column width="45%"}
+- Riots last week, in a tense market: investors worry about French debt.
+
+- French bonds **fell** in price, **yields rose**: the 10-year went from
+  **3.35%** a year ago to **above 5%**, a first since 2002.
+
+- For a bond, a lower price **is** a higher yield. To see why: **face
+  value**, **coupon**, **price** and **yield**.
+:::
+::::
+
+## What is a bond? {.smaller}
+
+A bond is a loan cut into small pieces and sold to investors. France borrows by
+selling bonds; so do companies via corporate bonds. The contract fixes:
+
+- **Face value** (or principal): the amount repaid at the end. Say 100 euros.
+
+- **Coupon rate**: the interest paid every year, as a percentage of the face
+  value. A 3.35% coupon (France's rate a year ago) on 100 of face value pays
+  $3.35\% \times 100 = 3.35$ euros a year.
+
+- **Maturity**: when the face value is repaid. Say 10 years.
+
+Two more words are **not** in the contract. They come from the market:
+
+- **Price**: what an investor pays today to own the bond. It changes every
+  minute, as investors buy and sell.
+
+- **Yield** (yield to maturity): the return an investor earns if they pay
+  today's price and hold the bond until it is repaid.
+
+## The cash flows of the bond {.smaller}
+
+Face value 100, coupon 3.35%, 10 years. The holder receives
+$3.35\% \times 100 = 3.35$ every year, and 100 back with the last coupon:
+
+| Year       | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 10         |
+|:-----------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----------:|
+| Coupon     | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35       |
+| Face value |      |      |      |      |      |      |      |      |      | 100        |
+| **Total**  | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | 3.35 | **103.35** |
+
+Added up, the bond pays $10 \times 3.35 + 100 = 133.5$ euros over its life.
+
+::: {.box .box-a}
+These cash flows are **fixed by the contract**. Riots, budgets and
+investor moods do not change a single one of them. The only thing that moves
+is the **price** people are willing to pay today for this fixed stream.
+:::
+
+## From the price to the yield {.smaller}
+
+The price is what you pay today; the cash flows are what you get. The yield is
+the discount rate that makes the two sides equal:
+
+$$\text{Price} = \frac{3.35}{1+y} + \frac{3.35}{(1+y)^2} + \dots
++ \frac{3.35}{(1+y)^{9}} + \frac{103.35}{(1+y)^{10}}$$
+
+- Same logic as the IRR of a project (first slides of this deck): the
+  investment is the price, the project is the bond, and $y$ is the return it
+  earns.
+
+- The market sets the price; the yield is then **computed** from it. Nobody
+  sets a yield directly.
+
+- If the price is exactly 100, the yield is exactly 3.35%: you lend 100, you
+  receive 3.35 a year on it, you get your 100 back. Yield = coupon rate. That
+  was the situation a year ago, when the bond was issued.
+
+## Price falls, yield rises {.smaller}
+
+A year of sell-offs: the price fell from 100 to about **86.9**.
+
+- The buyer at 86.9 still receives 3.35 a year and 100 at the end: the same
+  133.5 euros of cash flows for 13.1 euros less.
+
+- Two sources of return instead of one: the coupon of 3.35 and the price discount.
+
+- Solving the price equation with Price $= 86.9$ gives $y \approx 5.05\%$.
+
+| Price paid today | Cash flows received | Yield |
+|:----------------:|:-------------------:|:-----:|
+| 100              | 3.35 a year + 100   | 3.35% |
+| 96               | 3.35 a year + 100   | 3.85% |
+| 86.9             | 3.35 a year + 100   | 5.05% |
+
+::: {.box .box-a}
+Fixed cash flows, lower price, higher return. Price and yield move in
+**opposite directions**: "yields rose" and "bonds fell" say the same thing.
+:::
+
+## So what does the headline mean? {.smaller}
+
+- Investors fear France's debt will not be brought under control, and last
+  week's riots made lending to France look even riskier.
+
+- For the same cash flows, they now demand a higher return. The only way to
+  get it is to pay **less**: they sell, the price drops, the yield climbs.
+
+- **Who loses today:** anyone who bought French bonds a year ago. Their bond
+  pays the same 3.35 a year, but is worth about 86.9 instead of 100 if sold
+  now: a loss of 13% in a year.
+
+- **Who pays tomorrow:** France. The next bond it issues must offer more
+  than 5% to find buyers, instead of 3.35%. Higher yield = higher cost of debt
+  for the borrower, which deepens the budget problem.

@@ -34,22 +34,6 @@ Recap lecture 2
 \vfill
 ```
 
-## Recap of Lecture 2 {.smaller}
-
-Let's do a recap:
-
-- Portfolio choice: in what to invest?
-
-- The mean-variance framework
-
-- The utility function
-
-- The three monsters: covariance, correlation, beta
-
-- Diversification and its link with correlation
-
-- Portfolio return, variance and standard deviation
-
 ## Recap: portfolio choice, in what to invest? {.smaller}
 
 - You have money to invest and many assets to choose from. A **portfolio** is

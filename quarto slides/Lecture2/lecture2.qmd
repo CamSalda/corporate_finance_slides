@@ -18,24 +18,6 @@ footer: "Lecture 2: Portfolio Choice and Diversification"
 
 - Diversification: which risk disappears in a portfolio and which does not
 
-## Recap of Lecture 1 {.smaller}
-
-Let's do a recap:
-
-- The summation sign
-
-- What a return is, and where it comes from
-
-- Why returns compound, and what that does over a long horizon
-
-- The geometric mean (CAGR) and the arithmetic mean
-
-- Stock splits
-
-- Variance and volatility
-
-- The link between risk and return
-
 ## Recap: the summation sign {.smaller}
 
 - $\sum$ is a shortcut for a long addition. Below it: where to **start**; above

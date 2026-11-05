@@ -50,6 +50,10 @@ $code-color: #240085;
 .reveal .slide.dense li {
   margin-bottom: 0.1em;
 }
+// Airy lists, for short definition lists such as a notation slide.
+.reveal .slide.spaced li {
+  margin-bottom: 0.8em;
+}
 // Font sizes carried over from the beamer sources, mostly source credits under figures.
 .reveal .tiny { font-size: 0.45em; }
 .reveal .scriptsize { font-size: 0.55em; }
@@ -63,6 +67,10 @@ $code-color: #240085;
 }
 .reveal .columns img {
   max-height: 300px;
+}
+// Links underlined so they stand out from body text.
+.reveal .slides a {
+  text-decoration: underline;
 }
 .reveal .slide-number {
   color: #240085;

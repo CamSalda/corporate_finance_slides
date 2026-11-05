@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 Quarto slide decks for the Corporate Finance course, ESCP Business School (Camilo Saldarriaga,
-2025/2026). Migrated from beamer. Each deck renders twice: reveal.js HTML for teaching, beamer
+2026/2027). Migrated from beamer. Each deck renders twice: reveal.js HTML for teaching, beamer
 PDF for handouts.
 
 ## Commands
