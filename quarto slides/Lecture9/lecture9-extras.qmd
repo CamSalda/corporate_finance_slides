@@ -81,12 +81,16 @@ footer: "Lecture 9 extras"
 ## Anthropic: the income statement {.smaller}
 
 ::: {.center}
-![](anthropicIncomeStatement.png){style="height: 520px; max-height: none"}
+![](anthropicIncomeStatement.png){height="230" style="height: 470px; max-height: none"}
 :::
 
 ::: {.tiny}
 Source: Anthropic, PBC, Form S-1 filed with the SEC, 26 October 2026. Amounts
 in \$ millions.
+:::
+
+::: {.small .center}
+**[Read the full S-1 filing on sec.gov](https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm#i199fd6a8a0664d5da497db9a78cf0452_241)**
 :::
 
 ## Anthropic: reading the numbers {.smaller}

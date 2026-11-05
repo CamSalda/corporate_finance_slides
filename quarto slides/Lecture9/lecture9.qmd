@@ -4,7 +4,7 @@ subtitle: "Lecture 9: Debt and Taxes"
 footer: "Lecture 9: Debt and Taxes"
 ---
 
-## Plan
+## Plan {.smaller .spaced}
 
 - Recap from lecture 8
 
@@ -143,8 +143,6 @@ from the investments.
   - **agency costs and information**: debt changes how managers act and what
     investors learn (Chap. 16).
 
-- Today: the first one, taxes.
-
 ## {.center}
 
 ::: {.content-visible when-format="revealjs"}
@@ -204,11 +202,29 @@ $$V^{L} = V^{U} + \tau_{C} D$$
 :::
 
 ::: {.box .box-b}
-**Equation (1).** The cost of equity rises more slowly:
+**Cost of equity with taxes.** It rises more slowly:
 $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}(1-\tau_C)\left(r^{U}_{E}-r_D\right)$$
 :::
 :::
 :::::
+
+## MM2: the cost of capital and debt {.smaller}
+
+::: {.center}
+![](CostCap.png){fig-align="center" height="240" style="height: 360px; max-height: none"}
+:::
+
+- With taxes, the cost of equity still rises with debt, but the **WACC
+  falls**: debt costs only $r_D(1-\tau_{C})$ after tax.
+
+## Where we are going: the trade-off {.smaller}
+
+::: {.center}
+![](figure16p1.png){fig-align="center" height="230" style="height: 380px; max-height: none"}
+:::
+
+- Debt adds tax savings ($\tau^{*} D$), but too much debt brings financial
+  distress costs. The best debt level $D^{*}$ balances the two.
 
 ## Introduction {.smaller}
 
@@ -414,7 +430,7 @@ $$V^{L} = V^{U} + PV(\text{Interest tax shield}).$$
 
 - The Proposition 1 of MM2 becomes then: $V^{L} = V^{U} + \tau_{C} D$.
 
-- **Example:** $1.36 / 0.05 = 27.2 = 34\% \times 80$. Each euro of permanent
+- **Example:**  34\% \times 80= 27.2 =$. Each euro of permanent
   debt adds 34 cents of value.
 
 ## MM2: a simple example
@@ -483,7 +499,7 @@ firm and the cost of equity of the unlevered firm.
 - Each year, shareholders receive the operating income minus the interest,
   after tax. Their return is that amount divided by what their shares are
   worth:
-  $$r^{L}_{E} = \frac{\left(\Pi-r_{D} D\right) \left(1-\tau_{C}\right)}{E^{L}} = \frac{\Pi\left(1-\tau_{C}\right) - r_{D} D \left(1-\tau_{C}\right)}{E^{L}},$$
+  $$r^{L}_{E} = \frac{\left(\Pi-r_{D} D\right) \left(1-\tau_{C}\right)}{E^{L}} = \frac{\Pi\left(1-\tau_{C}\right) - r_{D} D \left(1-\tau_{C}\right)}{E^{L}}, \tag{0}$$
   where $\Pi$ is the operating income (EBIT).
 
 - The numerator has two parts: the after-tax operating income
@@ -497,7 +513,7 @@ We decompose the after-tax operating income
 
 - Without debt, the after-tax operating income is exactly
   what pays the owners their required return on the whole firm. We know that
-  $$\Pi \left(1-\tau_{C}\right) = r_{WACC}^{U} V^{U} = r^{U}_{E} V^{U},$$
+  $$\Pi \left(1-\tau_{C}\right) = r_{WACC}^{U} V^{U} = r^{U}_{E} V^{U} \tag{1}$$
 
  - We now take $V^{U},$
 
@@ -505,11 +521,14 @@ We decompose the after-tax operating income
 
 - Switch the side of $\tau_{C} D$: the firm without debt
   is worth the levered firm minus the tax shield:
-  $$V^{U} = V^{L} - \tau_{C} D = \left(E^{L} + D \right) - \tau_{C} D.$$
+  $$V^{U} = V^{L} - \tau_{C} D = \left(E^{L} + D \right) - \tau_{C} D \tag{2}$$
+
+- Put (2) into (1):
+  $$\Pi \left(1-\tau_{C}\right) = r^{U}_{E} \left(\left(E^{L} + D \right) - \tau_{C} D\right) \tag{3}$$
 
 ## Step 3: substitute and simplify {.smaller}
 
-- Thus:
+- Put (2) into (0):
   $$r^{L}_{E} = \frac{r^{U}_{E} \left(\left(E^{L} + D \right) - \tau_{C} D\right) - r_{D} D \left(1-\tau_{C}\right)}{E^{L}}$$
 
 - Open the bracket, using $(E^{L} + D) - \tau_{C} D = E^{L} + D(1-\tau_{C})$:
@@ -518,11 +537,11 @@ We decompose the after-tax operating income
 - Divide each term by $E^{L}$ and factor out $\frac{D}{E^{L}}(1-\tau_{C})$:
 
 ::: {.box .box-a}
-**Equation (1).**
+**Cost of equity with taxes.**
 $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}} \left(1-\tau_{C} \right)\left(r^{U}_{E}-r_{D} \right)$$
 :::
 
-## Equation (1) next to Lecture 8 {.smaller}
+## Cost of equity with taxes next to Lecture 8 {.smaller}
 
 | Without taxes (Lecture 8)                                   | With corporate taxes (today)                                                      |
 |:-----------------------------------------------------------:|:---------------------------------------------------------------------------------:|
@@ -534,7 +553,7 @@ $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}} \left(1-\tau_{C} \right)\left(r^{U}_{E
   from shareholders in bad years. Equity still gets riskier with leverage, but
   more slowly than without taxes.
 
-## Equation (1) next to Lecture 8 (con't) {.smaller}
+## Cost of equity with taxes next to Lecture 8 (con't) {.smaller}
 
 - **Example.** $r^{U}_{E} = 10\%$, $r_{D} = 5\%$, $D/E^{L} = 1$, $\tau_{C} = 25\%$:
 
@@ -562,6 +581,9 @@ $$\text{Effective cost of debt} = r_{D} \left(1-\tau_{C}\right) D.$$
 
   - Effective cost of debt = 0.1\*100000 - 3400 = 6600
 
+  - This is the formula of the previous slide:
+    $r_{D}(1-\tau_{C})D = 0.1 \times (1-0.34) \times 100000 = 6600$.
+
 - **As a rate.** Divide by the debt: $6600 / 100000 = 6.6\%$.
 
   - This is $r_{D}(1-\tau_{C}) = 10\% \times (1 - 0.34)$, the **after-tax
@@ -571,7 +593,7 @@ $$\text{Effective cost of debt} = r_{D} \left(1-\tau_{C}\right) D.$$
 
 - The WACC of a levered firm is:
   $$\begin{aligned}
-  r_{WACC}^{L} & = \frac{D}{D+E^{L}}r_{D}\left(1-\tau_{C}\right) + \frac{E^{L}}{D+E^{L}}  r^{L}_{E}, \\
+  r_{WACC}^{L} & = \frac{D}{D+E^{L}}r_{D}\left(1-\tau_{C}\right) + \frac{E^{L}}{D+E^{L}}  r^{L}_{E}, \\[1.6em]
   & = \frac{D}{D+E^{L}} r_{D} + \frac{E^{L}}{D+E^{L}} r_{E}^{L}  - \frac{D}{D+E^{L}} \tau_{C} r_{D}.
   \end{aligned}$$
 
@@ -581,7 +603,7 @@ $$\text{Effective cost of debt} = r_{D} \left(1-\tau_{C}\right) D.$$
 
 ## MM2: WACC with taxes, the result {.smaller}
 
-- By using the expression in Equation (1) for $r^{L}_{E}$, we obtain:
+- By using the cost of equity with taxes for $r^{L}_{E}$, we obtain:
 
 ::: {.box .box-a}
 $$r_{WACC}^{L}=\underbrace{r_{WACC}^{U}}_{\begin{array}{c}\text{WACC without} \\ \text{leverage}\end{array}} \underbrace{\left(1-\tau_{C} \frac{D}{D+E^{L}}\right)}_{\begin{array}{c}\text{Reduction due} \\ \text{to interest tax shield}\end{array}}$$
@@ -604,13 +626,13 @@ $$r_{WACC}^{L}=\underbrace{r_{WACC}^{U}}_{\begin{array}{c}\text{WACC without} \\
 
 ## Betas with taxes {.smaller}
 
-- Remark: In MM2, we have (this can be derived using the expression in
-  Equation (1)):
+- Remark: In MM2, we have (this can be derived using the cost of equity
+  with taxes):
   $$\beta^{L}_{E} = \beta^{U}_{E} \left(1+\left(1-\tau_{C} \right)\frac{D}{E} \right).$$
 
 - Lecture 8, risk-free debt and no taxes:
   $\beta^{L}_{E} = \beta^{U}_{E}\,\big(1 + \frac{D}{E}\big)$. Taxes add the
-  same factor $(1-\tau_{C})$ as in Equation (1).
+  same factor $(1-\tau_{C})$ as in the cost of equity with taxes.
 
 - **Example.** $\beta^{U}_{E} = 1$, $D/E^{L} = 1$, $\tau_{C} = 25\%$:
   $\beta^{L}_{E} = 1 \times (1 + 0.75 \times 1) = 1.75$, against 2 without
@@ -645,7 +667,7 @@ $$r_{WACC}^{L}=\underbrace{r_{WACC}^{U}}_{\begin{array}{c}\text{WACC without} \\
 - We use a shortcut in these cases. The shortcut values the firm twice, once **with** the tax benefit and once
   **without**, and takes the difference.
 
-## Beyond MM2: "uncertain" debt levels (con't 2)
+## Beyond MM2: "uncertain" debt levels (con't 2) {.smaller}
 
 - "Special" case: target debt-equity ratio
 
@@ -942,7 +964,7 @@ Negative Pre-tax Income, S&P 500 1975-2021
 - **MM2 Proposition 1**: $V^{L} = V^{U} + PV(\text{Interest tax shield})$;
   with permanent debt, $V^{L} = V^{U} + \tau_{C} D$.
 
-- **Equation (1)**: $r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}(1-\tau_{C})(r^{U}_{E} - r_{D})$.
+- **Cost of equity with taxes**: $r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}(1-\tau_{C})(r^{U}_{E} - r_{D})$.
   Equity still gets riskier with debt, but more slowly than without taxes.
 
 - **WACC with taxes** $= \frac{E}{E+D} r^{L}_{E} + \frac{D}{E+D} r_{D}(1-\tau_{C})$:
@@ -953,6 +975,59 @@ Negative Pre-tax Income, S&P 500 1975-2021
 
 - **Trade-off**: tax savings against financial distress costs. Firms use less
   debt than taxes alone would suggest.
+
+## What to remember: the four propositions {.smaller}
+
+::::: {.columns}
+::: {.column width="49%"}
+**MM1: no taxes (Lecture 8)**
+
+::: {.box .box-a}
+**MM1 Proposition 1.** Firm value does not depend on debt:
+$$V^{L} = V^{U}$$
+:::
+
+::: {.box .box-a}
+**MM1 Proposition 2.** The cost of equity rises with debt:
+$$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}\left(r^{U}_{E}-r_D\right)$$
+:::
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+**MM2: with corporate taxes (Lecture 9)**
+
+::: {.box .box-b}
+**MM2 Proposition 1.** Debt adds the value of the tax it saves:
+$$V^{L} = V^{U} + \tau_{C} D$$
+:::
+
+::: {.box .box-b}
+**Cost of equity with taxes.** It rises more slowly:
+$$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}(1-\tau_C)\left(r^{U}_{E}-r_D\right)$$
+:::
+:::
+:::::
+
+## What to remember: the cost of capital {.smaller}
+
+::: {.center}
+![](CostCap.png){fig-align="center" height="240" style="height: 360px; max-height: none"}
+:::
+
+- With taxes, the cost of equity still rises with debt, but the **WACC
+  falls**: debt costs only $r_D(1-\tau_{C})$ after tax.
+
+## What to remember: the trade-off {.smaller}
+
+::: {.center}
+![](figure16p1.png){fig-align="center" height="230" style="height: 380px; max-height: none"}
+:::
+
+- Debt adds tax savings ($\tau^{*} D$), but too much debt brings financial
+  distress costs. The best debt level $D^{*}$ balances the two.
 
 ## Quiz
 

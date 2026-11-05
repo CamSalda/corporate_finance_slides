@@ -68,6 +68,10 @@ $code-color: #240085;
 .reveal .columns img {
   max-height: 300px;
 }
+// Links underlined so they stand out from body text.
+.reveal .slides a {
+  text-decoration: underline;
+}
 .reveal .slide-number {
   color: #240085;
 }
