@@ -804,6 +804,45 @@ capture the whole tax shield: $20 \times 1.65 = 33$. The price cannot stay at
 :::
 :::::
 
+## Personal taxes, step by step {.smaller}
+
+- Investors pay tax too: $\tau_{i}$ on interest, $\tau_{e}$ on equity
+  income. Follow **one euro of EBIT**.
+
+- **Route 1, paid as interest.** No corporate tax (interest is deductible).
+  The lender pays $\tau_{i}$ on the euro and keeps $1 - \tau_{i}$.
+
+- **Route 2, paid to shareholders.** The firm pays $\tau_{C}$ first and keeps
+  $1 - \tau_{C}$; the shareholder then pays $\tau_{e}$ on that and keeps
+  $(1 - \tau_{C})(1 - \tau_{e})$.
+
+- Example: $\tau_{C} = 25\%$, $\tau_{e} = 30\%$, $\tau_{i} = 40\%$.
+
+  | Route    | After $\tau_{C}$      | After personal tax                     |
+  |:---------|:---------------------:|:--------------------------------------:|
+  | Interest | $1$                   | $1 - \tau_{i} = 0.60$                  |
+  | Equity   | $1 - \tau_{C} = 0.75$ | $(1 - \tau_{C})(1 - \tau_{e}) = 0.75 \times 0.70 = 0.525$ |
+
+- Debt still wins, but by $0.60 - 0.525 = 0.075$ per euro, not by the full
+  $\tau_{C} = 0.25$ of corporate tax saved.
+
+## The effective tax advantage of debt {.smaller}
+
+- The **effective tax advantage of debt** measures that gap as a fraction of
+  what the interest route leaves:
+  $$\tau^{*} = 1 - \frac{(1 - \tau_{C})(1 - \tau_{e})}{1 - \tau_{i}}$$
+
+- In the example: $\tau^{*} = 1 - 0.525 / 0.60 = 12.5\%$. Without personal
+  taxes ($\tau_{e} = \tau_{i} = 0$) the formula gives $\tau^{*} = \tau_{C} = 25\%$.
+
+- In words: personal taxes fall more heavily on interest than on equity
+  income, so part of the corporate tax saving is given back to the tax
+  authority at the investor's level. The advantage of debt shrinks.
+
+- With permanent debt, the value added by leverage becomes $\tau^{*} D$
+  instead of $\tau_{C} D$. This is the $\tau^{*}$ used in the trade-off
+  figure of section E.
+
 ## E. Optimal capital structure with taxes
 
 - Question(s):
@@ -816,6 +855,27 @@ capture the whole tax shield: $20 \times 1.65 = 33$. The price cannot stay at
   depend on leverage) discounted at the WACC.
 
 - Thus, the leverage which minimizes the WACC also maximizes firm value.
+
+## The low leverage puzzle {.smaller}
+
+- **What MM2 predicts.** Every euro of debt adds $\tau^{*}$ of value and
+  lowers the WACC. Taken literally, a firm should borrow until interest uses
+  up all its taxable income.
+
+- **What we observe.** Large US and French firms finance only about 20% of
+  their assets with debt. Interest absorbs well under half of EBIT in most
+  years, and few firms report losses. Most of them could deduct much more
+  interest than they do.
+
+- **The puzzle.** Firms leave tax savings on the table. Either the benefit is
+  smaller than $\tau^{*} D$ suggests (personal taxes, interest that cannot be
+  deducted), or debt has costs that MM2 ignores: financial distress, agency
+  problems.
+
+::: {.box .box-a}
+The rest of this section looks at the evidence, then at what limits the tax
+benefit and what debt costs, to arrive at a **trade-off**.
+:::
 
 ## Do firms prefer debt? {.smaller .shrink}
 
@@ -870,7 +930,7 @@ Debt-to-Value Ratio \[$D / (E + D)$\] of U.S. Firms, 1975-2021
 
 - Why does the leverage choice vary so much across industries?
 
-## The low leverage puzzle {.smaller .shrink}
+## The low leverage puzzle: the evidence {.smaller .shrink}
 
 Interest Payments as a Percentage of EBIT and Percentage of Firms with
 Negative Pre-tax Income, S&P 500 1975-2021

@@ -35,20 +35,27 @@ Recap lecture 9
 - Interest is paid **before** corporate tax, dividends **after**. Every euro
   paid as interest instead of dividends saves tax for the firm.
 
-- The firm of Lecture 9: profit before interest and tax 10, tax rate 34%,
-  then a loan of 80 at 5% (interest 4):
-
-  |                              | Without leverage | With leverage |
-  |:-----------------------------|:----------------:|:-------------:|
-  | Taxes                        | 3.4              | 2.04          |
-  | Net income (to shareholders) | 6.6              | 3.96          |
-  | Interest (to lenders)        | 0                | 4             |
-  | **Total to investors**       | **6.6**          | **7.96**      |
-
 ::: {.box .box-a}
-Investors as a group receive 1.36 more. That is tax the firm no longer pays,
-the **interest tax shield**: $\tau_{C} \times \text{interest} = 34\% \times 4 = 1.36$.
+$$\text{Interest tax shield} = \tau_{C} \times \text{Interest payments}$$
 :::
+
+- $\tau_{C}$ is the corporate tax rate. In words: of every euro of interest,
+  the firm gets back the tax it would have paid on that euro.
+
+- The gain goes to investors as a group: shareholders receive less, but
+  shareholders and lenders together receive more, by exactly the tax saved.
+
+- Seen from the firm, the shield makes borrowing cheaper. Of each euro of
+  interest the firm pays, the tax authority refunds $\tau_{C}$, so the
+  **effective cost of debt** is
+  $$r_{D}\,(1 - \tau_{C})$$
+
+## Recap: the interest tax shield (con't) {.smaller}
+
+::: {.center}
+![](CashFlowsUnleveredLeveredFirm.png){fig-align="center" height="250" style="height: 400px; max-height: none"}
+:::
+
 
 ## Recap: MM2 Proposition 1 {.smaller}
 
@@ -58,16 +65,10 @@ unlevered firm plus the present value of its tax savings:
 $$V^{L} = V^{U} + PV(\text{Interest tax shield})$$
 :::
 
-- With **permanent** debt $D$, the shield is $\tau_{C} \times r_{D} \times D$
-  every year for ever. Discounted at $r_{D}$ it is worth $\tau_{C} D$:
+- This means that in presence of taxes, the firm's value changes with the capital structure,
+as the tax shield should be considered:
   $$V^{L} = V^{U} + \tau_{C}\, D$$
 
-- The quiz of Lecture 9: a firm worth 1000 with no debt, tax rate 25%, borrows
-  200 permanently and buys back shares. It is now worth
-  $1000 + 0.25 \times 200 = 1050$, and the shareholders capture the 50 when
-  the recap is announced.
-
-- Taken literally, MM2 says: borrow as much as possible.
 
 ## Recap: the four propositions {.smaller}
 
@@ -115,16 +116,60 @@ $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}(1-\tau_C)\left(r^{U}_{E}-r_D\right)$$
   rises:
   $$r_{WACC} = \frac{E}{E+D}\, r^{L}_{E} + \frac{D}{E+D}\, r_{D}\,(1 - \tau_{C})$$
 
-## Recap: personal taxes and the limits of debt {.smaller}
+## Recap: betas with taxes {.smaller}
 
-- Investors pay tax too: $\tau_{i}$ on interest, $\tau_{e}$ on dividends and
-  capital gains. One euro of EBIT paid as interest leaves $1 - \tau_{i}$;
-  paid to shareholders it leaves $(1 - \tau_{C})(1 - \tau_{e})$.
+- Lecture 8, risk-free debt and no taxes: the equity beta is the asset beta
+  scaled up by the leverage,
+  $$\beta^{L}_{E} = \beta^{U}_{E}\,\Big(1 + \frac{D}{E}\Big)$$
 
-- The advantage of debt shrinks to the **effective tax advantage**
+- With corporate taxes (MM2), the same factor $(1 - \tau_{C})$ that slowed
+  the rise of the cost of equity also slows the rise of the beta:
+
+::: {.box .box-a}
+$$\beta^{L}_{E} = \beta^{U}_{E}\,\Big(1 + (1 - \tau_{C})\,\frac{D}{E}\Big)$$
+:::
+
+- In words: debt still makes the shares riskier, but part of the debt is
+  "paid for" by the tax authority through the shield, so each euro of debt
+  adds less risk to the equity than without taxes.
+
+- $\beta^{U}_{E}$ is the unlevered (asset) beta, $\beta^{L}_{E}$ the levered
+  (equity) beta, $D/E$ the market-value debt-to-equity ratio.
+
+## Recap: personal taxes, step by step {.smaller}
+
+- Investors pay tax too: $\tau_{i}$ on interest, $\tau_{e}$ on equity
+  income. Follow **one euro of EBIT**.
+
+- **Route 1, paid as interest.** No corporate tax (interest is deductible).
+  The lender pays $\tau_{i}$ on the euro and keeps $1 - \tau_{i}$.
+
+- **Route 2, paid to shareholders.** The firm pays $\tau_{C}$ first and keeps
+  $1 - \tau_{C}$; the shareholder then pays $\tau_{e}$ on that and keeps
+  $(1 - \tau_{C})(1 - \tau_{e})$.
+
+- Example: $\tau_{C} = 25\%$, $\tau_{e} = 30\%$, $\tau_{i} = 40\%$.
+
+  | Route    | After $\tau_{C}$      | After personal tax                     |
+  |:---------|:---------------------:|:--------------------------------------:|
+  | Interest | $1$                   | $1 - \tau_{i} = 0.60$                  |
+  | Equity   | $1 - \tau_{C} = 0.75$ | $(1 - \tau_{C})(1 - \tau_{e}) = 0.75 \times 0.70 = 0.525$ |
+
+- Debt still wins, but by $0.60 - 0.525 = 0.075$ per euro, not by the full
+  $\tau_{C} = 0.25$ of corporate tax saved.
+
+## Recap: the effective tax advantage and the limits of debt {.smaller}
+
+- The **effective tax advantage of debt** measures that gap as a fraction of
+  what the interest route leaves:
   $$\tau^{*} = 1 - \frac{(1 - \tau_{C})(1 - \tau_{e})}{1 - \tau_{i}}$$
-  In words: how much more investors keep, per euro of EBIT, when it goes out
-  as interest instead of as dividends.
+
+- In the example: $\tau^{*} = 1 - 0.525 / 0.60 = 12.5\%$. Without personal
+  taxes ($\tau_{e} = \tau_{i} = 0$) the formula gives $\tau^{*} = \tau_{C} = 25\%$.
+
+- In words: personal taxes fall more heavily on interest than on equity
+  income, so part of the corporate tax saving is given back to the tax
+  authority at the investor's level. The advantage of debt shrinks.
 
 - Interest above taxable income (or above the legal limit) saves no tax.
 
