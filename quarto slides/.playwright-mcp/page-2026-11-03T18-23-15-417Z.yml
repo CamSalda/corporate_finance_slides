@@ -1,0 +1,343 @@
+- generic [ref=f18e4]:
+  - generic [ref=f18e5]:
+    - link "Skip to main content" [ref=f18e6] [cursor=pointer]:
+      - /url: "#main-view"
+    - link [ref=f18e9] [cursor=pointer]:
+      - /url: /
+      - img "Spotify" [ref=f18e10]
+    - generic [ref=f18e12]:
+      - button "Home" [ref=f18e13] [cursor=pointer]
+      - search [ref=f18e18]:
+        - button "Search" [ref=f18e20] [cursor=pointer]
+        - generic [ref=f18e24]:
+          - combobox "What do you want to play?" [ref=f18e25]
+          - generic [ref=f18e26]:
+            - status
+        - button "Browse" [ref=f18e29] [cursor=pointer]
+    - generic [ref=f18e35]:
+      - button "Premium" [ref=f18e36] [cursor=pointer]
+      - button "Support" [ref=f18e37] [cursor=pointer]
+      - button "Download" [ref=f18e38] [cursor=pointer]
+      - link "Install App" [ref=f18e40] [cursor=pointer]:
+        - /url: /download
+      - generic [ref=f18e46]:
+        - button "Sign up" [ref=f18e47] [cursor=pointer]
+        - button "Log in" [ref=f18e48] [cursor=pointer]
+  - generic [ref=f18e50]:
+    - navigation "Main" [ref=f18e51]:
+      - generic [ref=f18e52]:
+        - generic [ref=f18e53]:
+          - generic [ref=f18e56]:
+            - heading "Your Library" [level=1] [ref=f18e58]
+            - button "Create" [ref=f18e60] [cursor=pointer]
+          - generic [ref=f18e65]:
+            - generic [ref=f18e66]:
+              - generic [ref=f18e67]:
+                - generic [ref=f18e68]: Create your first playlist
+                - generic [ref=f18e69]: It's easy, we'll help you
+              - button "Create playlist" [ref=f18e71] [cursor=pointer]
+            - generic [ref=f18e73]:
+              - generic [ref=f18e74]:
+                - generic [ref=f18e75]: Let's find some podcasts to follow
+                - generic [ref=f18e76]: We'll keep you updated on new episodes
+              - link "Browse podcasts" [ref=f18e78] [cursor=pointer]:
+                - /url: /genre/podcasts-web
+            - generic:
+              - grid "Your Library":
+                - generic:
+                  - row
+                  - row
+        - button "English" [ref=f18e82] [cursor=pointer]
+    - generic [ref=f18e87]:
+      - text: Resize main navigation
+      - slider "Resize main navigation" [ref=f18e88]: "280"
+  - complementary "Now playing bar" [ref=f18e90]:
+    - generic [ref=f18e91] [cursor=pointer]:
+      - generic [ref=f18e92]:
+        - paragraph [ref=f18e93]: Preview of Spotify
+        - paragraph [ref=f18e94]: Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
+      - button "Sign up free" [ref=f18e95]
+    - generic [ref=f18e97]:
+      - generic "Player controls" [ref=f18e99]:
+        - generic [ref=f18e100]:
+          - generic [ref=f18e101]:
+            - button "Enable shuffle" [disabled] [ref=f18e102]
+            - button "Previous" [disabled] [ref=f18e107]
+          - button "Pause" [disabled] [ref=f18e111]
+          - generic [ref=f18e116]:
+            - button "Next" [disabled] [ref=f18e117]
+            - checkbox "Disable repeat" [disabled] [ref=f18e121]
+        - generic [ref=f18e125]:
+          - generic [ref=f18e126]: "-:--"
+          - generic [ref=f18e130]:
+            - text: Change progress
+            - slider "Change progress" [disabled] [ref=f18e131]: "0"
+          - generic [ref=f18e137]: "-:--"
+      - generic [ref=f18e141]:
+        - button "Mute" [disabled] [ref=f18e142] [cursor=pointer]
+        - generic:
+          - generic:
+            - generic:
+              - text: Change volume
+              - slider "Change volume": "1"
+  - main "Search for Unhedged | Spotify" [active] [ref=f18e152]:
+    - generic [ref=f18e157]:
+      - generic [ref=f18e159] [cursor=pointer]:
+        - button "Unhedged Financial Times" [ref=f18e160]
+        - generic [ref=f18e163]:
+          - link "Unhedged" [ref=f18e164]:
+            - /url: /show/42KqGvg4MxWwUPqZ0t98OC
+            - paragraph [ref=f18e165]:
+              - generic [ref=f18e166]: Unhedged
+          - generic [ref=f18e167]: Financial Times
+      - generic [ref=f18e171] [cursor=pointer]:
+        - button "Odd Lots Bloomberg" [ref=f18e172]
+        - generic [ref=f18e175]:
+          - link "Odd Lots" [ref=f18e176]:
+            - /url: /show/1te7oSFyRVekxMBJUSethH
+            - paragraph [ref=f18e177]:
+              - generic [ref=f18e178]: Odd Lots
+          - generic [ref=f18e179]: Bloomberg
+      - generic [ref=f18e183] [cursor=pointer]:
+        - button "Exchanges Goldman Sachs" [ref=f18e184]
+        - generic [ref=f18e187]:
+          - link "Exchanges" [ref=f18e188]:
+            - /url: /show/1T6xOGR2S5tY6bZ7XbpAC3
+            - paragraph [ref=f18e189]:
+              - generic [ref=f18e190]: Exchanges
+          - generic [ref=f18e191]: Goldman Sachs
+      - generic [ref=f18e195] [cursor=pointer]:
+        - button "FT News Briefing Financial Times" [ref=f18e196]
+        - generic [ref=f18e199]:
+          - link "FT News Briefing" [ref=f18e200]:
+            - /url: /show/1410RabA4XOqO6IV8p0gYF
+            - paragraph [ref=f18e201]:
+              - generic [ref=f18e202]: FT News Briefing
+          - generic [ref=f18e203]: Financial Times
+      - generic [ref=f18e207] [cursor=pointer]:
+        - button "Market Maker AmplifyME" [ref=f18e208]
+        - generic [ref=f18e211]:
+          - link "Market Maker" [ref=f18e212]:
+            - /url: /show/32f0wNclLA68z9Qo7IygPP
+            - paragraph [ref=f18e213]:
+              - generic [ref=f18e214]: Market Maker
+          - generic [ref=f18e215]: AmplifyME
+      - generic [ref=f18e219] [cursor=pointer]:
+        - button "Bloomberg News Now Bloomberg" [ref=f18e220]
+        - generic [ref=f18e223]:
+          - link "Bloomberg News Now" [ref=f18e224]:
+            - /url: /show/5q8wg5rFYbbeDk0kk7t6Uc
+            - paragraph [ref=f18e225]:
+              - generic [ref=f18e226]: Bloomberg News Now
+          - generic [ref=f18e227]: Bloomberg
+      - generic [ref=f18e231] [cursor=pointer]:
+        - button "Lemonade Stand Vox Media Podcast Network" [ref=f18e232]
+        - generic [ref=f18e235]:
+          - link "Lemonade Stand" [ref=f18e236]:
+            - /url: /show/0Yz44z9z3t8VQu4WRmsrs6
+            - paragraph [ref=f18e237]:
+              - generic [ref=f18e238]: Lemonade Stand
+          - generic [ref=f18e239]: Vox Media Podcast Network
+      - generic [ref=f18e243] [cursor=pointer]:
+        - button "The Markets Goldman Sachs" [ref=f18e244]
+        - generic [ref=f18e247]:
+          - link "The Markets" [ref=f18e248]:
+            - /url: /show/4QYK5hxHNeXnevtUTsn5a7
+            - paragraph [ref=f18e249]:
+              - generic [ref=f18e250]: The Markets
+          - generic [ref=f18e251]: Goldman Sachs
+      - generic [ref=f18e255] [cursor=pointer]:
+        - button "The Rachman Review Financial Times" [ref=f18e256]
+        - generic [ref=f18e259]:
+          - link "The Rachman Review" [ref=f18e260]:
+            - /url: /show/016vrvCdyUC5N5QjdaX7hZ
+            - paragraph [ref=f18e261]:
+              - generic [ref=f18e262]: The Rachman Review
+          - generic [ref=f18e263]: Financial Times
+      - generic [ref=f18e267] [cursor=pointer]:
+        - button "Unhedged Weekly - Your Monday Morning Marketing Update A podcast by Marissa Homere" [ref=f18e268]
+        - generic [ref=f18e271]:
+          - link "Unhedged Weekly - Your Monday Morning Marketing Update" [ref=f18e272]:
+            - /url: /show/37nQv5E2dQtUKn4RDzysWk
+            - paragraph [ref=f18e273]:
+              - generic [ref=f18e274]: Unhedged Weekly - Your Monday Morning Marketing Update
+          - generic [ref=f18e275]: A podcast by Marissa Homere
+      - generic [ref=f18e279] [cursor=pointer]:
+        - button "Planet Money NPR" [ref=f18e280]
+        - generic [ref=f18e283]:
+          - link "Planet Money" [ref=f18e284]:
+            - /url: /show/4FYpq3lSeQMAhqNI81O0Cn
+            - paragraph [ref=f18e285]:
+              - generic [ref=f18e286]: Planet Money
+          - generic [ref=f18e287]: NPR
+      - generic [ref=f18e291] [cursor=pointer]:
+        - button "The Economics Show with Soumaya Keynes Financial Times" [ref=f18e292]
+        - generic [ref=f18e295]:
+          - link "The Economics Show with Soumaya Keynes" [ref=f18e296]:
+            - /url: /show/64rPqCkSSBkuSJpkMLRe9i
+            - paragraph [ref=f18e297]:
+              - generic [ref=f18e298]: The Economics Show with Soumaya Keynes
+          - generic [ref=f18e299]: Financial Times
+      - generic [ref=f18e303] [cursor=pointer]:
+        - button "Macro Voices Erik Townsend" [ref=f18e304]
+        - generic [ref=f18e307]:
+          - link "Macro Voices" [ref=f18e308]:
+            - /url: /show/6DX9sYVSZq4YqbpGuxRg6f
+            - paragraph [ref=f18e309]:
+              - generic [ref=f18e310]: Macro Voices
+          - generic [ref=f18e311]: Erik Townsend
+      - generic [ref=f18e315] [cursor=pointer]:
+        - button "The Story of Money Financial Times" [ref=f18e316]
+        - generic [ref=f18e319]:
+          - link "The Story of Money" [ref=f18e320]:
+            - /url: /show/5UOQnxomRBw3qlnIHevm6F
+            - paragraph [ref=f18e321]:
+              - generic [ref=f18e322]: The Story of Money
+          - generic [ref=f18e323]: Financial Times
+      - generic [ref=f18e327] [cursor=pointer]:
+        - button "Unhedged Summary Eric" [ref=f18e328]
+        - generic [ref=f18e331]:
+          - link "Unhedged Summary" [ref=f18e332]:
+            - /url: /show/2twvtvr3nkp4JXIdgp5kHU
+            - paragraph [ref=f18e333]:
+              - generic [ref=f18e334]: Unhedged Summary
+          - generic [ref=f18e335]: Eric
+      - generic [ref=f18e339] [cursor=pointer]:
+        - button "Acquired Ben Gilbert and David Rosenthal" [ref=f18e340]
+        - generic [ref=f18e343]:
+          - link "Acquired" [ref=f18e344]:
+            - /url: /show/7Fj0XEuUQLUqoMZQdsLXqp
+            - paragraph [ref=f18e345]:
+              - generic [ref=f18e346]: Acquired
+          - generic [ref=f18e347]: Ben Gilbert and David Rosenthal
+      - generic [ref=f18e351] [cursor=pointer]:
+        - button "Collin Plume Show Collin Plume" [ref=f18e352]
+        - generic [ref=f18e355]:
+          - link "Collin Plume Show" [ref=f18e356]:
+            - /url: /show/3dQofrpyY82OJodAWPTzsY
+            - paragraph [ref=f18e357]:
+              - generic [ref=f18e358]: Collin Plume Show
+          - generic [ref=f18e359]: Collin Plume
+      - generic [ref=f18e363] [cursor=pointer]:
+        - button "Prof G Markets Prof G Media & Vox Media" [ref=f18e364]
+        - generic [ref=f18e367]:
+          - link "Prof G Markets" [ref=f18e368]:
+            - /url: /show/7syF2ry9j6nqYc656WHBA7
+            - paragraph [ref=f18e369]:
+              - generic [ref=f18e370]: Prof G Markets
+          - generic [ref=f18e371]: Prof G Media & Vox Media
+      - generic [ref=f18e375] [cursor=pointer]:
+        - 'button "Elite Force Podcast: Audio Vault William Walker" [ref=f18e376]'
+        - generic [ref=f18e379]:
+          - 'link "Elite Force Podcast: Audio Vault" [ref=f18e380]':
+            - /url: /show/2EocjbGhSkZ3sFnihT0pH3
+            - paragraph [ref=f18e381]:
+              - generic [ref=f18e382]: "Elite Force Podcast: Audio Vault"
+          - generic [ref=f18e383]: William Walker
+      - generic [ref=f18e387] [cursor=pointer]:
+        - button "The Rational Reminder Podcast Benjamin Felix, Cameron Passmore, and Dan Bortolotti" [ref=f18e388]
+        - generic [ref=f18e391]:
+          - link "The Rational Reminder Podcast" [ref=f18e392]:
+            - /url: /show/6RHWTH9iW7hdnA7eAg7ukO
+            - paragraph [ref=f18e393]:
+              - generic [ref=f18e394]: The Rational Reminder Podcast
+          - generic [ref=f18e395]: Benjamin Felix, Cameron Passmore, and Dan Bortolotti
+      - generic [ref=f18e399] [cursor=pointer]:
+        - button "The Journal. The Wall Street Journal" [ref=f18e400]
+        - generic [ref=f18e403]:
+          - link "The Journal." [ref=f18e404]:
+            - /url: /show/0KxdEdeY2Wb3zr28dMlQva
+            - paragraph [ref=f18e405]:
+              - generic [ref=f18e406]: The Journal.
+          - generic [ref=f18e407]: The Wall Street Journal
+      - generic [ref=f18e411] [cursor=pointer]:
+        - button "WSJ What’s News The Wall Street Journal" [ref=f18e412]
+        - generic [ref=f18e415]:
+          - link "WSJ What’s News" [ref=f18e416]:
+            - /url: /show/59176gU8vcFho6Sc1dm3Lu
+            - paragraph [ref=f18e417]:
+              - generic [ref=f18e418]: WSJ What’s News
+          - generic [ref=f18e419]: The Wall Street Journal
+      - generic [ref=f18e423] [cursor=pointer]:
+        - button "The Intelligence from The Economist The Economist" [ref=f18e424]
+        - generic [ref=f18e427]:
+          - link "The Intelligence from The Economist" [ref=f18e428]:
+            - /url: /show/12zKAMNyS2GNentUzxq9QN
+            - paragraph [ref=f18e429]:
+              - generic [ref=f18e430]: The Intelligence from The Economist
+          - generic [ref=f18e431]: The Economist
+      - generic [ref=f18e435] [cursor=pointer]:
+        - button "Economist Podcasts The Economist" [ref=f18e436]
+        - generic [ref=f18e439]:
+          - link "Economist Podcasts" [ref=f18e440]:
+            - /url: /show/2ZFDmgDS2Z6xccP51s1zFQ
+            - paragraph [ref=f18e441]:
+              - generic [ref=f18e442]: Economist Podcasts
+          - generic [ref=f18e443]: The Economist
+      - generic [ref=f18e447] [cursor=pointer]:
+        - button "Unbiased Updates Straight Arrow News" [ref=f18e448]
+        - generic [ref=f18e451]:
+          - link "Unbiased Updates" [ref=f18e452]:
+            - /url: /show/6E1quPJMdLpoA3v7l0iTRd
+            - paragraph [ref=f18e453]:
+              - generic [ref=f18e454]: Unbiased Updates
+          - generic [ref=f18e455]: Straight Arrow News
+      - generic [ref=f18e459] [cursor=pointer]:
+        - button "Motley Fool Hidden Gems Investing The Motley Fool" [ref=f18e460]
+        - generic [ref=f18e463]:
+          - link "Motley Fool Hidden Gems Investing" [ref=f18e464]:
+            - /url: /show/7tXRc97C1fA0epHAGQuJOE
+            - paragraph [ref=f18e465]:
+              - generic [ref=f18e466]: Motley Fool Hidden Gems Investing
+          - generic [ref=f18e467]: The Motley Fool
+      - generic [ref=f18e471] [cursor=pointer]:
+        - button "Marketplace Marketplace" [ref=f18e472]
+        - generic [ref=f18e475]:
+          - link "Marketplace" [ref=f18e476]:
+            - /url: /show/6zYlX5UGEPmNCWacYUJQGD
+            - paragraph [ref=f18e477]:
+              - generic [ref=f18e478]: Marketplace
+          - generic [ref=f18e479]: Marketplace
+      - generic [ref=f18e483] [cursor=pointer]:
+        - button "Animal Spirits Podcast The Compound" [ref=f18e484]
+        - generic [ref=f18e487]:
+          - link "Animal Spirits Podcast" [ref=f18e488]:
+            - /url: /show/71siUnIMn0iQY7Kz5BQSqJ
+            - paragraph [ref=f18e489]:
+              - generic [ref=f18e490]: Animal Spirits Podcast
+          - generic [ref=f18e491]: The Compound
+      - generic [ref=f18e495] [cursor=pointer]:
+        - button "Capital Allocators – Inside the Institutional Investment Industry Ted Seides – Allocator and Asset Management Expert" [ref=f18e496]
+        - generic [ref=f18e499]:
+          - link "Capital Allocators – Inside the Institutional Investment Industry" [ref=f18e500]:
+            - /url: /show/3q6PrjHVfRzpD2lN1g2XRU
+            - paragraph [ref=f18e501]:
+              - generic [ref=f18e502]: Capital Allocators – Inside the Institutional Investment Industry
+          - generic [ref=f18e503]: Ted Seides – Allocator and Asset Management Expert
+      - generic [ref=f18e507] [cursor=pointer]:
+        - button "Thoughts on the Market Morgan Stanley" [ref=f18e508]
+        - generic [ref=f18e511]:
+          - link "Thoughts on the Market" [ref=f18e512]:
+            - /url: /show/5cOfqdkomvzyhPTR7n6KFa
+            - paragraph [ref=f18e513]:
+              - generic [ref=f18e514]: Thoughts on the Market
+          - generic [ref=f18e515]: Morgan Stanley
+    - separator [ref=f18e519]
+  - generic [ref=f18e522]:
+    - generic [aria-hidden]:
+      - generic:
+        - complementary:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - button [disabled]
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Find something to play
+                    - button:
+                      - generic: Search
+    - button "Show Now Playing view" [ref=f18e524] [cursor=pointer]
