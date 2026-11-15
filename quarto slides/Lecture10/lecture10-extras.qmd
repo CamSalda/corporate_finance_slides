@@ -1,0 +1,77 @@
+---
+title: "Corporate Finance"
+subtitle: "Lecture 10 extras: Payout policy in the real world"
+footer: "Lecture 10 extras"
+---
+
+## Announcements
+
+- **Last year's exam** is now available on **Blackboard**.
+
+- **Two weeks before the exam**, all the **Pearson exercises** will be open for
+  you to practice.
+
+## Optional stock dividend: cash or shares? {.smaller}
+
+- The firm declares a dividend and lets **each shareholder choose**: receive it
+  in **cash**, or in **new shares** of the firm worth the same amount.
+
+- To make the shares attractive, they are usually issued at a **discount**:
+  in France, up to 10% below the recent market price.
+
+- Shareholders who take shares receive no cash, so the firm **keeps that
+  money**. It works like a small equity issue to existing shareholders, with no
+  bank fees.
+
+- Common in France (*paiement du dividende en actions*: Sanofi, Orange,
+  Total). Same idea elsewhere: **scrip dividend** in the UK.
+
+## Optional stock dividend: why do it? {.smaller}
+
+- A firm that needs cash could simply **cut its dividend**. But a dividend cut
+  is read as bad news, and the share price falls (signalling, Lecture 10).
+
+- With an optional stock dividend the dividend stays the same on paper, while
+  part of the cash stays in the firm.
+
+- David and Ginglinger (2016) show that French firms using it are not punished
+  the way firms that cut their dividend are.
+
+::: {.box .box-a}
+Same cash saved, different signal: how a payout is presented matters to
+investors.
+:::
+
+## Apple: the largest buyback in US history {.smaller}
+
+- **May 2024**: Apple announces a share repurchase programme of
+  **\$110 billion**, the largest ever announced by a US company.
+
+- At the same time it raised its dividend by only 4%. Apple returns most of
+  its cash through **buybacks**, not dividends.
+
+- Why prefer buybacks? They are **flexible** (no promise to repeat them every
+  year), and in many countries they are taxed more lightly than dividends.
+
+- TODO: add a chart of Apple's buybacks and dividends per year (10-K).
+
+## Berkshire Hathaway: no dividend at all {.smaller}
+
+- Warren Buffett's Berkshire Hathaway has paid **no dividend since 1967**.
+
+- Buffett's argument (2012 letter to shareholders): a shareholder who wants
+  cash can **sell a few shares** each year. This is the **homemade dividend**
+  of the Modigliani-Miller payout irrelevance result (Lecture 10).
+
+- And Berkshire keeps the cash to invest, because Buffett believes he earns
+  more on it than shareholders would elsewhere.
+
+::: {.box .box-a}
+In a perfect market, payout policy does not change firm value: investors can
+create the payout they want by themselves.
+:::
+
+## A story to follow {.smaller}
+
+- TODO: a payout headline from this term (a dividend cut, a record buyback,
+  a special dividend) and the question it raises for the course.

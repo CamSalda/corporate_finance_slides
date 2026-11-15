@@ -288,28 +288,36 @@ Uses of free cash flow:
 
 - "True" dividends:
 
-  - Cash Div: cash payment.
+  - Cash dividend: cash payment.
 
-    - Regular Cash Div: quarterly (US) or annually (France)
+    - Regular cash dividend: quarterly (US) or annually (France)
 
-    - Special Cash Div: one-time dividend payment, usually much larger
+    - Special cash dividend: one-time dividend payment, usually much larger
       than a regular dividend
 
   - Optional stock dividends (in France)/ Scrip dividend (UK)
 
 - "Fake" dividends:
 
-  - Stock Div: issue of dividends in shares.
+  - Stock dividend: issue of dividends in shares.
 
   - Stock Splits: division of a stock in multiple stocks.
 
+## Dividend ratios
+
 - Financial ratios:
 
-  - Dividend yield: Annual dividend / Stock price
+  - **Dividend yield**: Annual dividend / Stock price
 
-  - Payout ratio: Cash dividends / Earnings per share
+    In words: the cash return you get each year from dividends, per euro
+    invested in the share.
 
-## Payment of a dividend: procedure
+  - **Payout ratio**: Cash dividends / Earnings per share
+
+    In words: the share of the firm's earnings paid out as dividends; the
+    rest is retained.
+
+## Payment of a dividend: procedure {.smaller}
 
 ::: {.center}
 ![](figure17p2.png){fig-align="center"}
@@ -317,11 +325,11 @@ Uses of free cash flow:
 
 - Declaration Date: board authorizes the dividend and makes it public.
 
-- Record Date: dividend is paid to all shareholders of record on a
-  specific date (it takes three days for shares to be registered).
-
 - Ex-Dividend Date: anyone who purchases the stock on or after the
   ex-dividend date will not receive a dividend.
+
+- Record Date: dividend is paid to all shareholders of record on a
+  specific date (it takes three days for shares to be registered).
 
 ## The four dates, step by step {.smaller}
 
@@ -360,10 +368,7 @@ pp. 174-191, 2016.
 
 | Declaration date | Ex-Dividend date | Record date | Payable date |
 |:--:|:--:|:--:|:--:|
-| Annual general meeting | Buyers of the | Shareholders | Eligible shareholders |
-| of shareholders decides | the stock after this | recorded by this | receive payment |
-| to pay a dividend of | date do not receive | date receive | of 1 EUR |
-| 1 EUR | dividend | dividend | per share held |
+| Annual general meeting of shareholders decides to pay a dividend of 1 EUR | Buyers of the stock after this date do not receive the dividend | Shareholders recorded by this date receive the dividend | Eligible shareholders receive payment of 1 EUR per share held |
 | 24 January 2017 | 6 February 2017 | 7 February 2017 | 8 February 2017 |
 
 ## Dividend history for GM
@@ -401,19 +406,19 @@ pp. 174-191, 2016.
 - The shareholder loses nothing: a share worth $P_{\text{ex}}$ plus cash of
   $\text{Div}$ is still worth $P_{\text{cum}}$.
 
-## Share repurchases (or buyback)
+## Share repurchases (or buyback) {.smaller}
 
-- Same result as dividends: company pays cash to investors.
+- **Same result as dividends**: the company pays cash to investors.
 
-- In both cases the cash and equity of the firm are reduced.
+- In both cases the cash and the equity of the firm are reduced.
 
-- Differences between dividends and share repurchases
+- **Differences** between dividends and share repurchases:
 
-  - A dividend reduces the stock prices but not the number of stocks.
+  - A dividend reduces the **stock price** but not the number of shares.
 
-  - A share repurchase reduces the number but not the price of stocks.
+  - A share repurchase reduces the **number of shares** but not the price.
 
-- Share repurchases can have fiscal benefits.
+- Share repurchases can have **fiscal benefits** (section C).
 
 ## Share repurchases in France {.smaller}
 
@@ -542,9 +547,17 @@ pp. 174-191, 2016.
 - **Repurchase, she does not sell.** She keeps 1,000 shares at \$10:
   $\$10{,}000$. Same wealth, all of it in shares.
 
+## A shareholder's wealth in both cases (con't) {.smaller}
+
 - **Repurchase, but she wants cash.** She sells 100 shares at \$10 for
   \$1,000 and keeps 900 shares worth \$9,000: again \$10,000, with the same
-  split as the dividend. She has made her own **homemade dividend**.
+  split as the dividend.
+
+- Another option is simply to sell shares in the market, creating a
+  **homemade dividend**: she can turn any payout into the cash she wants.
+
+- The reverse also works: under the dividend, she can buy \$1,000 of shares
+  at \$9 and be back to all-shares, as under the repurchase.
 
 ::: {.box .box-a}
 In a perfect market the shareholder is as rich either way, and can convert one
@@ -554,8 +567,7 @@ payout into the other by selling or buying a few shares.
 ## Genron: one firm, three payout policies {.smaller}
 
 - The textbook's example (Chap. 17.2). **Genron** has no debt, \$20 million
-  of excess cash today, and expects free cash flows of \$48 million a year
-  from next year on. Its cost of capital $r^{U}_{E}$ is 12%, and it has
+  of excess cash today, and expects constant free cash flows of \$48 million for the future years. Its cost of capital $r^{U}_{E}$ is 12%, and it has
   10 million shares.
 
 - **Step 1, value of the business.** A perpetuity of 48 at 12%:
@@ -584,7 +596,7 @@ payout into the other by selling or buying a few shares.
 - **Step 3, the price on the ex-dividend day:**
   $$P_{\text{ex}} = \frac{4.80}{0.12} = \$40$$
 
-- The price falls by \$2, the dividend. Next slide: the same thing on the
+- The price falls by \$2 after the first payment, the dividend. Next slide: the same thing on the
   balance sheet.
 
 ## Genron, policy 1 (con't): the balance sheet {.smaller}
@@ -635,8 +647,7 @@ payout into the other by selling or buying a few shares.
 
 ::: {.box .box-a}
 A common mistake: "fewer shares, so the price must rise". No: the firm also has
-less cash. The two effects cancel exactly, as in the dilution fallacy of
-Lecture 8, run backwards.
+less cash. The two effects cancel exactly.
 :::
 
 ## Genron, policy 3: a bigger dividend financed by new shares {.smaller}
@@ -679,20 +690,6 @@ does not: it only moves cash between today and tomorrow.
 
 ## Homemade dividends {.smaller}
 
-- Example 17.1. Genron pays the \$2 dividend (policy 1). An investor with
-  2,000 shares would have preferred policy 3: \$4.50 a share, that is
-  $2{,}000 \times 4.50 = \$9{,}000$ a year. Can she get it on her own?
-
-- **Step 1, today.** The dividend gives her $2{,}000 \times 2 = \$4{,}000$.
-  She needs \$5,000 more, so she sells $5{,}000 / 40 = 125$ shares at the
-  ex-dividend price of \$40. Total cash today: \$9,000.
-
-- **Step 2, next year and after.** She keeps $2{,}000 - 125 = 1{,}875$ shares,
-  each paying \$4.80: $1{,}875 \times 4.80 = \$9{,}000$ a year.
-
-- She has rebuilt policy 3 by herself. The reverse works too: an investor who
-  wants **less** cash today reinvests the dividend in new shares.
-
 ::: {.box .box-a}
 In a perfect market, investors can create any payout pattern they like by
 buying or selling shares. So they do not pay more for one policy than for
@@ -727,48 +724,56 @@ another.
 - Check with the firm as a whole: 100,000 shares pay \$1,000,000 a year;
   $1{,}000{,}000 / 0.1 = \$10{,}000{,}000$, that is \$100 a share.
 
+## Solution: Policy 2, what one share receives {.smaller}
+
+- Policy 2: share repurchase with the cash at the end of year 1 and
+  distribution of a regular dividend thereafter.
+
+- Dividend received by **one share** under each policy:
+
+  | | Year 1 | Year 2 | Year 3 | ... |
+  |:--|:--:|:--:|:--:|:--:|
+  | Policy 1: dividend | \$10 | \$10 | \$10 | ... |
+  | Policy 2: repurchase | \$0 | ? | ? | ... |
+
+- Under Policy 2, shareholders give up the year 1 dividend.
+
+- **Question:** does that change today's price?
+
 ## Solution: Policy 2, step by step {.smaller}
 
-- Policy 2: Share repurchase with the cash at the end of year 1 and
-  distribution of a regular dividend thereafter:
+- **Step 1. Share price at the end of year 1: \$110.**[^1] Just before the
+  repurchase, a share is a claim on future cash flows of the firm:
+  \$10 this year **and** on the future cash
+  flows, worth \$100 as under Policy 1: $10 + 100 = \$110$.
 
-  - **Step 1.** Share price at the end of year 1: \$110[^1]
+- **Step 2. The repurchase.** Cash \$1,000,000, which can be used to
+  repurchase \$1,000,000/\$110 = 9,091 shares. 90,909 stocks remain in the
+  market.
 
-  - **Step 2.** Cash \$1,000,000, which can be used to repurchase
-    \$1,000,000/\$110=9,091 shares
+- **Step 3. The new dividend.** If the cash of \$1,000,000 per year is
+  entirely distributed, the dividend is \$1,000,000/90,909 = **\$11**, from
+  year 2: the same cash shared by fewer shares.
 
-  - **Step 3.** 90,909 stocks remain in the market. If the cash of
-    \$1,000,000/per year is entirely distributed, the dividend is
-    \$1,000,000/90,909=\$11
-
-- **Step 4.** The value today is then \$11/(0.1x1.1)=\$100.
+- **Step 4. The value today.** \$11 every year is worth $11 / 0.1 = \$110$ at
+  the end of year 1, and $110 / 1.1 = \$100$ one year earlier, today. In one
+  line: $\$11/(0.1 \times 1.1) = \$100$.
 
 [^1]: See the Appendix for a proof.
 
-## Solution: why 110 and why 100 {.smaller}
+## Solution: Policy 1 vs Policy 2 {.smaller}
 
-- **Why \$110 at the end of year 1.** Just before the repurchase the firm holds
-  the \$1,000,000 of cash (\$10 a share) **and** its future cash flows, worth
-  \$100 a share as under policy 1: $10 + 100 = \$110$.
-
-- **Why \$11 a share.** The same \$1,000,000 a year is now shared by fewer
-  shareholders: 90,909 instead of 100,000. That is the "higher dividend" the
-  firm hoped for.
-
-- **Why \$100 today.** The \$11 dividends start at the end of year 2. At the
-  end of year 1 they are worth $11 / 0.1 = \$110$; discount one more year:
-  $110 / 1.1 = \$100$.
-
-- **The firm's mistake.** It looked at the dividend per share (\$11 against
-  \$10) and forgot that shareholders give up the year 1 dividend. More later,
-  nothing now: same present value.
+| | Year 1 | Year 2 | Year 3 | ... | Price today |
+|:--|:--:|:--:|:--:|:--:|:--:|
+| Policy 1: dividend | \$10 | \$10 | \$10 | ... | **\$100** |
+| Policy 2: repurchase | \$0 | \$11 | \$11 | ... | **\$100** |
 
 ::: {.box .box-a}
 Policy 2 raises the dividend per share without raising the share price. This is
 Modigliani and Miller's point, which we now state in general.
 :::
 
-## Modigliani-Miller and payout policy
+## Modigliani-Miller and payout policy {.smaller}
 
 - When a firm decides on the level of dividends, it usually takes two
   decisions:
@@ -867,64 +872,18 @@ dividend policy is irrelevant and does not affect the initial share price.
   | 2003-2012 | 15% | 15% |
   | 2013- | 20% | 20% |
 
-- The share of US firms paying dividends fell from 75% in 1975 to 35% in 2002,
-  and recovered after the 2003 tax cut. That firms pay dividends at all while
+- That firms pay dividends at all while
   they carry a tax cost is the **dividend puzzle**.
-
-## Taxes: issuing shares to pay a dividend {.smaller}
-
-- Example 17.2. A firm raises \$10 million from its shareholders by selling
-  new shares and immediately pays the \$10 million back as a dividend.
-  Dividend tax 40%, capital gains tax 15%.
-
-- **Step 1, tax on the dividend.** $40\% \times 10 = \$4$ million.
-
-- **Step 2, the capital gains side.** The firm is worth \$10 million less after
-  the dividend, so when shareholders sell, their capital gain is \$10 million
-  smaller. That saves $15\% \times 10 = \$1.5$ million of capital gains tax.
-
-- **Step 3, net.** Shareholders pay $4 - 1.5 = \$2.5$ million of tax and get
-  back only \$7.5 million of the \$10 million they put in.
-
-::: {.box .box-a}
-Without taxes this round trip changes nothing (policy 3 of Genron). With a
-higher tax on dividends it destroys value. This is Paul's first reason for
-low dividends: income tax.
-:::
-
-## Taxes: the effective dividend tax rate {.smaller}
-
-- Think of an investor who buys the share just before the ex-dividend date
-  and sells just after (Chap. 17.4). She gets the dividend, taxed at
-  $\tau_{d}$, and a capital loss equal to the price drop, which saves tax at
-  $\tau_{g}$. The two must balance, so the drop is a fraction of the dividend:
-  $$P_{\text{cum}} - P_{\text{ex}} = \text{Div} \times (1 - \tau^{*}_{d}),
-  \qquad
-  \tau^{*}_{d} = \frac{\tau_{d} - \tau_{g}}{1 - \tau_{g}}$$
-
-- $\tau^{*}_{d}$ is the **effective dividend tax rate**: the extra tax paid
-  per euro received as a dividend rather than as a capital gain.
-
-- US investor, 2002: $\tau_{d} = 39\%$, $\tau_{g} = 20\%$, so
-  $\tau^{*}_{d} = (0.39 - 0.20)/(1 - 0.20) = 23.75\%$. In 2003, both 15%:
-  $\tau^{*}_{d} = 0$. This is why the price falls by **less** than the
-  dividend (section A).
 
 ## Clientele effects {.smaller}
 
-- $\tau^{*}_{d}$ differs across investors. Those who pay little or no tax on
-  dividends have no reason to avoid them.
+- The tax cost of receiving a dividend rather than a capital gain differs
+  across investors. Those who pay little or no tax on dividends have no
+  reason to avoid them.
 
 - In the US: 1. Stocks in retirement accounts 2. Pension Funds 3.
   Companies (70% deductible)
 
-- Preferences by investor group (Table 17.3):
-
-  | Investor group | Tax on dividends | Preference |
-  |:--|:--|:--|
-  | Individuals (taxable) | disadvantage | repurchases |
-  | Pension funds | none | whatever matches cash needs |
-  | Corporations | advantage | high dividends |
 
 - **Clientele effect**: a firm's payout policy attracts the investors it suits.
   In 1996 individuals held 54% of US stocks but received only 35% of
@@ -933,7 +892,12 @@ low dividends: income tax.
 ## Clientele effects: price and volume around special dividends
 
 ::: {.center}
-![](figure17p6.png){fig-align="center"}
+![](figure17p6.png){fig-align="center" height="210" style="height: 400px; max-height: none"}
+:::
+
+::: {.footnotesize .center}
+Value Line, Inc., special dividend of \$17.50 a share, 2004 (Chap. 17.4,
+Figure 17.6).
 :::
 
 ## Reading the Value Line figure {.smaller}
@@ -955,7 +919,7 @@ low dividends: income tax.
 ## Pay out or retain? Perfect markets {.smaller}
 
 - First branch of the tree: once good projects are funded, pay out the rest
-  or keep it (Chap. 17.5)?
+  or keep it?
 
 - Example 17.4. Barston has \$100,000 of excess cash: pay it out now, or
   invest it for a year in Treasury bills at 6% and pay it out next year.
@@ -985,28 +949,24 @@ the value of the firm.
 - Interest **received** by the firm is taxed, just as interest **paid** saves
   tax (Lecture 9). Cash is negative debt, so holding cash has a tax cost.
 
-- Example 17.6. Microsoft's \$32 billion special dividend of 2004: kept for
-  ever, the tax on its interest would be worth $35\% \times 32 = \$11.2$
-  billion today, or \$1.05 per share.
 
 ::: {.box .box-a}
-Keeping cash the firm does not need costs $\tau_{C} \times$ the cash: a
+Keeping cash the firm does not need implies a cost of $\tau_{C} \times$ (the tax): a
 reason to pay out.
 :::
 
 ## Pay out or retain? Costs of raising capital {.smaller}
 
-- Paul's second reason for low dividends: **the cost of raising capital is
+- Second reason for low dividends: **the cost of raising capital is
   high**. If the firm pays out today and needs money tomorrow, it must go back
   to the market, and that is expensive.
 
 - Direct issuance costs: about 1 to 3% of the amount for debt, 3.5 to 7% for
-  equity. Indirect costs too: the adverse-selection discount and the delays
-  seen in Lecture 9.
+  equity.
 
 - So firms keep cash to avoid these costs when they expect large future
   needs: research programmes, acquisitions, or simply volatile earnings that
-  could leave them short. Cash is **financial slack**, and it also keeps the
+  could leave them short. Cash is **financial cuishon**, and it also keeps the
   firm away from financial distress.
 
 - Trade-off, as for leverage: the tax cost of holding cash against the cost
@@ -1049,15 +1009,6 @@ reason to pay out.
 - GM changed its dividend only eight times in twenty years while its earnings
   swung from large profits to large losses (Chap. 17.6).
 
-- Lintner's survey of executives (1956): managers raise the dividend only
-  when they expect to **sustain** the new level, and cut it only as a last
-  resort. From 1971 to 2001 only 5.4% of dividend changes by US firms were
-  cuts.
-
-- They can afford to smooth because, in the short run, repurchases, share
-  issues and cash reserves absorb the difference between earnings and
-  dividends.
-
 ## Signalling with payout policy {.smaller}
 
 - Dividends:
@@ -1077,61 +1028,6 @@ reason to pay out.
   - Managers can increase the value of the firm by repurchasing
     undervalued shares $\Rightarrow$ positive signal.
 
-## Signalling: the evidence {.smaller}
-
-- Because dividends are smoothed, a change in the dividend is news about what
-  managers expect: the **dividend signalling hypothesis**.
-
-- US firms, 1967-1993: a dividend increase of 10% or more moved the price up
-  by 1.34% on average; a cut of 10% or more moved it down by 3.71%. Cuts are
-  rarer and hurt more.
-
-- Weaker than leverage signals (Lecture 9): missing a dividend is not as
-  costly as missing an interest payment. Replacing equity with debt moves
-  prices by more than 10%.
-
-- A cut can be **good** news when it funds good projects: Royal &
-  SunAlliance cut its dividend in 2001 to reinvest in a growing insurance
-  market, and its shares rose 5%.
-
-- Repurchase announcements: about +3% for an open market programme, +12% for
-  a tender offer, +8% for a Dutch auction. The firmer the commitment, the
-  stronger the signal.
-
-## Signalling: repurchasing undervalued shares {.smaller}
-
-- Example 17.8. Clark has 200 million shares at \$30, no debt, and \$600
-  million of cash. Managers believe the true value is \$35 a share. Clark
-  buys back shares now, at \$30; soon after, the market agrees with the
-  managers.
-
-- **Step 1, the buyback.** $600 / 30 = 20$ million shares; 180 million remain.
-
-- **Step 2, the balance sheet** (millions):
-
-  | | Before | After buyback | After the news |
-  |:--|:--:|:--:|:--:|
-  | Cash | 600 | 0 | 0 |
-  | Other assets | 5,400 | 5,400 | 6,400 |
-  | Shares (millions) | 200 | 180 | 180 |
-  | **Share price** | **\$30** | **\$30** | **\$35.56** |
-
-## Signalling: repurchasing undervalued shares (con't) {.smaller}
-
-- **Step 3, read the table.** After the news the business is worth
-  \$6.4 billion, spread over 180 million shares: $6{,}400 / 180 = \$35.56$.
-
-- **Step 4, had Clark waited.** Buying at \$35 gets only $600 / 35 = 17.1$
-  million shares, leaving 182.9 million, and the price after would be
-  $6{,}400 / 182.9 = \$35.00$.
-
-- Buying while the share is cheap gains $0.56 \times 180 = \$100$ million for
-  the shareholders who stay, taken from those who sold at \$30.
-
-::: {.box .box-a}
-Investors know this, so a repurchase is read as a signal that managers think
-the share is cheap: prices rise on the announcement.
-:::
 
 ## What to remember {.smaller}
 
@@ -1181,25 +1077,3 @@ the share is cheap: prices rise on the announcement.
   expect lower earnings. But if the firm cuts to fund new positive-NPV
   projects, the cut means more value later, and the price can rise, as for
   Royal & SunAlliance in 2001.
-
-## Appendix: ``Exercise: share repurchase and DCF evaluation";  Calculation with general $P$ in Policy 2 {.smaller}
-
-In the solution of the "Exercise: share repurchase and DCF evaluation"
-(Section B of this lecture), I assume that the price at the end of year
-1 under Policy 2 equals 110. Below I provide the proof for this claim:
-
-- Let $P$ denote the share price at the end of year 1.
-
-- Cash of \$ 1,000,000 can be used to repurchase $1,000,000/P$ shares.
-
-- $100,000 - \frac{1,000,000}{P}$ stocks remain in the market. If the
-  cash is entirely distributed, the dividend is
-  $\frac{1,000,000}{100,000 - \frac{1,000,000}{P}}$ per year, which
-  simplifies to $\frac{10P}{P-10}$.
-
-## Appendix: ``Exercise: share repurchase and DCF evaluation";  Calculation with general $P$ in Policy 2 (con't)
-
-- The dividend discount model (Gordon growth formula) then implies that
-  $$
-  P = \frac{\frac{10P}{P- 10}}{0.1}.
-  $$ Solving this equation gives $P$ equal to \$ 110.
