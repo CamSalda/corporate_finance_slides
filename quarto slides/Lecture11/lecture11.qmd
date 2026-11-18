@@ -129,11 +129,6 @@ policy than for another.
 - **Share repurchases.** Managers can increase the value of the firm by
   repurchasing undervalued shares, so a repurchase is a positive signal.
 
-::: {.box .box-a}
-Lecture 10 asked what a firm does with **too much** cash. Today: what a firm
-does when it needs **more** cash than it has. It raises **equity** (First
-Part) or **debt** (Second Part).
-:::
 
 ## {.center}
 
@@ -167,7 +162,7 @@ Beginning of lecture 11 content
   **who** gives the money, and **what** do they get in return (a share of
   ownership, or a promise to be repaid).
 
-## A. Equity financing for private companies
+## A. Equity financing for private companies {.smaller}
 
 - The initial capital that is required to start a business is usually
   provided by the entrepreneur and the immediate family.
@@ -188,6 +183,10 @@ Beginning of lecture 11 content
 
 - **Venture capital firms**:
 
+  - A VC firm raises a fund from investors (the **limited partners**: pension
+    funds, endowments, wealthy families) and its managers (the **general
+    partners**) invest it in start-ups. From the investors' side:
+
   - Offer limited partners advantages over investing directly in
     start-ups: Limited partners are more diversified and benefit from
     the expertise of the general partners.
@@ -195,22 +194,6 @@ Beginning of lecture 11 content
   - But general partners charge high fees: Most firms charge 20% of any
     positive return they make (carried interest), and an annual
     management fee of about 2% of the fund's committed capital.
-
-## Sources of funding: VC fees in numbers {.smaller}
-
-- A VC firm runs a fund of \$100 million. The **limited partners** (pension
-  funds, rich families...) put in the money; the **general partners** (the
-  venture capitalists) choose the start-ups.
-
-- **Management fee**: $2\% \times 100 = \$2$ million every year, whatever
-  happens.
-
-- **Carried interest**: if the fund gains \$50 million, the general partners
-  keep $20\% \times 50 = \$10$ million.
-
-- So the limited partners receive \$40 million of the \$50 million gain,
-  minus the yearly fees. They accept because they could not pick and
-  advise start-ups themselves.
 
 ## Sources of funding (con't) {.smaller}
 
@@ -223,6 +206,17 @@ Beginning of lecture 11 content
   - May also initiate investments by finding a publicly traded firm and
     purchasing the outstanding equity, thereby taking the company
     private in a leveraged buyout (LBO).
+
+::: {.box .box-a}
+**What is an LBO?** A private equity firm buys all the shares of a company and
+pays for most of the price with **borrowed money**, often 60% or more. The debt
+is then carried by the company itself and repaid out of its own cash flows.
+The private equity firm puts in only a small slice of equity, so if the
+company does well its return is large (the leverage effect of Lecture 8); if
+the company struggles, the heavy debt can push it into financial distress.
+:::
+
+## Sources of funding (con't 2) {.smaller}
 
 - **Institutional Investors** (e.g., pension funds, insurance companies,
   endowments, and foundations) may invest directly in private firms or
@@ -253,22 +247,14 @@ Beginning of lecture 11 content
 
 ## Funding rounds: example, step by step {.smaller}
 
-- You start a firm with \$100,000 and get 1.5 million shares. Angels then buy
-  0.5 million shares: **2 million shares** exist. A VC now invests **\$6
-  million** at a **post-money value of \$10 million** (Example 23.1).
+- You put in \$100,000 for 1.5m shares; angels buy 0.5m (for \$100,000, our
+  assumption). A VC invests **\$6m** at a **post-money value of \$10m**
+  (Example 23.1).
 
-- **Step 1, VC's share**: $6 / 10 = 60\%$.
+![](funding_round.png){fig-align="center" height="230"}
 
-- **Step 2, pre-money value**: $10 - 6 = \$4$ million.
-
-- **Step 3, price per share**: \$4 million over 2 million shares = **\$2**.
-
-- **Step 4, new shares**: \$6 million / \$2 = 3 million shares for the VC;
-  5 million shares in total.
-
-- **Step 5, your stake**: $1.5 / 5 = 30\%$ of a \$10 million firm =
-  **\$3 million**. Your \$100,000 is now worth 30 times more, but you control
-  only 30% of the firm.
+- Your \$100,000 is now worth **\$3m**, 30 times more, but you control only
+  **30%** of the firm.
 
 ## Example
 
@@ -297,18 +283,9 @@ more: a smaller slice of a much bigger cake.
 
 - VCs usually buy **convertible preferred shares**: if the firm is sold
   cheaply, they get their money back **before** the founders; if it is sold
-  at a high price, they convert into ordinary shares (Example 23.2).
+  at a high price, they convert into ordinary shares
 
-- Series A: \$6 million, paid back first (1x). Series B: \$10 million, paid
-  back three times (3x = \$30 million), even before Series A.
-
-  | Sale price | Series B | Series A | Founders |
-  |:--|:--:|:--:|:--:|
-  | \$30 million | \$30m | 0 | 0 |
-  | \$36 million | \$30m | \$6m | 0 |
-  | \$120 million (all convert) | \$30m | \$27m | \$63m |
-
-- Founders get something only above \$36 million. Preferences protect
+-Preferences protect
   investors when the firm does badly.
 
 ## B. The Initial Public Offering (IPO) {.smaller}
@@ -341,9 +318,6 @@ more: a smaller slice of a much bigger cake.
   - Secondary Offering: Shares sold by existing shareholders in an
     equity offering.
 
-- In words: in a **primary** offering the cash goes to the **firm**; in a
-  **secondary** offering it goes to the **old owners** who sell. Most IPOs
-  mix both.
 
 ## Types of offerings (con't) {.smaller}
 
@@ -366,24 +340,6 @@ more: a smaller slice of a much bigger cake.
 - Who bears the risk of unsold shares? **Best efforts**: the firm. **Firm
   commitment**: the bank (the underwriter).
 
-## Auction IPO: example {.smaller}
-
-- A firm sells **500,000 shares** by auction. Investors send bids (Example 23.3):
-
-  | Price | Shares bid at this price | Total bids at this price or more |
-  |:--|:--:|:--:|
-  | \$8.00 | 25,000 | 25,000 |
-  | \$7.75 | 100,000 | 125,000 |
-  | \$7.50 | 75,000 | 200,000 |
-  | \$7.25 | 150,000 | 350,000 |
-  | **\$7.00** | 150,000 | **500,000** |
-  | \$6.75 | 275,000 | 775,000 |
-
-- Read down the last column: at **\$7.00**, bids reach the 500,000 shares on
-  sale. The offer price is \$7, and **every** winning bidder pays \$7, even
-  those who bid \$8.
-
-- Google went public this way in 2004.
 
 ## Example
 
@@ -394,10 +350,12 @@ more: a smaller slice of a much bigger cake.
 ## Reading the examples {.smaller}
 
 - **Anthropic** (June 2026): files to go public, an **IPO**: the first sale
-  of its shares to the public.
+  of its shares to the public. It is a **firm commitment** offer: about 22
+  banks, led by Goldman Sachs and Morgan Stanley, buy all the shares and
+  resell them at a price set by bookbuilding.
 
 - **Alphabet** (June 2026): already public, it sells **\$80 billion** of new
-  shares, a **seasoned equity offering** (section C), to pay for AI data
+  shares, to pay for AI data
   centres. Existing shareholders are diluted.
 
 - Same tool, new shares, at two stages of a firm's life.
@@ -407,16 +365,6 @@ more: a smaller slice of a much bigger cake.
 ::: {.center}
 ![](table23p3.png){fig-align="center"}
 :::
-
-## Reading the table of largest IPOs {.smaller}
-
-- The largest IPOs raise **tens of billions of dollars**: Alibaba (2014,
-  \$21.8bn), Visa (2008), Facebook (2012), General Motors (2010).
-
-- Most are recent: as markets grow, so does the size of the biggest deals.
-
-- Several are firms from abroad (Alibaba, ENEL) listing in New York, the
-  deepest equity market.
 
 - A typical IPO is far smaller: the median US IPO raised about \$180 million
   in 2020.

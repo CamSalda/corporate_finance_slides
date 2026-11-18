@@ -70,7 +70,11 @@ as the tax shield should be considered:
   $$V^{L} = V^{U} + \tau_{C}\, D$$
 
 
-## Recap: the four propositions {.smaller}
+## Recap: the four propositions {.smaller .center}
+
+```{=latex}
+\vfill
+```
 
 ::::: {.columns}
 ::: {.column width="49%"}
@@ -104,6 +108,10 @@ $$r^{L}_{E} = r^{U}_{E} + \frac{D}{E^{L}}(1-\tau_C)\left(r^{U}_{E}-r_D\right)$$
 :::
 :::
 :::::
+
+```{=latex}
+\vfill
+```
 
 ## Recap: cost of equity and WACC with taxes {.smaller}
 
