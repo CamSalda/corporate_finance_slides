@@ -742,7 +742,7 @@ another.
 
 ## Solution: Policy 2, step by step {.smaller}
 
-- **Step 1. Share price at the end of year 1: \$110.**[^1] Just before the
+- **Step 1. Share price at the end of year 1: \$110.** Just before the
   repurchase, a share is a claim on future cash flows of the firm:
   \$10 this year **and** on the future cash
   flows, worth \$100 as under Policy 1: $10 + 100 = \$110$.
@@ -758,8 +758,6 @@ another.
 - **Step 4. The value today.** \$11 every year is worth $11 / 0.1 = \$110$ at
   the end of year 1, and $110 / 1.1 = \$100$ one year earlier, today. In one
   line: $\$11/(0.1 \times 1.1) = \$100$.
-
-[^1]: See the Appendix for a proof.
 
 ## Solution: Policy 1 vs Policy 2 {.smaller}
 
