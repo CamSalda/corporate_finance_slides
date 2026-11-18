@@ -10,21 +10,159 @@ footer: "Lecture 11: Long-Term Financing"
 
 A.  Equity Financing for Private Companies (Chap. 23.1)
 
-B.  The Initial Public Offering (Chap. 23.2)
+B.  The Initial Public Offering (Chap. 23.2-23.3)
 
-C.  The Seasoned Equity Offering (Chap. 23.4)
+C.  SPACs and the Seasoned Equity Offering (Chap. 23.4-23.5)
 
 **Second Part: Debt Financing**
 
-A.  Corporate Debt (Chap. 24.1)
+D.  Corporate Debt (Chap. 24.1)
 
-B.  Other Types of Debt (Chap. 24.2)
+E.  Other Types of Debt (Chap. 24.2)
 
-C.  Bond Covenants (Chap. 24.3)
+F.  Bond Covenants (Chap. 24.3)
 
-D.  Repayment Provisions (Chap. 24.4)
+G.  Repayment Provisions (Chap. 24.4)
 
-## A. Equity financing for private companies
+Mostly based on the BDM textbook Chap. 23 and 24.
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Recap lecture 10
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Recap lecture 10}
+\end{center}
+\vfill
+```
+
+## Recap: two ways to pay out cash {.smaller}
+
+- A firm with spare cash can give it to shareholders in two ways:
+
+  | | Dividend | Repurchase |
+  |:--|:--|:--|
+  | What happens | cash paid on every share | the firm buys back some shares |
+  | Share price | falls by the dividend | stays the same |
+  | Number of shares | unchanged | falls |
+
+- Either way, a shareholder ends with the **same wealth**: share plus cash in
+  one case, more valuable shares (or cash from selling) in the other.
+
+## Recap: the four dates of a dividend {.smaller}
+
+![](figure17p2.png){fig-align="center" height="200"}
+
+- **Declaration**: the board announces the dividend. **Ex-dividend**: buyers
+  from this day on do not get it, so the price falls by the dividend.
+  **Record**: the register fixes who is paid. **Payable**: the cash goes out.
+
+## Recap: the price falls by the dividend {.smaller}
+
+In a perfect market, the price should fall exactly by the amount of dividend paid.
+
+![](SequencePrice.png){fig-align="center" height="300"}
+
+## Recap: dividend ratios {.smaller}
+
+- **Dividend yield** = Annual dividend / Stock price. In words: the cash
+  return you get each year from dividends, per euro invested in the share.
+
+- **Payout ratio** = Cash dividends / Earnings per share. In words: the share
+  of the firm's earnings paid out as dividends; the rest is retained.
+
+## Recap: payout policy is irrelevant (MM) {.smaller .center}
+
+```{=latex}
+\vfill
+```
+
+::: {.box .box-a}
+**MM dividend irrelevance (1961).** With investments fixed, in a perfect
+market, payout policy does not change the share price. Investors can make
+their own **homemade dividends** by selling shares.
+:::
+
+::: {.box .box-a}
+**Homemade dividends.** In a perfect market, investors can create any payout
+pattern they like by buying or selling shares. So they do not pay more for one
+policy than for another.
+:::
+
+```{=latex}
+\vfill
+```
+
+## Recap: payout policy in practice {.smaller}
+
+- **Taxes**: where dividends are taxed more than capital gains, repurchases
+  are cheaper for shareholders.
+
+- **Clientele effects**: the tax cost of receiving a dividend rather than a
+  capital gain differs across investors. Those who pay little or no tax on
+  dividends have no reason to avoid them, so each payout policy attracts the
+  investors it suits.
+
+- **Pay out or retain?** Pay out the cash the firm cannot invest in
+  positive-NPV projects. Retained cash costs tax and invites waste, but
+  saves the cost of raising money later.
+
+## Recap: signalling with payout policy {.smaller}
+
+- **Dividends.** Firms smooth their dividends, so a change is news.
+
+  - A policy to pay high dividends can be costly if the firm's finances are
+    not solid.
+
+  - Hence, an increase in dividends signals that the managers are confident
+    that they can generate high cash flows in the future.
+
+  - Conversely, a decrease in dividends is a bad signal about the managers'
+    confidence in the firm's ability to generate high cash flows in the future.
+
+- **Share repurchases.** Managers can increase the value of the firm by
+  repurchasing undervalued shares, so a repurchase is a positive signal.
+
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Beginning of lecture 11 content
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Beginning of lecture 11 content}
+\end{center}
+\vfill
+```
+
+## Introduction: the life of a firm's financing {.smaller}
+
+- As a firm grows, it changes where it gets its money:
+
+  | Stage | Who provides the money | Section |
+  |:--|:--|:--:|
+  | Start | founders, family and friends | A |
+  | Young private firm | angels, venture capital | A |
+  | Going public | many investors, through an IPO | B |
+  | Public firm | new shares (SPAC, SEO) | C |
+  | Any stage | loans and bonds | D-G |
+
+- At each step, the questions are the same: **how much** is the firm worth,
+  **who** gives the money, and **what** do they get in return (a share of
+  ownership, or a promise to be repaid).
+
+## A. Equity financing for private companies {.smaller}
 
 - The initial capital that is required to start a business is usually
   provided by the entrepreneur and the immediate family.
@@ -35,7 +173,7 @@ D.  Repayment Provisions (Chap. 24.4)
   - It is important to understand how the infusion of outside capital
     will affect the control of the company.
 
-## Sources of funding {.smaller .dense}
+## Sources of funding {.smaller}
 
 - **Angel investors**:
 
@@ -45,6 +183,10 @@ D.  Repayment Provisions (Chap. 24.4)
 
 - **Venture capital firms**:
 
+  - A VC firm raises a fund from investors (the **limited partners**: pension
+    funds, endowments, wealthy families) and its managers (the **general
+    partners**) invest it in start-ups. From the investors' side:
+
   - Offer limited partners advantages over investing directly in
     start-ups: Limited partners are more diversified and benefit from
     the expertise of the general partners.
@@ -52,6 +194,8 @@ D.  Repayment Provisions (Chap. 24.4)
   - But general partners charge high fees: Most firms charge 20% of any
     positive return they make (carried interest), and an annual
     management fee of about 2% of the fund's committed capital.
+
+## Sources of funding (con't) {.smaller}
 
 - **Private Equity Firms**:
 
@@ -63,7 +207,16 @@ D.  Repayment Provisions (Chap. 24.4)
     purchasing the outstanding equity, thereby taking the company
     private in a leveraged buyout (LBO).
 
-## Sources of funding (con't) {.smaller}
+::: {.box .box-a}
+**What is an LBO?** A private equity firm buys all the shares of a company and
+pays for most of the price with **borrowed money**, often 60% or more. The debt
+is then carried by the company itself and repaid out of its own cash flows.
+The private equity firm puts in only a small slice of equity, so if the
+company does well its return is large (the leverage effect of Lecture 8); if
+the company struggles, the heavy debt can push it into financial distress.
+:::
+
+## Sources of funding (con't 2) {.smaller}
 
 - **Institutional Investors** (e.g., pension funds, insurance companies,
   endowments, and foundations) may invest directly in private firms or
@@ -75,11 +228,65 @@ D.  Repayment Provisions (Chap. 24.4)
   corporate investors might invest for strategic corporate objectives,
   in addition to the financial returns.
 
+## Funding rounds: pre-money and post-money {.smaller}
+
+- A private firm raises money in **rounds** (Series A, B, C...). At each
+  round, investors and the firm agree on a value for the firm.
+
+- **Pre-money value**: what the firm is worth **before** the new money.
+
+- **Post-money value**: what it is worth **after**, cash included:
+  $$\text{Post-money value} = \text{Pre-money value} + \text{Amount invested}$$
+
+- The new investors get a share of the firm equal to what they paid over the
+  post-money value:
+  $$\text{New investors' share} = \frac{\text{Amount invested}}{\text{Post-money value}}$$
+
+- This is the "control" question of section A: every round gives away part of
+  the ownership.
+
+## Funding rounds: example, step by step {.smaller}
+
+- You put in \$100,000 for 1.5m shares; angels buy 0.5m (for \$100,000, our
+  assumption). A VC invests **\$6m** at a **post-money value of \$10m**
+  (Example 23.1).
+
+![](funding_round.png){fig-align="center" height="230"}
+
+- Your \$100,000 is now worth **\$3m**, 30 times more, but you control only
+  **30%** of the firm.
+
 ## Example
 
 ::: {.center}
-![](lecunAMI1.png){height="420"} ![](lecunAMI2.png){height="420"}
+![](lecunAMI1.png){height="200" style="height: 420px; max-height: none"} ![](lecunAMI2.png){height="200" style="height: 420px; max-height: none"}
 :::
+
+## Reading the AMI example {.smaller}
+
+- AMI (Yann LeCun's start-up) raised **\$1.03 billion** at a **pre-money
+  value of \$3.50 billion** (March 2026).
+
+- **Post-money value**: $3.50 + 1.03 = \$4.53$ billion.
+
+- **New investors' share**: $1.03 / 4.53 = 22.7\%$.
+
+- **Founders and earlier investors** keep $100\% - 22.7\% = 77.3\%$ of a firm
+  now worth \$4.53 billion.
+
+::: {.box .box-a}
+Raising money dilutes ownership, but it can make every remaining share worth
+more: a smaller slice of a much bigger cake.
+:::
+
+## Liquidation preference: who is paid first {.smaller}
+
+- VCs usually buy **convertible preferred shares**: if the firm is sold
+  cheaply, they get their money back **before** the founders; if it is sold
+  at a high price, they convert into ordinary shares
+
+-Preferences protect
+  investors when the firm does badly.
 
 ## B. The Initial Public Offering (IPO) {.smaller}
 
@@ -101,7 +308,7 @@ D.  Repayment Provisions (Chap. 24.4)
   - The firm must satisfy all the requirements of public companies (SEC
     filings, Sarbanes-Oxley, etc.).
 
-## Types of offerings {.smaller .dense}
+## Types of offerings {.smaller}
 
 - Primary vs. Secondary:
 
@@ -110,6 +317,9 @@ D.  Repayment Provisions (Chap. 24.4)
 
   - Secondary Offering: Shares sold by existing shareholders in an
     equity offering.
+
+
+## Types of offerings (con't) {.smaller}
 
 - Best-Efforts vs. Firm Commitment vs. Auction IPOs:
 
@@ -127,17 +337,83 @@ D.  Repayment Provisions (Chap. 24.4)
     price such that the number of bids at or above that price equal the
     number of offered shares.
 
+- Who bears the risk of unsold shares? **Best efforts**: the firm. **Firm
+  commitment**: the bank (the underwriter).
+
+
 ## Example
 
 ::: {.center}
-![](anthropicIPO.png){height="420"} ![](alphabetSEO.png){height="265"}
+![](anthropicIPO.png){height="200" style="height: 420px; max-height: none"} ![](alphabetSEO.png){height="125" style="height: 265px; max-height: none"}
 :::
 
-## Largest U.S. IPOs
+## Reading the examples {.smaller}
 
-::: {.center}
-![](table23p3.png){fig-align="center"}
+- **Anthropic** (June 2026): files to go public, an **IPO**: the first sale
+  of its shares to the public. It is a **firm commitment** offer: about 22
+  banks, led by Goldman Sachs and Morgan Stanley, buy all the shares and
+  resell them at a price set by bookbuilding.
+
+- **Alphabet** (June 2026): already public, it sells **\$80 billion** of new
+  shares, to pay for AI data
+  centres. Existing shareholders are diluted.
+
+- Same tool, new shares, at two stages of a firm's life.
+
+## Largest U.S. IPOs {.smaller}
+
+```{=latex}
+\begingroup\footnotesize\setlength{\tabcolsep}{2.5pt}
+```
+
+| Company | Date | Exchange | Sector | Lead underwriter | USD m |
+|:--------------|:-------|:---------|:-----------|:-----------------|-------:|
+| SpaceX | 06/2026 | Nasdaq | Industrials | Goldman Sachs | 75,000 |
+| SK hynix | 07/2026 | Nasdaq | Technology | Bank of America | 26,507 |
+| Alibaba | 09/2014 | NYSE | Technology | Credit Suisse | 21,767 |
+| Visa | 03/2008 | NYSE | Financials | J.P. Morgan | 17,864 |
+| ENEL | 11/1999 | NYSE | Utilities | Merrill Lynch | 16,452 |
+| Facebook | 05/2012 | Nasdaq | Technology | Morgan Stanley | 16,007 |
+| General Motors | 11/2010 | NYSE | Consumer | Morgan Stanley | 15,774 |
+| Deutsche Telekom | 11/1996 | NYSE | Telecoms | Goldman Sachs | 13,034 |
+| Rivian | 11/2021 | Nasdaq | Consumer | Morgan Stanley | 11,934 |
+
+::: {.footnotesize}
+**Source**: Renaissance Capital IPO Home, November 2026, ranks 1 to 9. Deal
+sizes exclude the greenshoe.
 :::
+
+```{=latex}
+\endgroup
+```
+
+## Largest U.S. IPOs (con't) {.smaller}
+
+```{=latex}
+\begingroup\footnotesize\setlength{\tabcolsep}{2.5pt}
+```
+
+| Company | Date | Exchange | Sector | Lead underwriter | USD m |
+|:--------------|:-------|:---------|:-----------|:-----------------|-------:|
+| AT&T Wireless | 04/2000 | NYSE | Telecoms | Goldman Sachs | 10,620 |
+| Kraft Foods | 06/2001 | NYSE | Consumer | Credit Suisse | 8,680 |
+| Uber | 05/2019 | NYSE | Technology | Morgan Stanley | 8,100 |
+| France Telecom | 10/1997 | NYSE | Telecoms | Merrill Lynch | 7,289 |
+| Medline | 12/2025 | Nasdaq | Health care | Goldman Sachs | 6,265 |
+| Telstra | 11/1997 | NYSE | Telecoms | Credit Suisse | 5,646 |
+| Swisscom | 10/1998 | NYSE | Telecoms | Warburg Dillon Read | 5,582 |
+| Cerebras Systems | 05/2026 | Nasdaq | Technology | Morgan Stanley | 5,550 |
+| United Parcel Service | 11/1999 | NYSE | Transportation | Morgan Stanley | 5,470 |
+
+::: {.footnotesize}
+**Source**: Renaissance Capital IPO Home, November 2026, ranks 10 to 18.
+:::
+
+- A typical IPO is far smaller: the median US IPO raised about \$180 million in 2020.
+
+```{=latex}
+\endgroup
+```
 
 ## Mechanics of an IPO
 
@@ -164,6 +440,25 @@ D.  Repayment Provisions (Chap. 24.4)
 *Source:* Global Equity Capital Markets Review, 2021
 
 :::
+
+## The IPO, step by step {.smaller}
+
+1. **Choose the banks**: a lead underwriter and a syndicate.
+
+2. **File with the regulator** (SEC in the US): registration statement and
+   preliminary prospectus.
+
+3. **Value the firm** and set a price range.
+
+4. **Road show and book building**: meet large investors, collect their
+   orders.
+
+5. **Set the offer price**, final prospectus, shares start trading.
+
+6. **After the IPO**: greenshoe option (first 30 days), then the **lockup**
+   ends (90-180 days).
+
+- The next slides take these steps one by one.
 
 ## Mechanics of an IPO (con't) {.smaller}
 
@@ -232,9 +527,49 @@ D.  Repayment Provisions (Chap. 24.4)
   - **Lockup**: A restriction that prevents insiders from selling their
     shares for some period, usually 90-180 days, after an IPO.
 
-## D. The Seasoned Equity Offering (SEO) {.smaller}
 
-- Public firms use SEOs to raise additional equity.
+## The four IPO puzzles (Chap. 23.3) {.smaller}
+
+- **Underpricing**: on average the share closes its first day well above the
+  offer price, by more than 17% in the US since 1960, so the issuer leaves
+  money on the table.
+
+- **Hot and cold markets**: IPOs come in waves, with many firms going public
+  when markets are high (1983, 1996, 1999-2000) and almost none after a
+  crash (2001-03, 2008).
+
+- **High costs**: an IPO costs about 7% of the money raised in fees alone, far
+  more than issuing bonds or seasoned equity.
+
+- **Long-run underperformance**: in the three to five years after an IPO, the
+  new shares tend to do worse than the market.
+
+::: {.box .box-a}
+None of the four fits a perfect market. The usual explanations are the
+winner's curse for underpricing, and managers timing the market for the
+other three.
+:::
+
+## C. SPACs: going public through the back door {.smaller}
+
+- A **SPAC** (special purpose acquisition company) is an empty company that
+  goes public first, with a promise: buy a private firm within two years.
+  The private firm then becomes public by **merging** with the SPAC, with no
+  IPO of its own (Chap. 23.4).
+
+- **Example**: the electric-car maker Lucid merged with the SPAC CCIV in 2021.
+
+  - Fees: **3.7%** of the money raised, about half the 7% of an IPO.
+
+  - First-day price: \$26.83, against an effective price of \$9.87 a share:
+    the shares rose **172%**.
+
+- After the merger, SPAC firms have done badly: on average almost **25%** a
+  year below the market. More than a third of 2021 listings were SPACs.
+
+## C. The Seasoned Equity Offering (SEO) {.smaller}
+
+- Public firms use SEOs to raise additional equity (Chap. 23.5).
 
   - The steps are similar as for an IPO. The main difference is that a
     market price for the stock already exists, so the price-setting
@@ -264,6 +599,23 @@ D.  Repayment Provisions (Chap. 24.4)
 - The previous shareholders have thus lost 50 cents, which is the gain
   of the new shareholders.
 
+## Wealth transfer, step by step {.smaller}
+
+| | Before | After the issue |
+|:--|:--:|:--:|
+| Assets | 100 EUR | 100 + 50 = 150 EUR |
+| Number of shares | 50 | 50 + 50 = 100 |
+| Price per share | 100 / 50 = 2 EUR | 150 / 100 = 1.50 EUR |
+
+- **Old shareholders**: 50 shares worth $50 \times 2 = 100$ EUR before,
+  $50 \times 1.50 = 75$ EUR after. They **lose 25 EUR**.
+
+- **New shareholders**: pay $50 \times 1 = 50$ EUR for shares worth
+  $50 \times 1.50 = 75$ EUR. They **gain 25 EUR**.
+
+- Selling shares **below** their value moves wealth from old to new
+  shareholders.
+
 ## Rights offer: example {.smaller}
 
 - If Alpha instead decides to do a rights offer, each existing
@@ -277,6 +629,28 @@ D.  Repayment Provisions (Chap. 24.4)
 
 - But existing and new shareholders are the same so the loss of 50 cents
   per stock is compensated by the profit on the new shares.
+
+- **In numbers**: together, the old shareholders had 100 EUR of shares and
+  50 EUR of cash = 150 EUR. After: 100 shares $\times$ 1.50 = 150 EUR. **No loss**:
+  the 25 EUR stays with the same people.
+
+## Rights offer: the price does not matter {.smaller}
+
+- A firm worth \$1 billion has 100 million shares at \$10. It needs
+  **\$200 million** (Example 23.8). Two possible rights offers:
+
+  | | Offer (a) | Offer (b) |
+  |:--|:--:|:--:|
+  | Terms | 4 rights + \$8 buy 1 share | 5 rights + \$10 buy 2 shares |
+  | New shares | 25 million | 40 million |
+  | Money raised | $25 \times 8 = \$200$m | $40 \times 5 = \$200$m |
+  | Price after | $1{,}200 / 125 = \$9.60$ | $1{,}200 / 140 = \$8.57$ |
+
+- A shareholder with 4 shares and \$8 under offer (a): $4 \times 10 + 8 = \$48$
+  before, $5 \times 9.60 = \$48$ after. The same holds under (b).
+
+- With a rights offer the issue price only changes **how** the value is
+  split between old and new shares, not **who** owns it.
 
 ## Price reaction {.smaller}
 
@@ -296,7 +670,7 @@ D.  Repayment Provisions (Chap. 24.4)
     likely to be overvalued. $\Rightarrow$ Price drop at announcement of
     SEO.
 
-## Price reaction (con't)
+## Price reaction (con't) {.smaller}
 
 - But adverse selection cannot be the whole story:
 
@@ -310,15 +684,15 @@ D.  Repayment Provisions (Chap. 24.4)
 
 ## Second Part: Debt Financing
 
-A.  Corporate Debt (Chap. 24.1)
+D.  Corporate Debt (Chap. 24.1)
 
-B.  Other Types of Debt (Chap. 24.2)
+E.  Other Types of Debt (Chap. 24.2)
 
-C.  Bond Covenants (Chap. 24.3)
+F.  Bond Covenants (Chap. 24.3)
 
-D.  Repayment Provisions (Chap. 24.4)
+G.  Repayment Provisions (Chap. 24.4)
 
-## A. Corporate debt
+## D. Corporate debt
 
 - Characteristics of a debt security:
 
@@ -331,6 +705,24 @@ D.  Repayment Provisions (Chap. 24.4)
   - Coupon payment dates
 
   - Maturity
+
+## Corporate debt: a real bond {.smaller}
+
+- In 2005 the car-rental firm Hertz issued, among others, this bond:
+
+  | Characteristic | Value |
+  |:--|:--|
+  | Face value (total) | \$1.8 billion, in bonds of \$1,000 |
+  | Issue price | 100% of face value (at par) |
+  | Coupon rate | 8.875% a year, fixed |
+  | Coupon payment dates | every six months |
+  | Maturity | 2014 |
+
+- Each \$1,000 bond pays $8.875\% \times 1000 / 2 = \$44.38$ every six
+  months, and \$1,000 back in 2014.
+
+- A bond issued **below** face value is an **original issue discount** (OID)
+  bond: part of the return comes from the price rising to face value.
 
 ## Issuance of debt {.smaller}
 
@@ -363,6 +755,9 @@ D.  Repayment Provisions (Chap. 24.4)
 :::
 ::::
 
+- A young firm borrows privately; a large, well-known firm can tap the public
+  market for much bigger amounts.
+
 ## Seniority
 
 - Most types of corporate bonds---notes (maturity less than 10 years)
@@ -376,7 +771,24 @@ D.  Repayment Provisions (Chap. 24.4)
 - In exchange for more risk, the investors of junior debt are promised
   higher yields.
 
-## B. Other types of debt
+## Seniority: who is paid first {.smaller}
+
+- If the firm defaults, its assets are shared out in this order:
+
+  1. **Secured debt**: backed by specific assets (a building, the car
+     fleet). Mortgage bonds and asset-backed bonds.
+
+  2. **Senior unsecured debt**: notes and debentures with no specific
+     asset, paid before other debt.
+
+  3. **Subordinated (junior) debt**: paid only after senior debt.
+
+  4. **Shareholders**: paid last, with what is left.
+
+- **Hertz (2005)**: its senior notes paid **8.875%**, its subordinated notes
+  **10.5%**. The lower in the line, the higher the interest rate.
+
+## E. Other types of debt {.smaller .shrink}
 
 - **Sovereign debt**: debt issued by national governments.
 
@@ -387,6 +799,12 @@ D.  Repayment Provisions (Chap. 24.4)
 
   - Up from 112% of GDP and 3,228 billion EUR a year earlier: an increase
     of 232.5 billion EUR in a single year.
+
+![](public_debt_gdp.png){fig-align="center" height="220"}
+
+::: {.tiny}
+*Source:* IMF Global Debt Database, 1985–2024; 2025: Eurostat and IMF WEO.
+:::
 
 ## Existing U.S. Treasury Securities
 
@@ -415,7 +833,7 @@ D.  Repayment Provisions (Chap. 24.4)
   other asset-backed securities + Often division into tranches that are
   assigned different repayment priority.
 
-## C. Bond covenants {.smaller}
+## F. Bond covenants {.smaller}
 
 - Restrictive clauses in a bond contract that limit the issuers from
   undercutting their ability to repay the bonds.
@@ -432,7 +850,11 @@ D.  Repayment Provisions (Chap. 24.4)
 - If the issuer fails to live up to any covenant, the bond goes into
   default.
 
-## D. Repayment provisions {.smaller}
+- **Why accept them?** Covenants protect lenders against managers taking
+  the cash out or piling on more debt. Lenders feel safer and ask for a
+  **lower interest rate**.
+
+## G. Repayment provisions {.smaller}
 
 - Issuers can repurchase outstanding bonds in the market before
   maturity.
@@ -460,6 +882,9 @@ D.  Repayment Provisions (Chap. 24.4)
 ![](ConvertiblesFT.PNG){fig-align="center"}
 :::
 
+
+
+
 ## Bonds with options {.smaller}
 
 - Bonds are commonly sold with options which give the issuer or the
@@ -479,6 +904,16 @@ D.  Repayment Provisions (Chap. 24.4)
 
 - Has a bond with an option a lower or higher yield than an otherwise
   identical bond? Why?
+
+## Bonds with options: the answer {.smaller}
+
+- An option is worth something to whoever **holds** it.
+
+- **Option for the investor** (puttable, convertible): the investor gets an
+  extra right, so accepts a **lower yield**.
+
+- **Option for the issuer** (callable): the firm gets an extra right, so it
+  must pay a **higher yield**.
 
 ## Hybrid bonds: convertible bonds {.smaller}
 
@@ -504,6 +939,30 @@ D.  Repayment Provisions (Chap. 24.4)
 
 ![](ConvBV.png){fig-align="center"}
 
+## What to remember {.smaller}
+
+- **A. Private firms** raise money in rounds. Post-money = pre-money +
+  invested; new investors own invested / post-money.
+
+- **B. IPO**: underwriters, book building, greenshoe, lockup. IPOs
+  are underpriced on average, come in waves and do poorly in the long run.
+
+- **C. SPACs** are a cheaper back door to the market. Poor performance on average.
+
+## What to remember (con't) {.smaller}
+
+- **D. Corporate debt**: private or public; seniority sets who is paid first
+  and the interest rate.
+
+- **E. Other debt**: sovereign bonds, TIPS (Treasury Inflation-Protected
+  Securities), ABS (asset-backed securities) and CDO (collateralized debt
+  obligation) tranches.
+
+- **F. Covenants** protect lenders and lower the rate.
+
+- **G. Options in bonds**: callable means a higher yield; convertible and
+  puttable mean a lower yield.
+
 ## Quiz
 
 - What are some of the advantages and disadvantages of going public?
@@ -515,3 +974,20 @@ D.  Repayment Provisions (Chap. 24.4)
 
 - Why does a convertible bond have a lower yield than an otherwise
   identical bond without the option to convert?
+
+## Quiz: answers {.smaller}
+
+- **Going public.** Advantages: liquidity for early investors, access to
+  much more capital. Disadvantages: dispersed owners who find it hard to
+  monitor managers, and the cost of public-company rules.
+
+- **Cash vs rights offer.** A cash offer sells to anyone, so a low price
+  moves wealth to new buyers. A rights offer sells only to existing
+  shareholders, so the value stays with them whatever the price.
+
+- **Covenant breach.** The bond goes into default: lenders can ask for
+  their money back or renegotiate.
+
+- **Convertible yield.** The investor also holds an option to become a
+  shareholder (a warrant). That option has value, so the investor accepts a
+  lower coupon.
