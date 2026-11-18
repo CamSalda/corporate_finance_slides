@@ -360,14 +360,60 @@ more: a smaller slice of a much bigger cake.
 
 - Same tool, new shares, at two stages of a firm's life.
 
-## Largest U.S. IPOs
+## Largest U.S. IPOs {.smaller}
 
-::: {.center}
-![](table23p3.png){fig-align="center"}
+```{=latex}
+\begingroup\footnotesize\setlength{\tabcolsep}{2.5pt}
+```
+
+| Company | Date | Exchange | Sector | Lead underwriter | USD m |
+|:--------------|:-------|:---------|:-----------|:-----------------|-------:|
+| SpaceX | 06/2026 | Nasdaq | Industrials | Goldman Sachs | 75,000 |
+| SK hynix | 07/2026 | Nasdaq | Technology | Bank of America | 26,507 |
+| Alibaba | 09/2014 | NYSE | Technology | Credit Suisse | 21,767 |
+| Visa | 03/2008 | NYSE | Financials | J.P. Morgan | 17,864 |
+| ENEL | 11/1999 | NYSE | Utilities | Merrill Lynch | 16,452 |
+| Facebook | 05/2012 | Nasdaq | Technology | Morgan Stanley | 16,007 |
+| General Motors | 11/2010 | NYSE | Consumer | Morgan Stanley | 15,774 |
+| Deutsche Telekom | 11/1996 | NYSE | Telecoms | Goldman Sachs | 13,034 |
+| Rivian | 11/2021 | Nasdaq | Consumer | Morgan Stanley | 11,934 |
+
+::: {.footnotesize}
+**Source**: Renaissance Capital IPO Home, November 2026, ranks 1 to 9. Deal
+sizes exclude the greenshoe.
 :::
 
-- A typical IPO is far smaller: the median US IPO raised about \$180 million
-  in 2020.
+```{=latex}
+\endgroup
+```
+
+## Largest U.S. IPOs (con't) {.smaller}
+
+```{=latex}
+\begingroup\footnotesize\setlength{\tabcolsep}{2.5pt}
+```
+
+| Company | Date | Exchange | Sector | Lead underwriter | USD m |
+|:--------------|:-------|:---------|:-----------|:-----------------|-------:|
+| AT&T Wireless | 04/2000 | NYSE | Telecoms | Goldman Sachs | 10,620 |
+| Kraft Foods | 06/2001 | NYSE | Consumer | Credit Suisse | 8,680 |
+| Uber | 05/2019 | NYSE | Technology | Morgan Stanley | 8,100 |
+| France Telecom | 10/1997 | NYSE | Telecoms | Merrill Lynch | 7,289 |
+| Medline | 12/2025 | Nasdaq | Health care | Goldman Sachs | 6,265 |
+| Telstra | 11/1997 | NYSE | Telecoms | Credit Suisse | 5,646 |
+| Swisscom | 10/1998 | NYSE | Telecoms | Warburg Dillon Read | 5,582 |
+| Cerebras Systems | 05/2026 | Nasdaq | Technology | Morgan Stanley | 5,550 |
+| United Parcel Service | 11/1999 | NYSE | Transportation | Morgan Stanley | 5,470 |
+
+::: {.footnotesize}
+**Source**: Renaissance Capital IPO Home, November 2026, ranks 10 to 18.
+:::
+
+- A typical IPO is far smaller: the median US IPO raised about \$180 million in 2020.
+
+```{=latex}
+\endgroup
+```
 
 ## Mechanics of an IPO
 
@@ -395,23 +441,12 @@ more: a smaller slice of a much bigger cake.
 
 :::
 
-## Reading the table of underwriters {.smaller}
-
-- A few large US banks dominate: JPMorgan, Goldman Sachs and Morgan Stanley
-  each led IPOs worth more than \$30 billion in 2021.
-
-- The top 10 banks handle about **half** of all IPO money.
-
-- Why? A big IPO needs a bank with many large investor clients, to sell all
-  the shares quickly at a good price. Reputation is hard to build, so the
-  same banks win again and again.
-
 ## The IPO, step by step {.smaller}
 
 1. **Choose the banks**: a lead underwriter and a syndicate.
 
 2. **File with the regulator** (SEC in the US): registration statement and
-   preliminary prospectus ("red herring").
+   preliminary prospectus.
 
 3. **Value the firm** and set a price range.
 
@@ -457,23 +492,6 @@ more: a smaller slice of a much bigger cake.
 - Book Building: A process used by underwriters for coming up with an
   offer price based on customers' expressions of interest.
 
-## Valuing an IPO with comparables {.smaller}
-
-- Wagner Inc.: sales \$320 million, operating profit (EBIT) \$15 million,
-  \$10 million of cash, no debt, 20 million shares. Similar listed firms are
-  worth on average **21.2 times** their EBIT and **0.9 times** their sales
-  (Example 23.4).
-
-- **With EBIT**: value of the business $15 \times 21.2 = \$318$ million; add
-  the cash: \$328 million; per share: $328 / 20 = \$16.40$.
-
-- **With sales**: $320 \times 0.9 = \$288$ million; plus cash: \$298 million;
-  $298 / 20 = \$14.90$ per share.
-
-- The two methods disagree, so the bank proposes a **price range**, say
-  \$13 to \$17. The road show and book building then pick the price within
-  it.
-
 ## Mechanics of an IPO (con't) {.smaller}
 
 - Pricing the Deal and Managing Risk
@@ -509,73 +527,27 @@ more: a smaller slice of a much bigger cake.
   - **Lockup**: A restriction that prevents insiders from selling their
     shares for some period, usually 90-180 days, after an IPO.
 
-## Spread and greenshoe: RealNetworks {.smaller}
 
-- RealNetworks' IPO (1997): **3 million** shares at **\$12.50**, plus a
-  greenshoe of **450,000** shares ($15\% \times 3$ million).
+## The four IPO puzzles (Chap. 23.3) {.smaller}
 
-- **Spread**: the bank paid the firm \$11.625 a share and sold at \$12.50:
-  $0.875 / 12.50 = 7\%$ of the price.
+- **Underpricing**: on average the share closes its first day well above the
+  offer price, by more than 17% in the US since 1960, so the issuer leaves
+  money on the table.
 
-- **Greenshoe**: the bank sold 3.45 million shares, 450,000 more than it had.
+- **Hot and cold markets**: IPOs come in waves, with many firms going public
+  when markets are high (1983, 1996, 1999-2000) and almost none after a
+  crash (2001-03, 2008).
 
-  - **Success**: the price rose to \$17.875 on day one. The bank buys the
-    450,000 extra shares from the firm at \$12.50 (the greenshoe option).
+- **High costs**: an IPO costs about 7% of the money raised in fees alone, far
+  more than issuing bonds or seasoned equity.
 
-  - **Failure** (price below \$12.50): the bank buys 450,000 shares on the
-    market instead. Its buying supports the price.
+- **Long-run underperformance**: in the three to five years after an IPO, the
+  new shares tend to do worse than the market.
 
-- Either way, the bank closes its position without a loss.
-
-## IPO puzzles: underpricing {.smaller}
-
-- **Underpricing**: on average, the price at the end of the first day is
-  well above the offer price. In the US, the average first-day return was
-  more than **17%** (1960-2021). RealNetworks: $17.875 / 12.50 - 1 = 43\%$.
-
-- Free money for investors? Not quite: the **winner's curse** (Example 23.5).
-
-  - In 80% of IPOs, demand is 16 times the shares on offer and the price
-    rises 20%. You ask for 2,000 shares but get only $2000 / 16 = 125$:
-    profit $125 \times \$15 \times 20\% = \$375$.
-
-  - In the other 20%, nobody else wants the shares and the price falls 5%.
-    You get all 2,000: loss $2000 \times \$15 \times 5\% = \$1{,}500$.
-
-  - On average: $0.8 \times 375 - 0.2 \times 1500 = 300 - 300 = \$0$.
-
-- You get **more** of the bad IPOs and **less** of the good ones. Underpricing
-  is what makes ordinary investors willing to take part.
-
-## IPO puzzles: hot and cold markets {.smaller}
-
-::: {.center}
-![](figure23p5.png){fig-align="center" height="200" style="height: 350px; max-height: none"}
-:::
-
-- The number of IPOs and the money raised move in **waves**: peaks in 1983,
-  1996 and 1999-2000, then collapses (2001-03, 2008). Firms go public when
-  markets are high, and wait when they are low.
-
-::: {.tiny}
-Figure 23.5, Cyclicality of IPOs in the U.S., 1975-2014 (BDM).
-:::
-
-## IPO puzzles: costs and long-run returns {.smaller}
-
-::: {.center}
-![](figure23p6.png){fig-align="center" height="170" style="height: 270px; max-height: none"}
-:::
-
-- **High costs**: direct costs as a % of the money raised. IPOs (red) cost the
-  most, about 7% of the money raised for a typical deal, and much more for
-  small ones. Bonds (black) cost the least.
-
-- **Long-run underperformance**: in the years after an IPO, the new shares
-  tend to do **worse** than the market.
-
-::: {.tiny}
-Figure 23.6, Relative costs of issuing securities (BDM).
+::: {.box .box-a}
+None of the four fits a perfect market. The usual explanations are the
+winner's curse for underpricing, and managers timing the market for the
+other three.
 :::
 
 ## C. SPACs: going public through the back door {.smaller}
@@ -698,25 +670,7 @@ Figure 23.6, Relative costs of issuing securities (BDM).
     likely to be overvalued. $\Rightarrow$ Price drop at announcement of
     SEO.
 
-## Price reaction: a numerical example {.smaller}
-
-- The share trades at **\$50**. Managers know more than the market about the
-  true value.
-
-  - If they know the true value is **\$60**, selling new shares at \$50
-    would give away value to new buyers: they **do not issue** (they
-    borrow or wait).
-
-  - If they know the true value is **\$40**, selling at \$50 is a good deal
-    for the old shareholders: they **issue**.
-
-- So an announced SEO tells investors that the true value is probably
-  closer to \$40: the price **falls** on the announcement.
-
-- Same logic as Lecture 10: a repurchase suggests the share is cheap, an
-  issue suggests it is expensive.
-
-## Price reaction (con't)
+## Price reaction (con't) {.smaller}
 
 - But adverse selection cannot be the whole story:
 
@@ -801,16 +755,6 @@ G.  Repayment Provisions (Chap. 24.4)
 :::
 ::::
 
-## Reading the examples {.smaller}
-
-- **Mistral** (March 2026): \$830 million of **private debt** from a group of
-  lenders, to build a data centre near Paris. Quick and confidential, but
-  the loan cannot be sold on a market.
-
-- **Oracle** (February 2026): \$25 billion of **public bonds**, in eight parts
-  with maturities from 3 to 40 years. Sold to thousands of investors and
-  traded on the market, but it needs a prospectus and a credit rating.
-
 - A young firm borrows privately; a large, well-known firm can tap the public
   market for much bigger amounts.
 
@@ -844,7 +788,7 @@ G.  Repayment Provisions (Chap. 24.4)
 - **Hertz (2005)**: its senior notes paid **8.875%**, its subordinated notes
   **10.5%**. The lower in the line, the higher the interest rate.
 
-## E. Other types of debt
+## E. Other types of debt {.smaller .shrink}
 
 - **Sovereign debt**: debt issued by national governments.
 
@@ -856,25 +800,15 @@ G.  Repayment Provisions (Chap. 24.4)
   - Up from 112% of GDP and 3,228 billion EUR a year earlier: an increase
     of 232.5 billion EUR in a single year.
 
+![](public_debt_gdp.png){fig-align="center" height="220"}
+
+::: {.tiny}
+*Source:* IMF Global Debt Database, 1985–2024; 2025: Eurostat and IMF WEO.
+:::
+
 ## Existing U.S. Treasury Securities
 
 ![](table24p4.png){fig-align="center"}
-
-## Reading the table of Treasury securities {.smaller}
-
-- The US government borrows at every maturity:
-
-  - **Bills**: up to one year, no coupon. You buy below face value and get
-    the face value at maturity.
-
-  - **Notes**: 2 to 10 years, with coupons.
-
-  - **Bonds**: 30 years, with coupons.
-
-  - **TIPS**: protected against inflation (next slide).
-
-- These yields are the "risk-free rates" used throughout the course (CAPM,
-  Lecture 4): other borrowers pay a spread above them.
 
 ## TIPS (Treasury-Inflation-Protected Securities)
 
@@ -885,26 +819,6 @@ G.  Repayment Provisions (Chap. 24.4)
 - Example:
 
 ![](tipsExample.png){fig-align="center"}
-
-## TIPS: reading the example step by step {.smaller}
-
-- A 3-year TIPS with face value \$1,000 and a **4%** coupon.
-
-- **Step 1, the principal follows inflation**:
-
-  - Year 1, inflation 2%: $1000 \times 1.02 = \$1{,}020$.
-
-  - Year 2, inflation 3%: $1020 \times 1.03 = \$1{,}050.60$.
-
-  - Year 3, inflation 1%: $1050.60 \times 1.01 = \$1{,}061.11$.
-
-- **Step 2, the coupon is 4% of that principal**: \$40.80, \$42.02, \$42.44.
-
-- **Step 3, at maturity** the investor gets back the adjusted principal:
-  $1{,}061.11 + 42.44 = \$1{,}103.55$.
-
-- The investor's money keeps its **purchasing power**, whatever inflation
-  turns out to be.
 
 ## Other types of debt: Asset-Backed Securities {.smaller}
 
@@ -918,28 +832,6 @@ G.  Repayment Provisions (Chap. 24.4)
 - **Collateralized Debt Obligations (CDO)**: A re-securitization of
   other asset-backed securities + Often division into tranches that are
   assigned different repayment priority.
-
-## CDO tranches: an example {.smaller}
-
-- A pool of loans worth **\$100 million** is split into three tranches,
-  paid in order:
-
-  | Tranche | Size | Paid | Loses money |
-  |:--|:--:|:--|:--|
-  | Senior | \$70m | first | last |
-  | Mezzanine | \$20m | second | second |
-  | Equity | \$10m | last | first |
-
-- Suppose borrowers default and the pool loses **\$15 million**:
-
-  - the equity tranche loses all its \$10 million;
-
-  - the mezzanine tranche loses the other \$5 million (a quarter of it);
-
-  - the senior tranche is paid in full.
-
-- The same pool creates safe and risky securities. In 2008, losses were so
-  large that even "safe" tranches lost money.
 
 ## F. Bond covenants {.smaller}
 
@@ -984,37 +876,14 @@ G.  Repayment Provisions (Chap. 24.4)
 
   - Note: If rates rise, there is no need to refinance.
 
-## Callable bonds: example {.smaller}
-
-- A 5-year bond pays an **8%** coupon on \$100. It is **callable at \$100**
-  after one year. Interest rates have fallen, and it trades at **\$103**
-  (Example 24.2).
-
-- **If it is not called**: the investor earns about **7.26%** a year for five
-  years (the yield to maturity).
-
-- **If it is called** after one year: the investor gets the coupon and the
-  \$100 back, \$108 in total, for \$103 paid:
-  $$\text{Yield to call} = \frac{108}{103} - 1 = 4.85\%$$
-
-- The firm calls exactly when rates have fallen, so the investor must
-  reinvest at the new, lower rates. Investors want a **higher yield** on a
-  callable bond to accept this.
-
-## Sinking funds
-
-- Another way to repay early: the firm pays money **every year** into a
-  **sinking fund**, and a trustee uses it to buy back part of the bonds.
-
-- The debt is repaid **gradually**, not all at maturity. If the fund does not
-  repay everything, the rest is paid at the end in one large **balloon
-  payment**.
-
 ##
 
 ::: {.center}
 ![](ConvertiblesFT.PNG){fig-align="center"}
 :::
+
+
+
 
 ## Bonds with options {.smaller}
 
@@ -1046,10 +915,6 @@ G.  Repayment Provisions (Chap. 24.4)
 - **Option for the issuer** (callable): the firm gets an extra right, so it
   must pay a **higher yield**.
 
-- This is the FT headline: with rates high in 2023, even top-rated firms
-  issued convertibles to pay a lower coupon, giving investors a chance to
-  become shareholders instead.
-
 ## Hybrid bonds: convertible bonds {.smaller}
 
 - A corporate bond with a provision that gives the bondholder an option
@@ -1074,45 +939,24 @@ G.  Repayment Provisions (Chap. 24.4)
 
 ![](ConvBV.png){fig-align="center"}
 
-## Reading the convertible bond figure {.smaller}
-
-- A convertible bond with face value **\$1,000** and a conversion ratio of
-  **15** shares.
-
-- **Step 1, conversion price**: $1000 / 15 = \$66.67$ per share.
-
-- **Step 2, at maturity**, the investor picks the better of:
-
-  - \$1,000 in cash (red line, the straight bond);
-
-  - 15 shares (blue line): worth more than \$1,000 only if the share is above
-    \$66.67.
-
-- **Step 3, before maturity** the convertible (yellow) is worth more than
-  both lines: the investor can still wait and see.
-
-- A low share price: it behaves like a bond. A high share price: like the
-  shares.
-
 ## What to remember {.smaller}
 
 - **A. Private firms** raise money in rounds. Post-money = pre-money +
   invested; new investors own invested / post-money.
 
-- **B. IPO**: underwriters, book building, 7% spread, greenshoe, lockup. IPOs
+- **B. IPO**: underwriters, book building, greenshoe, lockup. IPOs
   are underpriced on average, come in waves and do poorly in the long run.
 
-- **C. SPACs** are a cheaper back door to the market. An **SEO** sold below
-  value moves wealth from old to new shareholders, unless it is a rights
-  offer. Prices fall on announcement (signalling).
+- **C. SPACs** are a cheaper back door to the market. Poor performance on average.
 
 ## What to remember (con't) {.smaller}
 
 - **D. Corporate debt**: private or public; seniority sets who is paid first
   and the interest rate.
 
-- **E. Other debt**: sovereign bonds, TIPS (inflation-protected), ABS and
-  CDO tranches.
+- **E. Other debt**: sovereign bonds, TIPS (Treasury Inflation-Protected
+  Securities), ABS (asset-backed securities) and CDO (collateralized debt
+  obligation) tranches.
 
 - **F. Covenants** protect lenders and lower the rate.
 
