@@ -4,6 +4,12 @@ subtitle: "Lecture 11 extras: a finance podcast and the Anthropic IPO"
 footer: "Lecture 11 extras"
 ---
 
+## The next class is the last one
+
+::: {.center}
+![](lastClass.jpg){fig-align="center" height="220" style="height: 460px; max-height: none"}
+:::
+
 ## Plan
 
 A.  The Finance and Economics Papers Podcast
@@ -191,22 +197,3 @@ Sources: CBS News, 23 Nov 2026; Yahoo Finance, 19–20 Nov 2026.
 ::: {.tiny}
 Source: CBS News, Yahoo Finance, 19 Nov 2026.
 :::
-
-## Reading the deal with Lecture 11 {.smaller}
-
-- **Bookbuilding**: demand was so strong that the price was raised above
-  the initial range, from \$70–78 to \$83.
-
-- **Underpricing**: shares sold at \$83 closed at \$97.17.
-  Money left on the table: (\$97.17 − \$83) × 980 million = about **\$13.9 billion**.
-  The average first-day gain of a US IPO is about 19% (Jay Ritter).
-
-- **Underwriting fees**: \$550 million is about 0.7% of the money raised,
-  far below the usual 7% spread. On a deal this size, banks compete hard.
-
-- **Small float**: only about 7.4% of the shares trade, so a few buyers and
-  sellers can move the price a lot.
-
-- **Long-run performance**: of 32 of the biggest IPOs, more than half fell
-  at least 50% at some point in their first year (Truist). ANT has since
-  traded below its \$83 offer price.

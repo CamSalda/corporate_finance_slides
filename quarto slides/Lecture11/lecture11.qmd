@@ -251,7 +251,7 @@ the company struggles, the heavy debt can push it into financial distress.
   assumption). A VC invests **\$6m** at a **post-money value of \$10m**
   (Example 23.1).
 
-![](funding_round.png){fig-align="center" height="230"}
+![](funding_round.png){fig-align="center" height="230" style="height: 360px; max-height: none"}
 
 - Your \$100,000 is now worth **\$3m**, 30 times more, but you control only
   **30%** of the firm.
