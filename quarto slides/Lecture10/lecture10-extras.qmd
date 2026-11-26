@@ -11,6 +11,26 @@ footer: "Lecture 10 extras"
 - **Two weeks before the exam**, all the **Pearson exercises** will be open for
   you to practice.
 
+## ESCP Founder Report Q3 2026 {.smaller}
+
+- Published this month by the **ESCP Alternative Investment Society**, with
+  Blue Factory ESCP. Third edition this year. Worth a read before you start
+  your own company.
+
+- **Headline figures for Q3 2026:**
+  - ESCP alumni startups raised **over \$79 million** across **13 funding
+    rounds** worldwide, led by **France and Italy**.
+  - **14 ESCP-linked unicorns** (start-ups valued above \$1 billion).
+  - Exit of the quarter: NVIDIA's announced acquisition of **Hugging Face**,
+    co-founded by Clem Delangue (ESCP MiM 2012), for about **\$12.9 billion**.
+    The same company we met in the Lecture 2 extras.
+  - A section on ESCP-founded start-ups that joined **Y Combinator**.
+
+- Link to the post:
+  [linkedin.com/posts/escp-founder-report-q3-2026-ugcPost-7527806650414690304-q3jI](https://www.linkedin.com/posts/escp-founder-report-q3-2026-ugcPost-7527806650414690304-q3jI/)
+
+- Full report and earlier editions: [escpais.com/founder-report](https://www.escpais.com/founder-report)
+
 ## Apple: the largest buyback in US history {.smaller}
 
 - **May 2024**: Apple announces a share repurchase programme of
