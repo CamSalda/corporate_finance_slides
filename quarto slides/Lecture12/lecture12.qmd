@@ -12,6 +12,103 @@ B.  Option basics (Chap. 20.1)
 
 C.  Option payoffs at expiration (Chap. 20.2)
 
+Mostly based on the BDM textbook Chap. 20.
+
+The second part of today's session is the final exam briefing (separate
+deck).
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Recap lecture 11
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Recap lecture 11}
+\end{center}
+\vfill
+```
+
+## Recap: raising equity {.smaller}
+
+- **Private firms** raise money in **funding rounds**. Post-money value =
+  pre-money value + money invested. The new investors own: money invested /
+  post-money value.
+
+- **IPO**: the firm sells shares to the public for the first time. An
+  **underwriter** (a bank) runs the sale, sets the price through **book
+  building**, can sell extra shares (**greenshoe**), and insiders cannot sell
+  for months (**lockup**).
+
+- Three facts: IPOs are **underpriced** on average (the price jumps on the
+  first day), they come in **waves**, and they do **poorly in the long run**.
+
+## Recap: SPACs and seasoned offerings {.smaller}
+
+- **SPAC**: a listed shell full of cash merges with a private firm, a back
+  door to the market. Cheaper and faster than an IPO, poor returns on average.
+
+- **Seasoned equity offering (SEO)**: a firm that is already listed sells new
+  shares.
+
+  - **Cash offer**: sold to anyone. If the price is low, wealth moves from the
+    old shareholders to the new buyers.
+
+  - **Rights offer**: sold to the existing shareholders only, so the value
+    stays with them whatever the price.
+
+- The share price falls on the announcement: investors read a sale of shares
+  as a sign that managers think the shares are expensive.
+
+## Recap: corporate debt {.smaller}
+
+- **Private debt** (bank loans, private placements) or **public debt** (bonds
+  sold to the market).
+
+- **Seniority**: who is paid first if the firm fails. Secured debt, then
+  senior unsecured, then subordinated. Lower in the ladder means a higher
+  interest rate.
+
+- **Covenants**: promises written in the bond contract (limits on dividends,
+  on new debt). They protect lenders, so the firm borrows at a lower rate.
+  Breaking one is a default.
+
+- Other debt: sovereign bonds, **TIPS** (inflation-protected), **ABS**
+  (asset-backed securities) and **CDO** (collateralized debt obligation)
+  tranches.
+
+## Recap: bonds with options {.smaller}
+
+- **Callable bond**: the firm may repay early. The right belongs to the firm,
+  so investors ask for a **higher yield**.
+
+- **Puttable bond**: the investor may ask for early repayment.
+  **Convertible bond**: the investor may swap the bond for shares. The right
+  belongs to the investor, so the investor accepts a **lower yield**.
+
+- Last week the options were hidden inside bonds. **Today we open the box and
+  study the option itself.**
+
+## {.center}
+
+::: {.content-visible when-format="revealjs"}
+::: {.center .huge}
+Beginning of lecture 12 content
+:::
+:::
+
+```{=latex}
+\vfill
+\begin{center}
+{\color{escpblue}\Huge\bfseries Beginning of lecture 12 content}
+\end{center}
+\vfill
+```
+
 ## Introduction
 
 - A company is exposed to many different risks:
@@ -62,10 +159,13 @@ C.  Option payoffs at expiration (Chap. 20.2)
   "hard to diversify" risk with a financial derivative than with an
   insurance contract.
 
-## Financial derivatives
+## Financial derivatives {.smaller}
 
 - The value of financial derivatives depends on another value (the
   underlying).
+
+  - Think of a derivative as a side bet whose value is read off another
+    price.
 
 - The underlying is mostly the price of a financial security.
 
@@ -96,6 +196,23 @@ C.  Option payoffs at expiration (Chap. 20.2)
     the counterparty so that there is no credit risk in the futures
     market.
 
+## A forward, step by step {.smaller}
+
+- An airline agrees **today** to buy jet fuel in three months at a **forward
+  price of 100** per unit. No money changes hands today.
+
+- In three months the airline pays 100 whatever the market ("spot") price is:
+
+  | Spot price in three months | 80 | 100 | 120 |
+  |:---------------------------|---:|----:|----:|
+  | The buyer pays 100 for fuel worth | 80 | 100 | 120 |
+  | **Buyer's gain** = spot − forward | −20 | 0 | +20 |
+  | **Seller's gain** = forward − spot | +20 | 0 | −20 |
+
+- The contract fixes the price today, so the price risk moves from the buyer
+  to the seller. One side's gain is the other side's loss, and **both sides
+  can lose**.
+
 ## Forward/futures: terminology {.smaller}
 
 | **"Spot" market** | **"Futures/forward" market**        |
@@ -108,12 +225,15 @@ C.  Option payoffs at expiration (Chap. 20.2)
 | Seller            | Party which takes the               |
 |                   | short position in the contract      |
 
-## The value of a forward contract
+## The value of a forward contract {.smaller .shrink}
 
 The value of the forward contract at maturity depends on the spot price
 at maturity:
 
-![](contractForward.png){fig-align="center"}
+![](contractForward.png){fig-align="center" height="190" style="height: 340px; max-height: none"}
+
+- **Long** (buyer): the line rises with the spot price; below the forward
+  price the buyer loses (red area). **Short** (seller): the mirror image.
 
 ## Closing a position {.smaller}
 
@@ -171,6 +291,19 @@ at maturity:
 - The price of an option or the option premium is paid by the buyer to
   the seller to acquire the right.
 
+## Call and put side by side {.smaller}
+
+| | **Call** | **Put** |
+|:--|:--|:--|
+| The right to… | buy at the strike price $K$ | sell at the strike price $K$ |
+| Used when the share price is… | above $K$ | below $K$ |
+| The buyer gains when the price… | rises | falls |
+| The buyer pays today | the premium | the premium |
+| The seller… | must sell at $K$ if asked | must buy at $K$ if asked |
+
+- The premium is the price of a right. The seller is paid today to take on
+  an obligation for later.
+
 ## Terminology {.smaller}
 
 - Exercising an option: when a holder of an option enforces the
@@ -205,6 +338,29 @@ at maturity:
     in-the-money (out-of-the-money) and for which the strike price and
     the stock price are very far apart.
 
+## Moneyness, step by step with real quotes {.smaller}
+
+- eBay shares trade at **33.75** (the quote table later in the deck,
+  September 2018). Compare each strike with the share price:
+
+  - **January 30 call**: the right to buy at 30 something worth 33.75. Using
+    it now would gain 3.75: **in-the-money**.
+
+  - **January 35 call**: buying at 35 something worth 33.75 loses money:
+    **out-of-the-money**.
+
+  - **January 37 put**: the right to sell at 37 something worth 33.75, a gain
+    of 3.25: **in-the-money**.
+
+  - **January 30 put**: selling at 30 something worth 33.75:
+    **out-of-the-money**.
+
+  - **September 34 call**: strike and share price almost equal: close to
+    **at-the-money**.
+
+- Rule: a **call** is in the money when the strike is **below** the share
+  price, a **put** when the strike is **above** it.
+
 ## Terminology (con't 2) {.smaller}
 
 - **European option:** options that allow their holders to exercise the
@@ -235,18 +391,25 @@ at maturity:
 - Seller (**short position**) of a **put** expects an increase in the
   price of the underlying.
 
-##
+## Who gains when the price moves {.smaller}
 
-::: {.center}
-**But first, let's fight a monster**
+| Position | The price **rises** | The price **falls** |
+|:--|:--|:--|
+| Buy a call (long call) | gains | loses only the premium |
+| Sell a call (short call) | loses, with no limit | keeps the premium |
+| Buy a put (long put) | loses only the premium | gains |
+| Sell a put (short put) | keeps the premium | loses, up to the strike |
 
-![](maxMonsterScary.jpg){height="400"}
-:::
+- The buyer of an option can never lose more than the premium paid.
 
-## The monster is called max {.smaller}
+- The seller keeps the premium when nothing happens, and pays when the buyer
+  exercises.
+
+## A piece of notation: max {.smaller}
 
 - In the next slides you will meet formulas like
-  $\max\left(S_{T} - K; \ 0\right)$. That $\max$ is the whole monster.
+  $\max\left(S_{T} - K; \ 0\right)$. That $\max$ is the only new piece of
+  notation.
 
 - $\max$ of two numbers means: **look at both and keep the bigger one**.
   Nothing else.
@@ -300,14 +463,6 @@ at maturity:
 
 - The two parts meet exactly at the strike price. That is the kink.
 
-##
-
-::: {.center}
-**The max monster was kind of friendly after all**
-
-![](maxMonsterFriendly.png){height="380"}
-:::
-
 ## C. Option payoffs at expiration {.smaller}
 
 - The value of a call at expiration is $$\begin{equation*}
@@ -333,6 +488,25 @@ at maturity:
 ![](figure20p2Put.png){height="320"}
 :::
 
+## The seller's side: the mirror image {.smaller}
+
+- The seller (writer) of an option takes the other side of the contract:
+  whatever the buyer receives, the seller pays. The seller's payoff is
+  **minus** the buyer's payoff.
+
+- Strike price $K = 20$ again, share price $S_{T}$ at expiration:
+
+  | Share price $S_{T}$ | 10 | 15 | 20 | 25 | 30 |
+  |:--------------------|---:|---:|---:|---:|---:|
+  | Buyer of the call | 0 | 0 | 0 | 5 | 10 |
+  | **Seller of the call** | 0 | 0 | 0 | −5 | −10 |
+  | Buyer of the put | 10 | 5 | 0 | 0 | 0 |
+  | **Seller of the put** | −10 | −5 | 0 | 0 | 0 |
+
+- The seller of a put can lose at most the strike price: the share cannot
+  fall below zero. The seller of a call has **no floor**: the share price can
+  rise without limit.
+
 ## Option pricing model: call {.smaller .dense}
 
 - The most commonly used model to value European options is the
@@ -353,10 +527,29 @@ at maturity:
     money" at expiration.
 
   - N($d_1$) = "delta" of the option
-    ($\Delta = tial C_{t} / tial S_{t}$).
+    ($\Delta = \partial C_{t} / \partial S_{t}$).
 
   - There is a similar formula for the price of European put options
     which can be found, e.g., with the put-call parity.
+
+## Black-Scholes without the maths {.smaller .shrink}
+
+- In words: **call price = (what you may receive) − (what you may pay)**. You
+  may receive the share, worth $S_t$. You may pay the strike $K$, at
+  expiration, so it is discounted. Each piece is weighted by a number between
+  0 and 1, $N(d_1)$ or $N(d_2)$, which plays the role of a probability.
+
+- Five inputs, and the direction each one pushes the price of a call:
+
+  | Input | When it goes up, the call price… |
+  |:--|:--|
+  | Share price $S_t$ | rises: more to gain |
+  | Strike price $K$ | falls: you pay more to exercise |
+  | Time to expiration $T - t$ | rises: more time for the share to move |
+  | Volatility $\sigma$ | rises: bigger gains possible, downside capped at zero |
+  | Risk-free rate $r_f$ | rises: paying $K$ later costs less today |
+
+- Remember the five inputs and the direction of each effect.
 
 ## Options: history {.smaller}
 
@@ -389,11 +582,39 @@ expiration in January.
   chooses to buy the call today and hold it to expiry, assuming that the
   stock price reaches 40\$ at the expiration of the call option.
 
-## Profit from holding a call option to expiration
+## Option quotes: the answer, step by step {.smaller}
+
+1. **Moneyness.** The share trades at 33.75 and the strike is 30. The right
+   to buy at 30 something worth 33.75 is worth using: the call is
+   **in-the-money** (intrinsic value 33.75 − 30 = 3.75).
+
+2. **Cost.** A buyer pays the **ask** price: **4.80** per share.
+
+3. **Payoff at expiration** if the share is at 40: max(40 − 30; 0) = **10**.
+
+4. **Profit** = payoff − premium = 10 − 4.80 = **5.20**.
+
+5. **Return** = profit / cost = 5.20 / 4.80 = **108.33%**.
+
+- Compare with buying the share instead: 40 / 33.75 − 1 = **18.52%**. Same
+  news, about six times the return: an option is a **leveraged** bet. And if
+  the share ends below 30, the option expires worthless: a return of
+  **−100%**.
+
+## Profit from holding a call option to expiration {.smaller .shrink}
 
 ::: {.center}
-![](figure20p3.png){fig-align="center"}
+![](figure20p3.png){fig-align="center" height="185" style="height: 340px; max-height: none"}
 :::
+
+- The flat part of each line is **minus the premium**: the January 30 call
+  starts near −4.80, the January 40 call near −0.38.
+
+- Each line turns up at its strike. **Break-even = strike + premium**: 34.80
+  for the January 30 call, 40.38 for the January 40 call.
+
+- A cheap out-of-the-money call loses less when you are wrong, but needs a
+  bigger rise to pay.
 
 ## Returns from purchasing a call option and holding it to expiration
 
@@ -412,7 +633,26 @@ expiration in January.
   reasonable likelihood that the stock price will increase in the
   future.
 
-## Option usage in practice: portfolio insurance (con't) {.smaller}
+## Portfolio insurance, step by step {.smaller}
+
+- You own one Amazon share and want to be sure to have **at least 45** at
+  the expiration date, without giving up the upside.
+
+- **Way 1**: keep the share and buy a **put with strike 45**. **Way 2**: buy
+  a **risk-free bond paying 45** and a **call with strike 45**.
+
+  | Share price at expiration | 30 | 45 | 60 |
+  |:--------------------------|:--:|:--:|:--:|
+  | Way 1: share + put | 30 + 15 = 45 | 45 + 0 = 45 | 60 + 0 = 60 |
+  | Way 2: bond + call | 45 + 0 = 45 | 45 + 0 = 45 | 45 + 15 = 60 |
+
+- Both ways give the **same payoff** whatever happens: a floor at 45, and the
+  full upside above it.
+
+- Two packages with the same payoff must have the same price today. That is
+  the **put-call parity** (Chap. 20.3): share + put = bond + call.
+
+## Option usage in practice: portfolio insurance (con't) {.smaller .shrink}
 
 ![](Figure20p7.png){fig-align="center"}
 
@@ -432,9 +672,41 @@ the price of Amazon stock falling below \$45:
 
 :::
 
+## What to remember {.smaller}
+
+- **A. Forwards and futures.** A promise to buy or sell at a fixed price on
+  a fixed date. No premium, and both sides can lose. Futures are standardised
+  forwards with a clearing house.
+
+- **B. Options.** A right, not an obligation. A **call** is the right to buy
+  at the strike, a **put** the right to sell. The buyer pays a premium; the
+  seller is paid to take on an obligation. In, at or out of the money.
+  European (expiration date only) or American (any day until then).
+
+- **C. Payoffs.** Call: max($S_T$ − $K$; 0). Put: max($K$ − $S_T$; 0). The
+  seller's payoff is the mirror image. Profit = payoff − premium. Portfolio
+  insurance: share + put = bond + call.
+
 ## Quiz
 
 - Does the holder of an option have to exercise it?
 
 - Explain how you can use put options to create portfolio insurance. How
   can you create portfolio insurance using call options?
+
+- You bought the January 30 call at 4.80 and the share ends at 32. What are
+  your payoff, your profit and your return?
+
+## Quiz: answers {.smaller}
+
+- **No.** The holder has a right, not an obligation, and exercises only when
+  it pays. The seller, on the other hand, must deliver if asked.
+
+- **Put insurance**: keep the shares and buy a put whose strike is the floor
+  you want. **Call insurance**: buy a risk-free bond that pays the floor at
+  expiration, plus a call with the same strike. Both give the floor and keep
+  the upside.
+
+- **January 30 call at 32.** Payoff = max(32 − 30; 0) = 2. Profit = 2 − 4.80
+  = −2.80. Return = −2.80 / 4.80 = **−58.33%**. The option was in the money,
+  and you still lost money: the premium matters.
