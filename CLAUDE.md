@@ -89,6 +89,15 @@ symbol the first time it appears. If a derivation needs several steps, spread it
 rather than compressing it. This governs new content; it does not require rewriting the
 professor's own original slides unless asked.
 
+## Podcast companions
+
+Each deck has a companion episode beside it: `LectureN/lectureN_podcast_script.md` and
+`LectureN/lectureN_podcast.mp3`, both committed. The procedure (script format, tone, equations rule, the
+podcast repo at `C:\Users\camil\Documents\the-finance-papers-podcast` on its `escp-pronunciation` branch, the
+`.venv` there, the render command) is in `quarto slides/podcast-companion.md`; the skill
+`.claude/skills/lecture-podcast/SKILL.md` is its checklist. Renders run one at a time and take about as long
+as the episode.
+
 ## Git
 
 Never add Claude as a co-author or author of commits, PRs, or issues. No `Co-Authored-By` trailer,
