@@ -473,8 +473,6 @@ shares from the firm at the offer price.
   | **Call payoff** $\max(S_{T}-K;\ 0)$ | 0 | 0 | 0 | 5 | 10 |
   | **Put payoff** $\max(K-S_{T};\ 0)$ | 10 | 5 | 0 | 0 | 0 |
 
-- The middle row can be negative, the payoff rows never are. The zero in the
-  $\max$ does that work.
 
 ## That is why the graph has an elbow {.smaller}
 
@@ -488,17 +486,17 @@ shares from the firm at the offer price.
 
 - The two parts meet exactly at the strike price. That is the kink.
 
-## C. Option payoffs at expiration {.smaller}
+## C. Option payoffs at expiration {.smaller .shrink}
 
 - The value of a call at expiration is $$\begin{equation*}
   C_{T} = \max \left(S_{T} - K; \ 0 \right),
   \end{equation*}$$ where $S_{T}$ is the price of the underlying at
   expiration and $K$ is the strike price of the option.
 
-- Example for $K = 20$:
+- Example: payoff of a **call option** with $K = 20$:
 
 ::: {.center}
-![](figure20p2.png){height="290"}
+![](figure20p2.png){height="220" style="height: 290px; max-height: none"}
 :::
 
 ## Option payoffs at expiration: put {.smaller}
@@ -592,6 +590,26 @@ shares from the firm at the offer price.
 - A large number of options are not traded on exchanges but rather in
   over the counter markets.
 
+## Where options trade in Europe today {.smaller .shrink}
+
+- **Eurex, Frankfurt.** Created in 1998 by merging the German (DTB) and Swiss
+  (SOFFEX) futures exchanges; owned by Deutsche Börse. Known for Euro-Bund
+  futures (10-year German government bonds) and futures and options on the
+  Euro Stoxx 50 and the DAX. One of the largest derivatives exchanges in the
+  world.
+
+- **ICE Futures Europe, London: the former NYSE Liffe.** LIFFE opened in
+  1982, was bought by Euronext in 2002, became NYSE Liffe in 2007, and has
+  belonged to the US group ICE since 2013. Interest-rate futures (Euribor),
+  FTSE 100 options, and commodities such as cocoa, coffee and sugar.
+
+- **Euronext, Paris.** Independent again since 2014. Futures and options on
+  the **CAC 40**.
+
+- All three work as described in section A: an electronic order book,
+  standardised contracts, and a clearing house that stands between buyer and
+  seller.
+
 ## Option quotes: example of CBOE {.smaller}
 
 ::: {.center}
@@ -629,23 +647,16 @@ expiration in January.
 ## Profit from holding a call option to expiration {.smaller .shrink}
 
 ::: {.center}
-![](figure20p3.png){fig-align="center" height="185" style="height: 340px; max-height: none"}
+![](figure20p3.png){fig-align="center" height="185" style="height: 300px; max-height: none"}
 :::
 
-- The flat part of each line is **minus the premium**: the January 30 call
-  starts near −4.80, the January 40 call near −0.38.
+- **Each line is a call with a different strike price**, from 30 to 40.
 
-- Each line turns up at its strike. **Break-even = strike + premium**: 34.80
-  for the January 30 call, 40.38 for the January 40 call.
+- Below the strike, you lose what you paid for the option. Above it, every
+  extra dollar on the share is an extra dollar of profit.
 
-- A cheap out-of-the-money call loses less when you are wrong, but needs a
-  bigger rise to pay.
-
-## Returns from purchasing a call option and holding it to expiration
-
-::: {.center}
-![](figure20p4.png){fig-align="center"}
-:::
+- A low strike costs more but pays sooner. A high strike costs less but
+  needs a bigger rise.
 
 ## Option usage in practice: portfolio insurance
 
@@ -657,25 +668,6 @@ expiration in January.
   reluctant to sell his stocks because he also thinks there is a
   reasonable likelihood that the stock price will increase in the
   future.
-
-## Portfolio insurance, step by step {.smaller}
-
-- You own one Amazon share and want to be sure to have **at least 45** at
-  the expiration date, without giving up the upside.
-
-- **Way 1**: keep the share and buy a **put with strike 45**. **Way 2**: buy
-  a **risk-free bond paying 45** and a **call with strike 45**.
-
-  | Share price at expiration | 30 | 45 | 60 |
-  |:--------------------------|:--:|:--:|:--:|
-  | Way 1: share + put | 30 + 15 = 45 | 45 + 0 = 45 | 60 + 0 = 60 |
-  | Way 2: bond + call | 45 + 0 = 45 | 45 + 0 = 45 | 45 + 15 = 60 |
-
-- Both ways give the **same payoff** whatever happens: a floor at 45, and the
-  full upside above it.
-
-- Two packages with the same payoff must have the same price today. That is
-  the **put-call parity** (Chap. 20.3): share + put = bond + call.
 
 ## Option usage in practice: portfolio insurance (con't) {.smaller .shrink}
 
