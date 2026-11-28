@@ -527,6 +527,26 @@ sizes exclude the greenshoe.
   - **Lockup**: A restriction that prevents insiders from selling their
     shares for some period, usually 90-180 days, after an IPO.
 
+## The greenshoe: an automatic price stabiliser {.smaller .shrink}
+
+- The underwriter uses it to **steady the share price** in the first 30 days
+  after the IPO. It has two pieces:
+
+  1. **A short position.** The underwriter sells about 15% more shares than
+     the firm issues. It borrows the extra shares, so it owes them back.
+
+  2. **An option.** The right, not the obligation, to buy those extra shares
+     from the firm at the **offer price**.
+
+- Example: the firm issues 100 shares at 20, the underwriter sells 115.
+
+  | After the IPO, the price… | rises to 25 | falls to 18 |
+  |:--|:--|:--|
+  | The underwriter… | uses the option: buys 15 new shares from the firm at 20 | buys 15 shares in the market at 18 |
+  | The result | the firm raises money on 115 shares | the extra buying supports the price |
+
+- Either way, the underwriter can return the 15 shares it owes.
+
 
 ## The four IPO puzzles (Chap. 23.3) {.smaller}
 

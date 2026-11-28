@@ -213,27 +213,49 @@ Beginning of lecture 12 content
   to the seller. One side's gain is the other side's loss, and **both sides
   can lose**.
 
-## Forward/futures: terminology {.smaller}
+## Forward/futures: terminology {.smaller .shrink}
 
-| **"Spot" market** | **"Futures/forward" market**        |
-|:------------------|:------------------------------------|
-| Price             | Futures/forward price               |
-| Today             | Expiration date or transaction date |
-| Something         | Underlying                          |
-| Buyer             | Party which takes the               |
-|                   | long position in the contract       |
-| Seller            | Party which takes the               |
-|                   | short position in the contract      |
+| | **Spot: buy today** | **Forward/futures: agree today, trade later** |
+|:-----------------|:-----------------------|:-------------------------------------------|
+| **What is traded** | an asset, e.g. jet fuel | the same asset: the **underlying** |
+| **Price** | today's **spot price** |**forward price**: fixed today, paid later |
+| **Exchange date** | today | **expiration date** (or transaction date) |
+| **Buyer** | pays, gets the asset | **long** position: must buy at the forward price |
+| **Seller** | delivers the asset | **short** position: must sell at the forward price |
+
+## Hedging in real life: Ryanair's jet fuel {.smaller .shrink}
+
+::: {.columns}
+::: {.column width="40%"}
+![](ryanairHeadline.png){height="165" style="height: 330px; max-height: none"}
+:::
+::: {.column width="60%"}
+![](ryanairHedging.png){height="95" style="height: 230px; max-height: none"}
+:::
+:::
+
+- **2026: hedged.** 80% of its fuel locked in at **\$67** a barrel before the
+  Iran conflict. **2027: mostly not.** Only 15% locked in, at \$85, with the
+  spot price about double.
+
+- A hedge fixes the price only for the quantity and dates it covers: fares
+  could rise by up to 20%.
+
+::: {.tiny}
+Source: The Guardian.
+:::
 
 ## The value of a forward contract {.smaller .shrink}
 
-The value of the forward contract at maturity depends on the spot price
-at maturity:
+The value of the forward contract at maturity depends on the price of the
+underlying at maturity (the spot price):
 
-![](contractForward.png){fig-align="center" height="190" style="height: 340px; max-height: none"}
+![](forwardPayoff.png){fig-align="center" height="170" style="height: 300px; max-height: none"}
 
-- **Long** (buyer): the line rises with the spot price; below the forward
-  price the buyer loses (red area). **Short** (seller): the mirror image.
+- **Buyer (long):** above 100, pays 100 for something worth more: gains.
+  Below 100, could have bought cheaper in the market: loses.
+
+- **Seller (short):** the mirror image. Loses above 100, gains below.
 
 ## Closing a position {.smaller}
 
@@ -257,6 +279,25 @@ at maturity:
   (**physical delivery**).
 
   - Example: bonds, commodities.
+
+## Example: an exporter hedges the dollar {.smaller .shrink}
+
+- A French wine maker sells to a US importer and will be paid **1.1 million
+  dollars in three months**. Today 1 euro = 1.10 dollars, so that is worth
+  1 million euros.
+
+- **The risk**: if the dollar weakens, the same dollars buy fewer euros.
+
+- **The hedge**: today, it signs a forward to **sell 1.1 million dollars in
+  three months at 1.10**. It takes the short position on dollars.
+
+  | 1 euro = … dollars in three months | 1.00 | 1.10 | 1.25 |
+  |:--|--:|--:|--:|
+  | Without the forward, it gets | 1.10 m€ | 1.00 m€ | 0.88 m€ |
+  | **With the forward, it gets** | **1.00 m€** | **1.00 m€** | **1.00 m€** |
+
+- The forward fixes the euros it will receive. It gives up the gain if the
+  dollar strengthens, in exchange for no loss if it weakens.
 
 ## B. Option basics {.smaller}
 
@@ -290,6 +331,12 @@ at maturity:
 
 - The price of an option or the option premium is paid by the buyer to
   the seller to acquire the right.
+
+::: {.footnotesize}
+**Reminder (Lecture 11):** the greenshoe is a call option!!!. For about 30 days after
+the IPO, the underwriter has the right,to buy extra
+shares from the firm at the offer price.
+:::
 
 ## Call and put side by side {.smaller}
 
@@ -338,28 +385,6 @@ at maturity:
     in-the-money (out-of-the-money) and for which the strike price and
     the stock price are very far apart.
 
-## Moneyness, step by step with real quotes {.smaller}
-
-- eBay shares trade at **33.75** (the quote table later in the deck,
-  September 2018). Compare each strike with the share price:
-
-  - **January 30 call**: the right to buy at 30 something worth 33.75. Using
-    it now would gain 3.75: **in-the-money**.
-
-  - **January 35 call**: buying at 35 something worth 33.75 loses money:
-    **out-of-the-money**.
-
-  - **January 37 put**: the right to sell at 37 something worth 33.75, a gain
-    of 3.25: **in-the-money**.
-
-  - **January 30 put**: selling at 30 something worth 33.75:
-    **out-of-the-money**.
-
-  - **September 34 call**: strike and share price almost equal: close to
-    **at-the-money**.
-
-- Rule: a **call** is in the money when the strike is **below** the share
-  price, a **put** when the strike is **above** it.
 
 ## Terminology (con't 2) {.smaller}
 
