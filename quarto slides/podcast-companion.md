@@ -121,3 +121,4 @@ worked examples with numbers work well aloud and are always spelled out.
 | 9. Debt and Taxes | 4,994 | 29.6 min |
 | 10. Payout Policy | 4,621 | 27.8 min |
 | 11. Long-Term Financing | 5,690 | 33 min |
+| 12. Options and Risk Management | 4,383 | 24.8 min |
